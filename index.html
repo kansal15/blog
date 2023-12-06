@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>Gaurav Kansal Blog</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <style>
+
+  </style>
+
+</head>
+
+<body>
+  <!-- preloader -->
+  <div class="preloader">
+    <div class="loader">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- /preloader -->
+
+
+
+  <header class="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="index.html"><img class="img-fluid" src="images/logo.png" alt="parsa"
+          style="width: 130px;"></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navogation"
+        aria-controls="navogation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navogation">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link text-uppercase text-dark" href="index.html">Home</a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link text-uppercase text-dark" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-uppercase text-dark" href="category.html">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-uppercase text-dark" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- hero area -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-end">
+          <h1 class="mb-0">Welcome</h1>
+          <h2 class="mb-100 title-border-lg">to <i>Gaurav Kansal</i></h2>
+          <p class="mb-80 me-5">Gaurav Kansal is a Joint Director (IT) at the National Informatics Centre, a position he
+            has held since 2010.</p>
+          <span class="font-secondary text-dark me-3 me-sm-5 fw-bold">Follow</span>
+          <ul class="list-inline d-inline-block mb-5">
+            <li class="list-inline-item mx-3"><a href="#" class="text-dark"><i class="ti-twitter-alt"></i></a></li>
+            <li class="list-inline-item mx-3"><a href="#" class="text-dark"><i class="ti-linkedin"></i></a></li>
+            <li class="list-inline-item mx-3"><a href="#" class="text-dark"><i class="ti-github"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-6 text-right">
+          <img class="img-fluid" src="images/banner-img.png" alt="banner-image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /hero area -->
+
+  <!-- blog post -->
+  <section class="section">
+    <div class="container">
+      <div class="row ">
+        <div class="col-lg-8 ">
+          <input type='hidden' id='current_page' />
+          <input type='hidden' id='show_per_page' />
+          <div class="page" id="pagingBox">
+
+            <div class="mb-100 apnicCatArtical">
+              <article class="article-full-width">
+                <div class="post-image">
+                  <img class="img-fluid" src="images/masonary-post/apnic55.png" alt="post-thumb">
+                </div>
+                <div class="post-content">
+                  <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                    <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i> May 06, 2023 | APNIC</li>
+                    <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                      read
+                    </li>
+                  </ul>
+                  <h4 class="mb-4"><a href="blog-single.html" class="text-dark">APNIC 55 Summary</a></h4>
+                  <p class="mb-0 post-summary">The APNIC 55 meeting was held in Manila, Philippines from 20th Feb to
+                    02nd March 2023. The meeting was hosted by PhNOG, The Philippine Network Operators Group (PhNOG) and
+                    supported by DOST- Advanced Science and Technology Institute. </p>
+                  <a class="btn btn-transparent" href="blog-single.html">Continue...</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="mb-100 apnicCatArtical">
+              <article class="article-full-width">
+                <div class="post-image">
+                  <img class="img-fluid" src="images/masonary-post/voting.jpeg" alt="post-thumb">
+                </div>
+                <div class="post-content">
+                  <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                    <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>July 11, 2022 | APNIC</li>
+                    <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                      read
+                    </li>
+                  </ul>
+                  <h4 class="mb-4"><a href="blog-single.html" class="text-dark">APNIC's Members Voting Right</a></h4>
+                  <p class="mb-0 post-summary">APNIC Membership is classified into 7 tiers depending on the IP holding
+                    by
+                    each member. Each membership tier has voting rights. These voting rights play a crucial role in
+                    governance and policies matters of APNIC.</p>
+                  <a class="btn btn-transparent" href="blog-single.html">Continue...</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="mb-100 dnsCatArtical">
+              <article class="article-full-width">
+                <div class="post-image">
+                  <img class="img-fluid" src="images/masonary-post/root-dns.png" alt="post-thumb">
+                </div>
+                <div class="post-content">
+                  <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                    <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>Feb 15, 2022 | DNS</li>
+                    <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                      read
+                    </li>
+                  </ul>
+                  <h4 class="mb-4"><a href="blog-single.html" class="text-dark">History of DNS Root Servers</a></h4>
+                  <p class="mb-0 post-summary">A Journey from 4 nodes to 13 nodes at present. Based on the excerpt from
+                    “History of Root DNS Servers” by RSSAC..</p>
+                  <a class="btn btn-transparent" href="blog-single.html">Continue...</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="mb-100 wifiCatArtical">
+              <article class="article-full-width">
+                <div class="post-image">
+                  <img class="img-fluid" src="images/masonary-post/WiFi_Logo.png" alt="post-thumb">
+                </div>
+                <div class="post-content">
+                  <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                    <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>Dec 31, 2021 | WiFi</li>
+                    <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                      read
+                    </li>
+                  </ul>
+                  <h4 class="mb-4"><a href="blog-single.html" class="text-dark">Availability of 5 GHz WLAN Channels in
+                      India under
+                      unlicensed band</a></h4>
+                  <p class="mb-0 post-summary">In India, Wireless Planning and Coordination Wing of Department of
+                    Telecom,
+                    under Ministry of Communication takes care of licensing of radio frequencies.. </p>
+                  <a class="btn btn-transparent" href="blog-single.html">Continue...</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="mb-100 dnsCatArtical">
+              <article class="article-full-width">
+                <div class="post-image">
+                  <img class="img-fluid" src="images/masonary-post/root-dns.png" alt="post-thumb">
+                </div>
+                <div class="post-content">
+                  <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                    <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>Feb 15, 2022 | DNS</li>
+                    <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                      read
+                    </li>
+                  </ul>
+                  <h4 class="mb-4"><a href="blog-single.html" class="text-dark">History of DNS Root Servers</a></h4>
+                  <p class="mb-0 post-summary">A Journey from 4 nodes to 13 nodes at present. Based on the excerpt from
+                    “History of Root DNS Servers” by RSSAC..</p>
+                  <a class="btn btn-transparent" href="blog-single.html">Continue...</a>
+                </div>
+              </article>
+            </div>
+            <div class="mb-100 dnsCatArtical">
+              <article class="article-full-width">
+                <div class="post-image">
+                  <img class="img-fluid" src="images/masonary-post/apnic55.png" alt="post-thumb">
+                </div>
+                <div class="post-content">
+                  <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                    <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i> May 06, 2023 | APNIC</li>
+                    <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                      read
+                    </li>
+                  </ul>
+                  <h4 class="mb-4"><a href="blog-single.html" class="text-dark">APNIC 55 Summary</a></h4>
+                  <p class="mb-0 post-summary">The APNIC 55 meeting was held in Manila, Philippines from 20th Feb to
+                    02nd
+                    March 2023. The meeting was hosted by PhNOG, The Philippine Network Operators Group (PhNOG) and
+                    supported by DOST- Advanced Science and Technology Institute.</p>
+                  <a class="btn btn-transparent" href="blog-single.html">Continue...</a>
+                </div>
+              </article>
+            </div>
+            <div class="mb-100 wifiCatArtical">
+              <article class="article-full-width">
+                <div class="post-image">
+                  <img class="img-fluid" src="images/masonary-post/WiFi_Logo.png" alt="post-thumb">
+                </div>
+                <div class="post-content">
+                  <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                    <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>Dec 31, 2021 | WiFi</li>
+                    <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                      read
+                    </li>
+                  </ul>
+                  <h4 class="mb-4"><a href="blog-single.html" class="text-dark">Availability of 5 GHz WLAN Channels in
+                      India under
+                      unlicensed band</a></h4>
+                  <p class="mb-0 post-summary">In India, Wireless Planning and Coordination Wing of Department of
+                    Telecom,
+                    under Ministry of Communication takes care of licensing of radio frequencies.. </p>
+                  <a class="btn btn-transparent" href="blog-single.html">Continue...</a>
+                </div>
+              </article>
+            </div>
+            <div class="mb-100 dnsCatArtical wifiCatArtical">
+              <article class="article-full-width">
+                <div class="post-image">
+                  <img class="img-fluid" src="images/masonary-post/voting.jpeg" alt="post-thumb">
+                </div>
+                <div class="post-content">
+                  <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                    <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>July 11, 2022 | APNIC</li>
+                    <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                      read
+                    </li>
+                  </ul>
+                  <h4 class="mb-4"><a href="blog-single.html" class="text-dark">APNIC's Members Voting Right</a></h4>
+                  <p class="mb-0 post-summary">APNIC Membership is classified into 7 tiers depending on the IP holding
+                    by
+                    each member. Each membership tier has voting rights. These voting rights play a crucial role in
+                    governance and policies matters of APNIC.</p>
+                  <a class="btn btn-transparent" href="blog-single.html">Continue...</a>
+                </div>
+              </article>
+            </div>
+            <div class="mb-100 apnicCatArtical wifiCatArtical">
+              <article class="article-full-width">
+                <div class="post-image">
+                  <img class="img-fluid" src="images/masonary-post/WiFi_Logo.png" alt="post-thumb">
+                </div>
+                <div class="post-content">
+                  <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                    <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>Dec 31, 2021 | WiFi</li>
+                    <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                      read
+                    </li>
+                  </ul>
+                  <h4 class="mb-4"><a href="blog-single.html" class="text-dark">Availability of 5 GHz WLAN Channels in
+                      India under
+                      unlicensed band</a></h4>
+                  <p class="mb-0 post-summary">In India, Wireless Planning and Coordination Wing of Department of
+                    Telecom,
+                    under Ministry of Communication takes care of licensing of radio frequencies.. </p>
+                  <a class="btn btn-transparent" href="blog-single.html">Continue...</a>
+                </div>
+              </article>
+            </div>
+            <div class="mb-100 dnsCatArtical">
+              <article class="article-full-width">
+                <div class="post-image">
+                  <img class="img-fluid" src="images/masonary-post/apnic55.png" alt="post-thumb">
+                </div>
+                <div class="post-content">
+                  <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                    <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i> May 06, 2023 | APNIC</li>
+                    <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                      read
+                    </li>
+                  </ul>
+                  <h4 class="mb-4"><a href="blog-single.html" class="text-dark">APNIC 55 Summary</a></h4>
+                  <p class="mb-0 post-summary">The APNIC 55 meeting was held in Manila, Philippines from 20th Feb to
+                    02nd
+                    March 2023. The meeting was hosted by PhNOG, The Philippine Network Operators Group (PhNOG) and
+                    supported by DOST- Advanced Science and Technology Institute.</p>
+                  <a class="btn btn-transparent" href="blog-single.html">Continue...</a>
+                </div>
+              </article>
+            </div>
+            <div class="mb-100 wifiCatArtical">
+              <article class="article-full-width">
+                <div class="post-image">
+                  <img class="img-fluid" src="images/masonary-post/WiFi_Logo.png" alt="post-thumb">
+                </div>
+                <div class="post-content">
+                  <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                    <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>Dec 31, 2021 | WiFi</li>
+                    <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                      read
+                    </li>
+                  </ul>
+                  <h4 class="mb-4"><a href="blog-single.html" class="text-dark">Availability of 5 GHz WLAN Channels in
+                      India under
+                      unlicensed band</a></h4>
+                  <p class="mb-0 post-summary">In India, Wireless Planning and Coordination Wing of Department of
+                    Telecom,
+                    under Ministry of Communication takes care of licensing of radio frequencies.. </p>
+                  <a class="btn btn-transparent" href="blog-single.html">Continue...</a>
+                </div>
+              </article>
+            </div>
+            <div class="mb-100 dnsCatArtical wifiCatArtical">
+              <article class="article-full-width">
+                <div class="post-image">
+                  <img class="img-fluid" src="images/masonary-post/root-dns.png" alt="post-thumb">
+                </div>
+                <div class="post-content">
+                  <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                    <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>Feb 15, 2022 | DNS</li>
+                    <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                      read
+                    </li>
+                  </ul>
+                  <h4 class="mb-4"><a href="blog-single.html" class="text-dark">History of DNS Root Servers</a></h4>
+                  <p class="mb-0 post-summary">A Journey from 4 nodes to 13 nodes at present. Based on the excerpt from
+                    “History of Root DNS Servers” by RSSAC..</p>
+                  <a class="btn btn-transparent" href="blog-single.html">Continue...</a>
+                </div>
+              </article>
+            </div>
+            <div class="mb-100 apnicCatArtical wifiCatArtical">
+              <article class="article-full-width">
+                <div class="post-image">
+                  <img class="img-fluid" src="images/masonary-post/WiFi_Logo.png" alt="post-thumb">
+                </div>
+                <div class="post-content">
+                  <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                    <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>Dec 31, 2021 | WiFi</li>
+                    <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                      read
+                    </li>
+                  </ul>
+                  <h4 class="mb-4"><a href="blog-single.html" class="text-dark">Availability of 5 GHz WLAN Channels in
+                      India under
+                      unlicensed band</a></h4>
+                  <p class="mb-0 post-summary">In India, Wireless Planning and Coordination Wing of Department of
+                    Telecom,
+                    under Ministry of Communication takes care of licensing of radio frequencies.. </p>
+                  <a class="btn btn-transparent" href="blog-single.html">Continue...</a>
+                </div>
+              </article>
+            </div>
+
+
+          </div>
+
+
+
+
+          <div class="pagination justify-content-center align-items-center" id='page_navigation'>
+
+          </div>
+
+        </div>
+        <!-- /blog post -->
+        <!-- Side post -->
+        <div class="col-lg-4">
+
+          <div class="widget">
+            <h6 class="mb-4">LATEST POST</h6>
+            <div class="media mb-4">
+              <div class="post-thumb-sm me-3">
+                <img class="img-fluid" src="images/masonary-post/apnic55.png" alt="post-thumb">
+              </div>
+              <div class="media-body">
+                <ul class="list-inline d-flex justify-content-between mb-2">
+                  <li class="list-inline-item">Post By Gaurav Kansal</li>
+                  <li class="list-inline-item">May 06, 2023</li>
+                </ul>
+                <h6><a class="text-dark" href="">APNIC 55 Summary</a></h6>
+              </div>
+            </div>
+            <div class="media mb-4">
+              <div class="post-thumb-sm me-3">
+                <img class="img-fluid" src="images/masonary-post/voting.jpeg" alt="post-thumb">
+              </div>
+              <div class="media-body">
+                <ul class="list-inline d-flex justify-content-between mb-2">
+                  <li class="list-inline-item">Post By Gaurav Kansal</li>
+                  <li class="list-inline-item">July 11, 2022</li>
+                </ul>
+                <h6><a class="text-dark" href="">APNIC's Members Voting Right</a></h6>
+              </div>
+            </div>
+            <div class="media mb-4">
+              <div class="post-thumb-sm me-3">
+                <img class="img-fluid" src="images/masonary-post/root-dns.png" alt="post-thumb">
+              </div>
+              <div class="media-body">
+                <ul class="list-inline d-flex justify-content-between mb-2">
+                  <li class="list-inline-item">Post By Gaurav Kansal</li>
+                  <li class="list-inline-item">Feb 15, 2022</li>
+                </ul>
+                <h6><a class="text-dark" href="">History of DNS Root Servers</a></h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="widget">
+            <h6 class="mb-4">CATEGORIES</h6>
+
+            <ul class="list-unstyled widget-list">
+              <li><a href="javascript:void(0)" class="d-flex apnicCat">APNIC
+                  <small class="ms-auto apnicCatvalue"></small></a>
+              </li>
+              <li><a href="javascript:void(0)" class="d-flex dnsCat">DNS
+                  <small class="ms-auto dnsCatvalue"></small></a>
+              </li>
+              <li><a href="javascript:void(0)" class="d-flex wifiCat">WiFi
+                  <small class="ms-auto wifiCatvalue"></small></a>
+              </li>
+
+            </ul>
+          </div>
+
+
+          <!-- <div class="widget">
+            <h6 class="mb-4">TAG</h6>
+            <ul class="list-inline tag-list">
+              <li class="list-inline-item m-1"><a href="">ui ux</a></li>
+              <li class="list-inline-item m-1"><a href="">developmetns</a></li>
+              <li class="list-inline-item m-1"><a href="">travel</a></li>
+              <li class="list-inline-item m-1"><a href="">article</a></li>
+              <li class="list-inline-item m-1"><a href="">travel</a></li>
+              <li class="list-inline-item m-1"><a href="">ui ux</a></li>
+              <li class="list-inline-item m-1"><a href="">article</a></li>
+              <li class="list-inline-item m-1"><a href="">developmetns</a></li>
+            </ul>
+          </div> -->
+
+        </div>
+        <!-- /Side post -->
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <footer class="bg-secondary">
+    <div class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 mb-4 mb-md-0 d-flex justify-content-center">
+            <a href="index.html"><img src="images/logo.png" alt="persa" class="img-fluid" style="width: 160px;"></a>
+          </div>
+
+          <div class="col-md-4 col-sm-6 mb-4 mb-md-0 ">
+            <h6>Contact Info</h6>
+            <ul class="list-unstyled">
+              <li class="font-secondary text-dark">Address: New Delhi, IN</li>
+              <li class="font-secondary text-dark">Mail: gauravkansal@nic.in</li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
+            <h6>Follow</h6>
+            <ul class="list-inline d-inline-block">
+              <li class="list-inline-item"><a href="#" class="text-dark"><i class="ti-twitter-alt"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="text-dark"><i class="ti-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="text-dark"><i class="ti-github"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center pb-3">
+      <p class="mb-0">2019-2023 Gaurav Kansal. All rights</p>
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="plugins/jQuery/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="plugins/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- slick slider -->
+  <script src="plugins/slick/slick.min.js"></script>
+  <!-- masonry -->
+  <script src="plugins/masonry/masonry.js"></script>
+  <!-- instafeed -->
+  <!-- <script src="plugins/instafeed/instafeed.min.js"></script> -->
+  <!-- smooth scroll -->
+  <!-- <script src="plugins/smooth-scroll/smooth-scroll.js"></script> -->
+  <!-- headroom -->
+  <script src="plugins/headroom/headroom.js"></script>
+  <!-- reading time -->
+  <script src="plugins/reading-time/readingTime.min.js"></script>
+
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+  <!-- <script src="js/paginathing.min.js"></script> -->
+  <script>
+    // $('.page').paginathing({
+    //   perPage: 4,
+    //   insertAfter: '.page',
+    //   pageNumbers: true,
+    //   ulClass: 'profile-pagination-wrap align-center mt-4'
+    // });
+
+    $(document).ready(function () {
+      // console.log($(".page div").attr('class').length);
+      let getApnicCatLength = $(".page > div").filter(".apnicCatArtical").length;
+      let getdnsCatLength = $(".page > div").filter(".dnsCatArtical").length;
+      let getwifiCatLength = $(".page > div").filter(".wifiCatArtical").length;
+
+      $(".apnicCatvalue").html(`(${getApnicCatLength})`);
+      $(".dnsCatvalue").html(`(${getdnsCatLength})`);
+      $(".wifiCatvalue").html(`(${getwifiCatLength})`);
+
+      var activeCat = "";
+      function filterGroup(group) {
+        if (activeCat != group) {
+
+          $(".page > div").filter("." + group).show();
+          $(".page > div").filter(":not(." + group + ")").hide();
+          activeCat = group;
+        }
+      }
+
+      // $(".cat-all").click(function () {
+      //   $(".page > div").show();
+      //   activeCat = "all";
+      // });
+
+
+      $(".apnicCat").click(function (event) {
+        event.preventDefault();
+        filterGroup("apnicCatArtical");
+        $("#page_navigation").hide();
+      });
+      $(".dnsCat").click(function (event) {
+        event.preventDefault();
+        filterGroup("dnsCatArtical");
+        $("#page_navigation").hide();
+      });
+      $(".wifiCat").click(function (event) {
+        event.preventDefault();
+        filterGroup("wifiCatArtical");
+        $("#page_navigation").hide();
+      });
+    });
+
+  </script>
+
+  <script>
+    $(document).ready(function () {
+
+      //Pagination JS
+      //how much items per page to show
+      var show_per_page = 4;
+      //getting the amount of elements inside pagingBox div
+      var number_of_items = $('#pagingBox').children().length;
+      //calculate the number of pages we are going to have
+      var number_of_pages = Math.ceil(number_of_items / show_per_page);
+
+      //set the value of our hidden input fields
+      $('#current_page').val(0);
+      $('#show_per_page').val(show_per_page);
+
+      //now when we got all we need for the navigation let's make it '
+
+      /* 
+      what are we going to have in the navigation?
+        - link to previous page
+        - links to specific pages
+        - link to next page
+      */
+      var navigation_html = '<a class=" previous_link" href="javascript:previous();"><< Previous</a>';
+      var current_link = 0;
+      while (number_of_pages > current_link) {
+        // console.log(current_link);
+        navigation_html += '<a class="page-link" href="javascript:go_to_page(' + current_link + ')" longdesc="' + current_link + '">' + (current_link + 1) + '</a>';
+        current_link++;
+      }
+      navigation_html += '<a class="next_link" href="javascript:next();">Next >></a>';
+
+      $('#page_navigation').html(navigation_html);
+
+      //add active class to the first page link
+      $('#page_navigation .page-link:first').addClass('active');
+
+      //hide all the elements inside pagingBox div
+      $('#pagingBox').children().css('display', 'none');
+
+      //and show the first n (show_per_page) elements
+      $('#pagingBox').children().slice(0, show_per_page).css('display', 'block');
+
+    });
+
+
+
+    //Pagination JS
+
+    function previous() {
+
+      new_page = parseInt($('#current_page').val()) - 1;
+      // hide the image
+
+      console.log(`pre page ${new_page}`);
+      //if there is an item before the current active link run the function
+      if ($('.active').prev('.page-link').length == true) {
+
+        go_to_page(new_page);
+      }
+
+    }
+
+    function next() {
+      new_page = parseInt($('#current_page').val()) + 1;
+
+      console.log(`next page ${new_page}`);
+      //if there is an item after the current active link run the function
+      if ($('.active').next('.page-link').length == true) {
+        go_to_page(new_page);
+      }
+
+    }
+    function go_to_page(page_num) {
+      //get the number of items shown per page
+      var show_per_page = parseInt($('#show_per_page').val());
+      console.log(`number page ${page_num}`);
+      if (page_num != 0) {
+        $(".hero-section").hide();
+      }
+      else {
+        $(".hero-section").show();
+      }
+      //get the element number where to start the slice from
+      start_from = page_num * show_per_page;
+
+      //get the element number where to end the slice
+      end_on = start_from + show_per_page;
+
+      //hide all children elements of pagingBox div, get specific items and show them
+      $('#pagingBox').children().css('display', 'none').slice(start_from, end_on).css('display', 'block');
+
+      /*get the page link that has longdesc attribute of the current page and add active class to it
+      and remove that class from previously active page link*/
+      $('.page-link[longdesc=' + page_num + ']').addClass('active').siblings('.active').removeClass('active');
+
+      //update the current page input field
+      $('#current_page').val(page_num);
+    }
+  </script>
+
+
+
+</body>
+
+</html>
