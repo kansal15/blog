@@ -642,6 +642,14 @@ textarea.form-control {
 }
 .article-full-width .post-image {
   margin-right: 20px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  max-height: 250px;
+  border-radius: 10px;
+  
 }
 @media (max-width: 767px) {
   .article-full-width .post-image {
@@ -649,8 +657,7 @@ textarea.form-control {
   }
 }
 .article-full-width .post-image img {
-  height: 210px;
-  width: auto;
+  width: 100%;
   border-radius: 10px;
 }
 @media (max-width: 767px) {
@@ -863,4 +870,12 @@ blockquote {
     margin: 0;
     text-align: center;
   }
+}
+
+.showCat{
+  display: block;
+}
+
+.hideCat{
+  display: none;
 }
