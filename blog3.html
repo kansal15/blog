@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>Gaurav Kansal Blog</title>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="images/favicon.jpg">
+</head>
+
+<body>
+  <!-- preloader -->
+  <div class="preloader">
+    <div class="loader">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- /preloader -->
+
+  <header class="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="index.html"><img class="img-fluid" src="images/logo.png" alt="parsa"
+          style="width: 130px;"></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navogation"
+        aria-controls="navogation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="navogation">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link text-uppercase text-dark" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-uppercase text-dark" href="blog-single.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-uppercase text-dark" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- page-title -->
+  <section class="section bg-secondary">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4> How to - Configure Firefox to use only DoH and not to fallback to OS native resolver</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /page-title -->
+
+  <!-- blog single -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <!-- blog post -->
+        <div class="col-lg-8">
+          <ul class="list-inline d-flex justify-content-between py-3">
+            <li class="list-inline-item"><i class="ti-user mr-2"></i>Post by Gaurav kansal</li>
+            <li class="list-inline-item"><i class="ti-calendar mr-2"></i> May 16, 2022</li>
+          </ul>
+
+          <div class="content">
+            <p class="blog-post-body mt-5"> In this post, i will talk about configuring firefox browser to use DoH and not to fallback to OS native resolver </p>
+            <div class="mt-5 mb-5">
+              <h6><u>Step 1:</u></h6>
+              <p>Configure DoH like the way it is mentioned here -<a
+                  href="https://support.mozilla.org/en-US/kb/firefox-dns-over-https">https://support.mozilla.org/en-US/kb/firefox-dns-over-https.</a>
+              </p>
+              <p>I am using <a href=" https://doh.nkn.in/dns-query">
+                  https://doh.nkn.in/dns-query</a> (which is the DoH server of <a
+                  href="https://www.nkn.in">https://www.nkn.in</a> and in
+                alpha testing stage) as my DoH server in firefox browser.</p>
+              <img src="images/masonary-post/firefox.png" alt="post-thumb" class="img-fluid mb-4" style="width: 60%;">
+
+              <h6><u>Step 2:</u></h6>
+              <p>Check you configuration by typing <span style="background-color: #e3e6e8;">about:networking#dns
+                </span> in the browser address bar. Most probably, you will see something like this --</p>
+              <a
+                href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiulZjTDqHeU-GcygRL3-X1P9w-bJNnDCdNH7fsVROrHgkBv0mAadVmKwCrDtMAQNohpzkvpUldJ3NFpNu4xE8EKonhdblk6t-r4wRcZuDHgR3TPUUtpOtmoxq-Fi6pljiLhWDXl678aYay_qEt9IbDyQREFeqD2jXVdCERAD4JvbFms5Uf37JiD7c/s1894/Screenshot%202022-05-16%20at%2017.53.42.png">
+                <img
+                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiulZjTDqHeU-GcygRL3-X1P9w-bJNnDCdNH7fsVROrHgkBv0mAadVmKwCrDtMAQNohpzkvpUldJ3NFpNu4xE8EKonhdblk6t-r4wRcZuDHgR3TPUUtpOtmoxq-Fi6pljiLhWDXl678aYay_qEt9IbDyQREFeqD2jXVdCERAD4JvbFms5Uf37JiD7c/s16000/Screenshot%202022-05-16%20at%2017.53.42.png"
+                  class="img-fluid"></a>
+              <p>Here, the <span style="background-color: #e3e6e8;"> DoH Mode</span> option handles how firefox manages
+                your DNS queries.&nbsp; This document (<a
+                  href="https://wiki.mozilla.org/Trusted_Recursive_Resolver">https://wiki.mozilla.org/Trusted_Recursive_Resolver</a>)
+                talks about
+                the options available under 'DoH Mode'.</p>
+              <a
+                href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghPZDt3dJxYttDdtGQpCkiwtSHbKVGeEaQesTDGa6X17N49FbppEYuwFayumhQALkviWqWxInwIdo21xPuQ0ZMQ6gFCU9VFGdLhUNUcW2uXgMuZ-rWIo_8V2ls4CfBTicZ9egak0QipbdcilPkHMCjzIQQhuVhqUFKWjVQDO14L3qqMst6pZNRYAY/s1926/Screenshot%202022-05-16%20at%2017.58.20.png">
+                <img
+                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghPZDt3dJxYttDdtGQpCkiwtSHbKVGeEaQesTDGa6X17N49FbppEYuwFayumhQALkviWqWxInwIdo21xPuQ0ZMQ6gFCU9VFGdLhUNUcW2uXgMuZ-rWIo_8V2ls4CfBTicZ9egak0QipbdcilPkHMCjzIQQhuVhqUFKWjVQDO14L3qqMst6pZNRYAY/s16000/Screenshot%202022-05-16%20at%2017.58.20.png"
+                  class="img-fluid"></a>
+              <p>So, if you want to use only DoH and not to fallback to native OS resolver, you can change the value of
+                this parameter to '3'.</p>
+              <h6><u>Step 3:</u></h6>
+              <p>For changing the value of 'DoH Mode' parameter, type <span
+                  style="background-color: #e3e6e8;">about:config</span> in the browser's address bar and
+                search <span style="background-color: #e3e6e8;">network.trr.mode</span> and click on edit icon and
+                change the value to '3'.</p>
+              <a
+                href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjy9m5aTtRrz-7Hpw1jpgC3Mfl9ltTdDm9n1sKYrxHy1DMbxtLMBI_FAFO8RxNtQJPMJrFQ-HJx7iYx2eszismhPRh6OLoXYrQLKfMth7VVUSJNd3vaPnUghR2UlRPxnyrxjcVXooGsJUNmCPt7YyTRWlst3tnVi6FX6Pkhrr2LhtKRqGclo30Mr6M/s2868/Screenshot%202022-05-16%20at%2018.04.44.png">
+                <img
+                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjy9m5aTtRrz-7Hpw1jpgC3Mfl9ltTdDm9n1sKYrxHy1DMbxtLMBI_FAFO8RxNtQJPMJrFQ-HJx7iYx2eszismhPRh6OLoXYrQLKfMth7VVUSJNd3vaPnUghR2UlRPxnyrxjcVXooGsJUNmCPt7YyTRWlst3tnVi6FX6Pkhrr2LhtKRqGclo30Mr6M/s16000/Screenshot%202022-05-16%20at%2018.04.44.png"
+                  class="img-fluid"></a>
+              <p>Now all the DNS Queries from the firefox browser will go to DoH server instead of native OS DNS. Make
+                sure that DoH is available and accessible to you otherwise, you will not be able to access any site as
+                we have disable the fallback to native OS functionality by changing the <span style="background-color: #e3e6e8;"> DoH Mode</span> value from 2 to 3.</p>
+                <h6 class="byline post-labels">
+                  <span class="byline-label">Labels:</span><a href="https://blog.gauravkansal.in/search/label/DNS" rel="tag">DNS</a>
+                </h6>
+            </div>
+          </div>
+        </div>
+        <!-- /blog post -->
+
+        <!-- Side post -->
+        <div class="col-lg-4">
+          <div class="widget">
+            <h6 class="mb-4">LATEST POST</h6>
+            <div class="media mb-4">
+              <div class="post-thumb-sm me-3">
+                <img class="img-fluid" src="images/masonary-post/apnic55.png" alt="post-thumb">
+              </div>
+              <div class="media-body">
+                <ul class="list-inline d-flex justify-content-between mb-2">
+                  <li class="list-inline-item">Post By Gaurav Kansal</li>
+                  <li class="list-inline-item">May 06, 2023</li>
+                </ul>
+                <h6><a class="text-dark" href="">APNIC 55 Summary</a></h6>
+              </div>
+            </div>
+            <div class="media mb-4">
+              <div class="post-thumb-sm me-3">
+                <img class="img-fluid" src="images/masonary-post/voting.jpg" alt="post-thumb">
+              </div>
+              <div class="media-body">
+                <ul class="list-inline d-flex justify-content-between mb-2">
+                  <li class="list-inline-item">Post By Gaurav Kansal</li>
+                  <li class="list-inline-item">July 11, 2022</li>
+                </ul>
+                <h6><a class="text-dark" href="">APNIC's Members Voting Right</a></h6>
+              </div>
+            </div>
+            <div class="media mb-4">
+              <div class="post-thumb-sm me-3">
+                <img class="img-fluid" src="images/masonary-post/firefox.png" alt="post-thumb">
+              </div>
+              <div class="media-body">
+                <ul class="list-inline d-flex justify-content-between mb-2">
+                  <li class="list-inline-item">Post By Gaurav Kansal</li>
+                  <li class="list-inline-item">May 16, 2022</li>
+                </ul>
+                <h6><a class="text-dark" href="">How to - Configure Firefox</a></h6>
+              </div>
+            </div>
+          </div>
+          <div class="widget">
+            <h6 class="mb-4">CATEGORIES</h6>
+            <ul class="list-unstyled widget-list categories-list">
+              <!-- <li class="allCat"><a class="d-flex">Show All
+                  <small class="ms-auto allCatvalue"></small></a>
+              </li> -->
+              <li class="apnicCat"><a class="d-flex">APNIC
+                  <small class="ms-auto apnicCatvalue"></small></a>
+              </li>
+              <li class="dnsCat"><a href="javascript:void(0)" class="d-flex">DNS
+                  <small class="ms-auto dnsCatvalue"></small></a>
+              </li>
+              <li class="wifiCat"><a href="javascript:void(0)" class="d-flex">WiFi
+                  <small class="ms-auto wifiCatvalue"></small></a>
+              </li>
+            </ul>
+          </div>
+          <!-- <div class="widget">
+            <h6 class="mb-4">TAG</h6>
+            <ul class="list-inline tag-list">
+              <li class="list-inline-item m-1"><a href="">ui ux</a></li>
+              <li class="list-inline-item m-1"><a href="">developmetns</a></li>
+              <li class="list-inline-item m-1"><a href="">travel</a></li>
+              <li class="list-inline-item m-1"><a href="">article</a></li>
+              <li class="list-inline-item m-1"><a href="">travel</a></li>
+              <li class="list-inline-item m-1"><a href="">ui ux</a></li>
+              <li class="list-inline-item m-1"><a href="">article</a></li>
+              <li class="list-inline-item m-1"><a href="">developmetns</a></li>
+            </ul>
+          </div> -->
+        </div>
+        <!-- /Side post -->
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="bg-secondary">
+    <div class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
+            <a href="index.html"><img src="images/logo.png" alt="persa" class="img-fluid" style="width: 160px;"></a>
+          </div>
+
+          <div class="col-md-4 col-sm-6 mb-4 mb-md-0 ">
+            <h6>Contact Info</h6>
+            <ul class="list-unstyled">
+              <li class="font-secondary text-dark">Address: New Delhi, IN</li>
+              <li class="font-secondary text-dark">Mail: gauravkansal@nic.in</li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
+            <h6>Follow</h6>
+            <ul class="list-inline d-inline-block">
+              <li class="list-inline-item"><a href="#" class="text-dark"><i class="ti-twitter-alt"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="text-dark"><i class="ti-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center pb-3">
+      <p class="mb-0">2019-2023 Gaurav Kansal. All rights</p>
+    </div>
+  </footer>
+
+
+  <!-- jQuery -->
+  <script src="plugins/jQuery/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="plugins/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- slick slider -->
+  <script src="plugins/slick/slick.min.js"></script>
+  <!-- masonry -->
+  <script src="plugins/masonry/masonry.js"></script>
+  <!-- instafeed -->
+  <!-- <script src="plugins/instafeed/instafeed.min.js"></script> -->
+  <!-- smooth scroll -->
+  <!-- <script src="plugins/smooth-scroll/smooth-scroll.js"></script> -->
+  <!-- headroom -->
+  <script src="plugins/headroom/headroom.js"></script>
+  <!-- reading time -->
+  <script src="plugins/reading-time/readingTime.min.js"></script>
+
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+  <!-- <script src="js/paginathing.min.js"></script> -->
+
+</body>
+
+</html>
