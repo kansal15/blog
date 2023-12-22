@@ -253,12 +253,12 @@ button,
 select {
   cursor: pointer;
   transition: 0.2s ease;
-  color: #cd8c46;
+  color: #BF8C55;
 }
 
 a:not([href]):not([class]),
 a:not([href]):not([class]):hover {
-  color: #cd8c46;
+  color: #BF8C55;
 }
 
 a:focus,
@@ -1047,49 +1047,11 @@ blockquote {
   letter-spacing: 2px;
   font-size: 11px;
 }
-
-/* 
-.cd-intro {
-  width: 90%;
-  max-width: 768px;
-  text-align: center;
-}
-
-.cd-intro {
-  margin: 4em auto;
-}
-
-@media only screen and (min-width: 768px) {
-  .cd-intro {
-    margin: 5em auto;
-  }
-} */
-
-/* @media only screen and (min-width: 1170px) {
-  .cd-intro {
-      margin: 6em auto;
-  }
-}
-.cd-headline {
-  font-size: 3rem;
-  line-height: 1.2;
-}
-@media only screen and (min-width: 768px) {
-  .cd-headline {
-      font-size: 4.4rem;
-      font-weight: 300;
-  }
-}
-@media only screen and (min-width: 1170px) {
-  .cd-headline {
-      font-size: 6rem;
-  }
-} */
 .cd-words-wrapper {
   display: inline-block;
   position: relative;
   text-align: left;
-  color: #8f6335;
+  color: #BF8C55;
 }
 
 .cd-words-wrapper b {
@@ -1331,6 +1293,7 @@ blockquote {
 #blog-post-block img{
   margin: 0 auto;
   display: block;
+  width: 25%;
 }
 #sidebar-tab-text{
   color: #fff;
@@ -1442,7 +1405,11 @@ blockquote {
   font-size: 12px;
 }
 }
-
+@media only screen and (min-width:768px) and (max-width:991px) {
+  #blog-post-block img {
+    width: 100%;
+  }
+}
 
 @media only screen and (min-width:320px) and (max-width:767px) {
   body{
@@ -1458,6 +1425,9 @@ blockquote {
   }
   .section h4 {
     font-size: 0.875rem;
+}
+#blog-post-block img {
+  width: 100%;
 }
 .card-block {
   padding: 10px 10px;
