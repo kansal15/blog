@@ -9,7 +9,7 @@
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
+
   <!-- ** Plugins Needed for the Project ** -->
   <!-- Bootstrap -->
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
@@ -19,9 +19,38 @@
   <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
   <!-- Main Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
+ 
   <!--Favicon-->
   <link rel="icon" type="image/png" href="images/favicon.jpg">
   <link href="css/fontawesome/css/all.min.css" rel="stylesheet" />
+  <style>
+    .bg-image {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      object-position: center;
+      /* left: 50%;
+  top: 50%; */
+      transform: translate(65%, -14%); 
+      animation-name: rotate;
+      animation-timing-function: cubic-bezier(0.02, 0.63, 0.23, 0.99);
+      animation-iteration-count: 1;
+      animation-duration: 1.1s;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: translate(65%, -14%) rotate(0deg) scale(5);
+      }
+
+      100% {
+        transform: translate(65%, -14%) rotate(360deg) scale(1);
+      }
+    }
+
+  
+  </style>
 </head>
 
 <body>
@@ -76,29 +105,34 @@
   <section class="section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
-          <h2 class="mb-4">Contact Us</h2>
-          <img src="images/contact.jpg" alt="author" class="img-fluid w-100 mb-4">
-          <p class="mb-5">Strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams
-            steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream and, as I
-            lie close to the earth, a thousand unknown plants are noticed by me.<br><br>When I hear the buzz of the
-            little world among the stalks, and grow familiar with the countless indescribable forms of the insects and
-            flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath of that
-            universal love which bears and sustains.</p>
-          <form action="#" class="row">
-            <div class="col-lg-6">
-              <input type="text" class="form-control mb-4" name="name" id="name" placeholder="Name">
+        <div class="col-md-4">
+          <div class="text-center">
+            <div class="left-shape left-shape-svg left-text-palette-3-base left-shape-1">
+              <svg class="left-svg-link" preserveAspectRatio="none" viewBox="0 0 160 160" style="">
+                <use xlink:href="#svg-6487"></use>
+              </svg>
+              <svg class="left-svg-content" viewBox="0 0 160 160" x="0px" y="0px" id="svg-6487"
+                style="enable-background:new 0 0 160 160;">
+                <path
+                  d="M80,30c27.6,0,50,22.4,50,50s-22.4,50-50,50s-50-22.4-50-50S52.4,30,80,30 M80,0C35.8,0,0,35.8,0,80s35.8,80,80,80s80-35.8,80-80S124.2,0,80,0L80,0z">
+                </path>
+              </svg>
             </div>
-            <div class="col-lg-6">
-              <input type="email" class="form-control mb-4" name="email" id="email" placeholder="Email">
-            </div>
-            <div class="col-12">
-              <textarea name="message" id="message" class="form-control mb-4" placeholder="Message..."></textarea>
-            </div>
-            <div class="col-12">
-              <button class="btn btn-primary">Submit</button>
-            </div>
-          </form>
+            <div class="left-image left-image-circle left-image-1 bg-image"></div>
+            <div class="left-palette-3-base left-shape left-shape-circle left-shape-2"></div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="text-center rgt-block">           
+            <h3 class="profile-about-heading">Contact Info</h3>
+            <h5>
+              <span>Website</span>: <a href="" class="" target="_blank"> gauravkansal.in</a>
+              <br>
+              <span>Address</span>: <a href="" class="" target="_blank"> New Delhi, IN </a> <br>
+              <span>Email:</span>: <a href="" class="" target="_blank">
+                gauravkansal@nic.in</a>
+            </h5>
+          </div>
         </div>
       </div>
     </div>
@@ -121,8 +155,10 @@
           <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
             <h6>Follow</h6>
             <ul class="list-inline d-inline-block">
-              <li class="list-inline-item"><a href="https://twitter.com/kansal15" target="_blank" class="text-dark"><i class="ti-twitter-alt"></i></a></li>
-              <li class="list-inline-item"><a href="https://www.linkedin.com/in/gaurav-kansal/" target="_blank" class="text-dark"><i class="ti-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="https://twitter.com/kansal15" target="_blank" class="text-dark"><i
+                    class="ti-twitter-alt"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.linkedin.com/in/gaurav-kansal/" target="_blank"
+                  class="text-dark"><i class="ti-linkedin"></i></a></li>
             </ul>
           </div>
         </div>
@@ -152,7 +188,7 @@
 
   <!-- Main Script -->
   <script src="js/script.js"></script>
-
+  
 </body>
 
 </html>
