@@ -1,0 +1,366 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Mangal;
+	panose-1:2 4 5 3 5 2 3 3 2 2;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+@page WordSection1
+	{size:595.0pt 842.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-IN link=blue vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><u><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif;color:black'>Calculating
+DS record from DNSKEY</span></u></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>DS (Delegation Signer) is calculated using the following five fields
+—&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt'><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif;color:black'>a.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif;color:black'>D<span
+style='background:white'>NSKEY owner name: </span></span><a
+href="http://clean-internet.in"><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+background:white'>clean-internet.in</span></a><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black;background:white'>. (0x&nbsp;</span><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif;color:black'>0e636C65616E2D696E7465726E657402696E00<span
+style='background:white'>)</span></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;background:white'><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif;color:black'>b.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif;color:black'>Flags:
+257  (0x0101)</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;background:white'><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif;color:black'>c.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif;color:black'>Protocol:
+3  (0x03)</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;background:white'><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif;color:black'>d.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif;color:black'>Algorithm:
+13  (0x0D)</span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;background:white'><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif;color:black'>e.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif;color:black'>Public
+Key: HAbAHtlIrnJ7d8M7r4PpODUebLmP..</span></p>
+
+<p class=MsoNormal style='background:white'><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='background:white'><u><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black'>Hex of Public Key:</span></u><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif;color:black'>
+1c06c01ed948ae727b77c33baf83e938351e6cb98f9162bb2198b2e0a43ce9693da5b882ab5c5a025a8f986faecd7a3766b0c9104cda5001a32b8d013c125d3e</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>Now, combining the four parameters will lead to following data —</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>0e636C65616E2D696E7465726E657402696E00<span style='background:
+white'>0101030D1c06c01ed948ae727b77c33baf83e938351e6cb98f9162bb2198b2e0a43ce9693da5b882ab5c5a025a8f986faecd7a3766b0c9104cda5001a32b8d01</span>3c125d3e</span></p>
+
+<p class=MsoNormal style='background:white'><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='background:white'><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black'>Now, convert the hex to binary
+and find out the SHASUM - </span></p>
+
+<p class=MsoNormal style='background:white'><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='background:white'><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black'>echo -n
+0e636C65616E2D696E7465726E657402696E000101030D1c06c01ed948ae727b77c33baf83e938351e6cb98f9162bb2198b2e0a43ce9693da5b882ab5c5a025a8f986faecd7a3766b0c9104cda5001a32b8d013c125d3e
+| xxd -r -p | shasum -a 256</span></p>
+
+<p class=MsoNormal style='background:white'><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black'><br>
+<br>
+</span></p>
+
+<p class=MsoNormal style='background:white'><b><i><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black'>58b6825ce64a0bdffc475f82487f7a5793255986498041ea9b95241c8bf81ca7&nbsp;
+-</span></i></b></p>
+
+<p class=MsoNormal style='background:white'><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black'><br>
+<br>
+</span></p>
+
+<p class=MsoNormal style='background:white'><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black'>Which is exact same as DS
+record of </span><span style='color:black'><a href="http://clean-pipe.in"><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif'>clean-pipe.in</span></a></span><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif;color:black'>.
+domain - <br>
+<br>
+</span></p>
+
+<p class=MsoNormal style='background:white'><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black'>#dig clean-internet.in.&nbsp;
+DS +short&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+
+<p class=MsoNormal style='background:white'><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='background:white'><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black'>58183 13 2 <b><i>58B6825CE64A0BDFFC475F82487F7A5793255986498041EA9B95241C
+8BF81CA7</i></b></span></p>
+
+<p class=MsoNormal style='background:white'><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='background:white'><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='background:white'><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><u><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>Further explanation </span></u></b></p>
+
+<p class=MsoNormal><b><u><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'><span style='text-decoration:none'>&nbsp;</span></span></u></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='position:relative;z-index:251659264'><span
+style='position:absolute;left:-20px;top:-158px;width:505px;height:455px'><map
+name=MicrosoftOfficeMap0><area shape=Rect
+coords="0, 211, 505, 455" nohref><area shape=Rect
+coords="10, 0, 469, 243" href="http://clean-internet.in/"></map><img border=0
+width=505 height=455 src=missing.gif></span></span><span style='font-size:10.0pt;
+font-family:"Times New Roman",serif;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=MsoNormal><u><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<br clear=ALL>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'><br>
+<br>
+</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'><br>
+<br>
+</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>Ref —&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>1.&nbsp;</span><a
+href="https://www.mail-archive.com/opendnssec-user@lists.opendnssec.org/msg01788.html"><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif'>https://www.mail-archive.com/opendnssec-user@lists.opendnssec.org/msg01788.html</span></a></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>2.&nbsp;</span><a
+href="https://stackoverflow.com/questions/14930460/how-to-verify-dnskey-by-using-its-corresponding-ds"><span
+style='font-size:10.0pt;font-family:"Times New Roman",serif'>https://stackoverflow.com/questions/14930460/how-to-verify-dnskey-by-using-its-corresponding-ds</span></a></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
+
