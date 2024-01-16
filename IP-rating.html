@@ -193,10 +193,14 @@
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
     </svg>
   </div>
-
-
-  <!-- jQuery -->
-  <script src="plugins/jQuery/jquery.min.js"></script>
+   <script src="plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+        <script>
+            $('#myHead').load('header.html');
+            $(document).ready(function () {
+                $("#skipnone").remove();
+            });
+            $('#myFooter').load('footer.html');
+        </script>
   <!-- Bootstrap JS -->
   <script src="plugins/bootstrap/bootstrap.bundle.min.js"></script>
   <!-- slick slider -->
@@ -207,16 +211,8 @@
   <script src="plugins/headroom/headroom.js"></script>
   <!-- reading time -->
   <script src="plugins/reading-time/readingTime.min.js"></script>
-
   <!-- Main Script -->
-  <script src="js/script.js"></script>
-<script>
-   $('#myHead').load('header.html');
- $('#myFooter').load('footer.html');
-$(document).ready(function() {
-      $("#skipnone").hide();
-    });
-    </script>
+  <script src="js/script.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
