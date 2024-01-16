@@ -951,8 +951,14 @@
   </div>
 
 
-  <!-- jQuery -->
-  <script src="plugins/jQuery/jquery.min.js"></script>
+   <script src="plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+        <script>
+            $('#myHead').load('header.html');
+            $(document).ready(function () {
+                $("#skipnone").remove();
+            });
+            $('#myFooter').load('footer.html');
+        </script>
   <!-- Bootstrap JS -->
   <script src="plugins/bootstrap/bootstrap.bundle.min.js"></script>
   <!-- slick slider -->
@@ -965,14 +971,7 @@
   <script src="plugins/reading-time/readingTime.min.js"></script>
 
   <!-- Main Script -->
-  <script src="js/script.js"></script>
-<script>
-   $('#myHead').load('header.html');
- $('#myFooter').load('footer.html');
-$(document).ready(function() {
-      $("#skipnone").hide();
-    });
-    </script>
-</body>
+   <script src="js/script.js" crossorigin="anonymous"></script>
+ </body>
 
 </html>
