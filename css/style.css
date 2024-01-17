@@ -1616,6 +1616,13 @@ blockquote {
 
 /* End */
 
+h6 span{
+  color: #d58753;
+} 
+h6 p{
+  color: #d58753;
+} 
+
 /* media query css */
 
 @media (max-width: 480px) {

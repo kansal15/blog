@@ -34,6 +34,7 @@
         <!-- /preloader -->
 
         <div class="navigation" id="myHead"></div>
+
         <!-- page-title -->
         <section class="section bg-secondary">
             <div class="container">
@@ -51,7 +52,7 @@
                     <div class="col-md-4">
                         <div class="text-center">
                             <div class="left-shape left-shape-svg left-text-palette-3-base left-shape-1">
-                                <svg class="left-svg-link" preserveAspectRatio="none" viewBox="0 0 160 160">
+                                <svg class="left-svg-link" preserveAspectRatio="none" viewBox="0 0 160 160" style="">
                                 <use xlink:href="#svg-6487"></use>
                                 </svg>
                                 <svg class="left-svg-content" viewBox="0 0 160 160" x="0px" y="0px" id="svg-6487"
@@ -84,19 +85,19 @@
         </section>
 
         <div class="bg-secondary footer-bg" id="myFooter"></div>
-
         <div class="progress-wrap">
             <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
             </svg>
         </div>
+
        <script src="plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
         <script>
-            $('#myHead').load('header.html');
+            $('#myHead').load('/blog/include/header.html');
             $(document).ready(function () {
                 $("#skipnone").remove();
             });
-            $('#myFooter').load('footer.html');
+            $('#myFooter').load('/blog/include/footer.html');
         </script>
         <!-- Bootstrap JS -->
         <script src="plugins/bootstrap/bootstrap.min.js"></script>
@@ -113,4 +114,5 @@
         <!-- Main Script -->
         <script src="js/script.js" crossorigin="anonymous"></script>
     </body>
+
 </html>

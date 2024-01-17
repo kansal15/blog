@@ -44,7 +44,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<h4>Calculating DS record from DNSKEY</h4>
+					<h4>*** write heading....</h4>
 				</div>
 			</div>
 		</div>
@@ -60,19 +60,47 @@
 					<div class="col-lg-12">
 						<div class="card-block">
 							<div class="content">
-
-								<p><a href="https://2023.apricot.net/" target="_blank"> DS (Delegation Signer)</a> is
-									calculated using the following five fields –</p>
+								<img src="../images/masonary-post/voting.jpg" alt="post-thumb" class="img-fluid mb-4">
+								<p class="blog-post-body">
+									APNIC (the Asia Pacific Network Information Centre) *** write paragraph
+								  </p>
+								<p>*** write paragraph</p>
 								<ol type="i">
-									<li>Flags:257 (0x0101)
+									<li>text
 									</li>
-									<li>Protocol:3 (0x03)
+									<li>text
 									</li>
-									<li>Algorithm:13 (0x0D)
+									<li>text
 									</li>
-									<li>Public Key: HAbAHtlIrnJ7d8M7r4PpODUebLmP..
+									<li>text
 									</li>
 								</ol>
+								<div class="mt-5 mb-5">
+									<h6><u>*** write Sub-heading</u></h6>
+									<div class="blog-table text-center">
+										<table class="table table-secondary">
+										  <thead>
+											<tr>
+											  <th scope="col">#</th>
+											  <th scope="col">NIR</th>
+											  <th scope="col">Serving Economy</th>
+											  <th scope="col">Member under each NIR </th>
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+											  <th scope="row">1</th>
+											  <td><a href="https://www.apjii.or.id/" target="_blank">APJII (ID) </a></td>
+											  <td>Indonesia</td>
+											  <td>2916 <sup>e</sup></td>
+											</tr>
+										  </tbody>
+										</table>
+									  </div>
+								  </div>
+
+								  <blockquote><span style="color: #d58753;">*** write block Sub-heading</span>
+								</blockquote>
 								<h6>Hex of Public Key:
 									<span>1c06c01ed948ae727b77c33baf83e938351e6cb98f9162bb2198b2e0a43ce9693da5b882ab5c5a025a8f986faecd7a3766b0c9104cda5001a32b8d013c125d3e</span>
 								</h6>
@@ -89,12 +117,6 @@
 									| xxd -r -p | shasum -a 256
 								</h6>
 
-								<h6><span>58b6825ce64a0bdffc475f82487f7a5793255986498041ea9b95241c8bf81ca7 -</span>
-								</h6>
-
-								<p>Which is exact same as DS record of <a href="clean-pipe.in"
-										target="_blank">clean-pipe.in.</a> domain -</p>
-								<p><a href="clean-pipe.in" target="_blank">#dig</a> clean-internet.in. DS +short</p>
 								<h6>58183 13 2 <span>58B6825CE64A0BDFFC475F82487F7A5793255986498041EA9B95241C
 										8BF81CA7</span>
 								</h6>
@@ -102,15 +124,6 @@
 								<blockquote>
 									<h6><u>Calculating hex of clean-internet.in </u></h6>
 									<h6>
-										<p>A domain name, in "wireformat" is a set of labels,
-											where each label is preceded by a length value and ends with the empty label
-											(value 0x00).</p>
-										<p>For clean-internet, wire format is : 0e (as length is 14) and then “63 6C 65
-											61 6E 2D 69 6E 74 65 72 6E 65 74” (the hex representation of c , l , e …);
-										</p>
-										<p>and for in. , wire format is : 02 (as length is 2) and then “69 6E” (the hex
-											representation of i and n); </p>
-										<p>followed by empty label : 00 </p>
 										<p>So, combine hex of <a href="clean-internet.in"
 												target="_blank">“clean-internet.in”</a> is — <b>"0x 0e 63 6C 65 61 6E 2D
 												69 6E 74 65 72 6E 65 74 02 69 6E 00”</b>
@@ -118,27 +131,7 @@
 										</p>
 									</h6>
 								</blockquote>
-								<blockquote>
-									<h6><u>Calculating Hex of DNSKEY which is in ASCII format.</u></h6>
-									<h6>
-										<p>dig <a href="clean-internet.in" target="_blank">clean-internet.in.</a> <b>
-												@1.10.10.11</b> DNSKEY +short +multiline
-											<br>
-											256 3 13
-											<b>yE2hqr/n8hRaX1lEFmjxMJSiuce0gM5yiYoPsacLNc1yV8HMo8+rbOYu68FSimSwIU5wZYR+kQEK4F/a/5mllQ==</b>
-											<br>
-											257 3 13 <b>HAbAHtlIrnJ7d8M7r4PpODUebLmPkWK7IZiy4KQ86Wk9pbiCq1xaAlqP
-												mG+uzXo3ZrDJEEzaUAGjK40BPBJdPg==</b>
-										</p>
-										<p>Calculating Hex of the DNSKEY portion of the KSK —</p>
-										<p>% echo -n 'HAbAHtlIrnJ7d8M7r4PpODUebLmPkWK7IZiy4KQ86Wk9pbiCq1xaAlqP
-											mG+uzXo3ZrDJEEzaUAGjK40BPBJdPg==' | base64 -D -i - | xxd -ps
-											<br><b>1c06c01ed948ae727b77c33baf83e938351e6cb98f9162bb2198b2e0a43c
-												e9693da5b882ab5c5a025a8f986faecd7a3766b0c9104cda5001a32b8d01
-												3c125d3e</b>
-										</p>
-									</h6>
-								</blockquote>
+							
 
 								<h6><u>References: </u></h6>
 								<ol>
