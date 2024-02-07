@@ -61,8 +61,7 @@
 						<div class="card-block">
 							<div class="content">
 
-								<p><a href="https://2023.apricot.net/" target="_blank"> DS (Delegation Signer)</a> is
-									calculated using the following five fields –</p>
+								<p>DS (Delegation Signer) is calculated using the following five fields –</p>
 								<ol type="i">
 									<li>Flags:257 (0x0101)
 									</li>
@@ -77,14 +76,12 @@
 									<span>1c06c01ed948ae727b77c33baf83e938351e6cb98f9162bb2198b2e0a43ce9693da5b882ab5c5a025a8f986faecd7a3766b0c9104cda5001a32b8d013c125d3e</span>
 								</h6>
 
-								<p><a href="https://2023.apricot.net/" target="_blank"> Now,</a> combining the four
-									parameters will lead to following data —</p>
+								<p>Now, combining the four parameters will lead to following data —</p>
 								<h6><span>0e636C65616E2D696E7465726E657402696E000101030D1c06c01ed948ae727b77c33baf83e938351e6cb98f9162bb2198b2e0a43ce9693da5b882ab5c5a025a8f986faecd7a3766b0c9104cda5001a32b8d013c125d3e</span>
 								</h6>
 
-								<p><a href="https://2023.apricot.net/" target="_blank">Now, </a>convert the hex to
-									binary and find out the SHASUM -</p>
-								<h6>echo -n<span>
+								<p>Now, convert the hex to binary and find out the SHASUM -</p>
+								<h6>echo -n <span>
 										0e636C65616E2D696E7465726E657402696E000101030D1c06c01ed948ae727b77c33baf83e938351e6cb98f9162bb2198b2e0a43ce9693da5b882ab5c5a025a8f986faecd7a3766b0c9104cda5001a32b8d013c125d3e</span>
 									| xxd -r -p | shasum -a 256
 								</h6>
@@ -92,9 +89,8 @@
 								<h6><span>58b6825ce64a0bdffc475f82487f7a5793255986498041ea9b95241c8bf81ca7 -</span>
 								</h6>
 
-								<p>Which is exact same as DS record of <a href="clean-pipe.in"
-										target="_blank">clean-pipe.in.</a> domain -</p>
-								<p><a href="clean-pipe.in" target="_blank">#dig</a> clean-internet.in. DS +short</p>
+								<p>Which is exact same as DS record of <span>clean-pipe.in.</span> domain -</p>
+								<p> #dig clean-internet.in. DS +short</p>
 								<h6>58183 13 2 <span>58B6825CE64A0BDFFC475F82487F7A5793255986498041EA9B95241C
 										8BF81CA7</span>
 								</h6>
@@ -111,8 +107,7 @@
 										<p>and for in. , wire format is : 02 (as length is 2) and then “69 6E” (the hex
 											representation of i and n); </p>
 										<p>followed by empty label : 00 </p>
-										<p>So, combine hex of <a href="clean-internet.in"
-												target="_blank">“clean-internet.in”</a> is — <b>"0x 0e 63 6C 65 61 6E 2D
+										<p>So, combine hex of “clean-internet.in” is — <b>"0x 0e 63 6C 65 61 6E 2D
 												69 6E 74 65 72 6E 65 74 02 69 6E 00”</b>
 											OR <b>0x0e636C65616E2D696E7465726E657402696E00</b>
 										</p>
@@ -121,7 +116,7 @@
 								<blockquote>
 									<h6><u>Calculating Hex of DNSKEY which is in ASCII format.</u></h6>
 									<h6>
-										<p>dig <a href="clean-internet.in" target="_blank">clean-internet.in.</a> <b>
+										<p>dig clean-internet.in. <b>
 												@1.10.10.11</b> DNSKEY +short +multiline
 											<br>
 											256 3 13
