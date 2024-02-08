@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary heading-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>
+                        Flaw in ServerKeyExchange messages of TLS Protocol
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> September 30, 2015</li>
+                            </ul>
+                            <div class="content">
+                                <p class="blog-post-body">
+                                    Here we will discuss the flaw in the ServerKeyExchange messages of the TLS protocol
+                                    which caused the Logjam attack over TLS while using Diffie-Hellman Key Exchange.
+                                </p>
+                                <p>Before SSLv3, we don't use to authenticate the ServerKeyExchange messages where
+                                    server negotiates with client regarding usage of cipersuite and parameters.<br>
+                                    From onwards SSLv3, TLS send the signed message where it mention about parameters it
+                                    will use but remain silent over ciphersuite.</p>
+                                <img src="../../images/ServerKeyExchange RFC 5246.png" alt="igi"
+                                    class="img-fluid w-50 py-3">
+
+                                <p>Or in other words, signed portion contains parameters but not contain information
+                                    about ciphersuite the server will going to use.<br>
+                                    Now just to remind you, the difference between DH and DH-EXPORT is the size of
+                                    parameters only.</p>
+                                <p><u>So how to use this flaw -</u></p>
+                                <p>If the server supports DH-EXPORT, an attacker (Men-in-the-Middle) can edit the
+                                    negotiation sent by the client (even if client doesn't support DH-EXPORT), and
+                                    replace the list of client supported ciphersuite with DH-EXPORT only. The server
+                                    will in turn send back a signed 512-bit export-grade Diffie-Hellman tuple, which the
+                                    client will blindly accept -- because it doesn't realise that the server is
+                                    negotiating the export version of the ciphersuite.
+                                </p>
+
+                                <img src="../../images/Logjam Attack.png" alt="igi" class="img-fluid w-50 py-3">
+                                <p class="text-center"><i>Logjam Attack</i></p>
+                                <p>All this hard work will fails when client and server will exchange the Finished
+                                    messages (this include Hash of all the data exchange between client and server). The
+                                    loophole (or the solution) of this is to recover the DH secret quickly before
+                                    Finished messages exchanged between client and server.</p>
+                                <img src="../../images/Finished message in TLS RFC 5246.png" alt="igi"
+                                    class="img-fluid w-50 py-3">
+                                <p>So, the main task will be solve 512 bit discrete logarithmic problem before exchange
+                                    of Finished messages. And this is a big task :).
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /blog post -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Main content -->
+
+    <div id="showsidebar"></div>
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>

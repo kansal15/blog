@@ -11,16 +11,16 @@
 
   <!-- ** Plugins Needed for the Project ** -->
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
   <!-- slick slider -->
-  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="../../plugins/slick/slick.css">
   <!-- themefy-icon -->
-  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
   <!-- Main Stylesheet -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="../../css/style.css" rel="stylesheet">
   <!--Favicon-->
-  <link rel="icon" type="image/png" href="images/favicon.jpg">
-  <link href="css/fontawesome/css/all.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+  <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -64,7 +64,7 @@
                     href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
                 <li class="list-inline-item"><i class="ti-calendar mr-2"></i> July 11, 2022</li>
               </ul>
-              <img src="images/masonary-post/voting.jpg" alt="post-thumb" class="img-fluid mb-4">
+              <img src="../../images/masonary-post/voting.jpg" alt="post-thumb" class="img-fluid mb-4">
               <div class="content">
                 <p class="blog-post-body">
                   APNIC (the Asia Pacific Network Information Centre) is the regional Internet address registry (RIR)
@@ -880,67 +880,8 @@
   </section>
   <!-- /Main content -->
 
-  <!--The pull tab used to open and close the sidebar-->
-  <div class="sidebar-tab" id="sidebar-tab">
-    <div class="vertical-text text-center" id="sidebar-tab-text" onmouseenter="toggleSidebar()">
-      <div class="blog-text"><i class="fa-solid fa-blog"></i>Latest &nbsp Post</div>
-    </div>
-  </div>
-  <!-- content of the sidebar-->
-  <div class="sidebar" id="sidebar" onmouseleave="mouseleave()">
-    <div class="container-liner">
-      <!-- Side post -->
-      <div class="col-lg-12">
-        <div class="widget">
-          <div class="closeLatestPost">
-            <i class="fa-solid fa-rectangle-xmark fs-4 text-danger" onclick="mouseleave()"></i>
-          </div>
-          <h6 class="mb-4">LATEST POST</h6>
-          <div class="media mb-4">
-            <div class="post-thumb-sm me-3">
-              <img class="img-fluid" src="images/masonary-post/apnic55.png" alt="post-thumb">
-            </div>
-            <div class="media-body">
-              <ul class="list-inline d-flex justify-content-between mb-2">
-                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
-                    href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
-                <li class="list-inline-item">May 06, 2023</li>
-              </ul>
-              <h6><a class="text-dark" href="Summary-report-of-APNIC.html">APNIC 55 Summary</a></h6>
-            </div>
-          </div>
-          <div class="media mb-4">
-            <div class="post-thumb-sm me-3">
-              <img class="img-fluid" src="images/masonary-post/voting.jpg" alt="post-thumb">
-            </div>
-            <div class="media-body">
-              <ul class="list-inline d-flex justify-content-between mb-2">
-                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
-                    href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
-                <li class="list-inline-item">July 11, 2022</li>
-              </ul>
-              <h6><a class="text-dark" href="APNIC-policy.html">APNIC's Members Voting Right</a></h6>
-            </div>
-          </div>
-          <div class="media mb-4">
-            <div class="post-thumb-sm me-3">
-              <img class="img-fluid" src="images/masonary-post/firefox.png" alt="post-thumb">
-            </div>
-            <div class="media-body">
-              <ul class="list-inline d-flex justify-content-between mb-2">
-                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
-                    href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
-                <li class="list-inline-item">May 16, 2022</li>
-              </ul>
-              <h6><a class="text-dark" href="configure-firefox.html">How to - Configure Firefox</a></h6>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /Side post -->
-    </div>
-  </div>
-
+  <div id="showsidebar"></div>
+  
   <div class="bg-secondary footer-bg" id="myFooter"></div>
 
 
@@ -951,27 +892,28 @@
   </div>
 
 
-   <script src="plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+   <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
         <script>
-            $('#myHead').load('/blog/include/header.html');
+            $('#myHead').load('../../include/header.html');
             $(document).ready(function () {
                 $("#skipnone").remove();
             });
-            $('#myFooter').load('/blog/include/footer.html');
+            $('#myFooter').load('../../include/footer.html');
+            $('#showsidebar').load('../../include/sidebarShow.html');
         </script>
   <!-- Bootstrap JS -->
-  <script src="plugins/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
   <!-- slick slider -->
-  <script src="plugins/slick/slick.min.js"></script>
+  <script src="../../plugins/slick/slick.min.js"></script>
   <!-- masonry -->
-  <script src="plugins/masonry/masonry.js"></script>
+  <script src="../../plugins/masonry/masonry.js"></script>
   <!-- headroom -->
-  <script src="plugins/headroom/headroom.js"></script>
+  <script src="../../plugins/headroom/headroom.js"></script>
   <!-- reading time -->
-  <script src="plugins/reading-time/readingTime.min.js"></script>
+  <script src="../../plugins/reading-time/readingTime.min.js"></script>
 
   <!-- Main Script -->
-   <script src="js/script.js" crossorigin="anonymous"></script>
+   <script src="../../js/script.js" crossorigin="anonymous"></script>
  </body>
 
 </html>

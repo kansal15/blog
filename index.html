@@ -1,291 +1,616 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Gaurav Kansal Blog</title>
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
 
-        <!-- mobile responsive meta -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-        <!-- ** Plugins Needed for the Project ** -->
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-        <!-- slick slider -->
-        <link rel="stylesheet" href="plugins/slick/slick.css">
-        <!-- themefy-icon -->
-        <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
-        <!-- Main Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-        <!--Favicon-->
-        <link rel="icon" type="image/png" href="images/favicon.jpg">
-        <link href="css/fontawesome/css/all.min.css" rel="stylesheet" />
-    </head>
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
+    <link href="css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
 
-    <body>
-        <!-- preloader -->
-        <div class="preloader">
-            <div class="loader">
-                <span class="dot"></span>
-                <div class="dots">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- banner area -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-end">
+                    <h1 class="mb-0" style="font-family: hanskendrick">Welcome</h1>
+                    <h2 class="title-border-lg blog-heading-h2" style="font-family: hanskendrick">to <i>Gaurav
+                            Kansal</i></h2>
+                    <p class="me-5">Gaurav Kansal is a Joint Director (IT) at the National Informatics Centre, a
+                        position he
+                        has held since 2010.</p>
+                    <span class="font-secondary text-dark me-3 fw-bold">Follow</span>
+                    <ul class="list-inline d-inline-block mb-5">
+                        <li class="list-inline-item mx-3"><a href="https://twitter.com/kansal15" target="_blank"
+                                class="text-dark"><i class="ti-twitter-alt"></i></a></li>
+                        <li class="list-inline-item mx-3"><a href="https://www.linkedin.com/in/gaurav-kansal/"
+                                target="_blank" class="text-dark"><i class="ti-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 text-right">
+                    <img class="img-fluid w-50" src="images/banner-img.png" alt="banner-image">
                 </div>
             </div>
         </div>
-        <!-- /preloader -->
+    </section>
+    <!-- /banner area -->
 
-        <div class="navigation" id="myHead"></div>
-
-        <!-- banner area -->
-        <section class="hero-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 align-self-end">
-                        <h1 class="mb-0" style="font-family: hanskendrick">Welcome</h1>
-                        <h2 class="title-border-lg blog-heading-h2" style="font-family: hanskendrick">to <i>Gaurav Kansal</i></h2>
-                        <p class="me-5">Gaurav Kansal is a Joint Director (IT) at the National Informatics Centre, a position he
-                            has held since 2010.</p>
-                        <span class="font-secondary text-dark me-3 fw-bold">Follow</span>
-                        <ul class="list-inline d-inline-block mb-5">
-                            <li class="list-inline-item mx-3"><a href="https://twitter.com/kansal15" target="_blank"
-                                                                 class="text-dark"><i class="ti-twitter-alt"></i></a></li>
-                            <li class="list-inline-item mx-3"><a href="https://www.linkedin.com/in/gaurav-kansal/" target="_blank"
-                                                                 class="text-dark"><i class="ti-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 text-right">
-                        <img class="img-fluid w-50" src="images/banner-img.png" alt="banner-image">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- /banner area -->
-
-        <section class="index-section" id="blog-section">
-            <div class="container">
-                <div class="row ">
-                    <!-- blog post -->
-                    <div class="col-lg-8 ">
-                        <input type='hidden' id='current_page' />
-                        <input type='hidden' id='show_per_page' />
-                        <div class="page" id="pagingBox">
-                            <div class="mb-60 apnicCatArtical">
-                                <article class="article-full-width">
-                                    <div class="post-image">
-                                        <img class="img-fluid" src="images/masonary-post/apnic55.png" alt="post-thumb">
-                                    </div>
-                                    <div class="post-content">
-                                        <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
-                                            <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i> May 06, 2023 | APNIC</li>
-                                            <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
-                                                read
-                                            </li>
-                                        </ul>
-                                        <h4 class="mb-4"><a href="Summary-report-of-APNIC.html" class="text-dark">Summary report of APNIC 55
-                                                (APRICOT
-                                                2023) Meeting held in Manila, Philippines</a></h4>
-                                        <p class="mb-0 post-summary"> APNIC Logo The APNIC 55 meeting was held in Manila, Philippines from
-                                            20th Feb to 02nd March 2023. The meeting was hosted by PhNOG, The Philippine Network Operators Group
-                                            (PhNOG) and supported by DOST- Advanced Science and Technology Institute. Every year, APNIC ... </p>
-                                        <a class="btn btn-transparent" href="Summary-report-of-APNIC.html">Continue...</a>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <div class="mb-60 apnicCatArtical">
-                                <article class="article-full-width">
-                                    <div class="post-image">
-                                        <img class="img-fluid" src="images/masonary-post/voting.jpg" alt="post-thumb">
-                                    </div>
-                                    <div class="post-content">
-                                        <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
-                                            <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>July 11, 2022 | APNIC</li>
-                                            <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
-                                                read
-                                            </li>
-                                        </ul>
-                                        <h4 class="mb-4"><a href="APNIC-policy.html" class="text-dark">Is APNIC policy of Members Voting
-                                                Rights
-                                                doing the Justice with NIRs and Corresponding Countries</a></h4>
-                                        <p class="mb-0 post-summary">
-                                            APNIC (the Asia Pacific Network Information Centre) is the regional Internet address registry (RIR)
-                                            for the Asia-Pacific region, service 56 economies, including India, Bangladesh, China, Australia,
-                                            Japan and others. APNIC is one of the world's five RIRs and is part of the Number ...</p>
-                                        <a class="btn btn-transparent" href="APNIC-policy.html">Continue...</a>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <div class="mb-60 dnsCatArtical">
-                                <article class="article-full-width">
-                                    <div class="post-image">
-                                        <img class="img-fluid" src="images/masonary-post/firefox.png" alt="post-thumb">
-                                    </div>
-                                    <div class="post-content">
-                                        <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
-                                            <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>May 16, 2022 | DNS</li>
-                                            <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
-                                                read
-                                            </li>
-                                        </ul>
-                                        <h4 class="mb-4"><a href="configure-firefox.html" class="text-dark">How to - Configure Firefox to use
-                                                only
-                                                DoH and not to fallback to OS native resolver</a></h4>
-                                        <p class="mb-0 post-summary">
-                                            In this post, i will talk about configuring firefox browser to use DoH and not to fallback to OS
-                                            native resolver Step 1 :- Configure DoH like the way it is mentioned here -
-                                            https://support.mozilla.org/en-US/kb/firefox-dns-over-https . I am using
-                                            https://doh.nkn.in/dns-query ....</p>
-                                        <a class="btn btn-transparent" href="configure-firefox.html">Continue...</a>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <div class="mb-60 wifiCatArtical">
-                                <article class="article-full-width">
-                                    <div class="post-image">
-                                        <img class="img-fluid" src="images/masonary-post/ip.png" alt="post-thumb">
-                                    </div>
-                                    <div class="post-content">
-                                        <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
-                                            <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>May 13, 2022 | WiFi</li>
-                                            <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
-                                                read
-                                            </li>
-                                        </ul>
-                                        <h4 class="mb-4"><a href="IP-rating.html" class="text-dark">IP Ratings</a></h4>
-                                        <p class="mb-0 post-summary">
-                                            An IP rating must begin with 5 for partial dust protection or 6 for complete dust protection. The IP
-                                            rating is two digits, with the first and second digit defined as follows: First Digit (intrusion
-                                            protection) 0. (or X - see section below): No special protection. Not rated ...
-                                        </p>
-                                        <a class="btn btn-transparent" href="IP-rating.html">Continue...</a>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="mb-60 apnicCatArtical wifiCatArtical">
-                                <article class="article-full-width">
-                                    <div class="post-image">
-                                        <img class="img-fluid" src="images/masonary-post/thank-you.jpg" alt="post-thumb">
-                                    </div>
-                                    <div class="post-content">
-                                        <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
-                                            <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>Nov 01, 2022 | APNIC</li>
-                                            <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
-                                                read
-                                            </li>
-                                        </ul>
-                                        <h4 class="mb-4"><a href="thankYou.html" class="text-dark">Thank you note</a></h4>
-                                        <p class="mb-0 post-summary">
-                                            "A thank you note is the simplest form of showing gratitude". I am both humbled and honored that you
-                                            have placed your confidence and support in me by electing me for the NRO NC Member and NIR SIG
-                                            Co-Chair position. I sincerely thank you for casting your valuable vote ...
-                                        </p>
-                                        <a class="btn btn-transparent" href="thankYou.html">Continue...</a>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                        <div class="pagination justify-content-center align-items-center" id='page_navigation'>
-                        </div>
-
-                        <div class="pagination justify-content-center align-items-center" id="page_navigations"
-                             style="display: none;">
-                        </div>
-                    </div>
-                    <!-- /blog post -->
-                    <!-- Side post -->
-                    <div class="col-lg-4">
-                        <div class="widget">
-                            <h6 class="mb-4">LATEST POST</h6>
-                            <div class="media mb-4">
-                                <div class="post-thumb-sm me-3">
+    <section class="index-section" id="blog-section">
+        <div class="container">
+            <div class="row ">
+                <!-- blog post -->
+                <div class="col-lg-8 ">
+                    <input type='hidden' id='current_page' />
+                    <input type='hidden' id='show_per_page' />
+                    <div class="page" id="pagingBox">
+                        <div class="mb-60 apnicCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
                                     <img class="img-fluid" src="images/masonary-post/apnic55.png" alt="post-thumb">
                                 </div>
-                                <div class="media-body">
-                                    <ul class="list-inline d-flex justify-content-between mb-2">
-                                        <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
-                                                href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
-                                        <li class="list-inline-item">May 06, 2023</li>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i> May 06,
+                                            2023 | APNIC</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
                                     </ul>
-                                    <h6><a class="text-dark" href="Summary-report-of-APNIC.html">APNIC 55 Summary</a></h6>
+                                    <h4 class="mb-4"><a href="2023/05/Summary-report-of-APNIC.html" class="text-dark">Summary
+                                            report of APNIC 55
+                                            (APRICOT
+                                            2023) Meeting held in Manila, Philippines</a></h4>
+                                    <p class="mb-0 post-summary"> APNIC Logo The APNIC 55 meeting was held in Manila,
+                                        Philippines from
+                                        20th Feb to 02nd March 2023. The meeting was hosted by PhNOG, The Philippine
+                                        Network Operators Group
+                                        (PhNOG) and supported by DOST- Advanced Science and Technology Institute. Every
+                                        year, APNIC ... </p>
+                                    <a class="btn btn-transparent" href="2023/05/Summary-report-of-APNIC.html">Continue...</a>
                                 </div>
-                            </div>
-                            <div class="media mb-4">
-                                <div class="post-thumb-sm me-3">
+                            </article>
+                        </div>
+
+                        <div class="mb-60 apnicCatArtical wifiCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/masonary-post/thank-you.jpg" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>Nov 01,
+                                            2022 | APNIC</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="2022/11/thankYou.html" class="text-dark">Thank you note</a></h4>
+                                    <p class="mb-0 post-summary">
+                                        "A thank you note is the simplest form of showing gratitude". I am both humbled
+                                        and honored that you
+                                        have placed your confidence and support in me by electing me for the NRO NC
+                                        Member and NIR SIG
+                                        Co-Chair position. I sincerely thank you for casting your valuable vote ...
+                                    </p>
+                                    <a class="btn btn-transparent" href="2022/11/thankYou.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 apnicCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
                                     <img class="img-fluid" src="images/masonary-post/voting.jpg" alt="post-thumb">
                                 </div>
-                                <div class="media-body">
-                                    <ul class="list-inline d-flex justify-content-between mb-2">
-                                        <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
-                                                href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
-                                        <li class="list-inline-item">July 11, 2022</li>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>July 11,
+                                            2022 | APNIC</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
                                     </ul>
-                                    <h6><a class="text-dark" href="APNIC-policy.html">APNIC's Members Voting Right</a></h6>
+                                    <h4 class="mb-4"><a href="2022/07/is-apnic-policy-of-members-voting.html" class="text-dark">Is APNIC policy of
+                                            Members Voting
+                                            Rights
+                                            doing the Justice with NIRs and Corresponding Countries</a></h4>
+                                    <p class="mb-0 post-summary">
+                                        APNIC (the Asia Pacific Network Information Centre) is the regional Internet
+                                        address registry (RIR)
+                                        for the Asia-Pacific region, service 56 economies, including India, Bangladesh,
+                                        China, Australia,
+                                        Japan and others. APNIC is one of the world's five RIRs and is part of the
+                                        Number ...</p>
+                                    <a class="btn btn-transparent" href="2022/07/is-apnic-policy-of-members-voting.html">Continue...</a>
                                 </div>
-                            </div>
-                            <div class="media mb-4">
-                                <div class="post-thumb-sm me-3">
+                            </article>
+                        </div>
+
+                        <div class="mb-60 dnsCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
                                     <img class="img-fluid" src="images/masonary-post/firefox.png" alt="post-thumb">
                                 </div>
-                                <div class="media-body">
-                                    <ul class="list-inline d-flex justify-content-between mb-2">
-                                        <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
-                                                href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
-                                        <li class="list-inline-item">May 16, 2022</li>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>May 16,
+                                            2022 | DNS</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
                                     </ul>
-                                    <h6><a class="text-dark" href="configure-firefox.html">How to - Configure Firefox</a></h6>
+                                    <h4 class="mb-4"><a href="2022/05/configure-firefox.html" class="text-dark">How to -
+                                            Configure Firefox to use
+                                            only
+                                            DoH and not to fallback to OS native resolver</a></h4>
+                                    <p class="mb-0 post-summary">
+                                        In this post, i will talk about configuring firefox browser to use DoH and not
+                                        to fallback to OS
+                                        native resolver Step 1 :- Configure DoH like the way it is mentioned here -
+                                        https://support.mozilla.org/en-US/kb/firefox-dns-over-https . I am using
+                                        https://doh.nkn.in/dns-query ....</p>
+                                    <a class="btn btn-transparent" href="2022/05/configure-firefox.html">Continue...</a>
                                 </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 wifiCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/masonary-post/ip.png" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>May 13,
+                                            2022 | WiFi</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="2022/05/IP-rating.html" class="text-dark">IP Ratings</a></h4>
+                                    <p class="mb-0 post-summary">
+                                        An IP rating must begin with 5 for partial dust protection or 6 for complete
+                                        dust protection. The IP
+                                        rating is two digits, with the first and second digit defined as follows: First
+                                        Digit (intrusion
+                                        protection) 0. (or X - see section below): No special protection. Not rated ...
+                                    </p>
+                                    <a class="btn btn-transparent" href="2022/05/IP-rating.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+                       
+
+                        <div class="mb-60 apnicCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/APNIC-policy.png" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>March 05,
+                                            2022 | APNIC</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="/2022/03/are-nirs-limiting-nations-say-in-apnic.html"
+                                            class="text-dark">Are NIRs limiting the
+                                            nation’s say in APNIC
+                                            governance policies? (NIR: Boon or Bane – Is APNIC
+                                            policy of Members Voting Rights doing the Justice with NIRs and
+                                            Corresponding Countries)</a></h4>
+
+                                    <a class="btn btn-transparent"
+                                        href="/2022/03/are-nirs-limiting-nations-say-in-apnic.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 dnsCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/root_server.jpg" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>February
+                                            15, 2022 | DNS</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="2022/02/history-of-root-servers.html"
+                                            class="text-dark">History of Root Servers</a></h4>
+
+                                    <a class="btn btn-transparent"
+                                        href="2022/02/history-of-root-servers.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 IPV6Artical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/create_badge.png" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>February
+                                            03, 2022 | IPV6</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="2022/02/ipv6-sage-certified-henet.html" class="text-dark">
+                                            IPv6 Sage Certified - HE.NET</a></h4>
+
+                                    <a class="btn btn-transparent"
+                                        href="2022/02/ipv6-sage-certified-henet.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 wifiCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/wlanChannle1.png" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>December
+                                            31, 2021 | WiFi</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="2021/12/availability-and-info-of-wlan-channels.html"
+                                            class="text-dark">Availability of 5 GHz WLAN Channels in
+                                            India under unlicensed band</a></h4>
+
+                                    <p class="mb-0 post-summary">
+                                        "Availability of 5 GHz WLAN Channels in India under unlicensed band in India,
+                                        Wireless Planning and
+                                        Coordination Wing of Department of Telecom, under Ministry of Communication
+                                        takes care of licensing
+                                        of radio frequencies....
+                                    </p>
+
+                                    <a class="btn btn-transparent"
+                                        href="2021/12/availability-and-info-of-wlan-channels.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 wifiCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/traditional_psk.png" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>July 25,
+                                            2021 | WiFi</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="2021/07/identity-psk-ipsk.html" class="text-dark">Identity
+                                            PSK ( iPSK)</a></h4>
+                                    <p class="mb-0 post-summary">
+                                        "With the evolution of IoT (Internet of Things), devices that connect wirelessly
+                                        have increased many
+                                        folds.
+
+                                        From webcams, Smartwatches, fitness bands, firestick, Alexa, Google Home, and
+                                        many more..,
+                                        everything is going wireless for connectivity and so does the security threat...
+                                    </p>
+
+                                    <a class="btn btn-transparent" href="2021/07/identity-psk-ipsk.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+
+                        <div class="mb-60 wifiCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/mimo.png" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September
+                                            01, 2020 | WiFi</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="2020/09/multiple-input-multiple-output-mimo.html" class="text-dark"> Multiple Input Multiple
+                                            Output (MIMO)</a>
+                                    </h4>
+
+                                    <a class="btn btn-transparent" href="2020/09/multiple-input-multiple-output-mimo.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 wifiCatArtical">
+                            <article class="article-full-width">
+                              <div class="post-image">
+                                <img class="img-fluid" src="images/wireless_communication.jpg" alt="post-thumb">
+                              </div>
+                              <div class="post-content">
+                                <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                  <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>August 31, 2020 | WiFi</li>
+                                  <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                                    read
+                                  </li>
+                                </ul>
+                                <h4 class="mb-4"><a href="2020/08/common-terms-used-in-wireless.html" class="text-dark"> Common terms used in Wireless
+                                    Communications</a></h4>
+                                   
+                                <a class="btn btn-transparent" href="2020/08/common-terms-used-in-wireless.html">Continue...</a>
+                              </div>
+                            </article>
+                          </div>
+
+                          <div class="mb-60 wifiCatArtical">
+                            <article class="article-full-width">
+                              <div class="post-image">
+                                <img class="img-fluid" src="images/igi2.png" alt="post-thumb">
+                              </div>
+                              <div class="post-content">
+                                <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                  <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>October 03, 2016 | WiFi</li>
+                                  <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                                    read
+                                  </li>
+                                </ul>
+                                <h4 class="mb-4"><a href="2020/08/common-terms-used-in-wireless.html" class="text-dark"> Analysis of IGI Airport Wi-Fi setup</a></h4>
+                                
+                                <p class="mb-0 post-summary">
+                                    The access points installed at T3, IGI Airport, New Delhi are of Cisco make, Internal access points with internal antennas. This is depicted in the below images – Cisco access points can be installed in two modes –
+                                </p>
+
+                                <a class="btn btn-transparent" href="2020/08/common-terms-used-in-wireless.html">Continue...</a>
+                              </div>
+                            </article>
+                          </div>
+
+                          <div class="mb-60 OtherCatArtical">
+                            <article class="article-full-width">
+                              <div class="post-image">
+                                <img class="img-fluid" src="images/CA SubCA Hierarchy.png" alt="post-thumb">
+                              </div>
+                              <div class="post-content">
+                                <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                  <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September 30, 2015 | Other</li>
+                                  <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                                    read
+                                  </li>
+                                </ul>
+                                <h4 class="mb-4"><a href="2015/09/ca-certificate-chain-and-traceroute-of.html" class="text-dark"> CA Certificate chain and traceroute of bad.horse
+                                </a></h4>
+                                
+                                <p class="mb-0 post-summary">
+                                    Today i come across a funny domain, name bad.horse; Its funny not because of its name but because of the certificate chain and traceroute to this domain. Both subCA hierarchy and tracroute, has the full lyrics of Bad Horse song. Interesting stuff and amazing use of technology.
+
+                                </p>
+
+                                <a class="btn btn-transparent" href="2015/09/ca-certificate-chain-and-traceroute-of.html">Continue...</a>
+                              </div>
+                            </article>
+                          </div>
+
+                          <div class="mb-60 OtherCatArtical">
+                            <article class="article-full-width">
+                              <div class="post-image">
+                                <img class="img-fluid" src="images/ServerKeyExchange RFC 5246.png" alt="post-thumb">
+                              </div>
+                              <div class="post-content">
+                                <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                  <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September 30, 2015 | Other</li>
+                                  <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                                    read
+                                  </li>
+                                </ul>
+                                <h4 class="mb-4"><a href="2015/09/flaw-in-serverkeyexchange-messages-of.html" class="text-dark"> Flaw in ServerKeyExchange messages of TLS Protocol
+                                </a></h4>
+                                
+                                <p class="mb-0 post-summary">
+                                    Here we will discuss the flaw in the ServerKeyExchange messages of the TLS protocol which caused the Logjam attack over TLS while using Diffie-Hellman Key Exchange. Before SSLv3, we don't use to authenticate the
+
+                                </p>
+
+                                <a class="btn btn-transparent" href="2015/09/flaw-in-serverkeyexchange-messages-of.html">Continue...</a>
+                              </div>
+                            </article>
+                          </div>
+
+                          <div class="mb-60 OtherCatArtical">
+                            <article class="article-full-width">
+                              <div class="post-image">
+                                <img class="img-fluid" src="images/freak.jpg" alt="post-thumb">
+                              </div>
+                              <div class="post-content">
+                                <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                  <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September 26, 2015 | Other</li>
+                                  <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
+                                    read
+                                  </li>
+                                </ul>
+                                <h4 class="mb-4"><a href="2015/09/freak-factoring-attack-on-rsa-export.html" class="text-dark"> “FREAK” -- Factoring attack on RSA-EXPORT Keys
+                                </a></h4>
+                                
+                                <p class="mb-0 post-summary">
+                                    FREAK attack allows an attacker to intercept the SSL/TLS traffic between the vulnerable client & server and force them to use week encryption, typically Export Grade encryption (i.e, 512 bit RSA key exchange)..
+
+
+                                </p>
+
+                                <a class="btn btn-transparent" href="2015/09/freak-factoring-attack-on-rsa-export.html">Continue...</a>
+                              </div>
+                            </article>
+                          </div>
+
+
+
+                    </div>
+                    <div class="pagination justify-content-center align-items-center" id='page_navigation'>
+                    </div>
+
+                    <div class="pagination justify-content-center align-items-center" id="page_navigations"
+                        style="display: none;">
+                    </div>
+                </div>
+                <!-- /blog post -->
+                <!-- Side post -->
+                <div class="col-lg-4">
+                    <div class="widget">
+                        <h6 class="mb-4">LATEST POST</h6>
+                        <div class="media mb-4">
+                            <div class="post-thumb-sm me-3">
+                                <img class="img-fluid" src="images/masonary-post/apnic55.png" alt="post-thumb">
+                            </div>
+                            <div class="media-body">
+                                <ul class="list-inline d-flex justify-content-between mb-2">
+                                    <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                            href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                    <li class="list-inline-item">May 06, 2023</li>
+                                </ul>
+                                <h6><a class="text-dark" href="Summary-report-of-APNIC.html">APNIC 55 Summary</a></h6>
                             </div>
                         </div>
-                        <div class="widget">
-                            <h6 class="mb-4">CATEGORIES</h6>
-                            <ul class="list-unstyled widget-list categories-list">
-                                <li class="apnicCat"><a class="d-flex">APNIC
-                                        <small class="ms-auto apnicCatvalue"></small></a>
-                                </li>
-                                <li class="dnsCat"><a href="javascript:void(0)" class="d-flex">DNS
-                                        <small class="ms-auto dnsCatvalue"></small></a>
-                                </li>
-                                <li class="wifiCat"><a href="javascript:void(0)" class="d-flex">WiFi
-                                        <small class="ms-auto wifiCatvalue"></small></a>
-                                </li>
-                            </ul>
+                        <div class="media mb-4">
+                            <div class="post-thumb-sm me-3">
+                                <img class="img-fluid" src="images/masonary-post/voting.jpg" alt="post-thumb">
+                            </div>
+                            <div class="media-body">
+                                <ul class="list-inline d-flex justify-content-between mb-2">
+                                    <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                            href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                    <li class="list-inline-item">July 11, 2022</li>
+                                </ul>
+                                <h6><a class="text-dark" href="APNIC-policy.html">APNIC's Members Voting Right</a></h6>
+                            </div>
+                        </div>
+                        <div class="media mb-4">
+                            <div class="post-thumb-sm me-3">
+                                <img class="img-fluid" src="images/masonary-post/firefox.png" alt="post-thumb">
+                            </div>
+                            <div class="media-body">
+                                <ul class="list-inline d-flex justify-content-between mb-2">
+                                    <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                            href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                    <li class="list-inline-item">May 16, 2022</li>
+                                </ul>
+                                <h6><a class="text-dark" href="configure-firefox.html">How to - Configure Firefox</a>
+                                </h6>
+                            </div>
                         </div>
                     </div>
-                    <!-- /Side post -->
+                    <div class="widget">
+                        <h6 class="mb-4">CATEGORIES</h6>
+                        <ul class="list-unstyled widget-list categories-list">
+                            <li class="apnicCat"><a class="d-flex">APNIC
+                                    <small class="ms-auto apnicCatvalue"></small></a>
+                            </li>
+                            <li class="dnsCat"><a href="javascript:void(0)" class="d-flex">DNS
+                                    <small class="ms-auto dnsCatvalue"></small></a>
+                            </li>
+                            <li class="wifiCat"><a href="javascript:void(0)" class="d-flex">WiFi
+                                    <small class="ms-auto wifiCatvalue"></small></a>
+                            </li>
+                            <li class="OtherCat"><a href="javascript:void(0)" class="d-flex">Other
+                                <small class="ms-auto OtherCatvalue"></small></a>
+                        </li>
+                        </ul>
+                    </div>
                 </div>
+                <!-- /Side post -->
             </div>
-        </section>
-
-        <div class="bg-secondary footer-bg" id="myFooter"></div>
-        <div class="progress-wrap">
-            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-            </svg>
         </div>
-        <!-- jQuery -->
-        <script src="plugins/jQuery/jquery.min.js"></script>
-        <script>
-            $('#myHead').load('/blog/include/header.html');
-            $('#myFooter').load('/blog/include/footer.html');
-        </script>
-        <!-- Bootstrap JS -->
-        <script src="plugins/bootstrap/bootstrap.bundle.min.js"></script>
-        <!-- slick slider -->
-        <script src="plugins/slick/slick.min.js"></script>
-        <!-- masonry -->
-        <script src="plugins/masonry/masonry.js"></script>
-        <!-- headroom -->
-        <script src="plugins/headroom/headroom.js"></script>
-        <!-- reading time -->
-        <script src="plugins/reading-time/readingTime.min.js"></script>
-        <!-- Main Script -->
-        <script src="js/script.js"></script>
-       
-    </body>
+    </section>
+
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- jQuery -->
+    <script src="plugins/jQuery/jquery.min.js"></script>
+    <script>
+        $('#myHead').load('include/header.html');
+        $('#myFooter').load('include/footer.html');
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="plugins/reading-time/readingTime.min.js"></script>
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+
+</body>
 
 </html>

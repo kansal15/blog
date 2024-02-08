@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary heading-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>
+                        Analysis of IGI Airport Wi-Fi setup
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> October 03, 2016</li>
+                            </ul>
+                            <div class="content">
+                                <p class="blog-post-body">
+                                    The access points installed at T3, IGI Airport, New Delhi are of Cisco make,
+                                    Internal access points with internal antennas. This is depicted in the below images
+                                    –
+
+                                </p>
+                                <div class="d-flex flex-column justify-content-center">
+                                    <img src="../../images/igi1.png" alt="igi" class="img-fluid w-50 py-3">
+
+                                    <img src="../../images/igi2.png" alt="igi" class="img-fluid w-50 py-3">
+
+                                </div>
+
+                                <h6><u>Cisco access points can be installed in two modes –:- </u></h6>
+                                <ol>
+                                    <li><b>Lightweight installation.</b><br>
+                                        <p>In this mode, access points make a secure tunnel with the wireless controller
+                                            and pass all the user traffic to the controller. Based on configuration,
+                                            controller take appropriate actions and process the traffic. Advisable for
+                                            large/enterprise setup.</p>
+                                    </li>
+
+                                    <li><b>Autonomous installation –</b> <br>
+                                        <p>In this mode, access points play the role of controller also and process the
+                                            traffic as per policy. Ideal for small setup.</p>
+                                    </li>
+                                </ol>
+                                <p>
+                                    I roam around at various corner of the floor after connecting to wireless and I
+                                    didn’t face any connection drop (or re-authentication issues). This is a roaming
+                                    functionality which usually possible only in controller based model. This cause me
+                                    believe that wireless setup installed at T3, IGI Airport, New Delhi is controller
+                                    based setup.
+                                </p>
+
+                                <h6><u>SSID and other information’s –</u></h6>
+                                <p>SSID announced at T3 was <b>‘Tata Docomo Wi-Fi’</b> and it was an open ssid (service
+                                    set identifier). So, from the name itself it was clearly visible that Wi-Fi service
+                                    is provided by Tata Docomo (why will anyone else do the advertisement for Tata
+                                    Docomo J).
+                                    After connecting to the SSID, all the user traffic is diverted to the captive portal
+                                    which asked for OTP based authentication and only after successful authentication,
+                                    user is allowed to access the network (Internet).</p>
+                                <img src="../../images/igi3.png" alt="igi" class="img-fluid w-50 py-3">
+
+                                <p>From the above screen shots, we are able to find out some useful information like
+                                    network segment, signal strength, interference and about 802.11 protocol used.</p>
+
+                                <ol>
+                                    <li><b>Network</b>- The IP segment used for wireless was 100.77.32.0/20 which
+                                        belongs to
+                                        100.64.0.0/10 super net which is reserved as <b>‘Shared Address Space’</b> by
+                                        IANA
+                                        and is described in <a href="https://tools.ietf.org/html/rfc6598"
+                                            target="_blank">RFC 6598</a>.</li>
+
+                                    <li><b>802.11 information</b>- I was connected to wireless network over 802.11n
+                                        standard
+                                        in 2.4 GHz band, over channel number 6 and channel width was 20MHz (.11n
+                                        standard
+                                        works on both the band i.e., 2.4GHz and 5GHz). Connection speed was 145Mbps
+                                        (which
+                                        is fairly good) and MCS Index was 15.</li>
+
+                                    <li> <b>Signal strength</b>- RSSI value of the connection was -57dBm, which is
+                                        fairly
+                                        good as per standards and noise was -96dBM, which is negligible. So, we can
+                                        figure
+                                        out that interference was very low, or you can say, it was nearly negligible
+                                        (and
+                                        this was expected because wireless network was confined in the airport, which is
+                                        under the reach of limited persons only).
+
+                                    </li>
+                                </ol>
+
+
+
+                                <h6><u>Authentication</u></h6>
+                                <p>SSID announced for guest access was of <b>web-auth</b> type; means it was open
+                                    (anyone can come & connect) and all the user traffic was diverted to the captive
+                                    portal, which asked for user authentication through OTP before allowing the user to
+                                    access the network.</p>
+                                <img src="../../images/igi4.png" alt="igi" class="img-fluid w-50 py-3">
+
+                                <p>Website which asked for user information was <a
+                                        href="https://hs.tatadocomo.com/ttsl/home.do"
+                                        target="_blank">https://hs.tatadocomo.com/ttsl/home.do</a>, hosted over public
+                                    ip address (i.e., 14.194.199.10) but only accessible when you are connected through
+                                    their Wi-Fi. Website was over SSL/TLS which is a best practice in these cases.</p>
+                                <img src="../../images/igi5.png" alt="igi" class="img-fluid w-50 py-3">
+
+                                <p>After successful authentication, user is allowed to access the Wi-Fi for 45 mins
+                                    without any charges. Above image depicts that this (in my case when I took the
+                                    screen shot, 44 Min 44 Sec are left) and after that you have to purchase the coupon
+                                    to access the wireless and same is available on the captive portal in the
+                                    denominations of 20, 50 or 100. The white space visible over voucher images is the
+                                    space for Ads which was blocked by Ad Block extension.
+                                </p>
+
+                                <h6><u>Speed Test and Uplink Information</u></h6>
+                                <p>In 802.11 information part, I mentioned that I was connected over 145Mbps, which is a
+                                    theoretical connection speed based on Tx power, Rx power, RSSI values, Noise,
+                                    Modulation and certain other factors. The actual speed which I measured through
+                                    speed test utility is shown below –</p>
+                                <img src="../../images/igi6.png" alt="igi" class="img-fluid w-50 py-3">
+
+                                <p>Speed test results show a download speed of 22 Mbps and upload speed of 32 Mbps which
+                                    is much better than the average broadband speed in India.</p>
+                                <img src="../../images/igi7.png" alt="igi" class="img-fluid w-50 py-3">
+
+                                <p>If I talk about the up-link which is used for upstreaming the Wi-Fi at T3, I was
+                                    going out through Tata Docomo’s network and my public IP was 49.248.225.35</p>
+
+                                <p>This shows that Tata Docomo provides end-to-end wireless network at T3 which includes
+                                    wireless access points, controller and up-link for internet reachability.</p>
+
+                                <img src="../../images/igi8.png" alt="igi" class="img-fluid w-50 py-3">
+
+                            </div>
+                        </div>
+                        <!-- /blog post -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Main content -->
+
+    <div id="showsidebar"></div>
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>

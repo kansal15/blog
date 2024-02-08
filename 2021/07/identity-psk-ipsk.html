@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary heading-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>Identity PSK ( iPSK)</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> July 25, 2021</li>
+                            </ul>
+                            <div class="content">
+                                <p class="blog-post-body">
+                                    With the evolution of IoT (Internet of Things), devices that connect wirelessly have
+                                    increased many folds.
+                                </p>
+                                <p>From webcams, Smartwatches, fitness bands, firestick, Alexa, Google Home, and many
+                                    more.., everything is going wireless for connectivity and so does the security
+                                    threat. The main concern with IoT devices is the unavailability of the full wireless
+                                    protocol stack (and in the majority of devices, support of 802.1x is not available).
+                                    So, previously we only have the WPA-PSK option for connecting the IoT devices. </p>
+
+
+                                <p>In WPA*-PSK (WPA or WPA2) WLAN, a Pre-Shared Key (PSK) is configured and distributed
+                                    to all the clients that connect to the WLAN. This leads to PSK leakage, and it can
+                                    be accessible to unauthorized users (due to the nature of common PSK across all the
+                                    devices). </p>
+                                <p>Therefore, there was a need to provision unique PSK or Multiple PSK per SSID.
+                                    Identity-PSKs are unique pre-shared keys created for clients/groups on the same
+                                    WLAN.</p>
+
+                                <h6><u>Features of iPSK:- </u></h6>
+                                <ol>
+                                    <li>Unique PSK for individual Client/Groups.</li>
+                                    <li>Easy to revoke the PSK, if gets compromised without affecting the other groups.
+                                    </li>
+                                    <li>Easy to track down and mitigate the affected PSK group.</li>
+                                </ol>
+
+                                <img src="../../images/traditional_psk.png" alt="traditional_psk"
+                                    class="img-fluid w-50 py-3">
+                                <p class="fst-italic">Fig-1 shows the traditional PSK where SSID “PSK” is having the
+                                    Pre-Shared
+                                    Key as
+                                    “Prekey@123” and is distributed to all devices connecting to it.</p>
+                                <img src="../../images/identity-psk.png" alt="traditional_psk"
+                                    class="img-fluid w-50 py-3">
+                                <p class="fst-italic">Fig-2 showing the SSID “iPSK” configured and different devices are
+                                    being connected to the same SSID iPSK with individual keys.</p>
+                                <h6><u>Pre-requisites for Identity PSK in CISCO environment</u></h6>
+                                <ol>
+                                    <li>Wireless LAN controller (version 8.5 or later)</li>
+                                    <li>Identity services engine (version 2.2 or later)</li>
+                                    <li>Lightweight Access point</li>
+                                    <li>Identity PSK WLAN</li>
+                                </ol>
+                                <img src="../../images/ipsk_working.png" alt="ipsk working" class="img-fluid w-50 py-3">
+                                <p class="fst-italic">Fig-3 showing the flow of iPSK WLAN and the necessary
+                                    configuration on WLC and Radius.</p>
+                                <h6><u>Implementing iPSK in Cisco wireless environment:-</u></h6>
+                                <p>Configuration of WLC</p>
+                                <h6><u>Step 1-</u></h6>
+                                <p> Addition of Radius Server. Go to Security>AAA>Radius Authentication. (i.e.,
+                                    adding details of ISE, which is a radius server in this example)</p>
+                                <h6><u>Step 2-</u></h6>
+                                <p>Creation of Identity PSK WLAN </p>
+                                <h6><u>Step 3-</u></h6>
+                                <p> Edit WLAN, Layer-2 choose WPA2 Policy>PSK and check MAC Filtering</p>
+                                <img src="../../images/ipskstep-3.png" alt="" class="img-fluid w-50 py-3">
+                                <h6><u>Step 4-</u></h6>
+                                <p>Choose Radius (ISE) Server under Security>AAA Servers</p>
+                                <h6><u>Step 5-</u></h6>
+                                <p>Check Allow AAA Override under WLAN Advanced</p>
+                                <img src="../../images/ipskstep-5.png" alt="" class="img-fluid w-50 py-3">
+                                <h6><u>Now, we have two scenarios --</u></h6>
+                                <ul>
+                                    <li>Separate PSK for individual mac address</li>
+                                    <li>Common PSK for a group of devices and multiple device groups across a single
+                                        WLAN </li>
+                                </ul>
+
+                                <h6><u>Case1- Creation of Authorisation policy based on individual MAC addresses </u>
+                                </h6>
+                                <p>Configuration on Radius (ISE)</p>
+
+                                <h6><u>Step 1-</u></h6>
+                                <p>Adding NAD (Network Access Device) like WLC. Go to Administration>Network
+                                    Resources>Network Devices>Click Add.</p>
+
+                                <h6><u>Step 2-</u></h6>
+                                <p>Create an authorization profile under Policy>Policy Elements>Results>Authorisation
+                                    Profiles.</p>
+                                <img src="../../images/ipskstep-ise2.png" alt="" class="img-fluid w-50 py-3">
+
+                                <h6><u>Step 3-</u></h6>
+                                <p>Create Authorisation rule for individual users on basis of MAC address </p>
+                                <img src="../../images/ipskstep-ise3.png" alt="" class="img-fluid w-50 py-3">
+
+                                <h6><u>Case2- Creation of Authorisation policy based on device groups</u></h6>
+                                <h6><u>Step 1-</u></h6>
+                                <p>Create different endpoint groups for a set of different devices under
+                                    Administration>Groups>Endpoint Identity Groups</p>
+
+                                <h6><u>Step 2-</u></h6>
+                                <p>Create different Authorisation Profiles for different device groups under
+                                    Policy>Policy Elements>Authorization>Authorization Profiles</p>
+                                <img src="../../images/ipskstepcase-2a.png" alt="" class="img-fluid w-50 py-3">
+                                <img src="../../images/ipskstepcase-2b.png" alt="" class="img-fluid w-50 py-3">
+                                <p>Devices having MAC addresses under group G1 will have to connect with WLAN-iPSK with
+                                    key=”nkn@1234” and Devices MAC addresses under group G2 will have to connect with
+                                    WLAN-iPSK with key=” Tech#123”</p>
+
+                                <h6><u>Step 3-</u></h6>
+                                <p>Creation of separate Authorization profiles under Policy>Authorization</p>
+                                <img src="../../images/ipskstepcase-3.png" alt="" class="img-fluid w-50 py-3">
+                                <p>Happy Browsing 😊</p>
+
+                            </div>
+                        </div>
+                        <!-- /blog post -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Main content -->
+
+    <div id="showsidebar"></div>
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>

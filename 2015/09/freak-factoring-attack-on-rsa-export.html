@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary heading-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>
+                        “FREAK” -- Factoring attack on RSA-EXPORT Keys
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> September 26, 2015</li>
+                            </ul>
+                            <div class="content">
+                                <p class="blog-post-body">
+                                    FREAK attack allows an attacker to intercept the SSL/TLS traffic between the
+                                    vulnerable client & server and force them to use week encryption, typically Export
+                                    Grade encryption (i.e, 512 bit RSA key exchange), which an attacker can break and
+                                    steal the confidential data.
+
+                                </p>
+                                <p>FREAK attack was announced on March 3, 2015 and was discovered by Karthikeyan
+                                    Bhargavan at INRIA in Paris.
+                                    The FREAK attack is possible when a vulnerable browser connects to a susceptible web
+                                    server—a servezr that accepts “export-grade” encryption.</p>
+                                <h6><u>Vulnerable TLS Clients-</u></h6>
+                                <p><b>OpenSSL </b>- Versions before 1.0.1 </p>
+
+                                <h6><u>Vulnerable Web Browsers-</u></h6>
+                                <p><b>Chrome</b>- Versions before 41</p>
+                                <p><b>Android Browsers </b>- Vulnerable as they rarely gets updates</p>
+
+                                <h6><u>Acknowledgements -</u></h6>
+                                <p>
+                                    <i> <a href="http://blog.cryptographyengineering.com/2015/03/attack-of-week-freak-or-factoring-nsa.html"
+                                            target="_blank">http://blog.cryptographyengineering.com/2015/03/attack-of-week-freak-or-factoring-nsa.html</a><br>
+                                        <a href="https://www.smacktls.com/"
+                                            target="_blank">https://www.smacktls.com/</a><br>
+                                        <a href="https://freakattack.com/" target="_blank">https://freakattack.com/</a>
+                                    </i>
+                                </p>
+
+                            </div>
+                        </div>
+                        <!-- /blog post -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Main content -->
+
+    <div id="showsidebar"></div>
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>

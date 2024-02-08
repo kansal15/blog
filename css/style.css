@@ -1356,11 +1356,13 @@ blockquote {
   padding: 10px 40px;
 }
 
+.headroom--not-top.headroom--unpinned ~ #showsidebar .sidebar,
 .headroom--not-top.headroom--unpinned ~ .sidebar {
   top: 0px;
   transition: all 0.7s ease-in-out;
 }
 
+.headroom--not-top.headroom--pinned ~ #showsidebar .sidebar,
 .headroom--not-top.headroom--pinned ~ .sidebar {
   transition: all 0.7s ease-in-out;
 }
@@ -1614,14 +1616,19 @@ blockquote {
   transition: all 200ms linear;
 }
 
+.heading-section {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 /* End */
 
-h6 span{
+h6 span {
   color: #d58753;
-} 
-h6 p{
+}
+h6 p {
   color: #d58753;
-} 
+}
 
 /* media query css */
 
@@ -1700,8 +1707,9 @@ h6 p{
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  #blog-post-block img {
-    width: 100%;
+  #blog-post-block img,
+  #blog-post-block img.img-fluid.w-50 {
+    width: 100% !important;
   }
   .headroom--not-top.headroom--unpinned ~ .sidebar {
     top: 6.14rem;
@@ -1734,8 +1742,9 @@ h6 p{
   .section h4 {
     font-size: 0.875rem;
   }
-  #blog-post-block img {
-    width: 100%;
+  #blog-post-block img,
+  #blog-post-block img.img-fluid.w-50 {
+    width: 100% !important;
   }
   .card-block {
     padding: 10px 10px;
