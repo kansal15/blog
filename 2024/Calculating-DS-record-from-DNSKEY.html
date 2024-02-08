@@ -62,7 +62,7 @@
 							<div class="content">
 
 								<p>DS (Delegation Signer) is calculated using the following five fields –</p>
-								<ol type="i">
+								<ol type="i" margin-top: 0;>
 									<li>Flags:257 (0x0101)
 									</li>
 									<li>Protocol:3 (0x03)
@@ -98,14 +98,8 @@
 								<blockquote>
 									<h6><u>Calculating hex of clean-internet.in </u></h6>
 									<h6>
-										<p>A domain name, in "wireformat" is a set of labels,
-											where each label is preceded by a length value and ends with the empty label
-											(value 0x00).</p>
-										<p>For clean-internet, wire format is : 0e (as length is 14) and then “63 6C 65
-											61 6E 2D 69 6E 74 65 72 6E 65 74” (the hex representation of c , l , e …);
-										</p>
-										<p>and for in. , wire format is : 02 (as length is 2) and then “69 6E” (the hex
-											representation of i and n); </p>
+										<p>A domain name, in "wireformat" is a set of labels, where each label is preceded by a length value and ends with the empty label (value 0x00).</p>
+										<p>For clean-internet, wire format is : 0e (as length is 14) and then “63 6C 65 61 6E 2D 69 6E 74 65 72 6E 65 74” (the hex representation of c , l , e …); and for "in.", wire format is : 02 (as length is 2) and then “69 6E” (the hex representation of i and n); </p>
 										<p>followed by empty label : 00 </p>
 										<p>So, combine hex of “clean-internet.in” is — <b>"0x 0e 63 6C 65 61 6E 2D
 												69 6E 74 65 72 6E 65 74 02 69 6E 00”</b>
@@ -136,7 +130,7 @@
 								</blockquote>
 
 								<h6><u>References: </u></h6>
-								<ol>
+								<ol margin-top: 0;>
 									<li><a
 											href="https://www.mail-archive.com/opendnssec-user@lists.opendnssec.org/msg01788.html">https://www.mail-archive.com/opendnssec-user@lists.opendnssec.org/msg01788.html</a>
 									</li>
