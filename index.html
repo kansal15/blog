@@ -85,7 +85,7 @@
                                             </li>
                                         </ul>
                                         <h4 class="mb-4"><a href="/blog/2024/02/Calculating-DS-record-from-DNSKEY.html" class="text-dark">Calculating DS record from DNSKEY</a></h4>
-                                        <p class="mb-0 post-summary"><a href="https://2023.apricot.net/" target="_blank"> DS (Delegation Signer)</a> is calculated using the ... </p>
+                                        <p class="mb-0 post-summary">DS (Delegation Signer) is calculated using the ... </p>
                                         <a class="btn btn-transparent" href="/blog/2024/02/Calculating-DS-record-from-DNSKEY.html">Continue...</a>
                                     </div>
                                 </article>
@@ -530,72 +530,8 @@
                     <div class="col-lg-4">
                         <div class="widget">
                             <h6 class="mb-4">LATEST POST</h6>
-                            <div class="media mb-4">
-                                <div class="post-thumb-sm me-3">
-                                    <img class="img-fluid" src="images/masonary-post/dnskey.jpg" alt="post-thumb">
-                                </div>
-                                <div class="media-body">
-                                    <ul class="list-inline d-flex justify-content-between mb-2">
-                                        <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
-                                                href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
-                                        <li class="list-inline-item"> Feb 13, 2024</li>
-                                    </ul>
-                                    <h6><a class="text-dark" href="/blog/2024/02/Calculating-DS-record-from-DNSKEY.html">Calculating DS record</a></h6>
-                                </div>
-                            </div>
-                            <div class="media mb-4">
-                                <div class="post-thumb-sm me-3">
-                                    <img class="img-fluid" src="images/masonary-post/apnic55.png" alt="post-thumb">
-                                </div>
-                                <div class="media-body">
-                                    <ul class="list-inline d-flex justify-content-between mb-2">
-                                        <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
-                                                href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
-                                        <li class="list-inline-item">May 06, 2023</li>
-                                    </ul>
-                                    <h6><a class="text-dark" href="/blog/2023/05/Summary-report-of-APNIC.html">APNIC 55 Summary</a></h6>
-                                </div>
-                            </div>
-                            <div class="media mb-4">
-                                <div class="post-thumb-sm me-3">
-                                    <img class="img-fluid" src="images/masonary-post/thank-you.jpg" alt="post-thumb">
-                                </div>
-                                <div class="media-body">
-                                    <ul class="list-inline d-flex justify-content-between mb-2">
-                                        <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
-                                                href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
-                                        <li class="list-inline-item">Nov 01, 2022</li>
-                                    </ul>
-                                    <h6><a class="text-dark" href="/blog/2023/05/Summary-report-of-APNIC.html">Thank you note</a></h6>
-                                </div>
-                            </div>
-                            <div class="media mb-4">
-                                <div class="post-thumb-sm me-3">
-                                    <img class="img-fluid" src="images/masonary-post/voting.jpg" alt="post-thumb">
-                                </div>
-                                <div class="media-body">
-                                    <ul class="list-inline d-flex justify-content-between mb-2">
-                                        <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
-                                                href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
-                                        <li class="list-inline-item">July 11, 2022</li>
-                                    </ul>
-                                    <h6><a class="text-dark" href="/blog/2022/07/is-apnic-policy-of-members-voting.html">APNIC's Members Voting Right</a></h6>
-                                </div>
-                            </div>
-                            <div class="media mb-4">
-                                <div class="post-thumb-sm me-3">
-                                    <img class="img-fluid" src="images/masonary-post/firefox.png" alt="post-thumb">
-                                </div>
-                                <div class="media-body">
-                                    <ul class="list-inline d-flex justify-content-between mb-2">
-                                        <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
-                                                href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
-                                        <li class="list-inline-item">May 16, 2022</li>
-                                    </ul>
-                                    <h6><a class="text-dark" href="/blog/2022/05/configure-firefox.html">How to - Configure Firefox</a></h6>
-                                </div>
-                            </div>
-                        </div>
+                            <div id="latestBlogPost"></div>
+                        </div>                      
                         <div class="widget">
                             <h6 class="mb-4">CATEGORIES</h6>
                             <ul class="list-unstyled widget-list categories-list">
@@ -623,10 +559,11 @@
             </svg>
         </div>
         <!-- jQuery -->
-        <script src="plugins/jQuery/jquery.min.js"></script>
+        <script src="plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
         <script>
             $('#myHead').load('/blog/include/header.html');
-            $('#myFooter').load('/blog/include/footer.html');
+            $('#latestBlogPost').load('/blog/include/latestBlog.html');
+            $('#myFooter').load('/blog/include/footer.html');           
         </script>
         <!-- Bootstrap JS -->
         <script src="plugins/bootstrap/bootstrap.bundle.min.js"></script>
@@ -639,7 +576,7 @@
         <!-- reading time -->
         <script src="plugins/reading-time/readingTime.min.js"></script>
         <!-- Main Script -->
-        <script src="js/script.js"></script>
+        <script src="js/script.js" crossorigin="anonymous"></script>
        
     </body>
 
