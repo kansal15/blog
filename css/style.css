@@ -96,6 +96,7 @@ margin-bottom:5px;
 }
 #blog-post-block p {
 margin-bottom:10px;
+white-space: normal;
 }
 .btn:focus {
   outline: 0;
