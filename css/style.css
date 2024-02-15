@@ -1,8 +1,6 @@
 /*------------------------------------------------------------------
 [TABLE OF CONTENTS]
 -------------------------------------------------------------------*/
-/*  typography */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Playfair+Display:400,700");
 
 @font-face {
   font-family: "hanskendrick";
@@ -10,6 +8,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "poppins";
   src: url("../plugins/fonts/Poppins-Regular.ttf");
@@ -73,6 +72,7 @@ h5,
 h6,
 .h6 {
   font-size: 1rem;
+white-space: nowrap;
 }
 
 .list-type-li li {
@@ -1381,8 +1381,6 @@ blockquote {
 /* contact-us css */
 .bg-image {
   position: relative;
-  /* width: 400px;
-  height: 400px; */
   object-fit: cover;
   object-position: center;
   transform: translate(45%, 0%);
@@ -1532,7 +1530,25 @@ blockquote {
   width: 65%;
   margin: 0 auto;
 }
-
+.blog-tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.blog-tooltip .tooltiptext {
+  visibility: hidden;
+  width: 400px;
+  height: auto;
+  text-align: justify;
+  font-size: 11px;
+  position: absolute;
+  z-index: 1;
+  left: 20px;
+  padding: 10px;
+  line-height: 1.5;
+  cursor: pointer;
+  background-color: #fdefe6;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 10%);
+  border-radius: 3px;
+}
 /* #Progress
 ================================================== */
 
@@ -1629,6 +1645,7 @@ width: 45%;
 }
 h6 span{
   color: #d58753;
+white-space: normal;
 } 
 h6 p{
   color: #d58753;
@@ -1713,7 +1730,9 @@ h6 p{
 .navbar .nav-item .nav-link {
     font-size: 10px;
   }
-
+  .blog-tooltip .tooltiptext {
+    width: 200px;
+  }
   h1,
   .h1 {
     font-size: 10vw;
