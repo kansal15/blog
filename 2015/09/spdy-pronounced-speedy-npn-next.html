@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary heading-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>
+                        SPDY (pronounced speedy); NPN (Next Protocol Negotiation); ALPN (Application Layer Protocol
+                        Negotiation) and HTTP/2
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> September 19, 2015</li>
+                            </ul>
+                            <div class="content">
+                                <p class="blog-post-body">
+                                    SPDY (pronounced as SPeeDY) :-
+                                </p>
+                                <p>SPDY is an experimental protocol developed at Google, designed to reduce the latency
+                                    of web pages. Specifically, its goal is to address the limitations of HTTP/1.1 and
+                                    to remove existing bottlenecks like:-</p>
+                                <ul>
+                                    <li>head of line blocking,</li>
+                                    <li>inefficient use of underlying TCP connections,</li>
+                                    <li>and header bloat</li>
+                                </ul>
+                                <p>SPDY achieves reduced latency through compression, multiplexing, and
+                                    prioritisation.<br />
+                                    The name "SPDY" is a trademark of Google and is not an acronym.</p>
+                                <p>Implementing a new protocol across the web, where varieties of devices exists along
+                                    with multiple range of OS across platforms, is like play with fire. This may lead to
+                                    random dropped connections with no or very little troubleshooting information and
+                                    will cause frustration for the end user. To deal with this, SPDY is delivered via
+                                    SSL.
+                                    End-to-end encrypted tunnel allows the client and the server to exchange SPDY frames
+                                    without intervention by intermediate nodes. It's important to note that SPDY does
+                                    not require SSL, but in practice, SSL is a pragmatic choice to get to a working
+                                    solution.</p>
+                                <p>So, how the client and server will know to use the SPDY after the establishment of
+                                    TLS/SSL session ?<br />
+                                    Here comes NPN is picture.<br />
+                                    Next Protocol Negotiation (NPN) is a TLS extension, which was developed as part of
+                                    the SPDY effort at Google to enable efficient application protocol negotiation
+                                    during the TLS handshake. </p>
+                                <p>The biggest difference between HTTP/1.1 and SPDY, is that each user action in SPDY is
+                                    given a "stream ID", meaning there is a single TCP channel connecting the user to
+                                    the server. SPDY splits requests into either control or data. SPDY has shown evident
+                                    improvement from HTTP, with a new page load speedup ranging from 11.81% to 47.7%.
+                                </p>
+                                <p>On February 2015, Google had announced that following the final ratification of the
+                                    HTTP/2 standard, support for SPDY would be deprecated, and that support for SPDY
+                                    will be withdrawn completely in 2016.</p>
+                                <h6 class="pt-3"><u>Application Layer Protocol Negotiation (ALPN):-</u></h6>
+                                <p>ALPN is a revised and IETF approved version of the NPN extension. Application Layer
+                                    Protocol Negotiation (ALPN) is a TLS extension that introduces support for
+                                    application protocol negotiation into the TLS handshake (please see TLS Handshake
+                                    blog), thereby eliminating the need for an extra roundtrip required by the HTTP
+                                    Upgrade workflow.
+                                </p>
+                                <p>Specifically, the process is as follows:
+                                </p>
+                                <ul>
+                                    <li>The client appends a new ProtocolNameList field, containing the list of supported application protocols, into the ClientHello message.</li>
+                                    <li>The server inspects the ProtocolNameList field and returns a ProtocolName field indicating the selected protocol as part of the ServerHello message.</li>
+                                </ul>
+                                <p>The server may respond with only a single protocol name, and if it does not support any that the client requests, then it may choose to abort the connection. As a result, once the TLS handshake is complete, both the secure tunnel is established, and the client and server are in agreement as to which application protocol will be used, they can begin communicating immediately.</p>
+                                <p>ALPN eliminates the need for the HTTP Upgrade exchange, saving an extra roundtrip of latency. However, note that the TLS handshake itself still must be performed; hence ALPN negotiation is not any faster than HTTP Upgrade over an unencrypted channel. Instead, it ensures that application protocol negotiation over TLS is not any slower.</p>
+                                <p>In NPN, the server advertised which protocols it supports, and the client then chose and confirmed the protocol whereas in ALPN, this exchange is reversed: the client now specifies which protocols it supports, and the server then selects and confirms the protocol. The rationale for the change is that this brings ALPN into closer alignment with other protocol negotiation standards. In other words, ALPN is a successor to NPN, and NPN is deprecated. Clients and servers that rely on NPN negotiation will have to be upgraded to use ALPN instead.</p>
+
+                                <h6 class="pt-3"><u>HTTP/2 :-</u></h6>
+                                <p class="mb-4">HTTP/2 (originally named HTTP/2.0) is the second major version of the HTTP network protocol used by the World Wide Web. It is based on SPDY. HTTP/2 was developed by the Hypertext Transfer Protocol working group (httpbis, where bis means "repeat" or "twice") of the Internet Engineering Task Force. HTTP/2 is the first new version of HTTP since HTTP 1.1, which was standardised in RFC 2068 in 1997.</p>
+
+                                <blockquote>
+                                    <h6 style="color: #d58753;">Why not HTTP/1.2 ?</h6>
+                                    <p>To achieve the performance goals set by the HTTP Working Group, HTTP/2 introduces a new binary framing layer that is not backward compatible with previous HTTP/1.x servers and clients. Hence the major protocol version increment to HTTP/2.
+                                    </p>
+                                </blockquote>
+                                <p>HTTP/2 leaves most of HTTP 1.1's high level syntax, such as methods, status codes, header fields, and URIs, the same. The element that is modified is how the data is framed and transported between the client and the server.</p>
+                                <p>The standardisation effort came as an answer to SPDY, an HTTP-compatible protocol developed by Google. HTTP/2 uses a fixed Huffman code-based header compression algorithm, instead of SPDY's dynamic stream-based compression. This helps to reduce the potential for attacks on the protocol.
+                                </p>
+                                <p>The httpbis working group considered Google's SPDY protocol, Microsoft's HTTP Speed+Mobility proposal (SPDY based), and Network-Friendly HTTP Upgrade.</p>
+                                <p>HTTP/2 is defined for both HTTP URIs (i.e. without encryption) and for HTTPS URIs (over TLS, where TLS 1.2 or newer is required).</p>
+                                <p>Although the standard itself does not require usage of encryption, most client implementations (Firefox, Chrome) have stated that they will only support HTTP/2 over TLS, which makes encryption de facto mandatory.</p>
+                                <blockquote>
+                                    <p style="color: #d58753;">Roughly 1.2% of all websites support HTTP/2 till August 2015.</p>
+                                </blockquote>
+
+                            
+
+                            </div>
+                        </div>
+                        <!-- /blog post -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Main content -->
+
+    <div id="showsidebar"></div>
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>

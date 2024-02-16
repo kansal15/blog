@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary heading-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>
+                        TLS Session Resumption
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> September 19, 2015</li>
+                            </ul>
+                            <div class="content">
+                                <p class="blog-post-body">
+                                    The extra latency and computational costs of the full TLS handshake impose a serious
+                                    performance penalty on all applications that require secure communication. To help
+                                    mitigate some of the costs, TLS provides an ability to resume or share the same
+                                    negotiated secret key data between multiple connections.
+
+                                </p>
+                                <h6><u>Session Identifiers </u></h6>
+                                <p>The first Session Identifiers (RFC 5246) resumption mechanism was introduced in SSL
+                                    2.0, which allowed the server to create and send a 32-byte session identifier as
+                                    part of its "ServerHello" message during the full TLS negotiation which we discuss
+                                    in TLS Handshake. </p>
+                                    <p>
+                                    Internally, the server could then maintain a cache of session IDs and the negotiated
+                                    session parameters for each peer. In turn, the client could then also store the
+                                    session ID information and include the ID in the "ClientHello" message for a
+                                    subsequent session, which serves as an indication to the server that the client
+                                    still remembers the negotiated cipher suite and keys from previous handshake and is
+                                    able to reuse them. Assuming both the client and the server are able to find the
+                                    shared session ID parameters in their respective caches, then an abbreviated
+                                    handshake can take place. Otherwise, a full new session negotiation is required,
+                                    which will generate a new session ID.
+                                </p>
+                                <p>
+                                    <img src="../../images/Abbreviated TLS Handshake.png" alt="Abbreviated"
+                                        class="img-fluid w-50 py-3">
+                                </p>
+                                <p>Leveraging session identifiers allows us to remove a full roundtrip, as well as the
+                                    overhead of public key cryptography, which is used to negotiate the shared secret
+                                    key. This allows a secure connection to be established quickly and with no loss of
+                                    security, since we are reusing the previously negotiated session data.</p>
+
+                                <blockquote>
+                                    <p>
+                                        In practice, most web applications attempt to establish multiple connections to
+                                        the
+                                        same host to fetch resources in parallel, which makes session resumption a
+                                        must-have
+                                        optimisation to reduce latency and computational costs for both sides.
+
+                                    </p>
+                                    <p> Most modern browsers intentionally wait for the first TLS connection to complete
+                                        before opening new connections to the same server: subsequent TLS connections
+                                        can
+                                        reuse the SSL session parameters to avoid the costly handshake.</p>
+
+
+
+                                </blockquote>
+                                <p>However, one of the practical limitations of the Session Identifiers mechanism is the requirement for the server to create and maintain a session cache for every client. This results in several problems on the server, which may see tens of thousands or even millions of unique connections every day: consumed memory for every open TLS connection, a requirement for session ID cache and eviction policies, and nontrivial deployment challenges for popular sites with many servers, which should, ideally, use a shared TLS session cache for best performance.</p>
+
+                                <p>
+                                    None of the preceding problems are impossible to solve, and many high-traffic sites are using session identifiers successfully today. But for any multiserver deployment, session identifiers will require some careful thinking and systems architecture to ensure a well operating session cache.
+                                </p>
+
+                                <h6><u>Session Tickets</u></h6>
+                                <p>To address this concern for server-side deployment of TLS session caches, the "Session Ticket" (RFC 5077) replacement mechanism was introduced, which removes the requirement for the server to keep per-client session state. Instead, if the client indicated that it supports Session Tickets, in the last exchange of the full TLS handshake, the server can include a New Session Ticket record, which includes all of the session data encrypted with a secret key known only by the server.</p>
+                                <p>This session ticket is then stored by the client and can be included in the SessionTicket extension within theClientHello message of a subsequent session. Thus, all session data is stored only on the client, but the ticket is still safe because it is encrypted with a key known only by the server.</p>
+                                <p>The session identifiers and session ticket mechanisms are respectively commonly referred to as session cachingand stateless resumption mechanisms. The main improvement of stateless resumption is the removal of the server-side session cache, which simplifies deployment by requiring that the client provide the session ticket on every new connection to the server—that is, until the ticket has expired.</p>
+                                <p>
+                                    <u>Source </u>- <a href="oreilly.com" target="_blank">oreilly.com</a>
+                                       
+                                </p>
+
+                            </div>
+                        </div>
+                        <!-- /blog post -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Main content -->
+
+    <div id="showsidebar"></div>
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>

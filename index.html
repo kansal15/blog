@@ -1,119 +1,134 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Gaurav Kansal Blog</title>
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
 
-        <!-- mobile responsive meta -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-        <!-- ** Plugins Needed for the Project ** -->
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-        <!-- slick slider -->
-        <link rel="stylesheet" href="plugins/slick/slick.css">
-        <!-- themefy-icon -->
-        <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
-        <!-- Main Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-        <!--Favicon-->
-        <link rel="icon" type="image/png" href="images/favicon.jpg">
-        <link href="css/fontawesome/css/all.min.css" rel="stylesheet" />
-    </head>
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
+    <link href="css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
 
-    <body>
-        <!-- preloader -->
-        <div class="preloader">
-            <div class="loader">
-                <span class="dot"></span>
-                <div class="dots">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- banner area -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-end">
+                    <h1 class="mb-0" style="font-family: hanskendrick">Welcome</h1>
+                    <h2 class="title-border-lg blog-heading-h2" style="font-family: hanskendrick">to <i>Gaurav
+                            Kansal</i></h2>
+                    <p class="me-5">Gaurav Kansal is a Joint Director (IT) at the National Informatics Centre, a
+                        position he
+                        has held since 2010.</p>
+                    <span class="font-secondary text-dark me-3 fw-bold">Follow</span>
+                    <ul class="list-inline d-inline-block mb-5">
+                        <li class="list-inline-item mx-3"><a href="https://twitter.com/kansal15" target="_blank"
+                                class="text-dark"><i class="ti-twitter-alt"></i></a></li>
+                        <li class="list-inline-item mx-3"><a href="https://www.linkedin.com/in/gaurav-kansal/"
+                                target="_blank" class="text-dark"><i class="ti-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 text-right">
+                    <img class="img-fluid w-50" src="images/banner-img.png" alt="banner-image">
                 </div>
             </div>
         </div>
-        <!-- /preloader -->
+    </section>
+    <!-- /banner area -->
 
-        <div class="navigation" id="myHead"></div>
+    <section class="index-section" id="blog-section">
+        <div class="container">
+            <div class="row ">
+                <!-- blog post -->
+                <div class="col-lg-8 ">
+                    <input type='hidden' id='current_page' />
+                    <input type='hidden' id='show_per_page' />
+                    <div class="page" id="pagingBox">
+                        <div class="mb-60 dnsCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/masonary-post/dnskey.jpg" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i> Feb 13,
+                                            2024 | DNS</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="/blog/2024/02/Calculating-DS-record-from-DNSKEY.html"
+                                            class="text-dark">Calculating DS record from DNSKEY</a></h4>
+                                    <p class="mb-0 post-summary">DS (Delegation Signer) is calculated using the ... </p>
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2024/02/Calculating-DS-record-from-DNSKEY.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
 
-        <!-- banner area -->
-        <section class="hero-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 align-self-end">
-                        <h1 class="mb-0" style="font-family: hanskendrick">Welcome</h1>
-                        <h2 class="title-border-lg blog-heading-h2" style="font-family: hanskendrick">to <i>Gaurav Kansal</i></h2>
-                        <p class="me-5">Gaurav Kansal is a Joint Director (IT) at the National Informatics Centre, a position he
-                            has held since 2010.</p>
-                        <span class="font-secondary text-dark me-3 fw-bold">Follow</span>
-                        <ul class="list-inline d-inline-block mb-5">
-                            <li class="list-inline-item mx-3"><a href="https://twitter.com/kansal15" target="_blank"
-                                                                 class="text-dark"><i class="ti-twitter-alt"></i></a></li>
-                            <li class="list-inline-item mx-3"><a href="https://www.linkedin.com/in/gaurav-kansal/" target="_blank"
-                                                                 class="text-dark"><i class="ti-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 text-right">
-                        <img class="img-fluid w-50" src="images/banner-img.png" alt="banner-image">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- /banner area -->
+                        <div class="mb-60 apnicCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/masonary-post/apnic55.png" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i> May 06,
+                                            2023 | APNIC</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="/blog/2023/05/Summary-report-of-APNIC.html"
+                                            class="text-dark">Summary report of APNIC 55
+                                            (APRICOT
+                                            2023) Meeting held in Manila, Philippines</a></h4>
+                                    <p class="mb-0 post-summary"> APNIC Logo The APNIC 55 meeting was held in Manila,
+                                        Philippines from
+                                        20th Feb to 02nd March 2023. The meeting was hosted by PhNOG, The Philippine
+                                        Network Operators Group
+                                        (PhNOG) and supported by DOST- Advanced Science and Technology Institute. Every
+                                        year, APNIC ... </p>
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2023/05/Summary-report-of-APNIC.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
 
-        <section class="index-section" id="blog-section">
-            <div class="container">
-                <div class="row ">
-                    <!-- blog post -->
-                    <div class="col-lg-8 ">
-                        <input type='hidden' id='current_page' />
-                        <input type='hidden' id='show_per_page' />
-                        <div class="page" id="pagingBox">
-                            <div class="mb-60 dnsCatArtical">
-                                <article class="article-full-width">
-                                    <div class="post-image">
-                                        <img class="img-fluid" src="images/masonary-post/dnskey.jpg" alt="post-thumb">
-                                    </div>
-                                    <div class="post-content">
-                                        <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
-                                            <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i> Feb 13, 2024 | DNS</li>
-                                            <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
-                                                read
-                                            </li>
-                                        </ul>
-                                        <h4 class="mb-4"><a href="/blog/2024/02/Calculating-DS-record-from-DNSKEY.html" class="text-dark">Calculating DS record from DNSKEY</a></h4>
-                                        <p class="mb-0 post-summary">DS (Delegation Signer) is calculated using the ... </p>
-                                        <a class="btn btn-transparent" href="/blog/2024/02/Calculating-DS-record-from-DNSKEY.html">Continue...</a>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <div class="mb-60 apnicCatArtical">
-                                <article class="article-full-width">
-                                    <div class="post-image">
-                                        <img class="img-fluid" src="images/masonary-post/apnic55.png" alt="post-thumb">
-                                    </div>
-                                    <div class="post-content">
-                                        <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
-                                            <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i> May 06, 2023 | APNIC</li>
-                                            <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
-                                                read
-                                            </li>
-                                        </ul>
-                                        <h4 class="mb-4"><a href="/blog/2023/05/Summary-report-of-APNIC.html" class="text-dark">Summary report of APNIC 55
-                                                (APRICOT
-                                                2023) Meeting held in Manila, Philippines</a></h4>
-                                        <p class="mb-0 post-summary"> APNIC Logo The APNIC 55 meeting was held in Manila, Philippines from
-                                            20th Feb to 02nd March 2023. The meeting was hosted by PhNOG, The Philippine Network Operators Group
-                                            (PhNOG) and supported by DOST- Advanced Science and Technology Institute. Every year, APNIC ... </p>
-                                        <a class="btn btn-transparent" href="/blog/2023/05/Summary-report-of-APNIC.html">Continue...</a>
-                                    </div>
-                                </article>
-                            </div>
-                           
                         <div class="mb-60 apnicCatArtical wifiCatArtical">
                             <article class="article-full-width">
                                 <div class="post-image">
@@ -129,7 +144,8 @@
                                             read
                                         </li>
                                     </ul>
-                                    <h4 class="mb-4"><a href="/blog/2022/11/thankYou.html" class="text-dark">Thank you note</a></h4>
+                                    <h4 class="mb-4"><a href="/blog/2022/11/thankYou.html" class="text-dark">Thank you
+                                            note</a></h4>
                                     <p class="mb-0 post-summary">
                                         "A thank you note is the simplest form of showing gratitude". I am both humbled
                                         and honored that you
@@ -157,7 +173,8 @@
                                             read
                                         </li>
                                     </ul>
-                                    <h4 class="mb-4"><a href="/blog/2022/07/is-apnic-policy-of-members-voting.html" class="text-dark">Is APNIC policy of
+                                    <h4 class="mb-4"><a href="/blog/2022/07/is-apnic-policy-of-members-voting.html"
+                                            class="text-dark">Is APNIC policy of
                                             Members Voting
                                             Rights
                                             doing the Justice with NIRs and Corresponding Countries</a></h4>
@@ -168,7 +185,8 @@
                                         China, Australia,
                                         Japan and others. APNIC is one of the world's five RIRs and is part of the
                                         Number ...</p>
-                                    <a class="btn btn-transparent" href="/blog/2022/07/is-apnic-policy-of-members-voting.html">Continue...</a>
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2022/07/is-apnic-policy-of-members-voting.html">Continue...</a>
                                 </div>
                             </article>
                         </div>
@@ -188,7 +206,8 @@
                                             read
                                         </li>
                                     </ul>
-                                    <h4 class="mb-4"><a href="/blog/2022/05/configure-firefox.html" class="text-dark">How to -
+                                    <h4 class="mb-4"><a href="/blog/2022/05/configure-firefox.html"
+                                            class="text-dark">How to -
                                             Configure Firefox to use
                                             only
                                             DoH and not to fallback to OS native resolver</a></h4>
@@ -198,7 +217,8 @@
                                         native resolver Step 1 :- Configure DoH like the way it is mentioned here -
                                         https://support.mozilla.org/en-US/kb/firefox-dns-over-https . I am using
                                         https://doh.nkn.in/dns-query ....</p>
-                                    <a class="btn btn-transparent" href="/blog/2022/05/configure-firefox.html">Continue...</a>
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2022/05/configure-firefox.html">Continue...</a>
                                 </div>
                             </article>
                         </div>
@@ -218,7 +238,8 @@
                                             read
                                         </li>
                                     </ul>
-                                    <h4 class="mb-4"><a href="/blog/2022/05/IP-rating.html" class="text-dark">IP Ratings</a></h4>
+                                    <h4 class="mb-4"><a href="/blog/2022/05/IP-rating.html" class="text-dark">IP
+                                            Ratings</a></h4>
                                     <p class="mb-0 post-summary">
                                         An IP rating must begin with 5 for partial dust protection or 6 for complete
                                         dust protection. The IP
@@ -230,7 +251,7 @@
                                 </div>
                             </article>
                         </div>
-                       
+
 
                         <div class="mb-60 apnicCatArtical">
                             <article class="article-full-width">
@@ -253,11 +274,6 @@
                                             governance policies? (NIR: Boon or Bane – Is APNIC
                                             policy of Members Voting Rights doing the Justice with NIRs and
                                             Corresponding Countries)</a></h4>
-                                    <p class="mb-0 post-summary">
-                                        APNIC (the Asia Pacific Network Information Centre) is the regional Internet address
-                                        registry (RIR) for the Asia-Pacific....
-                                    </p>
-
 
                                     <a class="btn btn-transparent"
                                         href="/blog/2022/03/are-nirs-limiting-nations-say-in-apnic.html">Continue...</a>
@@ -282,9 +298,7 @@
                                     </ul>
                                     <h4 class="mb-4"><a href="/blog/2022/02/history-of-root-servers.html"
                                             class="text-dark">History of Root Servers</a></h4>
-                                     <p class="mb-0 post-summary">
-                                        History of Root Servers...
-                                    </p>
+
                                     <a class="btn btn-transparent"
                                         href="/blog/2022/02/history-of-root-servers.html">Continue...</a>
                                 </div>
@@ -306,7 +320,8 @@
                                             read
                                         </li>
                                     </ul>
-                                    <h4 class="mb-4"><a href="/blog/2022/02/ipv6-sage-certified-henet.html" class="text-dark">
+                                    <h4 class="mb-4"><a href="/blog/2022/02/ipv6-sage-certified-henet.html"
+                                            class="text-dark">
                                             IPv6 Sage Certified - HE.NET</a></h4>
 
                                     <a class="btn btn-transparent"
@@ -339,7 +354,7 @@
                                         Wireless Planning and
                                         Coordination Wing of Department of Telecom, under Ministry of Communication
                                         takes care of licensing
-                                        of radio frequencies...
+                                        of radio frequencies....
                                     </p>
 
                                     <a class="btn btn-transparent"
@@ -363,7 +378,8 @@
                                             read
                                         </li>
                                     </ul>
-                                    <h4 class="mb-4"><a href="/blog/2021/07/identity-psk-ipsk.html" class="text-dark">Identity
+                                    <h4 class="mb-4"><a href="/blog/2021/07/identity-psk-ipsk.html"
+                                            class="text-dark">Identity
                                             PSK ( iPSK)</a></h4>
                                     <p class="mb-0 post-summary">
                                         "With the evolution of IoT (Internet of Things), devices that connect wirelessly
@@ -375,7 +391,8 @@
                                         everything is going wireless for connectivity and so does the security threat...
                                     </p>
 
-                                    <a class="btn btn-transparent" href="/blog/2021/07/identity-psk-ipsk.html">Continue...</a>
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2021/07/identity-psk-ipsk.html">Continue...</a>
                                 </div>
                             </article>
                         </div>
@@ -396,201 +413,499 @@
                                             read
                                         </li>
                                     </ul>
-                                    <h4 class="mb-4"><a href="/blog/2020/09/multiple-input-multiple-output-mimo.html" class="text-dark"> Multiple Input Multiple
+                                    <h4 class="mb-4"><a href="/blog/2020/09/multiple-input-multiple-output-mimo.html"
+                                            class="text-dark"> Multiple Input Multiple
                                             Output (MIMO)</a>
                                     </h4>
-                                     <p class="mb-0 post-summary">
-                                        IEEE-802.11n wireless standard uses multiple antennas for high data transmissioni. 802.11n standard was...
-                                    </p>
 
-                                    <a class="btn btn-transparent" href="/blog/2020/09/multiple-input-multiple-output-mimo.html">Continue...</a>
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2020/09/multiple-input-multiple-output-mimo.html">Continue...</a>
                                 </div>
                             </article>
                         </div>
 
                         <div class="mb-60 wifiCatArtical">
                             <article class="article-full-width">
-                              <div class="post-image">
-                                <img class="img-fluid" src="images/wireless_communication.jpg" alt="post-thumb">
-                              </div>
-                              <div class="post-content">
-                                <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
-                                  <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>August 31, 2020 | WiFi</li>
-                                  <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
-                                    read
-                                  </li>
-                                </ul>
-                                <h4 class="mb-4"><a href="/blog/2020/08/common-terms-used-in-wireless.html" class="text-dark"> Common terms used in Wireless
-                                    Communications</a></h4>
-                                   <p class="mb-0 post-summary">
-                                        IEEE-802.11n wireless standard uses multiple antennas for high data transmissioni. 802.11n standard was...
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/wireless_communication.jpg" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>August 31,
+                                            2020 | WiFi</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="/blog/2020/08/common-terms-used-in-wireless.html"
+                                            class="text-dark"> Common terms used in Wireless
+                                            Communications</a></h4>
+
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2020/08/common-terms-used-in-wireless.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 wifiCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/igi2.png" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>October 03,
+                                            2016 | WiFi</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="/blog/2020/08/common-terms-used-in-wireless.html"
+                                            class="text-dark"> Analysis of IGI Airport Wi-Fi setup</a></h4>
+
+                                    <p class="mb-0 post-summary">
+                                        The access points installed at T3, IGI Airport, New Delhi are of Cisco make,
+                                        Internal access points with internal antennas. This is depicted in the below
+                                        images – Cisco access points can be installed in two modes –
                                     </p>
 
-                                <a class="btn btn-transparent" href="/blog/2020/08/common-terms-used-in-wireless.html">Continue...</a>
-                              </div>
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2020/08/common-terms-used-in-wireless.html">Continue...</a>
+                                </div>
                             </article>
-                          </div>
-
-                          <div class="mb-60 wifiCatArtical">
-                            <article class="article-full-width">
-                              <div class="post-image">
-                                <img class="img-fluid" src="images/igi2.png" alt="post-thumb">
-                              </div>
-                              <div class="post-content">
-                                <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
-                                  <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>October 03, 2016 | WiFi</li>
-                                  <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
-                                    read
-                                  </li>
-                                </ul>
-                                <h4 class="mb-4"><a href="/blog/2020/08/common-terms-used-in-wireless.html" class="text-dark"> Analysis of IGI Airport Wi-Fi setup</a></h4>
-                                
-                                <p class="mb-0 post-summary">
-                                    This Document will explore the terms used in Wireless Communication...
-                                </p>
-
-                                <a class="btn btn-transparent" href="/blog/2020/08/common-terms-used-in-wireless.html">Continue...</a>
-                              </div>
-                            </article>
-                          </div>
-
-                          <div class="mb-60 OtherCatArtical">
-                            <article class="article-full-width">
-                              <div class="post-image">
-                                <img class="img-fluid" src="images/CA SubCA Hierarchy.png" alt="post-thumb">
-                              </div>
-                              <div class="post-content">
-                                <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
-                                  <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September 30, 2015 | Other</li>
-                                  <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
-                                    read
-                                  </li>
-                                </ul>
-                                <h4 class="mb-4"><a href="/blog/2015/09/ca-certificate-chain-and-traceroute-of.html" class="text-dark"> CA Certificate chain and traceroute of bad.horse
-                                </a></h4>
-                                
-                                <p class="mb-0 post-summary">
-                                    Today i come across a funny domain, name bad.horse; Its funny not because of its name but because of the certificate chain and traceroute to this domain. Both subCA hierarchy and tracroute, has the full lyrics of Bad Horse song. Interesting stuff and amazing use of technology.
-
-                                </p>
-
-                                <a class="btn btn-transparent" href="/blog/2015/09/ca-certificate-chain-and-traceroute-of.html">Continue...</a>
-                              </div>
-                            </article>
-                          </div>
-
-                          <div class="mb-60 OtherCatArtical">
-                            <article class="article-full-width">
-                              <div class="post-image">
-                                <img class="img-fluid" src="images/ServerKeyExchange RFC 5246.png" alt="post-thumb">
-                              </div>
-                              <div class="post-content">
-                                <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
-                                  <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September 30, 2015 | Other</li>
-                                  <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
-                                    read
-                                  </li>
-                                </ul>
-                                <h4 class="mb-4"><a href="/blog/2015/09/flaw-in-serverkeyexchange-messages-of.html" class="text-dark"> Flaw in ServerKeyExchange messages of TLS Protocol
-                                </a></h4>
-                                
-                                <p class="mb-0 post-summary">
-                                    Here we will discuss the flaw in the ServerKeyExchange messages of the TLS protocol which caused the Logjam attack over TLS while using Diffie-Hellman Key Exchange. Before SSLv3, we don't use to authenticate the
-
-                                </p>
-
-                                <a class="btn btn-transparent" href="/blog/2015/09/flaw-in-serverkeyexchange-messages-of.html">Continue...</a>
-                              </div>
-                            </article>
-                          </div>
-
-                          <div class="mb-60 OtherCatArtical">
-                            <article class="article-full-width">
-                              <div class="post-image">
-                                <img class="img-fluid" src="images/freak.jpg" alt="post-thumb">
-                              </div>
-                              <div class="post-content">
-                                <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
-                                  <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September 26, 2015 | Other</li>
-                                  <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span class="eta"></span>
-                                    read
-                                  </li>
-                                </ul>
-                                <h4 class="mb-4"><a href="/blog/2015/09/freak-factoring-attack-on-rsa-export.html" class="text-dark"> “FREAK” -- Factoring attack on RSA-EXPORT Keys
-                                </a></h4>
-                                
-                                <p class="mb-0 post-summary">
-                                    FREAK attack allows an attacker to intercept the SSL/TLS traffic between the vulnerable client & server and force them to use week encryption, typically Export Grade encryption (i.e, 512 bit RSA key exchange)..
-
-
-                                </p>
-
-                                <a class="btn btn-transparent" href="/blog/2015/09/freak-factoring-attack-on-rsa-export.html">Continue...</a>
-                              </div>
-                            </article>
-                          </div>
-
-                        </div>
-                        <div class="pagination justify-content-center align-items-center" id='page_navigation'>
                         </div>
 
-                        <div class="pagination justify-content-center align-items-center" id="page_navigations"
-                             style="display: none;">
+                        <div class="mb-60 OtherCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/CA SubCA Hierarchy.png" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September
+                                            30, 2015 | Other</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="/blog/2015/09/ca-certificate-chain-and-traceroute-of.html"
+                                            class="text-dark"> CA Certificate chain and traceroute of bad.horse
+                                        </a></h4>
+
+                                    <p class="mb-0 post-summary">
+                                        Today i come across a funny domain, name bad.horse; Its funny not because of its
+                                        name but because of the certificate chain and traceroute to this domain. Both
+                                        subCA hierarchy and tracroute, has the full lyrics of Bad Horse song.
+                                        Interesting stuff and amazing use of technology.
+
+                                    </p>
+
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2015/09/ca-certificate-chain-and-traceroute-of.html">Continue...</a>
+                                </div>
+                            </article>
                         </div>
+
+                        <div class="mb-60 OtherCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/ServerKeyExchange RFC 5246.png" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September
+                                            30, 2015 | Other</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="/blog/2015/09/flaw-in-serverkeyexchange-messages-of.html"
+                                            class="text-dark"> Flaw in ServerKeyExchange messages of TLS Protocol
+                                        </a></h4>
+
+                                    <p class="mb-0 post-summary">
+                                        Here we will discuss the flaw in the ServerKeyExchange messages of the TLS
+                                        protocol which caused the Logjam attack over TLS while using Diffie-Hellman Key
+                                        Exchange. Before SSLv3, we don't use to authenticate the
+
+                                    </p>
+
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2015/09/flaw-in-serverkeyexchange-messages-of.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 OtherCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/freak.jpg" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September
+                                            26, 2015 | Other</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="/blog/2015/09/freak-factoring-attack-on-rsa-export.html"
+                                            class="text-dark"> “FREAK” -- Factoring attack on RSA-EXPORT Keys
+                                        </a></h4>
+
+                                    <p class="mb-0 post-summary">
+                                        FREAK attack allows an attacker to intercept the SSL/TLS traffic between the
+                                        vulnerable client & server and force them to use week encryption, typically
+                                        Export Grade encryption (i.e, 512 bit RSA key exchange)..
+
+
+                                    </p>
+
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2015/09/freak-factoring-attack-on-rsa-export.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 OtherCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/cryptography.jpg" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September
+                                            26, 2015 | Other</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="/blog/2015/09/export-grade-cryptography.html"
+                                            class="text-dark"> Export Grade Cryptography
+                                        </a></h4>
+
+                                    <p class="mb-0 post-summary">
+                                        What is export grade cryptography ? Since World War II, many countries including the U.S., U.K. and others, have regulated the export of cryptography in the interest of national security till 1992. Those countries used to believe that they had developed more advanced cryptographic solution than others and they wished to monitor the communication of other countries and hence restricted the advanced cryptographic solution to other nations, by their companies. Restriction had been eased down in 1992 and in 2000 but some are still there. Only those cryptography solutions which can be breaked by security agencies, were allowed to export and were known as Export Grade Cryptography. Ciphers itself are not of Export Grade as they properly follows algorithms. It is the use of cryptographic keys that are deliberately weekend so that security agencies can crack them as and when needed. The export-grade encryption had 512 bits, the maximum allowed under U.S. restrictions de...
+                                    </p>
+
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2015/09/export-grade-cryptography.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 OtherCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/wireshark.png" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September
+                                            22, 2015 | Other</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="/blog/2015/09/ip-to-country-mapping-in-wireshark.html"
+                                            class="text-dark"> IP to Country Mapping in Wireshark
+                                        </a></h4>
+
+                                    <p class="mb-0 post-summary">
+                                        Please follow the below articles for IP to Country Mapping in Wireshark :- <br/>https://www.wireshark.org/lists/wireshark-dev/200902/msg00154.html <br/>https://wiki.wireshark.org/HowToUseGeoIP..
+                                    </p>
+
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2015/09/ip-to-country-mapping-in-wireshark.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 TLSCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/SNI.jpg" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September
+                                            21, 2015 | Other</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="/blog/2015/09/server-name-indication-sni.html"
+                                            class="text-dark"> Server Name Indication (SNI)
+                                        </a></h4>
+
+                                    <p class="mb-0 post-summary">
+                                        TLS does not provide a mechanism for a client to tell a server the name of the server it is contacting. It may be desirable for clients to provide this information to facilitate secure connections to servers that host multiple 'virtual' servers at a single underlying network address..
+                                    </p>
+
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2015/09/server-name-indication-sni.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 TLSCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/Abbreviated TLS Handshake.png" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September
+                                            19, 2015 | TLS</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="/blog/2015/09/tls-session-resumption.html"
+                                            class="text-dark"> TLS Session Resumption
+                                        </a></h4>
+
+                                    <p class="mb-0 post-summary">
+                                        The extra latency and computational costs of the full TLS handshake impose a serious performance penalty on all applications that require secure communication. To help mitigate some of the costs, TLS provides an ability to resume or share the same negotiated secret key data between multiple connections..
+                                    </p>
+
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2015/09/tls-session-resumption.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 TLSCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/Abbreviated TLS Handshake.png" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September
+                                            19, 2015 | TLS</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="/blog/2015/09/tls-handshake.html"
+                                            class="text-dark"> TLS Handshake
+                                        </a></h4>
+
+                                    <p class="mb-0 post-summary">
+                                        Before the client and the server can begin exchanging application data over TLS, the encrypted tunnel must be negotiated: the client and the server must agree on the version of the TLS protocol, choose the cipher suite, and verify certificates if necessary. Unfortunately, each of these steps requires new packet roundtrips between the client and the server, which adds startup latency to all TLS connections.
+                                    </p>
+
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2015/09/tls-handshake.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 OtherCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/http1.jpg" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September
+                                            19, 2015 | Other</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="/blog/2015/09/http10-and-http11.html"
+                                            class="text-dark"> HTTP/1.0 and HTTP/1.1
+                                        </a></h4>
+
+                                    <p class="mb-0 post-summary">
+                                        HTTP is a protocol used to exchange or transfer hypertext.  Hypertext is structured text that uses logical links (hyperlinks) between nodes containing text. Tim Berners-Lee and his team at CERN are credited with inventing the original HTTP along with HTML and the associated technology for a web server and a text-based web browser. 
+                                    </p>
+
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2015/09/http10-and-http11.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 OtherCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/spdy.jpg" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September
+                                            19, 2015 | Other</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="/blog/2015/09/spdy-pronounced-speedy-npn-next.html"
+                                            class="text-dark"> SPDY (pronounced speedy); NPN (Next Protocol Negotiation); ALPN (Application Layer Protocol Negotiation) and HTTP/2
+                                        </a></h4>
+
+                                    <p class="mb-0 post-summary">
+                                        SPDY (pronounced as SPeeDY) :- SPDY is an experimental protocol developed at Google, designed to reduce the latency of web pages. Specifically, its goal is to address the limitations of HTTP/1.1 and to remove existing bottlenecks like:-  - head of line blocking,  - inefficient use of underlying TCP connections,  - and header bloat SPDY achieves reduced latency through compression, multiplexing, and prioritisation. The name "SPDY" is a trademark of Google and is not an acronym..
+                                    </p>
+
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2015/09/spdy-pronounced-speedy-npn-next.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 TLSCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/CipherSuites.jpg" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September
+                                            08, 2015 | TLS</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="/blog/2015/09/cipher-suites.html"
+                                            class="text-dark"> Cipher Suites
+                                        </a></h4>
+
+                                    <p class="mb-0 post-summary">
+                                        A cipher suite is a named combination of authentication , encryption , message authentication code (MAC) and key exchange algorithms used to negotiate the security settings for a network connection using the Transport Layer Security (TLS) / Secure Sockets Layer (SSL) network protocol.. 
+                                    </p>
+
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2015/09/cipher-suites.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="mb-60 TLSCatArtical">
+                            <article class="article-full-width">
+                                <div class="post-image">
+                                    <img class="img-fluid" src="images/tls-ssl.jpg" alt="post-thumb">
+                                </div>
+                                <div class="post-content">
+                                    <ul
+                                        class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+                                        <li class="list-inline-item"><i class="ti-calendar me-2 fw-bold"></i>September
+                                            08, 2015 | TLS</li>
+                                        <li class="list-inline-item"><i class="ti-alarm-clock me-2 fw-bold"></i><span
+                                                class="eta"></span>
+                                            read
+                                        </li>
+                                    </ul>
+                                    <h4 class="mb-4"><a href="/blog/2015/09/transport-layer-security-tls-and-secure.html"
+                                            class="text-dark"> Transport Layer Security (TLS) and Secure Sockets Layer (SSL)
+                                        </a></h4>
+
+                                    <p class="mb-0 post-summary">
+                                        Transport Layer Security (TLS) is a successor of Secure Sockets Layer (SSL) and its a cryptographic protocol used for establishing an encrypted link between a Server and a Client over a public network. They use X.509 certificates and hence asymmetric cryptography to authenticate the certificate holder to its clients, and to negotiate a symmetric session key... 
+                                    </p>
+
+                                    <a class="btn btn-transparent"
+                                        href="/blog/2015/09/transport-layer-security-tls-and-secure.html">Continue...</a>
+                                </div>
+                            </article>
+                        </div>
+
                     </div>
-                    <!-- /blog post -->
-                    <!-- Side post -->
-                    <div class="col-lg-4">
-                        <div class="widget">
-                            <h6 class="mb-4">LATEST POST</h6>
-                            <div id="latestBlogPost"></div>
-                        </div>                      
-                        <div class="widget">
-                            <h6 class="mb-4">CATEGORIES</h6>
-                            <ul class="list-unstyled widget-list categories-list">
-                                <li class="apnicCat"><a class="d-flex">APNIC
-                                        <small class="ms-auto apnicCatvalue"></small></a>
-                                </li>
-                                <li class="dnsCat"><a href="javascript:void(0)" class="d-flex">DNS
-                                        <small class="ms-auto dnsCatvalue"></small></a>
-                                </li>
-                                <li class="wifiCat"><a href="javascript:void(0)" class="d-flex">WiFi
-                                        <small class="ms-auto wifiCatvalue"></small></a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="pagination justify-content-center align-items-center" id='page_navigation'>
                     </div>
-                    <!-- /Side post -->
+
+                    <div class="pagination justify-content-center align-items-center" id="page_navigations"
+                        style="display: none;">
+                    </div>
                 </div>
+                <!-- /blog post -->
+                <!-- Side post -->
+                <div class="col-lg-4">
+                    <div class="widget">
+                        <h6 class="mb-4">LATEST POST</h6>
+                        <div id="latestBlogPost"></div>
+                    </div>
+                    <div class="widget">
+                        <h6 class="mb-4">CATEGORIES</h6>
+                        <ul class="list-unstyled widget-list categories-list">
+                            <li class="apnicCat"><a class="d-flex">APNIC
+                                    <small class="ms-auto apnicCatvalue"></small></a>
+                            </li>
+                            <li class="dnsCat"><a href="javascript:void(0)" class="d-flex">DNS
+                                    <small class="ms-auto dnsCatvalue"></small></a>
+                            </li>
+                            <li class="wifiCat"><a href="javascript:void(0)" class="d-flex">WiFi
+                                    <small class="ms-auto wifiCatvalue"></small></a>
+                            </li>
+                            <li class="TLSCat"><a href="javascript:void(0)" class="d-flex">TLS
+                                <small class="ms-auto TLSCatvalue"></small></a>
+                            </li>
+                            <li class="OtherCat"><a href="javascript:void(0)" class="d-flex">Other
+                                    <small class="ms-auto OtherCatvalue"></small></a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <!-- /Side post -->
             </div>
-        </section>
-
-        <div class="bg-secondary footer-bg" id="myFooter"></div>
-        <div class="progress-wrap">
-            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-            </svg>
         </div>
-        <!-- jQuery -->
-        <script src="plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
-        <script>
-            $('#myHead').load('/blog/include/header.html');
-            $('#latestBlogPost').load('/blog/include/latestBlog.html');
-            $('#myFooter').load('/blog/include/footer.html');           
-        </script>
-        <!-- Bootstrap JS -->
-        <script src="plugins/bootstrap/bootstrap.bundle.min.js"></script>
-        <!-- slick slider -->
-        <script src="plugins/slick/slick.min.js"></script>
-        <!-- masonry -->
-        <script src="plugins/masonry/masonry.js"></script>
-        <!-- headroom -->
-        <script src="plugins/headroom/headroom.js"></script>
-        <!-- reading time -->
-        <script src="plugins/reading-time/readingTime.min.js"></script>
-        <!-- Main Script -->
-        <script src="js/script.js" crossorigin="anonymous"></script>
-       
-    </body>
+    </section>
+
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- jQuery -->
+    <script src="plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('/blog/include/header.html');
+        $('#latestBlogPost').load('/blog/include/latestBlog.html');
+        $('#myFooter').load('/blog/include/footer.html');           
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="plugins/reading-time/readingTime.min.js"></script>
+    <!-- Main Script -->
+    <script src="js/script.js" crossorigin="anonymous"></script>
+
+</body>
 
 </html>

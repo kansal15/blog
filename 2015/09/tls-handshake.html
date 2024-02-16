@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary heading-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>
+                        TLS Handshake
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> September 19, 2015</li>
+                            </ul>
+                            <div class="content">
+                                <p class="blog-post-body">
+                                    Before the client and the server can begin exchanging application data over TLS, the
+                                    encrypted tunnel must be negotiated: the client and the server must agree on the
+                                    version of the TLS protocol, choose the cipher suite, and verify certificates if
+                                    necessary. Unfortunately, each of these steps requires new packet roundtrips between
+                                    the client and the server, which adds startup latency to all TLS connections.
+                                </p>
+                                <p>
+                                    <img src="../../images/TLS_Handshake.png" alt="TLS_Handshake"
+                                        class="img-fluid w-50 py-3">
+                                </p>
+                                <div>
+                                    <table class="table">
+                                        <tr>
+                                            <td>0 ms</td>
+                                            <td>TLS runs over a reliable transport (TCP), which means that we must first
+                                                complete the TCP three-way handshake, which takes one full roundtrip.
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>56 ms</td>
+                                            <td>With the TCP connection in place, the client sends a number of
+                                                specifications in plain text, such as the version of the TLS protocol it
+                                                is running, the list of supported ciphersuites, and other TLS options it
+                                                may want to use.</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>84 ms</td>
+                                            <td>The server picks the TLS protocol version for further communication,
+                                                decides on a ciphersuite from the list provided by the client, attaches
+                                                its certificate, and sends the response back to the client. Optionally,
+                                                the server can also send a request for the client’s certificate and
+                                                parameters for other TLS extensions.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>112 ms</td>
+                                            <td>Assuming both sides are able to negotiate a common version and cipher,
+                                                and the client is happy with the certificate provided by the server, the
+                                                client initiates either the RSA or the Diffie-Hellman key exchange,
+                                                which is used to establish the symmetric key for the ensuing session.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>140 ms</td>
+                                            <td>	
+                                                The server processes the key exchange parameters sent by the client, checks message integrity by verifying the MAC, and returns an encrypted "Finished" message back to the client.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>168 ms</td>
+                                            <td>The client decrypts the message with the negotiated symmetric key, verifies the MAC, and if all is well, then the tunnel is established and application data can now be sent.</td>
+                                        </tr>
+
+                                    </table>
+
+
+                                </div>
+
+                                <h6><u>TLS Parameters :- -</u></h6>
+                                <p>
+                                    <i> <a href="http://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml"
+                                            target="_blank">http://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml</a>
+                                    </i>
+                                </p>
+                                <p>
+                                    <u>Source </u>- <a href="oreilly.com" target="_blank">oreilly.com</a>
+                                </p>
+
+
+                            </div>
+                        </div>
+                        <!-- /blog post -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Main content -->
+
+    <div id="showsidebar"></div>
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>
