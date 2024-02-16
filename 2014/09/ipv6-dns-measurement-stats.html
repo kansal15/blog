@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary heading-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>
+                        IPv6 DNS Measurement Stats
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> September 30, 2014</li>
+                            </ul>
+                            <div class="content">
+                                <p class="blog-post-body">NIC IPv6 DNS Measurement </p>
+                                <br />
+                                <br />
+                                <p>Measuring who all are querying for nic.in or gov.in domain, what they are querying
+                                    for and from where they are querying.</p>
+
+                                <p>NIC had tested its IPv6 connectivity with internet peers on June 8, 2011 (World IPv6
+                                    day) and next year on World IPv6 Launch Day (June 6, 2012), we had launched our IPv6
+                                    DNS Server (having address 2405:8A00:1000::2) along with some websites.
+                                    Our IPv6 DNS Servers are live from day one onwards and today we are receiving
+                                    roughly 54000 queries per hour over IPv6 for various nic.in and gov.in domains.</p>
+                                <h6 class="mt-3"> In this paper, we are showing the following statistics:- </h6>
+                                <ol>
+                                    <li>Who all are querying us</li>
+                                    <li>What they are querying for</li>
+                                    <li> From which part of world we are getting the hits</li>
+                                </ol>
+                                <p>For taking out the bellow stats, we analyzed <i>7, 69, 00,000 (roughly 7.7 crore)</i>
+                                    IPv6 queries.</p>
+
+                                <h6 class="pt-4"><u>AS wise Query Statistics</u></h6>
+                                <p>Autonomous System number (ASn) wise query stat gives us the unexpected results.
+                                    Although we were predicting that Google will be in top 3 but didn’t expect that half
+                                    of received queries will be from Google only.</p>
+                                <p>
+                                    <img src="../../images/ASN Query.jpg" alt="Abbreviated" class="img-fluid w-50 py-3">
+                                </p>
+                                <p class="my-4">Google tops the list with 51.6% of queries and leads the list with huge margin.
+                                    Facebook comes 2nd with 7.4% of total queries. Our own AS 4758 comes at 4th place.
+                                </p>
+                                <div class="table-responsive" style="max-width: 700px; margin: 0 auto;">
+                                    <table class="table table-secondary text-center">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            15169
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;US
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;GOOGLE - Google Inc.,US
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            32934
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;US
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;FACEBOOK - Facebook, Inc.,US
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            36692
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;US
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;OPENDNS - OpenDNS, LLC,US
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            4758
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;IN
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;NICNET-VSNL-BOARDER-AP National Informatics
+                                                            Centre,IN
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            24940
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;DE
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;HETZNER-AS Hetzner Online AG,DE
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            39832
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;NO
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;NO-OPERA Opera Software ASA,NO
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            17813
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;IN
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;MTNL-AP Mahanagar Telephone Nigam Ltd.,IN
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            6939
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;US
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;HURRICANE - Hurricane Electric, Inc.,US
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr style=" ">
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            12008
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;US
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;ULTRADNS - NeuStar, Inc.,US
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            7018
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;US
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <span>
+                                                            &nbsp;ATT-INTERNET4 - AT&amp;T Services, Inc.,US
+                                                            <o:p></o:p>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="text-center">
+                                    <i>Top 10 ASn</i>
+                                </div>
+                                <p class="">Most unpredictable and still unanswered behavior is having Facebook at number 2nd. I am still wondering why Fb is querying us and that too in that much quantity.</p>
+                                <p>Our own ASn comes fourth after Google, Facebook and OpenDNS.  Only 2 organization from India find a place in this list. Apart from NIC only MTNL was able to reach in top 10.</p>
+                                <p>This somehow shows that Indian Internet Users are using Open DNS Servers (like of Google, Hurricane and others).</p>
+
+
+                                <h6 class="pt-4"><u>Route wise Query Statistics</u></h6>
+                                <p>Route wise query stats also depicts the same pattern as that of ASn wise. Top 3 segment which queried us the most belongs to Google.</p>
+                                <p>
+                                    <img src="../../images/Routewise Query.jpg" alt="Abbreviated" class="img-fluid w-50 py-3">
+                                </p>
+
+                                <h6 class="pt-4"><u>Most Queried Domain</u></h6>
+                                <p>India.gov.in tops in this list. It is the one which was queried maximum number of times over IPv6.</p>
+                                <p>
+                                    <img src="../../images/Top Queried Domain.jpg" alt="Abbreviated" class="img-fluid w-50 py-3">
+                                </p>
+
+                                <p>  Above graph depicts the top 10 third-level domains among *.nic.in and *.gov.in domain.</p>
+
+
+                            </div>
+                        </div>
+                        <!-- /blog post -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Main content -->
+
+    <div id="showsidebar"></div>
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>

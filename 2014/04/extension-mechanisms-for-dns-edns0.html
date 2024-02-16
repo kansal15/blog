@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary heading-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>
+                        Extension Mechanisms for DNS (EDNS0)
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> September 21, 2015</li>
+                            </ul>
+                            <div class="content">
+                                <p class="blog-post-body">
+                                    DNS Background
+                                </p>
+                                <br />
+                                <br />
+                                <p>
+                                    The Domain Name System Protocol was first designed in 1980s and after that various
+                                    features has been added while maintaining the compatibility with earlier versions of
+                                    the protocol.
+                                    <br /><br />
+                                    DNS Packet was restricted to UDP 512 bytes in the early releases while keeping in
+                                    mind the minimum MTU size is of 576 bytes in IPv4. This has been done to check the
+                                    issues of packet drops, fragmentation and others.<br />
+                                    This packet size limit of 512 bytes also led to limit the number of root servers to
+                                    13 (A to M).<br /><br />
+                                    In 1999, Paul Vixie proposed extending DNS to allow new flags and Response Codes,
+                                    and to provide support for longer responses which should also be backward compatible
+                                    with previous implementation.
+                                </p>
+
+                                <h6 class="pt-3"><u>Mechanism</u></h6>
+                                <p>Due to limitation of space in DNS header, no new flags can be added in it. EDNS add
+                                    information to DNS message in the form of pseudo-RRs included in the ‘additional
+                                    data’ section of DNS message. This section exist both in Request and
+                                    Response.<br /><br />
+                                    The pseudo-RR introduce for this are of type OPT.</p>
+
+
+                                <blockquote>
+                                    <i style="color: #d58753;"><small>As pseudo-RRs, OPT type RRs never appear in any
+                                            zone file; they exist only
+                                            in messages, fabricated by the DNS participants.<br />
+                                            The mechanism is backward compatible, because older DNS responders ignore
+                                            any RR of the unknown OPT type in a request and a newer DNS responder never
+                                            includes an OPT in a response unless there was one in the request. The
+                                            presence of the OPT in the request signifies a newer requester that knows
+                                            what to do with an OPT in the response.</small></i>
+                                </blockquote>
+                                <p>
+                                    The OPT pseudo-record provides space for up to 16 flags and it extends the space for
+                                    the response code. The overall size of the UDP packet and the version number (at
+                                    present 0) are contained in the OPT record. A variable length data field allows
+                                    further information to be registered in future versions of the protocol. The
+                                    original DNS protocol provided two label types, which are defined by the first two
+                                    bits in DNS packets: 00 (standard label) and 11 (compressed label). EDNS introduces
+                                    the label type 01 as extended label. The lower 6 bits of the first byte may be used
+                                    to define up to 63 new extended labels.
+                                </p>
+                                <h6 class="pt-3"><u>Requirement of EDNS</u></h6>
+                                <p>EDNS is essential for the implementation of DNSSEC.</p>
+
+
+                                <h6 class="pt-3"><u>DNS Header</u></h6>
+                                <p><img src="../../images/DNS_Header.png" alt="Abbreviated" class="img-fluid w-50 py-3">
+                                </p>
+                                <div class="my-3">
+                                    <div class="mb-2">
+                                        <b><span>ID</span></b>
+                                        <span>
+                                            &#8211; 16 bit field
+
+                                        </span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <b><span>QR</span></b>
+                                        <span>
+                                            &#8211; A 1 bit ﬁeld that speciﬁes
+                                            whether this message is a query (0), or a response (1).
+
+                                        </span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <b><span>Opcode</span></b>
+                                        <span>
+                                            -- A four bit ﬁeld that speciﬁes
+                                            kind of query in this message.
+
+                                        </span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <b><span>AA</span></b>
+                                        <span>
+                                            -- Authoritative Answer
+
+                                        </span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <b><span>TC</span></b>
+                                        <span>
+                                            -- Truncation - Speciﬁes that this
+                                            message was truncated.
+
+                                        </span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <b><span>RD</span></b>
+                                        <span>
+                                            &#8211; Recursion Desired
+
+                                        </span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <b><span>RA</span></b>
+                                        <span>
+                                            &#8211; Recursion Available
+
+                                        </span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <b><span>Z</span></b>
+                                        <span>
+                                            &#8211; Reserved for future use
+
+                                        </span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <b><span>RCODE</span></b>
+                                        <span>
+                                            &#8211; Response Code &#8211; 4 bit field. After
+                                            implementation of EDNS, RCODE list has been extended and 4 additional bytes
+                                            has
+                                            been added which has been placed in Additional Information Section. This led
+                                            to
+                                            extend the value of Response Code from 16 to 65535. The value have the
+                                            following meaning
+
+                                        </span>
+                                    </div>
+                                    <blockquote class="my-3">
+                                        <p><small>0 – No Error Condition</small><br />
+                                            <small>1 -- Format error - The name server was unable to interpret the
+                                                query.</small><br />
+                                            <small>2 -- Server failure - The name server was unable to process this
+                                                query due to a problem with the name server.</small><br />
+                                            <small>3 - Name Error - Meaningful only for responses from an authoritative
+                                                name server, this code signiﬁes that the domain name referenced in the
+                                                query does not exist.
+                                            </small><br />
+                                            <small>
+                                                4 - Not Implemented - The name server does not support the requested
+                                                kind of query.
+
+                                            </small><br />
+                                            <small>
+
+                                                5 -Refused - The name server refuses to perform the speciﬁed operation
+                                                for policy
+                                                reasons.</small><br />
+                                            <small>Full list can be viewed from <a
+                                                    href="https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml">here</a>.
+                                            </small>
+                                        </p>
+
+                                    </blockquote>
+                                    <div class="mb-2">
+                                        <b><span>QDCOUNT</span></b>
+                                        <span>
+                                            &#8211;16 bit field. Specifies number of entries in the question section.
+                                        </span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <b><span>ANCOUNT </span></b>
+                                        <span>
+                                            &#8211;16 bit field. Specifies number of resource records in the answer
+                                            section. 65535 different Resource records are possible. <br />
+                                            For EDNS, OPT pseudo-RR is used whose RR type is 41.
+                                        </span>
+                                    </div>
+                                    <blockquote class="my-3">
+                                        <p> <small>An OPT record does not carry any DNS data. It is used only to contain
+                                                control information pertaining to the question-and-answer sequence of a
+                                                specific transaction. OPT RRs MUST NOT be cached, forwarded, or stored
+                                                in or loaded from master files.
+                                                <br />
+                                                <br />
+                                                The OPT RR MAY be placed anywhere within the additional data section.
+                                                When an OPT RR is included within any DNS message, it MUST be the only
+                                                OPT RR in that message. If a query message with more than one OPT RR is
+                                                received, a FORMERR (RCODE=1) MUST be returned.
+                                            </small></p>
+                                    </blockquote>
+
+                                    <div class="mb-2">
+                                        <b><span>NSCOUNT </span></b>
+                                        <span>
+                                            &#8211; 16 bit field. Specifies number of Name Server Resource Record in the
+                                            authority record section.
+                                        </span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <b><span>ARCOUNT </span></b>
+                                        <span>
+                                            &#8211; 16 bit field. Specifies number of RRs in the additional record
+                                            section.
+                                        </span>
+                                    </div>
+                                </div>
+                                <h6><u>EDNS Support in Resolvers</u></h6>
+                                <p>Now question arises how you will check whether your resolver/caching dns server
+                                    supports larger dns packets or not?</p>
+                                <p>By default implementation of various firewalls block DNS packet of size larger than
+                                    512 bytes (Cisco ASA blocks such packets).</p>
+                                <p class="mt-4">To check EDNS implementation support in your resolver, use below mentioned dig
+                                    command –</p>
+                                <blockquote class="mb-3">
+                                    <i style="color: #d58753;"> $ dig +short rs.dns-oarc.net txt</i>
+                                </blockquote>
+                                <p class="mt-4">You can specify DNS resolver also by using below command –</p>
+                                <blockquote >
+                                    <i style="color: #d58753;"> $dig +short rs.dns-oarc.net txt @resolver-address</i>
+                                </blockquote>
+                                <p class="mt-4">The output should look something like this –</p>
+                                <div class="my-3">
+                                    <pre><b>rst.x4001.rs.dns-oarc.net.</b></pre>
+                                    <div class="mb-2">
+                                        <span
+                                            style="font-family: 'Courier New'; font-size: 10pt;">rst.x3985.x4001.rs.dns-oarc.net.</span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <span
+                                            style="font-family: 'Courier New'; font-size: 10pt;">rst.x4023.x3985.x4001.rs.dns-oarc.net.</span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <span style="font-family: 'Courier New'; font-size: 10pt;">"192.168.1.1 sent
+                                            EDNS buffer size 4096"</span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <span style="font-family: 'Courier New'; font-size: 10pt;">"192.168.1.1 DNS
+                                            reply size limit is at least 4023 bytes"</span>
+                                    </div>
+                                </div>
+                                <p class="mt-4">To check EDNS packet sixe support by nslookup utility, use following command –</p>
+                                <blockquote>
+                                    <i style="color: #d58753;">  cmd> nslookup –type=TXT rs.dns-oarc.net.
+                                    </i>
+                                </blockquote>
+                                <h6 class="mt-4"><u>For more detail about EDNS packet size testing, visit:-</u></h6>
+                                <p>
+                                    <i> <a href="https://www.dns-oarc.net/oarc/services/replysizetest/"
+                                            target="_blank">https://www.dns-oarc.net/oarc/services/replysizetest/</a>
+                                    </i>
+                                </p>
+                            </div>
+                            <!-- /blog post -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- /Main content -->
+
+    <div id="showsidebar"></div>
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>

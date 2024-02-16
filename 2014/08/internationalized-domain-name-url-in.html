@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary heading-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>
+                        Internationalized Domain Name -- URL in any Language
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> August 12, 2014</li>
+                            </ul>
+                            <div class="content">
+                                <p class="blog-post-body">
+                                    From whichever part of the world you belong, no matter what is your mother tongue,
+                                    if you are reading this post, this means you understands English.
+
+                                </p>
+                                <p>Nearly half of the world doesn't know English But still accessing Internet was not
+                                    very much friendly for those non-English speaking community to an extent due to the
+                                    limitation of only having ASCII characters in domain names until few years back.</p>
+                                <p>In simple term, before 2011 domains was restricted to be in English language only.
+                                </p>
+                                <p>In 2011, ICANN approved addition of IDN gTLDs (Internationalized Domain Name generic
+                                    Top-Level Domain)in the root zone. And this gives the luxury to the internet
+                                    community to have a domain url in any language.</p>
+                                <p>ICANN has delegated IDN in seven languages to NIXI. Details of those are as follows:
+                                </p>
+                                <div class="table-responsive py-3" style="max-width: 700px; margin: 0 auto;">
+                                    <table class="table table-secondary">
+
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>Internationalized Domain Name (IDN)</th>
+                                                <th>Language</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>.भारत</td>
+                                                <td>.Bharat in Devanagari</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.ভারত</td>
+                                                <td>.Bharat in Bangla</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.భారత్</td>
+                                                <td>.Bharat in Telugu</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.ભારત</td>
+                                                <td>.Bharat in Gujarati</td>
+                                            </tr>
+                                            <tr>
+                                                <td>. بھارت</td>
+                                                <td>.Bharat in Urdu</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.இந்தியா</td>
+                                                <td>.Bharat in Tamil</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.ਭਾਰਤ</td>
+                                                <td>.Bharat in Gurumukhi (Punjabi)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <p>From 15th August 2014 onwards, <a
+                                        href="https://registry.in/Internationalized_Domain_Names_IDNs"
+                                        target="_blank">NIXI will accept registration for&nbsp;<span
+                                            style="font-size: 12px;">.भारत IDN</span></a></p>
+
+                                <p>This means india.gov.in will have a corresponding भारतसरकार.भारत domain in Devanagari
+                                    script. And any user across the world can also access india.gov.in website by typing
+                                    भारतसरकार.भारत in the browser URL.
+                                    This will increase the penetration of the Internet through the use of local
+                                    languages and help penetrate local content.</p>
+
+                                <h6 class="pt-3"><u>IDN Mapping with existing DNS Setup</u></h6>
+                                <p>IDN provide us the freedom to have a domain in any language. But existing DNS
+                                    infrastructure doesn't support language other than English. And it is not easy to
+                                    change/upgrade whole DNS nfrastructure across the internet community.</p>
+                                <p>For sorting out this issue, punycode comes into the picture.</p>
+                                <p>Punycode is a simple and efficient transfer encoding syntax designed for use with
+                                    Internationalized Domain Names in Applications (IDNA). It uniquely and reversibly
+                                    transforms a Unicode string into an ASCII string. ASCII characters in the Unicode
+                                    string are represented literally, and non-ASCII characters are represented by ASCII
+                                    characters that are allowed in host name labels (letters, digits, and hyphens).</p>
+                                <h6><u>For more info, please refer :- -</u></h6>
+                                <div class="table-responsive py-3" style="max-width: 700px; margin: 0 auto;">
+                                    <table class="table table-secondary">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>Internationalized Domain Name (IDN)</th>
+                                                <th>Corresponding punycode</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>.भारत</td>
+                                                <td>xn--h2brj9c</td>
+                                            </tr>
+                                            <tr>
+                                                <td>सरकार.भारत</td>
+                                                <td>xn--11b7cb3a6a.xn--h2brj9c</td>
+                                            </tr>
+                                            <tr>
+                                                <td>рф (Cyrillic abbreviation of Russian Federation) &nbsp;</td>
+                                                <td>xn--p1ai</td>
+                                            </tr>
+                                            <tr>
+                                                <td>मेरीसरकार.भारत</td>
+                                                <td>xn--11b3cgab9b4bm5d.xn--h2brj9c&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td><br></td>
+                                                <td><br></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p>
+                                    For running a authoritative DNS for .भारत IDN, you will have to make a zone in your server with 'xn--h2brj9c' name. (Obviously you are not going to do this as this will only be done by DNS Servers which ar actually authoritative for the same).<br/><br/>
+When you type सरकार.भारत in the url, your browser will automatically convert IDN domain in punycode format and do the DNS Query (of course browser needs to be intelligent enough for doing this).
+                                </p>
+                                <p><img src="../../images/punycode.JPG" alt="Abbreviated" class="img-fluid w-50 py-3"></p>
+                                <div class="text-center">
+                                    <i>DNS Query for an IDN domain</i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /blog post -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Main content -->
+
+    <div id="showsidebar"></div>
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>
