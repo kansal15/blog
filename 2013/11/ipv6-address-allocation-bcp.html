@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary heading-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>
+                        IPv6 Address Allocation BCP
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> November 25, 2013</li>
+                            </ul>
+                            <div class="content">
+                                <p class="blog-post-body">
+                                    Best Current Practices in for IPv6 Address Allocation
+                                    <br /><br />
+                                </p>
+                                <p>This Best Practices document aims to provide IPv6 Address allocation guidelines that
+                                    a network operator can follow while planning the IPv6 sub-netting for its network
+                                    (based on the issues faced and learning’s from IPv6 implementation in NKN and NIC
+                                    network).
+                                </p>
+
+                                <h6><u>Best Current Practice:</u></h6>
+                                <ul>
+                                    <li>
+                                        <b>Sub-netting</b>
+                                        <p> IPv6 addresses generally written in Hex format. Each Hex number represents 4
+                                            bit, commonly known as nibble. A nibble boundary is a network mask that
+                                            aligns on a 4-bit boundary. Sub-netting the v6 address at nibble boundary
+                                            improves efficiency and make it easier to understand for humans* (Machine
+                                            will anyway read it binary format J).</p>
+                                        <p>
+                                            <img src="../../images/Nibble.jpg" alt="Abbreviated"
+                                                class="img-fluid w-50 py-3">
+                                        </p>
+                                        <p class="text-center"><i>Example of Nibble and non-Nibble Boundaries
+                                                Sub-netting</i>
+                                        </p>
+                                        <p>From the above example, we can clearly see that Sub-netting at the Nibble
+                                            boundaries is easier to manage and do the sub-netting.</p>
+                                        <blockquote>
+                                            <p style="color: #bf8c55; font-size:14px; margin-bottom: 0;"><b>*</b>
+                                                Condition may arise where you may have to do non-Nibble based
+                                                sub-netting. It depends on case-to-case basis But Nibble boundaries
+                                                based sub-netting is the recommended one.</p>
+                                        </blockquote>
+                                    </li>
+
+                                    <li>
+                                        <b>Every LAN segment should be assigned /64 prefix</b>
+                                        <p>A /64 IPv6 segment provides 64 bits for network and hosts both. Every LAN
+                                            segment should be provided /64 prefix regardless the size of the same. An
+                                            IEEE’s 64-bit Extended Unique Identifier EUI-64 format (method by which host
+                                            can automatically assign itself a unique ipv6 address) needs a LAN segment
+                                            of /64.</p>
+                                        <p>/64 subnet is also required for Stateless Address Auto Configuration (SLAAC,
+                                            refer RFC 4862).</p>
+                                    </li>
+
+                                    <li>
+                                        <b>Point-to-point Network</b>
+                                        <p>In case of point-to-point network, there is a flexibility of using /64 or
+                                            /126 or /127 segment. As ip addresses are generally assigned manually in
+                                            point-to-point link, so no benefit in using /64. If addresses are assigned
+                                            to point-to-point link through SLAAC or EUI-64, then /64 is the only
+                                            available option.</p>
+                                        <p>In case of manual assignment, /127 is the subnet which comes in mind. In some
+                                            cases, we may face an issue called “subnet-router anycast” in routers while
+                                            using /127 for point-to-point link (refer <a
+                                                href="http://tools.ietf.org/html/rfc3627" target="_blank">rfc 3627</a>
+                                            for more details). The best
+                                            available option will be using /126 for Point-to-point Links.</p>
+                                    </li>
+
+                                    <li>
+                                        <b>/48 blocks for every Site/Region/Customer</b>
+                                        <p> For multi-homing in IPv6, minimum /48 segment is required. Every
+                                            customer/Site should be allocated a /48 segment, irrespective of the
+                                            size/LAN of the Region/Customer.</p>
+                                        <p>Next /48 should be reserved for every Customer/Site so as allocate the same
+                                            if needed in future.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <b>Hierarchical address planning</b>
+                                        <p> There should always be a scope for further expansion of the network.
+                                            Inefficient planning and little or no scope for expansion will led to end up
+                                            in inefficient v6 address allocation and will also led to increase in the v6
+                                            routing table. As mentioned above, every site/region should be allocated /48
+                                            v6 block. In addition of this next /48 block should be reserved for that
+                                            site. Continuous allocation helps in aggregation two /48 into single /47
+                                            segment (which will help us in minimizing the size of the v6 routing table).
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <b>Infrastructure Segment</b>
+                                        <p> Infrastructure incl. Loopback addresses, WAN Links and others. First /48
+                                            from ISP resource pool should be reserved for this. We can further subnet
+                                            this /48 into multiple /64 segments.
+                                        </p>
+                                        <ol start="A">
+                                            <li>
+                                                <b>Loopback Addresses</b>
+                                                <p>Loopback is the most common address and in majority of times, it is
+                                                    used in configuration. It should be as concise as possible so as to
+                                                    help human in remember the same. Using first /48 from an ISP pool of
+                                                    /32 or /30 (or whatever the pool is) helps in suppressing the
+                                                    address to the maximum extent.</p>
+                                                <u>As for example, Suppose 2405:8A00::/32 is the ISP ipv6 address block,
+                                                    then we will have a following /48 subnet from the same :-</u>
+                                                <div class="table-responsive py-3"
+                                                    style="max-width: 700px; margin: 0 auto;">
+                                                    <table class="table table-secondary table-border text-center">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style=" background: #fdefe6; color: #bf8c55;">
+
+                                                                    2405:8A00::/32
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+
+                                                                    2405:8A00::/48
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+
+                                                                    2405:8A00:0001::/48
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+
+                                                                    2405:8A00:0002::/48
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+
+                                                                    (snip)
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+
+                                                                    2405:8A00:FFFF::/48
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <p>
+                                                    As clearly visible in above example, first /48 contains all zeros
+                                                    which can be combining to represent the segment in best concise
+                                                    manner. Loopback address needs to be /128 only. First /48 can be
+                                                    further segmented into multiple /64 and first /64 block will be used
+                                                    for loopback address allocation.
+                                                </p>
+                                                <p>
+                                                    By using /64 segment, a scope is there for 2^64 unique loopback v6
+                                                    addresses (which is more than enough for whole internetJ). As per
+                                                    current practice, use numeral only in last octet and leave alphabets
+                                                    altogether.
+                                                </p>
+                                                <p>
+                                                    For e.g.:- Suppose loopback segment is 2405:8A00::/64. Loopback
+                                                    addresses will be 2405:8A00::1/128, 2405:8A00::2/128,
+                                                    2405:8A00::3/128, …… 2405:8A00::9/128. The next sequential address
+                                                    will be 2405:8A00::A/128. But as per best practice, this will be
+                                                    ignored (having alphabet in last octet).
+                                                </p>
+                                                <p><u>Useful loopback addresses will be like:-</u></p>
+                                                <div class="table-responsive py-3"
+                                                    style="max-width: 700px; margin: 0 auto;">
+                                                    <table class="table table-secondary table-border text-center">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style=" background: #fdefe6; color: #bf8c55;">
+                                                                    2405:8A00::/64
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2405:8A00::1/128</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2405:8A00::2/128</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>(snip)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2405:8A00::9/128</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2405:8A00::10/128</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>(snip)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2405:8A00::9999/48</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                            </li>
+                                            <li>
+                                                <b>WAN Links</b>
+                                                <p>Point-to-point links or WAN links requires only 2 useful addresses.
+                                                    Here any of the /127 or /126 or /64 can be used. It depends on the
+                                                    network design altogether. Whatever be used, uniformity should be
+                                                    maintained. As per practice, /126 is the optimal option as it save
+                                                    us from ‘subnet-router anycast’ and also use the address space from
+                                                    efficiently. /64 can be separated out from the Infrastructure pool
+                                                    for this purpose.</p>
+                                                <u> For e.g.:-</u>
+                                                <div class="table-responsive py-3"
+                                                    style="max-width: 700px; margin: 0 auto;">
+                                                    <table class="table table-secondary table-border text-center">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style=" background: #fdefe6; color: #bf8c55;">2405:8A00:0:1::/64</td>
+                                                            </tr>
+                                                            <tr><td>2405:8A00:0:1::0/126</td></tr>
+                                                            <tr><td>2405:8A00:0:1::4/126</td></tr>
+                                                            <tr><td>(snip)</td></tr>
+                                                            <tr><td>2405:8A00:0:1::C/126</td></tr>
+                                                            <tr><td>2405:8A00:0:1::10/126</td></tr>
+                                                            <tr><td>(snip)</td></tr>
+                                                            <tr><td>2405:8A00:0:1::1C/126</td></tr>
+                                                          
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <!-- /blog post -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Main content -->
+
+    <div id="showsidebar"></div>
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>

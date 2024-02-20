@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary heading-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>
+                        Why we have IPv6 after IPv4..... Where is IPv5 ?
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> December 04, 2013</li>
+                            </ul>
+                            <div class="content">
+                                <p class="blog-post-body">
+                                    IP or Internet Protocol, is the primary network protocol used on the Internet,
+                                    introduced by Vint Cerf and Bob Kahn in 1974.<br /><br />
+                                    IP version 0 to 3 was introduced and used between 1974 and 1979. After changes and
+                                    refinements in initial IP protocol, version 4 was introduced in 1981, commonly known
+                                    as IPv4, described in RFC 791, which become the backbone of Whole Internet in no
+                                    time. (IPv4 is know as v4 because it is the fourth version of IP not because it has
+                                    4 octets, which is a common myth).
+
+                                </p>
+                                <p>TCP/IP Protocol was designed as a part of project ARPANET, whose aim was to
+                                    interconnect various universities and research institutes of USA. But with the dot
+                                    com boom, TCP/IP grows like anything and its become a victim of its own success.</p>
+                                <p>In Early 90's, expert realized that we will exhaust the whole IPv4 number very soon
+                                    and there is a need for a new protocol, which should be enough in size to serve the
+                                    internet community for at least 30-40 years. This lead to new version of Internet
+                                    Protocol.</p>
+                                <p>
+                                    <b>Version 5 </b>is used for Internet Stream Protocol, an experimental streaming
+                                    protocol, which never comes in public domain.
+                                </p>
+                                <p><b>Version 6 </b>is allocated to Simple Internet Protocol Plus, now commonly known as
+                                    IPv6. This is now next most common protocol after IPv4 and is intended to replace
+                                    IPv4.</p>
+                                <p><b>Version 7, 8 and 9</b> is allocated for various purposes but didn't get much
+                                    success and support.</p>
+                                <p>If we able to see next protocol (having that much recognition as that of v4 and v6)
+                                    in our lifetime, it will having a number greater than 9 for sure :).</p>
+
+                            </div>
+                        </div>
+                        <!-- /blog post -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Main content -->
+
+    <div id="showsidebar"></div>
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>
