@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary heading-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>
+                        How to install DIG in Windows Machine
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> August 04, 2013</li>
+                            </ul>
+                            <div class="content">
+                                <p class="blog-post-body">
+                                    DIG is a domain query tool and a part of BIND package of ISC.
+                                </p>
+                               <p>Using dig is very simple in Linux but is little bit tricky to use the same in Windows.</p>
+                               <p>I have tried to do the same and sharing you the steps which i follow for configuring the dig in my windows machine.</p>
+
+                               <h6><u>How to install dig in Windows :-</u></h6>
+                                <ol>
+                                    <li>
+                                        Create a folder for dig (eg: C:\dig)
+                                    </li>
+                                    <li>Download the latest version (currently which is 9.8.5-P2) of BIND software from here (ZIP format)
+                                    </li>
+                                    <li>Extract the .zip file and copy the dig.* and *.dll files in the folder created in step 1</li>
+                                    <li>Add the folder in the Environment Variables path settings (Right click on My Computer --> click on Properties --> Advance System Settings --> Environmental Variables --> Path )</li>
+                                </ol>
+                                <h6><u>Use dig more efficiently (using .digrc) :-</u></h6>
+                                <p>dig gives lot of information in its output which may not be useful in most of cases (and may be annoying for some of us). To cut short the dig output to show you only the answer section, you need to give lot of parameters to instruct dig.</p>
+
+                                <blockquote style="font-weight: 400; margin-bottom: 0; font-size: 14px;">
+<pre>
+<span>C:\Users\kansal&gt;dig india.gov.in any +nostats +nocomments +nocmd +noquestion +recurse &nbsp;</span>
+
+
+<span>india.gov.in. 84 &nbsp;IN &nbsp;AAAA &nbsp;2001:4408:5200::a464:38bf</span>
+
+<span>india.gov.in. 853 IN &nbsp;A 164.100.56.191</span>
+
+<span>india.gov.in. 853 IN &nbsp;NS &nbsp;ns2.nic.in.</span>
+
+<span>india.gov.in. 853 IN &nbsp;NS &nbsp;ns1.nic.in.</span>
+
+<span>india.gov.in. 853 IN &nbsp;NS &nbsp;ns10.nic.in.</span>
+
+<span>india.gov.in. 853 IN &nbsp;NS &nbsp;ns7.nic.in.</span>
+</pre>
+                                </blockquote>
+
+                                <p class="mt-4">Now to give lot of parameters in every query string is not feasible (especially to Windows guys who believe in using mouse more than keyword :) ).          </p>
+
+                                <p>After going through the dig man page, i found  a b'ful solution to get rid of entering parameters every time.</p>
+                                <p>Create a file and named it as ".digrc", and add the required parameters in that file.
+                                    dig command will read the parameters from that file and concatenate the o/p based on the parameters based in '.digrc' file.   </p>
+
+                                <p> <img src="../../images/digrc.jpg" alt="alertnettext"  class="img-fluid w-50 py-3"></p>
+
+                                <p>I create a file ".digrc" in C:\dig\ folder. Now the problem is how to tell dig to where to find the .digrc file.</p>
+
+                                <p>Solution of this is too simple. Just create a 'home' variable and add a value "C:\dig\" for the same.</p>
+
+                                <p> <img src="../../images/digrc-path.JPG" alt="alertnettext"  class="img-fluid w-50 py-3"></p>
+
+                                <p>Now to just check whether everything is working or not as per desired -</p>
+
+                                <p> <img src="../../images/dig-op.JPG" alt="alertnettext"  class="img-fluid w-50 py-3"></p>
+
+                                <p>Bingo :) we get the desired output without giving  the required parameters.</p>
+
+                                <b class="mt-4">P.S.- </b>
+                                <p>Bind 9.9.5 is the latest version of Bind which is in ESV (Extended Support Version). In this version, normal bind 9.9.5 dig utility wait continuously for indefinite period of time after query through dig command in Windows OS and user have to use Ctrl+C for getting the prompt again. This is a bug in Bind 9.9.5 dig tool which got hits when dig tool is used separately in windows environment (i.e., when only dig tool is used in Windows).</p>
+                                <p>This bug has been rectified in Bind 9.9.5-W1 version which can be downloaded from <a href="http://www.isc.org/downloads/file/bind-9-9-5rc2/?version=zip" target="_blank">here</a>.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /blog post -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Main content -->
+
+    <div id="showsidebar"></div>
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>

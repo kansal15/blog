@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary heading-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>
+                        Domain Information Groper (DIG) -- DNS Query Tool
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> August 04, 2013</li>
+                            </ul>
+                            <div class="content">
+                                <p class="blog-post-body">
+                                    DIG is a command-line tool for querying DNS Name Server (similar to nslookup utility
+                                    available in Windows and host utility). dig utility can be used for querying DNS
+                                    about the host address (both A and AAAA), name server(NS), mail exchange(MX),
+                                    Pointer Record(PTR), SOA (Start Of Authority) and others.
+
+                                </p>
+                                <p>DIG is a part of BIND software package ( BIND package is developed and managed by
+                                    Internet Systems Consortium ISC).</p>
+
+                                <h6><u>Usage Example :-</u></h6>
+                                <ol>
+                                    <li class="my-4">
+                                        <b>Ask for a host address :-</b>
+                                        <p>
+                                            <img src="../../images/dig-nkn.JPG" alt="Abbreviated"
+                                                class="img-fluid w-50 py-3">
+                                        </p>
+                                        <p class="text-center"><i>dig nkn.in</i></p>
+                                    </li>
+                                    <li class="my-4">
+                                        <b>Ask from a specific server :-</b>
+                                        <blockquote style="font-weight: 400; margin-bottom: 0; font-size: 14px;"
+                                            class="mt-4">
+                                            <pre class="mb-1">
+<span>dig nkn.in </span><span style="color: #cb0000;">@8.8.8.8</span>
+<span>; &lt;&lt;&gt;&gt; DiG 9.8.5-P2 &lt;&lt;&gt;&gt; nkn.in @</span><span style="color: #cb0000;">8.8.8.8</span>
+<span>;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 13527
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+ 
+;; QUESTION SECTION:
+;nkn.in.                                IN      A
+ 
+;; ANSWER SECTION:
+</span><span style="color: #cb0000;">nkn.in.                 14103   IN      A       164.100.56.206</span>
+<span>
+;; Query time: 171 msec
+;; SERVER: </span><span style="color: #cb0000;">8.8.8.8#53</span>(8.8.8.8)
+<span>;; WHEN: Sat Aug 03 23:22:51 India Standard Time 2013
+;; MSG SIZE  rcvd: 40
+</span> </pre>
+                                        </blockquote>
+                                    </li>
+
+                                    <li class="my-4">
+                                        <b>Ask for all the records for a particular domain :-</b>
+                                        <blockquote style="font-weight: 400; margin-bottom: 0; font-size: 14px;"
+                                            class="mt-4">
+                                            <pre><span >C:\Users\kansal&gt;dig nkn.in <span style="color: #cb0000;">any</span> <span style="color: blue;">@8.8.4.4</span>
+
+; &lt;&lt;&gt;&gt; DiG 9.8.5-P2 &lt;&lt;&gt;&gt; nkn.in any @8.8.4.4
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 41915
+;; flags: <span style="color: blue;">qr rd ra</span>; QUERY: 1, ANSWER: 7, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;nkn.in.                                IN      ANY
+     
+;; ANSWER SECTION:
+nkn.in.                 14390   IN      <span style="color: #cb0000;">SOA     </span>nkn.in. nsadmin\@nkn.in. 2013041
+601 10800 86400 1209600 14400
+nkn.in.                 14390   IN      <span style="color: #cb0000;">NS      </span>ns1.nkn.in.
+nkn.in.                 14390   IN      <span style="color: #cb0000;">NS      </span>ns3.nkn.in.
+nkn.in.                 14390   IN      <span style="color: #cb0000;">NS      </span>ns2.nkn.in.
+nkn.in.                 14390   IN      <span style="color: #cb0000;">A       </span>164.100.56.206
+nkn.in.                 14390   IN      <span style="color: #cb0000;">AAAA    </span>2001:4408:5200::a464:38ce
+nkn.in.                 14390   IN      <span style="color: #cb0000;">MX      </span>0 mailgw.nic.in.
+     
+;; Query time: 159 msec
+;; SERVER: 8.8.4.4#53(8.8.4.4)
+;;<span style="color: blue;"> WHEN: Sat Aug 03 23:24:59 India Standard Time 2013</span>
+;; MSG SIZE  rcvd: 197</span></pre>
+                                        </blockquote>
+                                    </li>
+
+                                    <li class="my-4">
+                                        <b> Find out the domain's Mail Server :-</b>
+                                        <blockquote style="font-weight: 400; margin-bottom: 0; font-size: 14px;"
+                                            class="mt-4">
+                                            <pre class="mb-1">
+<span>C:\Users\kansal&gt;dig nkn.in <span style="color: #cb0000;">MX</span>
+ &lt;&lt;&gt;&gt; DiG 9.8.5-P2 &lt;&lt;&gt;&gt; nkn.in MX
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 50205
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+        
+;; QUESTION SECTION:
+<span style="color: #cb0000;">;nkn.in.                                IN      MX
+        </span>
+;; ANSWER SECTION:
+<span style="color: #cb0000;">nkn.in.                 14232   IN      MX      0 mailgw.nic.in.
+      </span>
+;; Query time: 63 msec
+;; SERVER: 103.8.44.5#53(103.8.44.5)
+;; WHEN: Sat Aug 03 23:32:05 India Standard Time 2013
+;; MSG SIZE  rcvd: 51
+</span></span><span style="font-family: Menlo, Monaco, 'Andale Mono', 'lucida console', 'Courier New', monospace; font-size: 13px; line-height: 1.45em;">
+</span></pre>
+                                        </blockquote>
+
+                                    </li>
+                                    <li class="my-4">
+                                        <b> Ask for a reverse lookup :-</b>
+                                        <blockquote style="font-weight: 400; margin-bottom: 0; font-size: 14px;"
+                                        class="mt-4">
+<pre class="mb-1">C:\Users\kansal&gt;dig -<span style="color: #cb0000;">x 164.100.2.6</span>
+; &lt;&lt;&gt;&gt; DiG 9.8.5-P2 &lt;&lt;&gt;&gt; -x 164.100.2.6
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 3471
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+            
+;; QUESTION SECTION:
+;  6.2.100.164.in-addr.arpa.      IN      <span style="color: #cb0000;">PTR</span>
+            
+;; ANSWER SECTION:
+<span style="color: #cb0000;">6.2.100.164.in-addr.arpa. 82055 IN      PTR     mailgw-hyd.nic.in. </span>
+;; Query time: 70 msec
+;; SERVER: 103.8.44.5#53(103.8.44.5)
+;; WHEN: Sat Aug 03 23:29:52 India Standard Time 2013
+;; <span style="color: blue;">MSG SIZE  rcvd: 73</span> </pre>
+                                    </blockquote>
+                                    </li>
+
+                                    <li class="my-4">
+                                        <b>Check for DNSSEC Validation :-</b>
+                                        <blockquote style="font-weight: 400; margin-bottom: 0; font-size: 14px;"
+                                        class="mt-4">
+<pre>C:\Users\kansal&gt;
+C:\Users\kansal&gt;dig <span style="color: #cb0000;">apnic.net</span> <span style="color: #cb0000;">+dnssec</span> @8.8.8.8
+                
+;; &lt;&lt;&gt;&gt; DiG 9.8.5-P2 &lt;&lt;&gt;&gt; apnic.net +dnssec @8.8.8.8
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 8543
+;; flags: qr rd ra <span style="color: #cb0000;"><b>ad</b></span>; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+ 
+
+;; OPT PSEUDOSECTION:
+; <span style="color: #cb0000;">EDNS: version: 0, flags: do; udp: 512</span>
+;; QUESTION SECTION:
+;; apnic.net.                     IN      A
+ 
+;; ANSWER SECTION:
+ apnic.net.              3600    IN      A       202.12.29.175
+ <span style="color: #cb0000;">apnic.net.              3600    IN      RRSIG   A 8 2 3600 20130903002809 201308
+03232809 42189 apnic.net. Q9D9OKv2qfjs33C3yyuAJhkdxy0ytjgAmsXTjVveVGwXqEcL0tEz7g
+2f FKM+RykyuqxG/Tq2mxSlBrxgkhvomBLyR9OpCKvYPPST6deR6DWlztOa DIMYZ90gvpqBDGSiSafr
+xcvXAr0ZTUgBZcIAtkOpzEpoOa1zP1f6VRVA vMM=
+</span>
+;; Query time: 386 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8)
+;; WHEN: Sun Aug 04 11:07:27 India Standard Time 2013
+<span style="color: blue;">;; MSG SIZE  rcvd: 223</span></pre>
+                                    </blockquote>
+                                    </li>
+
+                                    <li class="my-4">
+                                        <b>Trace the DNS Query :-</b>
+                                        <blockquote style="font-weight: 400; margin-bottom: 0; font-size: 14px;"
+                                        class="mt-4">
+<pre>C:\Users\kansal&gt;dig india.gov.in <span style="color: red;"><b>+trace</b></span>
+
+; &lt;&lt;&gt;&gt; <span style="color: blue;"><b>DiG 9.8.5-P2</b></span> &lt;&lt;&gt;&gt; india.gov.in +trace
+;; global options: +cmd
+.                       31101   IN      NS      l.root-servers.net.
+.                       31101   IN      NS      h.root-servers.net.
+.                       31101   IN      NS      c.root-servers.net.
+.                       31101   IN      NS      g.root-servers.net.
+.                       31101   IN      NS      m.root-servers.net.
+.                       31101   IN      NS      e.root-servers.net.
+.                       31101   IN      NS      b.root-servers.net.
+.                       31101   IN      NS      a.root-servers.net.
+.                       31101   IN      NS      j.root-servers.net.
+.                       31101   IN      NS      d.root-servers.net.
+.                       31101   IN      NS      f.root-servers.net.
+.                       31101   IN      NS      k.root-servers.net.
+.                       31101   IN      NS      i.root-servers.net.
+;; Received 228 bytes from 103.8.44.5#53(103.8.44.5) in 1471 ms
+    
+    in.                     172800  IN      NS      a0.in.afilias-nst.info.
+    in.                     172800  IN      NS      a1.in.afilias-nst.in.
+    in.                     172800  IN      NS      a2.in.afilias-nst.info.
+    in.                     172800  IN      NS      b0.in.afilias-nst.org.
+    in.                     172800  IN      NS      b1.in.afilias-nst.in.
+    in.                     172800  IN      NS      b2.in.afilias-nst.org.
+    in.                     172800  IN      NS      c0.in.afilias-nst.info.
+    in.                     172800  IN      NS      ns7.cdns.net.
+;; Received 495 bytes from 128.63.2.53#53(h.root-servers.net) in 2994 ms
+    
+    india.gov.in.           86400   IN      NS      ns7.nic.in.
+    india.gov.in.           86400   IN      NS      ns1.nic.in.
+    india.gov.in.           86400   IN      NS      ns10.nic.in.
+    india.gov.in.           86400   IN      NS      ns2.nic.in.
+;; Received 107 bytes from 199.7.87.1#53(a0.in.afilias-nst.info) in 757 ms
+    
+    india.gov.in.           1800    IN      A       164.100.56.191
+    india.gov.in.           1800    IN      NS      ns2.nic.in.
+    india.gov.in.           1800    IN      NS      ns1.nic.in.
+    india.gov.in.           1800    IN      NS      ns10.nic.in.
+    india.gov.in.           1800    IN      NS      ns7.nic.in.
+;; Received 199 bytes from 164.100.14.3#53(ns1.nic.in) in 55 ms<span style="font-size: x-small;">
+    
+    
+    </span></pre>
+                                    </blockquote>
+                                    </li>
+
+                                </ol>
+
+                                <p>The above output show you how DNS queries works.</p>
+                                <p>In the above query, i ask for "trace" for the india.gov.in domain.</p>
+                                <p>My resolver first goes to "." (Root NameServer) as every resolver knows about Root Servers only. Root NS replies that 'he don't know about india.gov.in' but he knows about 'NS of .in domain'.</p>
+                                <p>Then resolver goes to NS of ".in" domain and ask for india.gov.in, which in turn replies that he only knows about NS of india.gov.in.</p>
+                                <p>Then resolver goes to NS of 'india.gov.in' which in turn replies the desired query answer.</p>
+
+                            </div>
+                        </div>
+                        <!-- /blog post -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Main content -->
+
+    <div id="showsidebar"></div>
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>

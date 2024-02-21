@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary heading-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>
+                        Shouldn't India have a Root Server ???
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> June 24, 2013</li>
+                            </ul>
+                            <div class="content">
+                                <p class="blog-post-body">
+                                    A Root name server is a name server for DNS root zone. Every new DNS query resolved
+                                    by our local resolver first goes to Root Name Server and then root name server
+                                    directs it to required domain server.
+
+                                </p>
+
+                                <p>This means that if in any case, root name servers goes down, then whole internet goes
+                                    down (don't worry this cannot be done so easily as most of root name servers are
+                                    running on Anycast and located all over the world). Recently, an anonymous group
+                                    posted, to target these 13 root name severs and to bring them down by DDOS attack on
+                                    31st March 2011, to protest against SOPA and PIPA. But as expected, they didn't
+                                    succeed. The last time someone seriously tried to take out the root servers was
+                                    about 4 or 5 years ago and they managed to take down six out of thirteen servers. I
+                                    am not saying that it could not be done but it would be tough.</p>
+
+                                <p>Every root name server is operated by different organization (except 'A' and 'J'
+                                    which are operated by VeriSign) but they all point to 'A' root name server.</p>
+
+                                <p>If any change needs to be done on root zone, it has to be done on 'A' and then all
+                                    root name server will update its zone file through 'A'.</p>
+
+                                <p>This creates a tricky situation because if the controllers of the root name servers
+                                    decides to block any particular zone Or if they are forced to do so (may be in case
+                                    of cyber-attack against any country or any similar situation), then that particular
+                                    zone will be out of the whole internet.
+                                </p>
+
+                                <p>Currently, there are 13 root name servers. The choice of 13 nameserver was due to the
+                                    limitation exists in the DNS specification, which specifies a maximum packet size of
+                                    512 bytes when using UDP.</p>
+
+                                <p>
+                                    Root name severs are named in the form of letter.root-servers.net, where letter
+                                    ranges from A to M.</p>
+
+                                <p>Out of 13 root name serves, 9 are running on Anycast. 2 root name servers are
+                                    operated by U.S. Universities.</p>
+
+                                <p>'B' operated by Information Sciences Institute of University of Southern California
+                                    and 'D' operated by University of Maryland.</p>
+
+                                <p>After the implementation of DNSSEC (DNS Security Extensions) and addition of IPv6
+                                    addresses for the root nameservers, 512 bytes limit doesn't remains valid and EDNS0
+                                    extension was added to DNS standard.</p>
+
+                                <p>Now as previously exists limitation doesn't exist anymore, new root name servers can
+                                    be granted by IANA.</p>
+
+                                <p>There are approx. 2.27 billion internet users all over the world out of which 1
+                                    billion are in ASIA. And if figure out country-wise internet users, India has
+                                    approximately 120 million internet users and china has 513 million internet users.
+                                    On combining both of these, it comes out 633 million internet users, which is 28% of
+                                    total internet users.</p>
+
+                                <p>But the irony is, there are no Root name servers operated by any of these countries.
+                                    Now the million dollar question is, shouldn't the IANA allocate new Root name
+                                    servers as the limitation doesn't exist anymore after the EDNS0 extension to the DNS
+                                    standards.</p>
+
+                                <p>There are many things that goes against china, some are, it filters internet traffic
+                                    and this is against the whole concept of internet itself, government influence over
+                                    the internet and unpredictable behavior of government. so may be internet community
+                                    shows reluctance in allocating new root name server to china.</p>
+
+                                <p>But if we talk about India, it is the largest democracy of the world, a secular and
+                                    sovereign country, has stable government since independence, ninth largest in the
+                                    world by GDP, so it is the safe bet for allocation of new Root Name Server.</p>
+
+                                <p>Shouldn't be IANA look into this and tries to decrease the internet infrastructure
+                                    difference which exists between the North and the South????</p>
+
+                            </div>
+                        </div>
+                        <!-- /blog post -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Main content -->
+
+    <div id="showsidebar"></div>
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>
