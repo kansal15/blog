@@ -49,32 +49,466 @@
     </section>
     <!-- /page-title -->
 
-    <!--Main content-->
-    <section class="mt-1" id="blog-post-block">
-        <div class="card mb-2">
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- blog post -->
-                    <div class="col-lg-12">
-                        <div class="card-block">
-                            <ul class="list-inline d-flex justify-content-between py-3">
-                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
-                                        href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
-                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> February 15, 2022</li>
-                            </ul>
-                            <div class="content">
-                                <iframe height="680"
-                                    src="https://drive.google.com/file/d/10_G2Tizxw1rX7vdMzNZXNG78k8FY_78V/preview"
-                                    width="100%"></iframe>
+    
+   <!--Main content-->
+   <section class="mt-1" id="blog-post-block">
+    <div class="card mb-2">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- blog post -->
+                <div class="col-lg-12">
+                    <div class="card-block">
+                        <ul class="list-inline d-flex justify-content-between py-3">
+                            <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                    href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                            <li class="list-inline-item"><i class="ti-calendar mr-2"></i> February 15, 2022</li>
+                        </ul>
+                        <img src="../../images/root_server.jpg" alt="post-thumb" class="img-fluid mb-4">
+                        <div class="content">
+                            <p class="blog-post-body">
+                                History of ROOT-SERVERS (A Journey from 4 nodes to 13 nodes at present)
+                            </p>
+                            <h6><u>1.1 Period 1983-1986: </u></h6>
+                            <p>Before the development of DNS, information about hosts were assigned in a flat 
+                                namespace format and name-to-address look ups was done using table, which use 
+                                to be available in all the hosts. Network Information Centre (NIC) at SRI 
+                                International, use to maintain this table and all hosts get the updated copy from 
+                                SRI-NIC periodically. At that time, most of the hosts were at ARPANET 
+                                (Advanced Research Project Agency Network) and DND (Defense Data 
+                                Network), and managing the hosts records in flat file wasn’t that tough.
+                                As the number of hosts were increasing so was the size of this flat file, and with 
+                                the frequency of updates, a decentralized database need was felt. To address this 
+                                problem, Mr. Jon Postel and Mr. Paul Mockapetris published number of RFCs 
+                                that laid down the design of DNS.</p>
+                            <p>To test the DNS, Mr. Jon Postel and Mr. Paul Mockapetris setup the first root 
+                                server in 1984 at Information Science Institute (ISI) at the University of South 
+                                California (USC). The domain name services were running of the software 
+                                developed by Mockapetris, named JEEVES. In 1985 an additional root was added 
+                                at ISI.</p>
+                            <p>An additional root server was placed at SRI International, as it was NIC for DDN 
+                                and was handling the registration of hosts and maintenance of hosts.txt file.</p>
+                            <p>Doug Kingston and Mike Muuss, at the Ballistic Research Laboratory (BRL) in 
+                                the U.S. Army, played an important role in the ongoing development of the 
+                                Berkeley Internet Name Domain (BIND) package. To assist in the further 
+                                development of the DNS and to provide a root server for MILNET (which was 
+                                split from the original ARPANET in 1983, is the operational, unclassified 
+                                network component of the Department of Defense Network) in the event that 
+                                MILNET had to be disconnected from the ARPANET, BRL volunteered in 1985 
+                                to host a root server, making it the first root server running BIND on a UNIX 
+                                operating system</p>
+                            <h6>Thus by 1985, there were four root name servers<sup><a onclick="linkfiles('link1')">[1]</a>
+                              <a onclick="linkfiles('link2')">[2]</a></sup> –
+                            </h6>
+                            
+                            <div class="blog-table text-center">
+                                <h6 class="text-center"><u>List of Root Servers in 1985</u></h6>
+                              <table class="table table-secondary">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Software</th>
+                                    <th scope="col">Organization</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>SRI-NIC</td>
+                                    <td>JEEVES</td>
+                                    <td>SRI-International</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="blog-tooltip">ISIB<sup><a href="#">[3]<span class="tooltiptext">As the DNS was at early stages of development, 
+                                      root name servers at ISI tended to change machines 
+                                        frequently. In November 1986, ISIB was retired, 
+                                        and replaced by another server named ISIA. In October 1987, 
+                                        ISIC (C.ISI.EDU) was retired as well.
+                                        </span></a></sup>
+                                    </td>
+                                    <td>JEEVES</td>
+                                    <td>Information Science Institute, 
+                                        USC</td>
+                                  </tr>
+                                  <tr>
+                                    <td>ISIC</td>
+                                    <td>JEEVES</td>
+                                    <td>Information Science Institute, 
+                                        USC</td>
+                                  </tr>
+                                  <tr>
+                                    <td>BRL-AOS</td>
+                                    <td>BIND</td>
+                                    <td>Ballistic Research Laboratory, 
+                                        U.S. Army</td>
+                                  </tr>
+                                </tbody>
+                              </table>
                             </div>
-                        </div>
-                        <!-- /blog post -->
+                            <blockquote><span style="color: #d58753;">By March 1987, SRI-NIC was named SRI-NIC.ARPA, ISIC was named 
+                              C.ISI.EDU, BRL-AOS was named BRL-AOS.ARPA, and ISIA (previously 
+                              ISIB) was named <b>A.ISI.EDU.</b></blockquote>
+                         
+                            <div class="mt-5 mb-5">
+                              <h6><u>1.2 Period 1986-1990: </u></h6>
+                              <p>In October 1986, at the Internet Engineering Task Force (IETF) 6 meeting, Doug 
+                                Kingston from BRL convened a workshop called “Name Domains for MILNET.” 
+                                The primary focus was to explore the transition of MILNET to use domain 
+                                names.<sup><a onclick="linkfiles('link4')">[4]</a></sup></p>
+                              <p>During the workshop and also in mailing list discussions afterwards, Gunter Air 
+                                Force Station was mentioned as a possible root server location because of its 
+                                ability to serve MILNET. Eventually, in November 1987 GUNTER-ADAM 
+                                (U.S. Air Force Networking Group) was added as a root server.</p>
+                              <p>In 1986, the National Science Foundation Network (NSFNET) went online. Built 
+                                as a "network of networks" and developed in phases, NSFNET connected 
+                                supercomputer centers in the U.S. and a variety of regional research and 
+                                education networks, extending the Internet’s reach throughout the United States.</p>
+                              <p>As NSFNet traffic and registrations grew, people became aware of some 
+                                cases of poor DNS service due to the limited number and reach of root servers. 
+                                To address this issue, in July 1987, at the IETF 7 meeting, the name domain 
+                                planning working group held a one-hour session to discuss root servers.<sup><a onclick="linkfiles('link5')">[5]</a></sup> The goal 
+                                of the meeting was to select root servers that would provide improved service to 
+                                the NSFNET.</p>
+                                <b>The participants discussed and chose three new name servers –</b>
+                              <ol type="i">
+                                <li>University of Maryland, largely because it was in a position to service 
+                                  equally well the NSFNET, ARPANET, MILNET and SURANET.
+                                </li>
+                                <li>NASA Ames, because it was an ideal location due to its connection to 
+                                  MILNET, ARPANET, NASA-SCINET19, NSFNET and BARRNET.</li>
+                                <li>Rensselaer Polytechnic Institute (RPI), which was part of the New York 
+                                  State Education and Research Network. It was also one of the first 
+                                  Internet service providers in the United States. 
+                                </li>
+                              </ol>
+                              <blockquote><span style="color: #d58753;">These three root servers and GUNTER-ADAM were expected to be operational 
+                                by IETF 8 in November 1987. In November 1987, C.ISI.EDU was retired from 
+                                root server duty. As agreed, four additional root servers were added.</blockquote>
+                              <p></p>
+
+                                <div class="blog-table text-center">
+                                  <h6 class="text-center"><u>List of Root Servers in November 1987 <sup><a onclick="linkfiles('link6')">[6]</a></sup></u></h6>
+                                <table class="table table-secondary">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Name</th>
+                                      <th scope="col">Software</th>
+                                      <th scope="col">Organization</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>SRI-NIC.ARPA</td>
+                                      <td>JEEVES</td>
+                                      <td>SRI-International</td>
+                                    </tr>
+                                    <tr>
+                                      <td>A.ISI.EDU</td>
+                                      <td>JEEVES</td>
+                                      <td>Information Sciences Institute, USC</td>
+                                    </tr>
+                                    <tr>
+                                      <td>C.NYSER.NET</td>
+                                      <td>BIND</td>
+                                      <td>Rensselaer Polytechnic Institute</td>
+                                    </tr>
+                                    <tr>
+                                      <td>TERP.UMD.NET</td>
+                                      <td>BIND</td>
+                                      <td>University of Maryland</td>
+                                    </tr>
+                                    <tr>
+                                      <td>GUNTER-ADAM.ARPA</td>
+                                      <td>JEEVES</td>
+                                      <td>U.S. Air Force Networking Group</td>
+                                    </tr>
+                                    <tr>
+                                      <td>NS.NASA.GOV</td>
+                                      <td>BIND</td>
+                                      <td>NASA Ames</td>
+                                    </tr>
+                                    <tr>
+                                      <td>BRL-AOS.ARPA</td>
+                                      <td>BIND</td>
+                                      <td>Ballistic Research Laboratory, U.S. Army</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <p>In November 1988, DDN implemented phase two of the MILNET Domain Name 
+                                Implementation with DDN MGT Bulletin 42. As a result, SRI-NIC.ARPA was 
+                                renamed to NIC.DDN.MIL, BRL-AOS.ARPA was renamed to AOS.BRL.MIL, 
+                                and GUNTERADAM.ARPA was renamed to GUNTER-ADAM.AF.MIL.</p>
+                                <h6>Thus, by November 1990, there were seven root servers –</h6>
+                                <div class="blog-table text-center">
+                                  <h6 class="text-center"><u>List of Root Servers in November 1990</u></h6>
+                                <table class="table table-secondary">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Original Name</th>
+                                      <th scope="col">New Name</th>
+                                      <th scope="col">Organization</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>SRI-NIC.ARPA</td>
+                                      <td>NS.NIC.DDN.MIL</td>
+                                      <td>SRI International</td>
+                                    </tr>
+                                    <tr>
+                                      <td>A.ISI.EDU</td>
+                                      <td>A.ISI.EDU</td>
+                                      <td>Information Sciences Institute, USC</td>
+                                    </tr>
+                                    <tr>
+                                      <td>C.NYSER.NET</td>
+                                      <td>C.NYSER.NET</td>
+                                      <td>Rensselaer Polytechnic Institute</td>
+                                    </tr>
+                                    <tr>
+                                      <td>TERP.UMD.NET</td>
+                                      <td>TERP.UMD.NET</td>
+                                      <td>University of Maryland</td>
+                                    </tr>
+                                    <tr>
+                                      <td>GUNTER-ADAM.ARPA</td>
+                                      <td>GUNTER-ADAM.AF.MIL</td>
+                                      <td>U.S. Air Force Networking Group</td>
+                                    </tr>
+                                    <tr>
+                                      <td>NS.NASA.GOV</td>
+                                      <td>NS.NASA.GOV</td>
+                                      <td>NASA Ames</td>
+                                    </tr>
+                                    <tr>
+                                      <td>BRL-AOS.ARPA</td>
+                                      <td>AOS.BRL.MIL</td>
+                                      <td>Ballistic Research Laboratory, U.S. Army</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="mt-5 mb-5">
+                              <h6><u>1.3 Period 1991 – ROOT DNS Outside North America: </u></h6>
+                             <p>There was an increasing need to have one or more root name servers in Europe 
+                              to reduce the dependency on the few, expensive and unstable Internet links to the 
+                              U.S. The issue was a topic of discussion at RIPE 1 on 22 May 1989.<sup><a onclick="linkfiles('link7')">[7]</a></sup>
+                              On 28 July 1991, the server NIC.NORDU.NET was added to the root zone and 
+                              became the first non-U.S. root server.</p>
+                            </div>
+
+                            <div class="mt-5 mb-5">
+                              <h6><u>1.4 Period 1991-1992: </u></h6>
+                              <p>In 1991, the Defense Information Systems Agency awarded the NIC contract to 
+                                Government Systems, Inc. (GSI), which in turn outsourced the contract to 
+                                Network Solutions, Inc. (NSI). As a result, a few changes happened –</p>
+                                <ol type="i">
+                                  <li>NS.NIC.DDN.MIL ownership changes from SRI-International to 
+                                    Network Solutions, Inc.
+                                  </li>
+                                  <li>A.ISI.EDU was retired, and a new root server KAVA.NISC.SRI.COM 
+                                    take the place of A.ISI.EDU.</li>
+                                </ol>
+                            </div>
+                            <div class="mt-5 mb-5">
+                              <h6><u>1.5 1993 – InterNIC: </u></h6>
+                              <p>ince the 1980s, the registration of domain names was performed by the DDN-NIC under contract by the Department of Defense. This was because most 
+                                registrants at the time were military users and awardees. By the early 1990s, due 
+                                to the rapid growth of the NSFNET, academic institutions comprised the majority 
+                                of new registrations, and the military was no longer willing to fund the 
+                                registration for these names. The U.S. Federal Networking Council (a group of 
+                                U.S. Government agencies involved in networking) asked the National Science 
+                                Foundation (NSF) to assume responsibility for non-military Internet registration.</p>
+                              <p>In 1992, after a solicitation process (NSF 9224), the NSF awarded three 
+                                five-year cooperative agreements, to American Telephone and Telegraph 
+                                Company (AT&T), General Atomics (GA), and Network Solutions, Inc. (NSI). 
+                                The contracted parties were to provide directory and database services, 
+                                information services and non-military registration services, respectively. These 
+                                companies adopted the name InterNIC for their joint role.</p>
+                                <p>Around the time Network Solutions won the bid to manage the domain 
+                                  registration service, it asked Jon Postel (IANA) about adding NS.INTERNET.NET as a root name server. Postel agreed and IANA added 
+                                  NS.INTERNET.NET as a root server in April 1993.</p>
+                                <p>In May 1994, KAVA.NISC.SRI.COM at SRI International was retired due to lack 
+                                  of funding, and NS1.ISI.EDU was added as a root server to replace it. 
+                                  In 1994, Paul Vixie and Rick Adams asked Jon Postel (IANA) on behalf of the 
+                                  Internet Software Consortium (ISC) to add a root server at ISC. Postel agreed, 
+                                  and in September 1994, IANA added NS.ISC.ORG as a root server. ISC was the 
+                                  organization coordinating the ongoing development and distribution of the most-used name server software, BIND, after taking over responsibility for BIND from 
+                                  Digital Equipment Corporation. </p>
+                                  <blockquote><span style="color: #d58753;">In October 1994, C.NYSER.NET changed to C.PSI.NET, as part of the 
+                                    commercialization of the Internet service provider <b>(ISP)</b>.</blockquote>
+                                <p></p>
+                            </div>
+                            <div class="mt-5 mb-5">
+                              <h6><u>1.6 1995 – Renaming Root Servers to root-servers.net: </u></h6>
+                              <p>By April 1993, the number of root name servers had grown to an extent where 
+                                the size of a root hints response was approaching the limit of 512 bytes. Bill 
+                                Manning and Paul Vixie developed a plan to rename all root servers under the 
+                                root-servers.net domain. This would allow the use of DNS label compression to 
+                                fit all the names within 512 bytes. Postel (IANA) agreed with the plan and Mark 
+                                Kosters began the renaming phases in 1995. </p>
+                                <div class="blog-table text-center">
+                                  <h6 class="text-center"><u>List of Root Servers in 1985</u></h6>
+                                <table class="table table-secondary">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Original Name</th>
+                                      <th scope="col">New Name</th>
+                                      <th scope="col">Organization</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>NS.InterNIC.NET</td>
+                                      <td>A.root-servers.net</td>
+                                      <td>InterNIC (Operated by NSI)</td>
+                                    </tr>
+                                    <tr>
+                                      <td>NS1.ISI.EDU</td>
+                                      <td>B.root-servers.net</td>
+                                      <td>Information Science Institute, 
+                                          USC</td>
+                                    </tr>
+                                    <tr>
+                                      <td>C.PSI.NET</td>
+                                      <td>C.root-servers.net</td>
+                                      <td>PSINet</td>
+                                    </tr>
+                                    <tr>
+                                      <td>TERP.UMD.NET</td>
+                                      <td>D.root-server.net</td>
+                                      <td>University of Maryland</td>
+                                    </tr>
+                                    <tr>
+                                      <td>NS.NASA.GOV</td>
+                                      <td>E.root-servers.net</td>
+                                      <td>NASA Ames Research Centre</td>
+                                    </tr>
+                                    <tr>
+                                      <td>NS.ISC.ORG</td>
+                                      <td>F.root-server.net</td>
+                                      <td class="blog-tooltip">Internet Software Consortium<sup><a href="#">[8]<span class="tooltiptext"> In 1994 when ISC first began to run a root name server, the company name was Internet Software Consortium. 
+                                        it was later changed to Internet Systems Consortium.
+                                          </span></a></sup></td>
+                                    </tr>
+                                    <tr>
+                                      <td>NS.NIC.DDN.MIL</td>
+                                      <td>G.root-server.net</td>
+                                      <td class="blog-tooltip">GSI (Operated by NSI)<sup><a href="#">[9]<span class="tooltiptext"> The .mil zone is removed from the root servers in 2006 that had been providing authoritative support (A, B, E, 
+                                        F, G, and H).
+                                          </span></a></sup></td>
+                                    </tr>
+                                    <tr>
+                                      <td>AOS.ARL.ARMY.MIL</td>
+                                      <td>H.root-server.net</td>
+                                      <td class="blog-tooltip">Internet Software Consortium<sup><a href="#">[10]<span class="tooltiptext"> On 09th Dec 2002, IPv6 support added to H at address 2001:500:1::803f:235 (no AAAA’s added to root zone 
+                                        until 2008).
+                                          </span></a></sup></td>
+                                    </tr>
+                                    <tr>
+                                      <td>NIC.NORDU.NET</td>
+                                      <td>I.root-server.net</td>
+                                      <td>NORDUnet</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>               
+                            </div>
+
+                            <div class="mt-5 mb-5">
+                              <h6><u>1.7 1997 – Adding J, K, L and M: </u></h6>
+                              <p class="blog-tooltip">Until 1996, there was only 9 Root Servers and with the migration to root-servers.net, operators were able to take advantage of DNS label compression,<sup><a onclick="linkfiles('link11')">[11]</a></sup>
+                                leaving room for four additional root servers to fit within a 512 byte DNS 
+                                response (will cover the 512 byte logic in detail in subsequent article)<sup><a href="#">[12]<span class="tooltiptext"> The limitation is specified in RFC 1035 because at the time there were networks that could not handle DNS 
+                                  packets larger than 512 bytes without fragmenting. Also, known firewall rules dropped DNS packets more than 
+                                  512 bytes in size.</span></a></sup>.
+                                In January 1997, servers J-Root, K-Root, L-Root and M-Root, were added, 
+                                serving the root zone exclusively. Postel (IANA) asked Network Solutions Inc. 
+                                to set up two additional servers with the intention of moving them to suitable 
+                                operators quickly thereafter. He kept two more servers at USC-ISI with the same 
+                                intention. J-Root and K-Root were set up at Network Solutions on the U.S. East 
+                                Coast, while L-Root and M-Root were at USC ISI on the U.S. West Coast. </p>
+                                <p>From interviews, it appears that Jon Postel developed and used a few simple 
+                                  criteria in selecting organizations to host these new servers:</p>
+                                  <ul class="list-type-li">
+                                    <li> Need: The need for root server service. At the time, Europe had one 
+                                      operator. As the Internet developed in Europe, another root server would be 
+                                      useful. There were also no root servers in Asia, so a root server was needed there. 
+                                      The primary tool that Postel used to determine the need was Larry Landweber’s 
+                                      International Connectivity Map. </li>
+
+                                    <li>Connectivity: The potential operator must have good connectivity both to 
+                                        the internal infrastructure (internal connectivity), and to the world (external 
+                                        connectivity). </li>
+                                    <li> Community consensus: The potential operator should demonstrate the 
+                                      widest possible support from the community being served.</li>
+                                    <li> Commitment to send and respond to traffic without filtering. The 
+                                      operator must be able to answer every DNS query and send responses back 
+                                      unfiltered. </li>
+                                </ul>
+                                <p class="blog-tooltip">For the European region, a number of parties expressed their willingness to 
+                                  operate a second root name server. Jon Postel (IANA) encouraged all parties to 
+                                  seek consensus about the matter. After thorough discussion, there was consensus that the Réseaux IP Européens Network Coordination Centre (RIPE NCC) was 
+                                  the appropriate organization to operate the server because of its neutrality and 
+                                  technical expertise. In particular, the RIPE NCC was deemed able to change the 
+                                  server’s deployment following changes in Internet topology.<sup><a href="#">[13]<span class="tooltiptext">
+                                    At the time, all deployments were unicast. The RIPE DNS working group suggested deploying near or at one 
+of the existing open exchange points. Consequently, the first deployment was at the LINX in London. The 
+LINX contributed hosting and local hands, while the RIPE NCC provided the hardware and covered operations. 
+This choice re-emphasized the independence of the location of the operator and the server itself. This was 
+followed shortly thereafter by deployment of a hot standby at the AMS-IX
+                                  </span></a></sup></p>
+                                  <p>In the Asia Pacific Region, the Widely Integrated Distributed Environment 
+                                    (WIDE) organization was chosen.</p>
+                                  <p>These selections provided additional organizational diversity in the operation of 
+                                    root servers. Operators now included educational institutions, governments, 
+                                    commercial companies and not-for-profit service organizations.</p>
+                                  <p>In May 1997, K-Root (K.ROOT-SERVERS.NET) moved to London LINX, 
+                                    managed by RIPE NCC. In August 1997, M-Root (M.ROOT-SERVERS.NET) 
+                                    moved to Japan, managed by WIDE.</p>
+                                  
+                            </div>                              
+                           
+                            <div class="mt-5 mb-5">
+                              <h6><u>1.8 Root Servers after Postel’s Death: </u></h6>
+                              <p>With K-Root and M-Root assigned, there remained two additional root servers to 
+                                be assigned. Unfortunately, Jon Postel died on 16 October 1998, and there was 
+                                no one to drive the process of assigning these additional root servers. J-Root 
+                                stayed with NSI, and remained with Verisign after it acquired NSI in 2000.</p>
+                                <p class="blog-tooltip">Before Postel’s death, it was planned that USC would transfer certain 
+                                  responsibilities, assets, and personnel to ICANN.<sup><a href="#">[14]<span class="tooltiptext">
+                                    4 Founded in 1998, Internet Corporation for Assigned Names and Numbers (ICANN) is a private not-for-profit public benefit corporation. It has performed the IANA functions on behalf of the global Internet 
+                                    community since the organization’s creation in 1998.
+                                  </span></a></sup>In 1999, this transfer 
+                                  occurred, which included L-Root. </p>
+                                 
+                                
+                                  
+                            </div>
+                            <h6><u>References: </u></h6>
+                            <ul class="refLi" style="list-style: none;">
+                                <li id="link1">1. <a class="openLink" onclick="linkOpen('https://marc.info/?l=namedroppers&m=95837667426588&w=2')"> https://marc.info/?l=namedroppers&m=95837667426588&w=2</a></li>
+                                <li id="link2">2. <a class="openLink" onclick="linkOpen('https://www.donelan.com/dnstimeline.html')"> https://www.donelan.com/dnstimeline.html</a></li>
+                                <li id="link4">4. <a class="openLink" onclick="linkOpen('http://www.ietf.org/proceedings/06.pdf')"><b>IETF 6 Proceedings:</b> http://www.ietf.org/proceedings/06.pdf</a></li>
+                                <li id="link5">5. <a class="openLink" onclick="linkOpen('http://www.ietf.org/proceedings/07.pdf')"><b>IETF 7 Proceedings:</b> http://www.ietf.org/proceedings/07.pdf</a></li>                                
+                                <li id="link6">6. <a class="openLink" onclick="linkOpen('http://marc.info/?l=namedroppers&m=95837781927013&w=2')">http://marc.info/?l=namedroppers&m=95837781927013&w=2</a></li>                                
+                                <li id="link7">7. <a class="openLink" onclick="linkOpen('https://www.ripe.net/participate/meetings/ripe-meetings/ripe-1')">https://www.ripe.net/participate/meetings/ripe-meetings/ripe-1</a></li>                                
+                                <li id="link11">11. <a class="openLink">Domain name compression was introduced in RFC1035 as an optional protocol feature and later mandated by 
+                                  RFC1123. In this scheme, an entire domain name or a list of labels at the end of a domain name is replaced with 
+                                  a pointer to a prior occurrence of the same name in the same message, thus eliminating the repetition of domain 
+                                  names in a message and reducing the size of the message. In the case of responses to root server priming queries
+                                  , the domain root-servers.net appears only once in the response, instead of 13 times (once for each root server).</a></li>                                
+
+                            </ul>
+                         </div>
                     </div>
+                    <!-- /blog post -->
                 </div>
             </div>
         </div>
-    </section>
-    <!-- /Main content -->
+    </div>
+</section>
+<!-- /Main content -->
 
     <div id="showsidebar"></div>
     <div class="bg-secondary footer-bg" id="myFooter"></div>
