@@ -1535,7 +1535,7 @@ blockquote {
 }
 .blog-tooltip .tooltiptext {
   visibility: hidden;
-  width: 400px;
+  width: 250px;
   height: auto;
   text-align: justify;
   font-size: 11px;
