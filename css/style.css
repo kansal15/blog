@@ -1533,6 +1533,7 @@ blockquote {
 .blog-tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
 .blog-tooltip .tooltiptext {
   visibility: hidden;
   width: 250px;
