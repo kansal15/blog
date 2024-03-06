@@ -105,15 +105,15 @@
     }, 2000);
 
     // article reading time
-    $('article').each(function () {
+    // $('article').each(function () {
 
-        let _this = $(this);
-        _this.readingTime({
+    //     let _this = $(this);
+    //     _this.readingTime({
 
-            readingTimeTarget: _this.find('.eta'),
+    //         readingTimeTarget: _this.find('.eta'),
 
-        });
-    });
+    //     });
+    // });
 
 
 })(jQuery);
@@ -643,3 +643,39 @@ function linkOpen(lin) {
 function uselinks(lin) {
     parent.location = lin;
 }
+
+
+//Reading Time show
+
+function readingTime(result, artiacalUrl, getindexhref, getindexa){
+    let aboutdata = $(result).find(".card .card-block").text().trim();
+          // console.log(aboutdata);
+          let wordsArray = aboutdata.split(/\s+/);
+          let wordCount = wordsArray.length;
+          let wordsPerMinute = 225;
+          let readingTime = Math.ceil(wordCount / wordsPerMinute);
+          //    console.log(`${artiacalUrl}-${readingTime}`);
+          if (artiacalUrl == getindexhref) {
+              var getclassnew=$(getindexa).siblings('ul').find('.eta');
+             $(getclassnew).text(`${readingTime} Minute to read`);
+          }
+  }
+  
+  $(document).ready(function () {
+    $("#pagingBox>div .article-full-width a.btn").each(function () {
+      let getindexa= $(this).siblings("h4");
+      let getindexhref = $(getindexa).find("a").attr("href");
+      var artiacalUrl = $(this).attr("href").trim();
+  
+      $.ajax({
+        type: "GET",
+        url: artiacalUrl,
+        data: "{articlurl: " + artiacalUrl + "}",
+        dataType: "html",
+        success: function (result) {
+          readingTime(result, artiacalUrl, getindexhref, getindexa);
+        },
+      });
+    });
+  });
+  

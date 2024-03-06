@@ -130,6 +130,7 @@
                                 <p>This bug has been rectified in Bind 9.9.5-W1 version which can be downloaded from <a href="http://www.isc.org/downloads/file/bind-9-9-5rc2/?version=zip" target="_blank">here</a>.
                                 </p>
                             </div>
+                            <div id="disqus_thread"></div>
                         </div>
                         <!-- /blog post -->
                     </div>
@@ -157,7 +158,25 @@
             $("#skipnone").remove();
         });
         $('#myFooter').load('../../include/footer.html');
-        $('#showsidebar').load('../../include/sidebarShow.html');
+             $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>     
+<script>
+        var geturl = window.location.href;
+        // console.log(geturl);
+        var disqus_config = function () {
+            this.page.url = geturl;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = geturl; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://gauravkansal-in.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
     </script>
 
     <!-- Bootstrap JS -->

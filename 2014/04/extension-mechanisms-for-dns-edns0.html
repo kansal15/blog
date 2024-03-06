@@ -269,13 +269,14 @@
                                     supports larger dns packets or not?</p>
                                 <p>By default implementation of various firewalls block DNS packet of size larger than
                                     512 bytes (Cisco ASA blocks such packets).</p>
-                                <p class="mt-4">To check EDNS implementation support in your resolver, use below mentioned dig
+                                <p class="mt-4">To check EDNS implementation support in your resolver, use below
+                                    mentioned dig
                                     command –</p>
                                 <blockquote class="mb-3">
                                     <i style="color: #d58753;"> $ dig +short rs.dns-oarc.net txt</i>
                                 </blockquote>
                                 <p class="mt-4">You can specify DNS resolver also by using below command –</p>
-                                <blockquote >
+                                <blockquote>
                                     <i style="color: #d58753;"> $dig +short rs.dns-oarc.net txt @resolver-address</i>
                                 </blockquote>
                                 <p class="mt-4">The output should look something like this –</p>
@@ -298,9 +299,10 @@
                                             reply size limit is at least 4023 bytes"</span>
                                     </div>
                                 </div>
-                                <p class="mt-4">To check EDNS packet sixe support by nslookup utility, use following command –</p>
+                                <p class="mt-4">To check EDNS packet sixe support by nslookup utility, use following
+                                    command –</p>
                                 <blockquote>
-                                    <i style="color: #d58753;">  cmd> nslookup –type=TXT rs.dns-oarc.net.
+                                    <i style="color: #d58753;"> cmd> nslookup –type=TXT rs.dns-oarc.net.
                                     </i>
                                 </blockquote>
                                 <h6 class="mt-4"><u>For more detail about EDNS packet size testing, visit:-</u></h6>
@@ -310,11 +312,13 @@
                                     </i>
                                 </p>
                             </div>
-                            <!-- /blog post -->
+                            <div id="disqus_thread"></div>
                         </div>
+                        <!-- /blog post -->
                     </div>
                 </div>
             </div>
+        </div>
     </section>
     <!-- /Main content -->
 
@@ -337,6 +341,24 @@
         });
         $('#myFooter').load('../../include/footer.html');
         $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+    <script>
+        var geturl = window.location.href;
+        // console.log(geturl);
+        var disqus_config = function () {
+            this.page.url = geturl;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = geturl; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://gauravkansal-in.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
     </script>
 
     <!-- Bootstrap JS -->
