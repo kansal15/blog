@@ -1,156 +1,167 @@
 <!DOCTYPE html>
 <html lang="zxx">
-    <head>
-        <meta charset="utf-8">
-        <title>Gaurav Kansal Blog</title>
-        <!-- mobile responsive meta -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-        <!-- ** Plugins Needed for the Project ** -->
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
-        <!-- slick slider -->
-        <link rel="stylesheet" href="../../plugins/slick/slick.css">
-        <!-- themefy-icon -->
-        <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
-        <!-- Main Stylesheet -->
-        <link href="../../css/style.css" rel="stylesheet">
-        <!--Favicon-->
-        <link rel="icon" type="image/png" href="../../images/favicon.jpg">
-        <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
-    </head>
-    <body>
-        <!-- preloader -->
-        <div class="preloader">
-            <div class="loader">
-                <span class="dot"></span>
-                <div class="dots">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>Calculating DS record from DNSKEY</h4>
                 </div>
             </div>
         </div>
-        <!-- /preloader -->
+    </section>
+    <!-- /page-title -->
 
-        <div class="navigation" id="myHead"></div>
-
-        <!-- page-title -->
-        <section class="section bg-secondary">
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
             <div class="container-fluid">
                 <div class="row">
+                    <!-- blog post -->
                     <div class="col-lg-12">
-                        <h4>Calculating DS record from DNSKEY</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- /page-title -->
-
-        <!--Main content-->
-        <section class="mt-1" id="blog-post-block">
-            <div class="card mb-2">
-                <div class="container-fluid">
-                    <div class="row">
-                        <!-- blog post -->
-                        <div class="col-lg-12">
-                            <div class="card-block">
-                                <ul class="list-inline d-flex justify-content-between py-3">
-                                    <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
                                         href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
-                                    <li class="list-inline-item"><i class="ti-calendar mr-2"></i> Feb 13, 2024</li>
-                                  </ul>
-                                  <img src="../../images/masonary-post/dnskey.jpg" alt="post-thumb" class="img-fluid mb-4">
-                                <div class="content">
-                                    <p class="blog-post-body mt-5">DS (Delegation Signer) is calculated using the following five fields –</p>
-                                    <br><br><ol type="i" margin-top: 0;>
-					<li>DNSKEY owner name: clean-internet.in. (0x 0e636C65616E2D696E7465726E657402696E00)    
-					</li>
-					<li>Flags:257 (0x0101)
-                                        </li>
-                                        <li>Protocol:3 (0x03)
-                                        </li>
-                                        <li>Algorithm:13 (0x0D)
-                                        </li>
-                                        <li>Public Key corresponding to the KSK: HAbAHtlIrnJ7d8M7r4PpODUebLmP..
-                                        </li>
-                                    </ol>
-                                    <h6>Hex of Public Key:
-                                        <span>1c06c01ed948ae727b77c33baf83e938351e6cb98f9162bb2198b2e0a43ce9693da5b882ab5c5a025a8f986faecd7a3766b0c9104cda5001a32b8d013c125d3e</span>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> Feb 13, 2024</li>
+                            </ul>
+                            <img src="../../images/masonary-post/dnskey.jpg" alt="post-thumb" class="img-fluid mb-4">
+                            <div class="content">
+                                <p class="blog-post-body mt-5">DS (Delegation Signer) is calculated using the following
+                                    five fields –</p>
+                                <br><br>
+                                <ol type="i" margin-top: 0;>
+                                    <li>DNSKEY owner name: clean-internet.in. (0x
+                                        0e636C65616E2D696E7465726E657402696E00)
+                                    </li>
+                                    <li>Flags:257 (0x0101)
+                                    </li>
+                                    <li>Protocol:3 (0x03)
+                                    </li>
+                                    <li>Algorithm:13 (0x0D)
+                                    </li>
+                                    <li>Public Key corresponding to the KSK: HAbAHtlIrnJ7d8M7r4PpODUebLmP..
+                                    </li>
+                                </ol>
+                                <h6>Hex of Public Key:
+                                    <span>1c06c01ed948ae727b77c33baf83e938351e6cb98f9162bb2198b2e0a43ce9693da5b882ab5c5a025a8f986faecd7a3766b0c9104cda5001a32b8d013c125d3e</span>
+                                </h6>
+
+                                <p>Now, combining the mentioned five parameters will lead to following data —</p>
+                                <h6><span>0e636C65616E2D696E7465726E657402696E000101030D1c06c01ed948ae727b77c33baf83e938351e6cb98f9162bb2198b2e0a43ce9693da5b882ab5c5a025a8f986faecd7a3766b0c9104cda5001a32b8d013c125d3e</span>
+                                </h6>
+
+                                <p>Now, convert the hex to binary and find out the SHASUM -</p>
+                                <h6>echo -n <span>
+                                        0e636C65616E2D696E7465726E657402696E000101030D1c06c01ed948ae727b77c33baf83e938351e6cb98f9162bb2198b2e0a43ce9693da5b882ab5c5a025a8f986faecd7a3766b0c9104cda5001a32b8d013c125d3e</span>
+                                    | xxd -r -p | shasum -a 256
+                                </h6>
+
+                                <h6><span>58b6825ce64a0bdffc475f82487f7a5793255986498041ea9b95241c8bf81ca7 -</span>
+                                </h6>
+
+                                <p>Which is exact same as DS record of <span>clean-pipe.in.</span> domain -</p>
+                                <p> #dig clean-internet.in. DS +short</p>
+                                <h6>58183 13 2 <span>58B6825CE64A0BDFFC475F82487F7A5793255986498041EA9B95241C
+                                        8BF81CA7</span>
+                                </h6>
+                                <h6><u>Further explanation: </u></h6>
+                                <blockquote>
+                                    <h6><u>Calculating hex of clean-internet.in </u></h6>
+                                    <h6>
+                                        <p>A domain name, in "wireformat" is a set of labels, where each label is
+                                            preceded by a length value and ends with the empty label (value 0x00).</p>
+                                        <p>For <b>clean-internet</b>, wire format is : 0e (as length is 14) and then “63
+                                            6C 65 61 6E 2D 69 6E 74 65 72 6E 65 74” (the hex representation of c , l , e
+                                            …); and for "in.", wire format is : 02 (as length is 2) and then “69 6E”
+                                            (the hex representation of i and n); </p>
+                                        <p>followed by empty label : 00 </p>
+                                        <p>So, combine hex of <b>“clean-internet.in”</b> is — <b>"0x 0e 63 6C 65 61 6E
+                                                2D
+                                                69 6E 74 65 72 6E 65 74 02 69 6E 00”</b></p>
+                                        <p> OR <b>0x0e636C65616E2D696E7465726E657402696E00</b>
+                                        </p>
                                     </h6>
-    
-                                    <p>Now, combining the mentioned five parameters will lead to following data —</p>
-                                    <h6><span>0e636C65616E2D696E7465726E657402696E000101030D1c06c01ed948ae727b77c33baf83e938351e6cb98f9162bb2198b2e0a43ce9693da5b882ab5c5a025a8f986faecd7a3766b0c9104cda5001a32b8d013c125d3e</span>
+                                </blockquote>
+                                <blockquote>
+                                    <h6><u>Calculating Hex of DNSKEY which is in ASCII format.</u></h6>
+                                    <h6>
+                                        <p>dig clean-internet.in. <b>
+                                                @1.10.10.11</b> DNSKEY +short +multiline
+                                            <br>
+                                            256 3 13
+                                            <b>yE2hqr/n8hRaX1lEFmjxMJSiuce0gM5yiYoPsacLNc1yV8HMo8+rbOYu68FSimSwIU5wZYR+kQEK4F/a/5mllQ==</b>
+                                            <br>
+                                            257 3 13 <b>HAbAHtlIrnJ7d8M7r4PpODUebLmPkWK7IZiy4KQ86Wk9pbiCq1xaAlqP
+                                                mG+uzXo3ZrDJEEzaUAGjK40BPBJdPg==</b>
+                                        </p>
+                                        <p>Calculating Hex of the DNSKEY portion of the KSK —</p>
+                                        <p>% echo -n 'HAbAHtlIrnJ7d8M7r4PpODUebLmPkWK7IZiy4KQ86Wk9pbiCq1xaAlqP
+                                            mG+uzXo3ZrDJEEzaUAGjK40BPBJdPg==' | base64 -D -i - | xxd -ps
+                                            <br><b>1c06c01ed948ae727b77c33baf83e938351e6cb98f9162bb2198b2e0a43c
+                                                e9693da5b882ab5c5a025a8f986faecd7a3766b0c9104cda5001a32b8d01
+                                                3c125d3e</b>
+                                        </p>
                                     </h6>
-    
-                                    <p>Now, convert the hex to binary and find out the SHASUM -</p>
-                                    <h6>echo -n <span>
-                                            0e636C65616E2D696E7465726E657402696E000101030D1c06c01ed948ae727b77c33baf83e938351e6cb98f9162bb2198b2e0a43ce9693da5b882ab5c5a025a8f986faecd7a3766b0c9104cda5001a32b8d013c125d3e</span>
-                                        | xxd -r -p | shasum -a 256
-                                    </h6>
-    
-                                    <h6><span>58b6825ce64a0bdffc475f82487f7a5793255986498041ea9b95241c8bf81ca7 -</span>
-                                    </h6>
-    
-                                    <p>Which is exact same as DS record of <span>clean-pipe.in.</span> domain -</p>
-                                    <p> #dig clean-internet.in. DS +short</p>
-                                    <h6>58183 13 2 <span>58B6825CE64A0BDFFC475F82487F7A5793255986498041EA9B95241C
-                                            8BF81CA7</span>
-                                    </h6>
-                                    <h6><u>Further explanation: </u></h6>
-                                    <blockquote>
-                                        <h6><u>Calculating hex of clean-internet.in </u></h6>
-                                        <h6>
-                                            <p>A domain name, in "wireformat" is a set of labels, where each label is preceded by a length value and ends with the empty label (value 0x00).</p>
-					    <p>For <b>clean-internet</b>, wire format is : 0e (as length is 14) and then “63 6C 65 61 6E 2D 69 6E 74 65 72 6E 65 74” (the hex representation of c , l , e …); and for "in.", wire format is : 02 (as length is 2) and then “69 6E” (the hex representation of i and n); </p>
-                                            <p>followed by empty label : 00 </p>
-					    <p>So, combine hex of <b>“clean-internet.in”</b> is — <b>"0x 0e 63 6C 65 61 6E 2D
-						    69 6E 74 65 72 6E 65 74 02 69 6E 00”</b></p>
-					    <p>   OR <b>0x0e636C65616E2D696E7465726E657402696E00</b>
-                                            </p>
-                                        </h6>
-                                    </blockquote>
-                                    <blockquote>
-                                        <h6><u>Calculating Hex of DNSKEY which is in ASCII format.</u></h6>
-                                        <h6>
-                                            <p>dig clean-internet.in. <b>
-                                                    @1.10.10.11</b> DNSKEY +short +multiline
-                                                <br>
-                                                256 3 13
-                                                <b>yE2hqr/n8hRaX1lEFmjxMJSiuce0gM5yiYoPsacLNc1yV8HMo8+rbOYu68FSimSwIU5wZYR+kQEK4F/a/5mllQ==</b>
-                                                <br>
-                                                257 3 13 <b>HAbAHtlIrnJ7d8M7r4PpODUebLmPkWK7IZiy4KQ86Wk9pbiCq1xaAlqP
-                                                    mG+uzXo3ZrDJEEzaUAGjK40BPBJdPg==</b>
-                                            </p>
-                                            <p>Calculating Hex of the DNSKEY portion of the KSK —</p>
-                                            <p>% echo -n 'HAbAHtlIrnJ7d8M7r4PpODUebLmPkWK7IZiy4KQ86Wk9pbiCq1xaAlqP
-                                                mG+uzXo3ZrDJEEzaUAGjK40BPBJdPg==' | base64 -D -i - | xxd -ps
-                                                <br><b>1c06c01ed948ae727b77c33baf83e938351e6cb98f9162bb2198b2e0a43c
-                                                    e9693da5b882ab5c5a025a8f986faecd7a3766b0c9104cda5001a32b8d01
-                                                    3c125d3e</b>
-                                            </p>
-                                        </h6>
-                                    </blockquote>
-    
-                                    <h6><u>References: </u></h6>
-                                    <ol margin-top: 0;>
-                                        <li><a
-                                                href="https://www.mail-archive.com/opendnssec-user@lists.opendnssec.org/msg01788.html">https://www.mail-archive.com/opendnssec-user@lists.opendnssec.org/msg01788.html</a>
-                                        </li>
-                                        <li><a
-                                                href="https://stackoverflow.com/questions/14930460/how-to-verify-dnskey-by-using-its-corresponding-ds">https://stackoverflow.com/questions/14930460/how-to-verify-dnskey-by-using-its-corresponding-ds</a>
-                                        </li>
-                                    </ol>
-                                </div>
+                                </blockquote>
+
+                                <h6><u>References: </u></h6>
+                                <ol margin-top: 0;>
+                                    <li><a
+                                            href="https://www.mail-archive.com/opendnssec-user@lists.opendnssec.org/msg01788.html">https://www.mail-archive.com/opendnssec-user@lists.opendnssec.org/msg01788.html</a>
+                                    </li>
+                                    <li><a
+                                            href="https://stackoverflow.com/questions/14930460/how-to-verify-dnskey-by-using-its-corresponding-ds">https://stackoverflow.com/questions/14930460/how-to-verify-dnskey-by-using-its-corresponding-ds</a>
+                                    </li>
+                                </ol>
                             </div>
                         </div>
-                        <!-- /blog post -->
+                        <div id="disqus_thread"></div>
                     </div>
+                    <!-- /blog post -->
                 </div>
             </div>
-            </div>
-        </section>
+        </div>
+        </div>
+    </section>
     <!-- /Main content -->
 
     <!-- content of the sidebar-->
@@ -161,19 +172,36 @@
 
     <div class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
     </div>
     <!-- jQuery -->
     <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
-        <script>
-            $('#myHead').load('../../include/header.html');
-            $(document).ready(function () {
-                $("#skipnone").remove();
-            });
-            $('#myFooter').load('../../include/footer.html');
-            $('#showsidebar').load('../../include/sidebarShow.html');
-        </script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+     <script>
+        var geturl = window.location.href;
+        // console.log(geturl);
+        var disqus_config = function () {
+            this.page.url = geturl;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = geturl; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://gauravkansal-in.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
     <!-- Bootstrap JS -->
     <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
     <!-- slick slider -->
@@ -185,8 +213,8 @@
     <!-- reading time -->
     <script src="../../plugins/reading-time/readingTime.min.js"></script>
 
-   <!-- Main Script -->
-   <script src="../../js/script.js"></script>
+    <!-- Main Script -->
+    <script src="../../js/script.js"></script>
 
 </body>
 
