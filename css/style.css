@@ -977,6 +977,47 @@ blockquote {
   color: #bf8c56;
 }
 
+
+.paginationNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.paginationNav .prev,
+.paginationNav .next {
+  border: 2px solid #c2915d;
+  padding: 2px 10px;
+  background-color: #e8d5c1;
+  color: #bf8c55;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.paginationNav span {
+  font-weight: 600;
+  font-size: 18px;
+  display: block;
+  padding: 2px 10px;
+  color: #bf8c55;
+}
+
+.paginationNav .next.active,
+.paginationNav .prev.active {
+  border: 2px solid #c2915d;
+  padding: 2px 10px;
+  background-color: #c2915d;
+  color: #e7d3be;
+  pointer-events: unset;
+  cursor: pointer;
+}
+
+.paginationNav .prev:hover,
+.paginationNav .next:hover {
+  color: #fff !important;
+}
+
 /* about-us css */
 .blog_maincontent {
   flex-grow: 1;

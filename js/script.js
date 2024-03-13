@@ -120,7 +120,7 @@
 
 
 
-// index page js
+// Pagination in index page js
 
 // js 1
 
@@ -132,59 +132,112 @@
 //   ulClass: 'profile-pagination-wrap align-center mt-4'
 // });
 
+
 $(document).ready(function () {
 
-    //Pagination JS
-    //how much items per page to show
-    var show_per_page = 4;
-    //getting the amount of elements inside pagingBox div
-    var number_of_items = $('#pagingBox').children().length;
-    //calculate the number of pages we are going to have
-    var number_of_pages = Math.ceil(number_of_items / show_per_page);
+
+
+    var elements = $('.page').find($('.mb-60'));
+    paginateChildren($('.page'), elements);
+
+
+    function paginateChildren(parentElement, elements) {
+        $('#page_navigation').show();
+        $('#cat_page_navigation').hide();
+    
+        let page = 1;
+        let currentElements;
+        let offsetStart;
+        let offsetEnd;
+        let currentPage = 1;
+        let elementsPerPage = 4;
+ 
+        var nmbrOfPages = Math.ceil(elements.length / elementsPerPage);
+
+
+        var displayNav = function () {
+            htmlNav = '<div class="paginationNav pull-right">';
+            htmlNav += '<a href="#" title="Previous" rel="" class="prev"><i class="fa fa-angle-left fa-lg"></i></a>';
+            htmlNav += '<span>' + currentPage + ' / ' + nmbrOfPages + '</span><br />';
+            htmlNav += '<a href="#" title="Next" rel="" class="next active"><i class="fa fa-angle-right fa-lg"></i></a>';
+            htmlNav += '</div>';
+           
+            $('#page_navigation .paginationNav').show();
+            if (!$('#page_navigation').find('.paginationNav').length) {
+                let testing = $('#page_navigation').find('.paginationNav').length;
+                $('#page_navigation').append(htmlNav);
+            }
+
+        };
+
+
+        $('#page_navigation').on('click', '.paginationNav a.prev', function (e) {
+            e.preventDefault();
+            page = currentPage > 1 ? parseInt(currentPage) - 1 : 1;
+            displayPage(page);
+        });
+        $('#page_navigation').on('click', '.paginationNav a.next', function (e) {
+            e.preventDefault();
+            page = currentPage < nmbrOfPages ? parseInt(currentPage) + 1 : nmbrOfPages;
+            displayPage(page);
+        });
 
 
 
-    //set the value of our hidden input fields
-    $('#current_page').val(0);
-    $('#show_per_page').val(show_per_page);
 
-    //now when we got all we need for the navigation let's make it '
+        var displayPage = function (page) {
+            if (currentPage != page || page == 1) {
+                currentPage = parseInt(page);
+                if (nmbrOfPages > 1) {
+                    $('#page_navigation .paginationNav').show();
+                    $('#page_navigation .paginationNav span').html(currentPage + ' / ' + nmbrOfPages);
+                }
+                else {
+                    $('#page_navigation .paginationNav').hide();
+                }
 
-    /* 
-     what are we going to have in the navigation?
-     - link to previous page
-     - links to specific pages
-     - link to next page
-     */
+                var $prevButton = $('#page_navigation .paginationNav a.prev');
+                var $nextButton = $('#page_navigation .paginationNav a.next');
+                if (currentPage == 1 && nmbrOfPages > 1) {
+                    if ($prevButton.hasClass('active')) {
+                        $prevButton.removeClass('active');
+                    }
+                    $nextButton.addClass('active');
 
-    function creatLink() {
-        var navigation_html = '<a class=" previous_link" href="javascript:previous();"><< Previous</a>';
-        var current_link = 0;
-        while (number_of_pages > current_link) {
-            // console.log(current_link);
-            navigation_html += '<a class="page-link" href="javascript:go_to_page(' + current_link + ')" longdesc="' + current_link + '">' + (current_link + 1) + '</a>';
-            current_link++;
+                } else if (currentPage > 1 && currentPage < nmbrOfPages) {
+                    $prevButton.addClass('active');
+                    $nextButton.addClass('active');
+
+                } else if (nmbrOfPages > 1 && currentPage == nmbrOfPages) {
+                    $prevButton.addClass('active');
+                    if ($nextButton.hasClass('active')) {
+                        $nextButton.removeClass('active');
+                    }
+
+
+                }
+                offsetStart = (page - 1) * elementsPerPage;
+                offsetEnd = page * elementsPerPage;
+                if (currentElements) {
+                    let getlength = currentElements.length;
+                    currentElements.hide();
+                } else {
+                    elements.hide();
+                }
+                currentElements = elements.slice(offsetStart, offsetEnd);
+                currentElements.fadeIn();
+            }
+        };
+        if (page.length <= 0 || page < 1 || page > nmbrOfPages) {
+            page = 1;
         }
-        navigation_html += '<a class="next_link" href="javascript:next();">Next >></a>';
 
-        $('#page_navigation').html(navigation_html);
+        displayPage(page);
 
-        //add active class to the first page link
-        $('#page_navigation .page-link:first').addClass('active');
-
-        //hide all the elements inside pagingBox div
-        $('#pagingBox').children().css('display', 'none');
-
-        //and show the first n (show_per_page) elements
-        $('#pagingBox').children().slice(0, show_per_page).css('display', 'block');
-
-
+        if (nmbrOfPages > 1) {
+            displayNav();
+        }
     }
-    ;
-    creatLink();
-
-    // list view
-
 
     $('.categories-list li').each(function (i) {
 
@@ -207,148 +260,116 @@ $(document).ready(function () {
     }
 
 
-    function getMachine() {
+    function paginateChildrentwo(parentElement, elementtwo) {
+        var page = 1;
+        var currentElements;
+        var offsetStart;
+        var offsetEnd;
+        var currentPage = 1;
+        var elementsPerPage = 4;
 
-        $(".categories-list a").click(function (event) {
-            $('#page_navigation').hide();
-            $('#page_navigations').show();
-            let categoriesClass = $(this).parent().attr("class");
-            event.preventDefault();
-            filterGroup(`${categoriesClass}Artical`);
-
-            $('#current_page').val(0);
+        var nmbrOfPages = Math.ceil(elementtwo.length / elementsPerPage);
 
 
-            list_of_cat = $('#pagingBox').children(".catlist").length;
-            // console.log(`list of ${list_of_cat}`);
+        var displayNavtwo = function () {
+            htmlNav = '<div class="paginationNav pull-right">';
+            htmlNav += '<a href="#" title="Previous" rel="" class="prev"><i class="fa fa-angle-left fa-lg"></i></a>';
+            htmlNav += '<span>' + currentPage + ' / ' + nmbrOfPages + '</span><br />';
+            htmlNav += '<a href="#" title="Next" rel="" class="next active"><i class="fa fa-angle-right fa-lg"></i></a>';
+            htmlNav += '</div>';
 
-            // $("#page_navigation").hide();
-
-            var number_of_pages = Math.ceil(list_of_cat / show_per_page);
-
-            var navigation_htmls = '<a class=" previous_link" href="javascript:previouspage();"><< Previous</a>';
-            var current_links = 0;
-            while (number_of_pages > current_links) {
-                // console.log(current_links);
-                navigation_htmls += '<a class="page-link" href="javascript:go_to_pages(' + current_links + ')" longdesc="' + current_links + '">' + (current_links + 1) + '</a>';
-                current_links++;
+            $('#cat_page_navigation .paginationNav').show();
+            if (!$('#cat_page_navigation').find('.paginationNav').length) {
+                let testing = $('#cat_page_navigation').find('.paginationNav').length;
+                $('#cat_page_navigation').append(htmlNav);
             }
-            navigation_htmls += '<a class="next_link" href="javascript:nextpage();">Next >></a>';
+        };
 
-            $('#page_navigations').html(navigation_htmls);
+                      
 
-            //add active class to the first page link
-            $('#page_navigations .page-link:first').addClass('active');
-
-            // //hide all the elements inside pagingBox div
-            $('#pagingBox').children('.catlist').css('display', 'none');
-
-            //and show the first n (show_per_page) elements
-            $('#pagingBox').children('.catlist').slice(0, show_per_page).css('display', 'block');
-
+        $('#cat_page_navigation').on('click', '.paginationNav a.prev', function (e) {
+            e.preventDefault();
+            elementtwo = $('.page').find('.catlist');
+            page = currentPage > 1 ? parseInt(currentPage) - 1 : 1;  
+            // console.log(`prev ${page}`);                  
+            displayPagetwo(page, elementtwo);
         });
-        return number_of_pages;
+        $('#cat_page_navigation').on('click', '.paginationNav a.next', function (e) {
+            e.preventDefault();
+            elementtwo = $('.page').find('.catlist');
+            page = currentPage < nmbrOfPages ? parseInt(currentPage) + 1 : nmbrOfPages;
+            // console.log(`next ${page}`);
+            displayPagetwo(page, elementtwo);
+        });
+
+
+        var displayPagetwo = function (page, elementtwo) {
+            if (currentPage != page || page == 1) {
+                currentPage = parseInt(page);
+                if (nmbrOfPages > 1) {
+                    $('#cat_page_navigation .paginationNav').show();
+                    $('#cat_page_navigation .paginationNav span').html(currentPage + ' / ' + nmbrOfPages);
+                }
+                else {
+                    $('#cat_page_navigation .paginationNav').hide();
+                }
+
+                var $prevButton = $('#cat_page_navigation .paginationNav a.prev');
+                var $nextButton = $('#cat_page_navigation .paginationNav a.next');
+                if (currentPage == 1 && nmbrOfPages > 1) {
+                    if ($prevButton.hasClass('active')) {
+                        $prevButton.removeClass('active');
+                    }
+                    $nextButton.addClass('active');
+                } else if (currentPage > 1 && currentPage < nmbrOfPages) {
+                    $prevButton.addClass('active');
+                    $nextButton.addClass('active');
+                } else if (nmbrOfPages > 1 && currentPage == nmbrOfPages) {
+                    $prevButton.addClass('active');
+                    if ($nextButton.hasClass('active')) {
+                        $nextButton.removeClass('active');
+                    }
+                }
+                
+                offsetStart = (page - 1) * elementsPerPage;
+                offsetEnd = page * elementsPerPage;
+                if (currentElements) {
+                   let getlength = currentElements.length;
+                    // currentElements.css('display', 'none');
+                    elementtwo.css('display', 'none');
+                } else {
+                    elementtwo.css('display', 'none');
+                }
+                currentElements = elementtwo.slice(offsetStart, offsetEnd);
+                currentElements.css('display', 'block');
+            }
+        };
+        if (page.length <= 0 || page < 1 || page > nmbrOfPages) {
+            page = 1;
+        }
+        elementtwo = $('.page').find('.catlist');
+        displayPagetwo(page, elementtwo);
+
+        if (nmbrOfPages > 1 && nmbrOfPages !="") {
+            displayNavtwo();
+        }
     }
-    var list = getMachine();
+
+
+    $(".categories-list a").click(function (event) {
+        $('#page_navigation').hide();
+        $('#cat_page_navigation').show();
+        let categoriesClass = $(this).parent().attr("class");
+        event.preventDefault();
+        filterGroup(`${categoriesClass}Artical`);
+        const elementtwo = $('.page').find('.catlist');
+        // console.log(elementtwo);
+        paginateChildrentwo($('.page'), elementtwo);
+    });
+
 
 });
 
-
-//Pagination JS
-
-function previous() {
-
-    new_page = parseInt($('#current_page').val()) - 1;
-    // hide the image
-
-    //if there is an item before the current active link run the function
-    if ($('.active').prev('.page-link').length == true) {
-
-        go_to_page(new_page);
-    }
-
-}
-
-function next() {
-    new_page = parseInt($('#current_page').val()) + 1;
-
-    //if there is an item after the current active link run the function
-    if ($('.active').next('.page-link').length == true) {
-        go_to_page(new_page);
-
-    }
-
-}
-function go_to_page(page_num) {
-    //get the number of items shown per page
-    var show_per_page = parseInt($('#show_per_page').val());
-
-    bannerShowHide(page_num);
-    //get the element number where to start the slice from
-    start_from = page_num * show_per_page;
-
-    //get the element number where to end the slice
-    end_on = start_from + show_per_page;
-
-    //hide all children elements of pagingBox div, get specific items and show them
-    $('#pagingBox').children().css('display', 'none').slice(start_from, end_on).css('display', 'block');
-
-    /*get the page link that has longdesc attribute of the current page and add active class to it
-     and remove that class from previously active page link*/
-    $('.page-link[longdesc=' + page_num + ']').addClass('active').siblings('.active').removeClass('active');
-
-    //update the current page input field
-    $('#current_page').val(page_num);
-}
-
-function previouspage() {
-
-    new_page = parseInt($('#current_page').val()) - 1;
-    // hide the image
-
-    //if there is an item before the current active link run the function
-    if ($('#page_navigations .active').prev('.page-link').length == true) {
-
-        go_to_pages(new_page);
-
-    }
-
-}
-
-function nextpage() {
-    new_pages = parseInt($('#current_page').val()) + 1;
-
-
-    //if there is an item after the current active link run the function
-    var truee = $('.active').next('.page-link').length;
-    if ($('#page_navigations .active').next('.page-link').length == true) {
-
-        go_to_pages(new_pages);
-    }
-
-}
-
-function go_to_pages(page_num) {
-    //get the number of items shown per page
-    var show_per_page = parseInt($('#show_per_page').val());
-
-    bannerShowHide(page_num);
-    //get the element number where to start the slice from
-    start_from = page_num * show_per_page;
-
-    //get the element number where to end the slice
-    end_on = start_from + show_per_page;
-
-    //hide all children elements of pagingBox div, get specific items and show them
-    $('#pagingBox').children('.catlist').css('display', 'none').slice(start_from, end_on).css('display', 'block');
-
-    /*get the page link that has longdesc attribute of the current page and add active class to it
-     and remove that class from previously active page link*/
-    $('.page-link[longdesc=' + page_num + ']').addClass('active').siblings('.active').removeClass('active');
-
-    //update the current page input field
-    $('#current_page').val(page_num);
-}
 
 
 //Show hide Banner
