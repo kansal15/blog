@@ -115,34 +115,84 @@
                                 <p>Specifically, the process is as follows:
                                 </p>
                                 <ul>
-                                    <li>The client appends a new ProtocolNameList field, containing the list of supported application protocols, into the ClientHello message.</li>
-                                    <li>The server inspects the ProtocolNameList field and returns a ProtocolName field indicating the selected protocol as part of the ServerHello message.</li>
+                                    <li>The client appends a new ProtocolNameList field, containing the list of
+                                        supported application protocols, into the ClientHello message.</li>
+                                    <li>The server inspects the ProtocolNameList field and returns a ProtocolName field
+                                        indicating the selected protocol as part of the ServerHello message.</li>
                                 </ul>
-                                <p>The server may respond with only a single protocol name, and if it does not support any that the client requests, then it may choose to abort the connection. As a result, once the TLS handshake is complete, both the secure tunnel is established, and the client and server are in agreement as to which application protocol will be used, they can begin communicating immediately.</p>
-                                <p>ALPN eliminates the need for the HTTP Upgrade exchange, saving an extra roundtrip of latency. However, note that the TLS handshake itself still must be performed; hence ALPN negotiation is not any faster than HTTP Upgrade over an unencrypted channel. Instead, it ensures that application protocol negotiation over TLS is not any slower.</p>
-                                <p>In NPN, the server advertised which protocols it supports, and the client then chose and confirmed the protocol whereas in ALPN, this exchange is reversed: the client now specifies which protocols it supports, and the server then selects and confirms the protocol. The rationale for the change is that this brings ALPN into closer alignment with other protocol negotiation standards. In other words, ALPN is a successor to NPN, and NPN is deprecated. Clients and servers that rely on NPN negotiation will have to be upgraded to use ALPN instead.</p>
+                                <p>The server may respond with only a single protocol name, and if it does not support
+                                    any that the client requests, then it may choose to abort the connection. As a
+                                    result, once the TLS handshake is complete, both the secure tunnel is established,
+                                    and the client and server are in agreement as to which application protocol will be
+                                    used, they can begin communicating immediately.</p>
+                                <p>ALPN eliminates the need for the HTTP Upgrade exchange, saving an extra roundtrip of
+                                    latency. However, note that the TLS handshake itself still must be performed; hence
+                                    ALPN negotiation is not any faster than HTTP Upgrade over an unencrypted channel.
+                                    Instead, it ensures that application protocol negotiation over TLS is not any
+                                    slower.</p>
+                                <p>In NPN, the server advertised which protocols it supports, and the client then chose
+                                    and confirmed the protocol whereas in ALPN, this exchange is reversed: the client
+                                    now specifies which protocols it supports, and the server then selects and confirms
+                                    the protocol. The rationale for the change is that this brings ALPN into closer
+                                    alignment with other protocol negotiation standards. In other words, ALPN is a
+                                    successor to NPN, and NPN is deprecated. Clients and servers that rely on NPN
+                                    negotiation will have to be upgraded to use ALPN instead.</p>
 
                                 <h6 class="pt-3"><u>HTTP/2 :-</u></h6>
-                                <p class="mb-4">HTTP/2 (originally named HTTP/2.0) is the second major version of the HTTP network protocol used by the World Wide Web. It is based on SPDY. HTTP/2 was developed by the Hypertext Transfer Protocol working group (httpbis, where bis means "repeat" or "twice") of the Internet Engineering Task Force. HTTP/2 is the first new version of HTTP since HTTP 1.1, which was standardised in RFC 2068 in 1997.</p>
+                                <p class="mb-4">HTTP/2 (originally named HTTP/2.0) is the second major version of the
+                                    HTTP network protocol used by the World Wide Web. It is based on SPDY. HTTP/2 was
+                                    developed by the Hypertext Transfer Protocol working group (httpbis, where bis means
+                                    "repeat" or "twice") of the Internet Engineering Task Force. HTTP/2 is the first new
+                                    version of HTTP since HTTP 1.1, which was standardised in RFC 2068 in 1997.</p>
 
                                 <blockquote>
                                     <h6 style="color: #d58753;">Why not HTTP/1.2 ?</h6>
-                                    <p>To achieve the performance goals set by the HTTP Working Group, HTTP/2 introduces a new binary framing layer that is not backward compatible with previous HTTP/1.x servers and clients. Hence the major protocol version increment to HTTP/2.
+                                    <p>To achieve the performance goals set by the HTTP Working Group, HTTP/2 introduces
+                                        a new binary framing layer that is not backward compatible with previous
+                                        HTTP/1.x servers and clients. Hence the major protocol version increment to
+                                        HTTP/2.
                                     </p>
                                 </blockquote>
-                                <p>HTTP/2 leaves most of HTTP 1.1's high level syntax, such as methods, status codes, header fields, and URIs, the same. The element that is modified is how the data is framed and transported between the client and the server.</p>
-                                <p>The standardisation effort came as an answer to SPDY, an HTTP-compatible protocol developed by Google. HTTP/2 uses a fixed Huffman code-based header compression algorithm, instead of SPDY's dynamic stream-based compression. This helps to reduce the potential for attacks on the protocol.
+                                <p>HTTP/2 leaves most of HTTP 1.1's high level syntax, such as methods, status codes,
+                                    header fields, and URIs, the same. The element that is modified is how the data is
+                                    framed and transported between the client and the server.</p>
+                                <p>The standardisation effort came as an answer to SPDY, an HTTP-compatible protocol
+                                    developed by Google. HTTP/2 uses a fixed Huffman code-based header compression
+                                    algorithm, instead of SPDY's dynamic stream-based compression. This helps to reduce
+                                    the potential for attacks on the protocol.
                                 </p>
-                                <p>The httpbis working group considered Google's SPDY protocol, Microsoft's HTTP Speed+Mobility proposal (SPDY based), and Network-Friendly HTTP Upgrade.</p>
-                                <p>HTTP/2 is defined for both HTTP URIs (i.e. without encryption) and for HTTPS URIs (over TLS, where TLS 1.2 or newer is required).</p>
-                                <p>Although the standard itself does not require usage of encryption, most client implementations (Firefox, Chrome) have stated that they will only support HTTP/2 over TLS, which makes encryption de facto mandatory.</p>
+                                <p>The httpbis working group considered Google's SPDY protocol, Microsoft's HTTP
+                                    Speed+Mobility proposal (SPDY based), and Network-Friendly HTTP Upgrade.</p>
+                                <p>HTTP/2 is defined for both HTTP URIs (i.e. without encryption) and for HTTPS URIs
+                                    (over TLS, where TLS 1.2 or newer is required).</p>
+                                <p>Although the standard itself does not require usage of encryption, most client
+                                    implementations (Firefox, Chrome) have stated that they will only support HTTP/2
+                                    over TLS, which makes encryption de facto mandatory.</p>
                                 <blockquote>
-                                    <p style="color: #d58753;">Roughly 1.2% of all websites support HTTP/2 till August 2015.</p>
+                                    <p style="color: #d58753;">Roughly 1.2% of all websites support HTTP/2 till August
+                                        2015.</p>
                                 </blockquote>
 
-                            
+
 
                             </div>
+
+                            <div class="pagination blogPagination my-4">
+                                <div class="paginationNav pull-right">
+
+                                    <a href="http10-and-http11.html" title="Previous" rel="" class="preblog">
+                                        <span><i class="fa fa-angle-left fa-lg"></i> </span>
+                                        Previous
+                                    </a>
+
+
+                                    <a href="cipher-suites.html" title="Next" rel="" class="nextblog">
+                                        Next<span><i class="fa fa-angle-right fa-lg"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+
+
                             <div id="disqus_thread"></div>
                         </div>
                         <!-- /blog post -->
@@ -171,9 +221,9 @@
             $("#skipnone").remove();
         });
         $('#myFooter').load('../../include/footer.html');
-             $('#showsidebar').load('../../include/sidebarShow.html');
-    </script>     
-<script>
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+    <script>
         var geturl = window.location.href;
         // console.log(geturl);
         var disqus_config = function () {

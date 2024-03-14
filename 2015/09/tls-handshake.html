@@ -113,12 +113,16 @@
                                         </tr>
                                         <tr>
                                             <td>140 ms</td>
-                                            <td>	
-                                                The server processes the key exchange parameters sent by the client, checks message integrity by verifying the MAC, and returns an encrypted "Finished" message back to the client.</td>
+                                            <td>
+                                                The server processes the key exchange parameters sent by the client,
+                                                checks message integrity by verifying the MAC, and returns an encrypted
+                                                "Finished" message back to the client.</td>
                                         </tr>
                                         <tr>
                                             <td>168 ms</td>
-                                            <td>The client decrypts the message with the negotiated symmetric key, verifies the MAC, and if all is well, then the tunnel is established and application data can now be sent.</td>
+                                            <td>The client decrypts the message with the negotiated symmetric key,
+                                                verifies the MAC, and if all is well, then the tunnel is established and
+                                                application data can now be sent.</td>
                                         </tr>
 
                                     </table>
@@ -138,6 +142,23 @@
 
 
                             </div>
+
+                            <div class="pagination blogPagination my-4">
+                                <div class="paginationNav pull-right">
+
+                                    <a href="tls-handshake.html" title="Previous" rel="" class="preblog">
+                                        <span><i class="fa fa-angle-left fa-lg"></i> </span>
+                                        Previous
+                                    </a>
+
+
+                                    <a href="http10-and-http11.html" title="Next" rel="" class="nextblog">
+                                        Next<span><i class="fa fa-angle-right fa-lg"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+
+
                             <div id="disqus_thread"></div>
                         </div>
                         <!-- /blog post -->
@@ -166,9 +187,9 @@
             $("#skipnone").remove();
         });
         $('#myFooter').load('../../include/footer.html');
-             $('#showsidebar').load('../../include/sidebarShow.html');
-    </script>     
-<script>
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+    <script>
         var geturl = window.location.href;
         // console.log(geturl);
         var disqus_config = function () {

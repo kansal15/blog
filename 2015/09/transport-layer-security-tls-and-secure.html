@@ -68,10 +68,15 @@
                             </ul>
                             <div class="content">
                                 <p class="blog-post-body">
-                                    Transport Layer Security (TLS) is a successor of Secure Sockets Layer (SSL) and its a cryptographic protocol used for establishing an encrypted link between a Server and a Client over a public network.
+                                    Transport Layer Security (TLS) is a successor of Secure Sockets Layer (SSL) and its
+                                    a cryptographic protocol used for establishing an encrypted link between a Server
+                                    and a Client over a public network.
 
                                 </p>
-                                <p>They use X.509 certificates and hence asymmetric cryptography to authenticate the certificate holder to its clients, and to negotiate a symmetric session key. This session key is used to encrypt the data communication between client and server. This allows message confidentiality and authenticity.</p>
+                                <p>They use X.509 certificates and hence asymmetric cryptography to authenticate the
+                                    certificate holder to its clients, and to negotiate a symmetric session key. This
+                                    session key is used to encrypt the data communication between client and server.
+                                    This allows message confidentiality and authenticity.</p>
 
                                 <p>TLS is widely used in applications like:-</p>
 
@@ -81,31 +86,53 @@
                                     <li>VoIP</li>
                                 </ul>
 
-                                <p>Because of the use of X.509 certificates,  CAs and PKI infrastructure are necessary to verify the certificates and for the establishment of chain-of trust.</p>
+                                <p>Because of the use of X.509 certificates, CAs and PKI infrastructure are necessary to
+                                    verify the certificates and for the establishment of chain-of trust.</p>
 
-                                <p>TLS is an Internet Engineering Task Force (IETF) standards track protocol, first defined in 1999 and updated in RFC 5246 (August 2008) and RFC 6176 (March 2011). It is based on the earlier SSL specifications (1994, 1995, 1996) developed by Netscape Communications.</p>
+                                <p>TLS is an Internet Engineering Task Force (IETF) standards track protocol, first
+                                    defined in 1999 and updated in RFC 5246 (August 2008) and RFC 6176 (March 2011). It
+                                    is based on the earlier SSL specifications (1994, 1995, 1996) developed by Netscape
+                                    Communications.</p>
 
                                 <h6 class="pt-3"><u>History and present development </u></h6>
                                 <ul>
                                     <li>
                                         <div>
                                             <b>SSL 1.0, 2.0 and 3.0</b>
-                                <p>Netscape developed the original SSL protocols. Version 1.0 was never publicly released because of serious security flaws in the protocol; version 2.0, released in February 1995, contained a number of security flaws which ultimately led to the design of SSL version 3. SSL version 3.0, released in 1996, represented a complete redesign of the protocol.
-                                </p>
+                                            <p>Netscape developed the original SSL protocols. Version 1.0 was never
+                                                publicly released because of serious security flaws in the protocol;
+                                                version 2.0, released in February 1995, contained a number of security
+                                                flaws which ultimately led to the design of SSL version 3. SSL version
+                                                3.0, released in 1996, represented a complete redesign of the protocol.
+                                            </p>
 
-                                <p>Newer versions of SSL/TLS are based on SSL 3.0. The 1996 draft of SSL 3.0 was published by IETF as a historical document in RFC 6101 . Dr. Taher Elgamal, chief scientist at Netscape Communications from 1995 to 1998, is recognised as the "father of SSL".
-                                </p>
-                                <p>As of 2014 the 3.0 version of SSL is considered insecure as it is vulnerable to the POODLE attack that affects all block ciphers in SSL; and RC4, the only non-block cipher supported by SSL 3.0, is also feasibly broken as used in SSL 3.0.
-                                </p>
-                                <p>SSL 2.0 is deprecated in RFC 6176.<br/>
-                                    SSL 3.0 is deprecated in RFC 7568.</p>
+                                            <p>Newer versions of SSL/TLS are based on SSL 3.0. The 1996 draft of SSL 3.0
+                                                was published by IETF as a historical document in RFC 6101 . Dr. Taher
+                                                Elgamal, chief scientist at Netscape Communications from 1995 to 1998,
+                                                is recognised as the "father of SSL".
+                                            </p>
+                                            <p>As of 2014 the 3.0 version of SSL is considered insecure as it is
+                                                vulnerable to the POODLE attack that affects all block ciphers in SSL;
+                                                and RC4, the only non-block cipher supported by SSL 3.0, is also
+                                                feasibly broken as used in SSL 3.0.
+                                            </p>
+                                            <p>SSL 2.0 is deprecated in RFC 6176.<br />
+                                                SSL 3.0 is deprecated in RFC 7568.</p>
                                         </div>
                                     </li>
                                     <li>
                                         <div>
                                             <b>PCT</b>
 
-                                            <p><b>Private Communications Technology (PCT)</b> 1.0 was a protocol developed by Microsoft in the mid-1990s. PCT was designed to address security flaws in version 2.0 of Netscape's Secure Sockets Layer protocol and to force Netscape to hand control of the then-proprietary SSL protocol to an open standards body. PCT has since been superseded by SSLv3 and Transport Layer Security. For a while it was still supported by Internet Explorer, but PCT 1.0 has been disabled since IE 5. It is still found in IIS and in the Windows operating system libraries, although in Windows Server 2003 it is disabled by default.
+                                            <p><b>Private Communications Technology (PCT)</b> 1.0 was a protocol
+                                                developed by Microsoft in the mid-1990s. PCT was designed to address
+                                                security flaws in version 2.0 of Netscape's Secure Sockets Layer
+                                                protocol and to force Netscape to hand control of the then-proprietary
+                                                SSL protocol to an open standards body. PCT has since been superseded by
+                                                SSLv3 and Transport Layer Security. For a while it was still supported
+                                                by Internet Explorer, but PCT 1.0 has been disabled since IE 5. It is
+                                                still found in IIS and in the Windows operating system libraries,
+                                                although in Windows Server 2003 it is disabled by default.
                                             </p>
                                         </div>
                                     </li>
@@ -113,14 +140,16 @@
                                         <div>
                                             <b>TLS 1.0</b>
                                             <p>
-                                                TLS 1.1 was defined in RFC 4346 in April 2006. It is an update from TLS version 1.0.
+                                                TLS 1.1 was defined in RFC 4346 in April 2006. It is an update from TLS
+                                                version 1.0.
                                             </p>
                                             <p>Significant differences in this version include:</p>
                                             <ol type="I">
                                                 <li>
                                                     Added protection against cipher-block chaining (CBC) attacks.
                                                     <ol>
-                                                        <li>The implicit initialisation vector (IV) was replaced with an explicit IV.</li>
+                                                        <li>The implicit initialisation vector (IV) was replaced with an
+                                                            explicit IV.</li>
                                                         <li>Change in handling of padding errors.</li>
                                                     </ol>
                                                 </li>
@@ -133,37 +162,101 @@
                                         <div>
                                             <b>TLS 1.2</b>
                                             <p>
-                                                TLS 1.2 was defined in RFC 5246 in August 2008. It is based on the earlier TLS 1.1 specification. Many major changes has been done in TLS 1.2.
+                                                TLS 1.2 was defined in RFC 5246 in August 2008. It is based on the
+                                                earlier TLS 1.1 specification. Many major changes has been done in TLS
+                                                1.2.
                                             </p>
-                                            <p>All TLS versions were further refined in RFC 6176 in March 2011 removing their backward compatibility with SSL such that TLS sessions will never negotiate the use of Secure Sockets Layer (SSL) version 2.0.</p>
+                                            <p>All TLS versions were further refined in RFC 6176 in March 2011 removing
+                                                their backward compatibility with SSL such that TLS sessions will never
+                                                negotiate the use of Secure Sockets Layer (SSL) version 2.0.</p>
                                         </div>
                                     </li>
                                     <li>
                                         <div>
                                             <b>TLS 1.3 (draft)</b>
-                                            <p>As of September 2015, TLS 1.3 is a working draft, and details are provisional and incomplete. It is based on the earlier TLS 1.2 specification. Major differences from TLS 1.2 include:</p>
+                                            <p>As of September 2015, TLS 1.3 is a working draft, and details are
+                                                provisional and incomplete. It is based on the earlier TLS 1.2
+                                                specification. Major differences from TLS 1.2 include:</p>
                                             <ul class="pt-3" style="color: #cd8c46;">
-                                                <li style="margin-bottom: 0.1em;">Removed support for weak and lesser used named curves</li>
-                                                <li style="margin-bottom: 0.1em;">Removed support for MD5 and SHA-224 hashes with signatures</li>
-                                                <li style="margin-bottom: 0.1em;">Required digital signatures even when a previous configuration is used</li>
-                                                <li style="margin-bottom: 0.1em;">Integration of HKDF and the semi-ephemeral DH proposal</li>
-                                                <li style="margin-bottom: 0.1em;">Replacement of resumption with&nbsp;<a href="https://en.wikipedia.org/wiki/TLS-PSK" style="background: none; color: #0b0080; text-decoration: none;" title="TLS-PSK" wotsearchprocessed="true">PSK</a>&nbsp;and tickets</li>
-                                                <li style="margin-bottom: 0.1em;">Relegation of ClientKeyShare to an appendix</li>
-                                                <li style="margin-bottom: 0.1em;">Support for 1-RTT handshakes and initial support for 0-RTT</li>
-                                                <li style="margin-bottom: 0.1em;">Dropped support for many insecure or obsolete features including,&nbsp;<a href="https://en.wikipedia.org/wiki/Data_compression" style="background: none; color: #0b0080; text-decoration: none;" title="Data compression" wotsearchprocessed="true">compression</a>, renegotiation, non-<a href="https://en.wikipedia.org/wiki/Authenticated_encryption" style="background: none; color: #0b0080; text-decoration: none;" title="Authenticated encryption" wotsearchprocessed="true">AEAD</a>&nbsp;ciphers, static&nbsp;<a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)" style="background: none; color: #0b0080; text-decoration: none;" title="RSA (cryptosystem)" wotsearchprocessed="true">RSA</a>&nbsp;and&nbsp;<a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange" style="background: none; color: #0b0080; text-decoration: none;" title="Diffie–Hellman key exchange" wotsearchprocessed="true">DH</a>&nbsp;key exchange, custom&nbsp;<a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange" style="background: none; color: #0b0080; text-decoration: none;" title="Diffie–Hellman key exchange" wotsearchprocessed="true">DHE</a>&nbsp;groups, point format negotiation, Change Cipher Spec protocol, Hello message UNIX time, and the length field AD input to AEAD ciphers</li>
-                                                <li style="margin-bottom: 0.1em;">Prohibition of SSL or RC4 negotiation for backwards compatibility</li>
+                                                <li style="margin-bottom: 0.1em;">Removed support for weak and lesser
+                                                    used named curves</li>
+                                                <li style="margin-bottom: 0.1em;">Removed support for MD5 and SHA-224
+                                                    hashes with signatures</li>
+                                                <li style="margin-bottom: 0.1em;">Required digital signatures even when
+                                                    a previous configuration is used</li>
+                                                <li style="margin-bottom: 0.1em;">Integration of HKDF and the
+                                                    semi-ephemeral DH proposal</li>
+                                                <li style="margin-bottom: 0.1em;">Replacement of resumption with&nbsp;<a
+                                                        href="https://en.wikipedia.org/wiki/TLS-PSK"
+                                                        style="background: none; color: #0b0080; text-decoration: none;"
+                                                        title="TLS-PSK" wotsearchprocessed="true">PSK</a>&nbsp;and
+                                                    tickets</li>
+                                                <li style="margin-bottom: 0.1em;">Relegation of ClientKeyShare to an
+                                                    appendix</li>
+                                                <li style="margin-bottom: 0.1em;">Support for 1-RTT handshakes and
+                                                    initial support for 0-RTT</li>
+                                                <li style="margin-bottom: 0.1em;">Dropped support for many insecure or
+                                                    obsolete features including,&nbsp;<a
+                                                        href="https://en.wikipedia.org/wiki/Data_compression"
+                                                        style="background: none; color: #0b0080; text-decoration: none;"
+                                                        title="Data compression"
+                                                        wotsearchprocessed="true">compression</a>, renegotiation, non-<a
+                                                        href="https://en.wikipedia.org/wiki/Authenticated_encryption"
+                                                        style="background: none; color: #0b0080; text-decoration: none;"
+                                                        title="Authenticated encryption"
+                                                        wotsearchprocessed="true">AEAD</a>&nbsp;ciphers, static&nbsp;<a
+                                                        href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)"
+                                                        style="background: none; color: #0b0080; text-decoration: none;"
+                                                        title="RSA (cryptosystem)"
+                                                        wotsearchprocessed="true">RSA</a>&nbsp;and&nbsp;<a
+                                                        href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange"
+                                                        style="background: none; color: #0b0080; text-decoration: none;"
+                                                        title="Diffie–Hellman key exchange"
+                                                        wotsearchprocessed="true">DH</a>&nbsp;key exchange,
+                                                    custom&nbsp;<a
+                                                        href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange"
+                                                        style="background: none; color: #0b0080; text-decoration: none;"
+                                                        title="Diffie–Hellman key exchange"
+                                                        wotsearchprocessed="true">DHE</a>&nbsp;groups, point format
+                                                    negotiation, Change Cipher Spec protocol, Hello message UNIX time,
+                                                    and the length field AD input to AEAD ciphers</li>
+                                                <li style="margin-bottom: 0.1em;">Prohibition of SSL or RC4 negotiation
+                                                    for backwards compatibility</li>
                                                 <li style="margin-bottom: 0.1em;">Integrated usage of session hash</li>
-                                                <li style="margin-bottom: 0.1em;">The record layer version number has been frozen and deprecated for improved backwards compatibility</li>
-                                                <li style="margin-bottom: 0.1em;">Movement of some security related algorithm details from an appendix to the specification</li>
-                                             </ul>
+                                                <li style="margin-bottom: 0.1em;">The record layer version number has
+                                                    been frozen and deprecated for improved backwards compatibility</li>
+                                                <li style="margin-bottom: 0.1em;">Movement of some security related
+                                                    algorithm details from an appendix to the specification</li>
+                                            </ul>
                                         </div>
                                     </li>
                                 </ul>
-                                
-                                <h6><u>For a details list of browser supporting TLS and SSL, please refer the below link:-</u></h6>
-                              <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security#Web_browsers" target="_blank">https://en.wikipedia.org/wiki/Transport_Layer_Security#Web_browsers</a>
+
+                                <h6><u>For a details list of browser supporting TLS and SSL, please refer the below
+                                        link:-</u></h6>
+                                <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security#Web_browsers"
+                                    target="_blank">https://en.wikipedia.org/wiki/Transport_Layer_Security#Web_browsers</a>
 
                             </div>
+
+                            <div class="pagination blogPagination my-4">
+                                <div class="paginationNav pull-right">
+
+                                    <a href="transport-layer-security-tls-and-secure.html" title="Previous" rel=""
+                                        class="preblog">
+                                        <span><i class="fa fa-angle-left fa-lg"></i> </span>
+                                        Previous
+                                    </a>
+
+
+                                    <a href="../../2014/09/ipv6-dns-measurement-stats.html" title="Next" rel=""
+                                        class="nextblog">
+                                        Next<span><i class="fa fa-angle-right fa-lg"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+
+
                             <div id="disqus_thread"></div>
                         </div>
                         <!-- /blog post -->
@@ -192,9 +285,9 @@
             $("#skipnone").remove();
         });
         $('#myFooter').load('../../include/footer.html');
-             $('#showsidebar').load('../../include/sidebarShow.html');
-    </script>     
-<script>
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+    <script>
         var geturl = window.location.href;
         // console.log(geturl);
         var disqus_config = function () {

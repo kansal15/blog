@@ -279,16 +279,31 @@
                                                     <table class="table table-secondary table-border text-center">
                                                         <tbody>
                                                             <tr>
-                                                                <td style=" background: #fdefe6; color: #bf8c55;">2405:8A00:0:1::/64</td>
+                                                                <td style=" background: #fdefe6; color: #bf8c55;">
+                                                                    2405:8A00:0:1::/64</td>
                                                             </tr>
-                                                            <tr><td>2405:8A00:0:1::0/126</td></tr>
-                                                            <tr><td>2405:8A00:0:1::4/126</td></tr>
-                                                            <tr><td>(snip)</td></tr>
-                                                            <tr><td>2405:8A00:0:1::C/126</td></tr>
-                                                            <tr><td>2405:8A00:0:1::10/126</td></tr>
-                                                            <tr><td>(snip)</td></tr>
-                                                            <tr><td>2405:8A00:0:1::1C/126</td></tr>
-                                                          
+                                                            <tr>
+                                                                <td>2405:8A00:0:1::0/126</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2405:8A00:0:1::4/126</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>(snip)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2405:8A00:0:1::C/126</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2405:8A00:0:1::10/126</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>(snip)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2405:8A00:0:1::1C/126</td>
+                                                            </tr>
+
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -300,6 +315,25 @@
                                 </ul>
 
                             </div>
+
+                            <div class="pagination blogPagination my-4">
+                                <div class="paginationNav pull-right">
+
+                                    <a href="../12/why-we-have-ipv6-after-ipv4-where-is.html" title="Previous" rel=""
+                                        class="preblog">
+                                        <span><i class="fa fa-angle-left fa-lg"></i> </span>
+                                        Previous
+                                    </a>
+
+
+                                    <a href="../08/domain-information-groper-dig-dns-query.html" title="Next" rel=""
+                                        class="nextblog">
+                                        Next<span><i class="fa fa-angle-right fa-lg"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+
+
                             <div id="disqus_thread"></div>
                         </div>
                         <!-- /blog post -->
@@ -328,9 +362,9 @@
             $("#skipnone").remove();
         });
         $('#myFooter').load('../../include/footer.html');
-             $('#showsidebar').load('../../include/sidebarShow.html');
-    </script>     
-<script>
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+    <script>
         var geturl = window.location.href;
         // console.log(geturl);
         var disqus_config = function () {

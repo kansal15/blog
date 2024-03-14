@@ -68,25 +68,58 @@
                             </ul>
                             <div class="content">
                                 <p class="blog-post-body">
-                                    TLS does not provide a mechanism for a client to tell a server the name of the server it is contacting. It may be desirable for clients to provide this information to facilitate secure connections to servers that host multiple 'virtual' servers at a single underlying network address.
-For taking care of this issue, SNI extension has been added into the TLS and published in <a href="https://tools.ietf.org/html/rfc6066" target="_blank">RFC 6066</a>.
+                                    TLS does not provide a mechanism for a client to tell a server the name of the
+                                    server it is contacting. It may be desirable for clients to provide this information
+                                    to facilitate secure connections to servers that host multiple 'virtual' servers at
+                                    a single underlying network address.
+                                    For taking care of this issue, SNI extension has been added into the TLS and
+                                    published in <a href="https://tools.ietf.org/html/rfc6066" target="_blank">RFC
+                                        6066</a>.
 
                                 </p>
-                                <p>Or to explain it in other words, Name-based virtual hosting allows multiple DNS hostnames to be hosted by a single server (usually a web server) on the same IP address. To achieve this the server uses a hostname presented by the client as part of the protocol (for HTTP the name is presented in the host header). However, when using HTTPS the TLS handshake happens before the server sees any HTTP headers. Therefore, it is not possible for the server to use the information in the HTTP host header to decide which certificate to present.</p>
-                                <p>SNI addresses this issue by having the client send the name of the virtual domain as part of the TLS negotiation. This enables the server to select the correct virtual domain and present the browser with the certificate containing the correct name. Therefore, with clients and servers that implement SNI, a server with a single IP address can serve a group of domain names.
+                                <p>Or to explain it in other words, Name-based virtual hosting allows multiple DNS
+                                    hostnames to be hosted by a single server (usually a web server) on the same IP
+                                    address. To achieve this the server uses a hostname presented by the client as part
+                                    of the protocol (for HTTP the name is presented in the host header). However, when
+                                    using HTTPS the TLS handshake happens before the server sees any HTTP headers.
+                                    Therefore, it is not possible for the server to use the information in the HTTP host
+                                    header to decide which certificate to present.</p>
+                                <p>SNI addresses this issue by having the client send the name of the virtual domain as
+                                    part of the TLS negotiation. This enables the server to select the correct virtual
+                                    domain and present the browser with the certificate containing the correct name.
+                                    Therefore, with clients and servers that implement SNI, a server with a single IP
+                                    address can serve a group of domain names.
                                 </p>
-                               
+
                                 <h6><u>For more info, please refer :- -</u></h6>
                                 <p>
                                     <i> <a href="https://en.wikipedia.org/wiki/Server_Name_Indication"
                                             target="_blank">https://en.wikipedia.org/wiki/Server_Name_Indication</a><br>
                                         <a href="https://tools.ietf.org/html/rfc6066"
                                             target="_blank">https://tools.ietf.org/html/rfc6066</a>
-                                        
+
                                     </i>
                                 </p>
 
                             </div>
+
+                            <div class="pagination blogPagination my-4">
+                                <div class="paginationNav pull-right">
+
+                                    <a href="ip-to-country-mapping-in-wireshark.html" title="Previous" rel=""
+                                        class="preblog">
+                                        <span><i class="fa fa-angle-left fa-lg"></i> </span>
+                                        Previous
+                                    </a>
+
+
+                                    <a href="tls-session-resumption.html" title="Next" rel="" class="nextblog">
+                                        Next<span><i class="fa fa-angle-right fa-lg"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+
+
                             <div id="disqus_thread"></div>
                         </div>
                         <!-- /blog post -->
@@ -115,9 +148,9 @@ For taking care of this issue, SNI extension has been added into the TLS and pub
             $("#skipnone").remove();
         });
         $('#myFooter').load('../../include/footer.html');
-             $('#showsidebar').load('../../include/sidebarShow.html');
-    </script>     
-<script>
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+    <script>
         var geturl = window.location.href;
         // console.log(geturl);
         var disqus_config = function () {

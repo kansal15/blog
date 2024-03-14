@@ -175,8 +175,8 @@ nkn.in.                 14390   IN      <span style="color: #cb0000;">MX      </
                                     <li class="my-4">
                                         <b> Ask for a reverse lookup :-</b>
                                         <blockquote style="font-weight: 400; margin-bottom: 0; font-size: 14px;"
-                                        class="mt-4">
-<pre class="mb-1">C:\Users\kansal&gt;dig -<span style="color: #cb0000;">x 164.100.2.6</span>
+                                            class="mt-4">
+                                            <pre class="mb-1">C:\Users\kansal&gt;dig -<span style="color: #cb0000;">x 164.100.2.6</span>
 ; &lt;&lt;&gt;&gt; DiG 9.8.5-P2 &lt;&lt;&gt;&gt; -x 164.100.2.6
 ;; global options: +cmd
 ;; Got answer:
@@ -192,14 +192,14 @@ nkn.in.                 14390   IN      <span style="color: #cb0000;">MX      </
 ;; SERVER: 103.8.44.5#53(103.8.44.5)
 ;; WHEN: Sat Aug 03 23:29:52 India Standard Time 2013
 ;; <span style="color: blue;">MSG SIZE  rcvd: 73</span> </pre>
-                                    </blockquote>
+                                        </blockquote>
                                     </li>
 
                                     <li class="my-4">
                                         <b>Check for DNSSEC Validation :-</b>
                                         <blockquote style="font-weight: 400; margin-bottom: 0; font-size: 14px;"
-                                        class="mt-4">
-<pre>C:\Users\kansal&gt;
+                                            class="mt-4">
+                                            <pre>C:\Users\kansal&gt;
 C:\Users\kansal&gt;dig <span style="color: #cb0000;">apnic.net</span> <span style="color: #cb0000;">+dnssec</span> @8.8.8.8
                 
 ;; &lt;&lt;&gt;&gt; DiG 9.8.5-P2 &lt;&lt;&gt;&gt; apnic.net +dnssec @8.8.8.8
@@ -225,14 +225,14 @@ xcvXAr0ZTUgBZcIAtkOpzEpoOa1zP1f6VRVA vMM=
 ;; SERVER: 8.8.8.8#53(8.8.8.8)
 ;; WHEN: Sun Aug 04 11:07:27 India Standard Time 2013
 <span style="color: blue;">;; MSG SIZE  rcvd: 223</span></pre>
-                                    </blockquote>
+                                        </blockquote>
                                     </li>
 
                                     <li class="my-4">
                                         <b>Trace the DNS Query :-</b>
                                         <blockquote style="font-weight: 400; margin-bottom: 0; font-size: 14px;"
-                                        class="mt-4">
-<pre>C:\Users\kansal&gt;dig india.gov.in <span style="color: red;"><b>+trace</b></span>
+                                            class="mt-4">
+                                            <pre>C:\Users\kansal&gt;dig india.gov.in <span style="color: red;"><b>+trace</b></span>
 
 ; &lt;&lt;&gt;&gt; <span style="color: blue;"><b>DiG 9.8.5-P2</b></span> &lt;&lt;&gt;&gt; india.gov.in +trace
 ;; global options: +cmd
@@ -276,18 +276,41 @@ xcvXAr0ZTUgBZcIAtkOpzEpoOa1zP1f6VRVA vMM=
     
     
     </span></pre>
-                                    </blockquote>
+                                        </blockquote>
                                     </li>
 
                                 </ol>
 
                                 <p>The above output show you how DNS queries works.</p>
                                 <p>In the above query, i ask for "trace" for the india.gov.in domain.</p>
-                                <p>My resolver first goes to "." (Root NameServer) as every resolver knows about Root Servers only. Root NS replies that 'he don't know about india.gov.in' but he knows about 'NS of .in domain'.</p>
-                                <p>Then resolver goes to NS of ".in" domain and ask for india.gov.in, which in turn replies that he only knows about NS of india.gov.in.</p>
-                                <p>Then resolver goes to NS of 'india.gov.in' which in turn replies the desired query answer.</p>
+                                <p>My resolver first goes to "." (Root NameServer) as every resolver knows about Root
+                                    Servers only. Root NS replies that 'he don't know about india.gov.in' but he knows
+                                    about 'NS of .in domain'.</p>
+                                <p>Then resolver goes to NS of ".in" domain and ask for india.gov.in, which in turn
+                                    replies that he only knows about NS of india.gov.in.</p>
+                                <p>Then resolver goes to NS of 'india.gov.in' which in turn replies the desired query
+                                    answer.</p>
 
                             </div>
+
+                            <div class="pagination blogPagination my-4">
+                                <div class="paginationNav pull-right">
+
+                                    <a href="../11/ipv6-address-allocation-bcp.html" title="Previous" rel=""
+                                        class="preblog">
+                                        <span><i class="fa fa-angle-left fa-lg"></i> </span>
+                                        Previous
+                                    </a>
+
+
+                                    <a href="how-to-install-dig-in-windows-machine.html" title="Next" rel=""
+                                        class="nextblog">
+                                        Next<span><i class="fa fa-angle-right fa-lg"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+
+
                             <div id="disqus_thread"></div>
                         </div>
                         <!-- /blog post -->
@@ -316,9 +339,9 @@ xcvXAr0ZTUgBZcIAtkOpzEpoOa1zP1f6VRVA vMM=
             $("#skipnone").remove();
         });
         $('#myFooter').load('../../include/footer.html');
-             $('#showsidebar').load('../../include/sidebarShow.html');
-    </script>     
-<script>
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+    <script>
         var geturl = window.location.href;
         // console.log(geturl);
         var disqus_config = function () {

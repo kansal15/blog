@@ -79,7 +79,7 @@
                                     2.0, which allowed the server to create and send a 32-byte session identifier as
                                     part of its "ServerHello" message during the full TLS negotiation which we discuss
                                     in TLS Handshake. </p>
-                                    <p>
+                                <p>
                                     Internally, the server could then maintain a cache of session IDs and the negotiated
                                     session parameters for each peer. In turn, the client could then also store the
                                     session ID information and include the ID in the "ClientHello" message for a
@@ -116,22 +116,60 @@
 
 
                                 </blockquote>
-                                <p>However, one of the practical limitations of the Session Identifiers mechanism is the requirement for the server to create and maintain a session cache for every client. This results in several problems on the server, which may see tens of thousands or even millions of unique connections every day: consumed memory for every open TLS connection, a requirement for session ID cache and eviction policies, and nontrivial deployment challenges for popular sites with many servers, which should, ideally, use a shared TLS session cache for best performance.</p>
+                                <p>However, one of the practical limitations of the Session Identifiers mechanism is the
+                                    requirement for the server to create and maintain a session cache for every client.
+                                    This results in several problems on the server, which may see tens of thousands or
+                                    even millions of unique connections every day: consumed memory for every open TLS
+                                    connection, a requirement for session ID cache and eviction policies, and nontrivial
+                                    deployment challenges for popular sites with many servers, which should, ideally,
+                                    use a shared TLS session cache for best performance.</p>
 
                                 <p>
-                                    None of the preceding problems are impossible to solve, and many high-traffic sites are using session identifiers successfully today. But for any multiserver deployment, session identifiers will require some careful thinking and systems architecture to ensure a well operating session cache.
+                                    None of the preceding problems are impossible to solve, and many high-traffic sites
+                                    are using session identifiers successfully today. But for any multiserver
+                                    deployment, session identifiers will require some careful thinking and systems
+                                    architecture to ensure a well operating session cache.
                                 </p>
 
                                 <h6><u>Session Tickets</u></h6>
-                                <p>To address this concern for server-side deployment of TLS session caches, the "Session Ticket" (RFC 5077) replacement mechanism was introduced, which removes the requirement for the server to keep per-client session state. Instead, if the client indicated that it supports Session Tickets, in the last exchange of the full TLS handshake, the server can include a New Session Ticket record, which includes all of the session data encrypted with a secret key known only by the server.</p>
-                                <p>This session ticket is then stored by the client and can be included in the SessionTicket extension within theClientHello message of a subsequent session. Thus, all session data is stored only on the client, but the ticket is still safe because it is encrypted with a key known only by the server.</p>
-                                <p>The session identifiers and session ticket mechanisms are respectively commonly referred to as session cachingand stateless resumption mechanisms. The main improvement of stateless resumption is the removal of the server-side session cache, which simplifies deployment by requiring that the client provide the session ticket on every new connection to the server—that is, until the ticket has expired.</p>
+                                <p>To address this concern for server-side deployment of TLS session caches, the
+                                    "Session Ticket" (RFC 5077) replacement mechanism was introduced, which removes the
+                                    requirement for the server to keep per-client session state. Instead, if the client
+                                    indicated that it supports Session Tickets, in the last exchange of the full TLS
+                                    handshake, the server can include a New Session Ticket record, which includes all of
+                                    the session data encrypted with a secret key known only by the server.</p>
+                                <p>This session ticket is then stored by the client and can be included in the
+                                    SessionTicket extension within theClientHello message of a subsequent session. Thus,
+                                    all session data is stored only on the client, but the ticket is still safe because
+                                    it is encrypted with a key known only by the server.</p>
+                                <p>The session identifiers and session ticket mechanisms are respectively commonly
+                                    referred to as session cachingand stateless resumption mechanisms. The main
+                                    improvement of stateless resumption is the removal of the server-side session cache,
+                                    which simplifies deployment by requiring that the client provide the session ticket
+                                    on every new connection to the server—that is, until the ticket has expired.</p>
                                 <p>
                                     <u>Source </u>- <a href="oreilly.com" target="_blank">oreilly.com</a>
-                                       
+
                                 </p>
 
                             </div>
+
+                            <div class="pagination blogPagination my-4">
+                                <div class="paginationNav pull-right">
+
+                                    <a href="server-name-indication-sni.html" title="Previous" rel="" class="preblog">
+                                        <span><i class="fa fa-angle-left fa-lg"></i> </span>
+                                        Previous
+                                    </a>
+
+
+                                    <a href="tls-handshake.html" title="Next" rel="" class="nextblog">
+                                        Next<span><i class="fa fa-angle-right fa-lg"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+
+
                             <div id="disqus_thread"></div>
                         </div>
                         <!-- /blog post -->
@@ -160,9 +198,9 @@
             $("#skipnone").remove();
         });
         $('#myFooter').load('../../include/footer.html');
-             $('#showsidebar').load('../../include/sidebarShow.html');
-    </script>     
-<script>
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+    <script>
         var geturl = window.location.href;
         // console.log(geturl);
         var disqus_config = function () {

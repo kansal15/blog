@@ -113,7 +113,7 @@
                                     improvements.</p>
                                 <p>For info about differences in HTTP/1.0 and HTTP/1.1, please visit the below link-</p>
                                 <i><a href="http://www2.research.att.com/~bala/papers/h0vh1.html"
-                                    target="_blank">http://www2.research.att.com/~bala/papers/h0vh1.html</a></i>
+                                        target="_blank">http://www2.research.att.com/~bala/papers/h0vh1.html</a></i>
 
                                 <h6 class="pt-3"><u>FList of Status Codes in HTTP :-</u></h6>
                                 <p>The first digit of the status code specifies one of five classes of response; the
@@ -134,48 +134,82 @@
                                     <li>
                                         <div>
                                             <b>2xx Success</b>
-                                            <p>This class of status codes indicates the action requested by the client was received, understood, accepted and processed successfully.</p>
+                                            <p>This class of status codes indicates the action requested by the client
+                                                was received, understood, accepted and processed successfully.</p>
                                         </div>
                                     </li>
 
                                     <li>
                                         <div>
                                             <b>3xx Redirection</b>
-                                            <p>This class of status code indicates the client must take additional action to complete the request. Many of these status codes are used in URL redirection. A user agent may carry out the additional action with no user interaction only if the method used in the second request is GET or HEAD. A user agent should not automatically redirect a request more than five times, since such redirections usually indicate an infinite loop.</p>
+                                            <p>This class of status code indicates the client must take additional
+                                                action to complete the request. Many of these status codes are used in
+                                                URL redirection. A user agent may carry out the additional action with
+                                                no user interaction only if the method used in the second request is GET
+                                                or HEAD. A user agent should not automatically redirect a request more
+                                                than five times, since such redirections usually indicate an infinite
+                                                loop.</p>
                                         </div>
                                     </li>
 
                                     <li>
                                         <div>
                                             <b>4xx Client Error</b>
-                                            <p>The 4xx class of status code is intended for cases in which the client seems to have erred.<br/>
-                                                The server should include an entity containing an explanation of the error situation, and whether it is a temporary or permanent condition. These status codes are applicable to any request method.</p>
+                                            <p>The 4xx class of status code is intended for cases in which the client
+                                                seems to have erred.<br />
+                                                The server should include an entity containing an explanation of the
+                                                error situation, and whether it is a temporary or permanent condition.
+                                                These status codes are applicable to any request method.</p>
                                         </div>
                                     </li>
 
                                     <li>
                                         <div>
                                             <b>5xx Server Error</b>
-                                            <p>The server failed to fulfill an apparently valid request. Response status codes beginning with the digit "5" indicate cases in which the server is aware that it has encountered an error or is otherwise incapable of performing the request.</p>
+                                            <p>The server failed to fulfill an apparently valid request. Response status
+                                                codes beginning with the digit "5" indicate cases in which the server is
+                                                aware that it has encountered an error or is otherwise incapable of
+                                                performing the request.</p>
                                         </div>
                                     </li>
-                                    </ul>
-                                    <p>Except when responding to a HEAD request, the server should include an entity containing an explanation of the error situation, and indicate whether it is a temporary or permanent condition.</p>
+                                </ul>
+                                <p>Except when responding to a HEAD request, the server should include an entity
+                                    containing an explanation of the error situation, and indicate whether it is a
+                                    temporary or permanent condition.</p>
 
 
-                                    <p>Reference --
-                                        <i> <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes"
-                                                target="_blank">https://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a><br>
-                                           
+                                <p>Reference --
+                                    <i> <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes"
+                                            target="_blank">https://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a><br>
 
-                                        </i>
-                                    </p>
-                                    <h6 class="pt-3"><u>HTTP and HTML :-</u></h6>
-                                    <p>HTML is a description "language" for how to present information that passes via http, HTML stands for Hyper Text Markup Language.</p>
-                                    <p>Hyper Text Transfer Protocol, http, is a computer protocol or set of procedures, describing how computers may pass information in an orderly fashion.
-                                    </p>
+
+                                    </i>
+                                </p>
+                                <h6 class="pt-3"><u>HTTP and HTML :-</u></h6>
+                                <p>HTML is a description "language" for how to present information that passes via http,
+                                    HTML stands for Hyper Text Markup Language.</p>
+                                <p>Hyper Text Transfer Protocol, http, is a computer protocol or set of procedures,
+                                    describing how computers may pass information in an orderly fashion.
+                                </p>
 
                             </div>
+
+                            <div class="pagination blogPagination my-4">
+                                <div class="paginationNav pull-right">
+
+                                    <a href="tls-handshake.html" title="Previous" rel="" class="preblog">
+                                        <span><i class="fa fa-angle-left fa-lg"></i> </span>
+                                        Previous
+                                    </a>
+
+
+                                    <a href="spdy-pronounced-speedy-npn-next.html" title="Next" rel="" class="nextblog">
+                                        Next<span><i class="fa fa-angle-right fa-lg"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+
+
                             <div id="disqus_thread"></div>
                         </div>
                         <!-- /blog post -->
@@ -204,9 +238,9 @@
             $("#skipnone").remove();
         });
         $('#myFooter').load('../../include/footer.html');
-             $('#showsidebar').load('../../include/sidebarShow.html');
-    </script>     
-<script>
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+    <script>
         var geturl = window.location.href;
         // console.log(geturl);
         var disqus_config = function () {

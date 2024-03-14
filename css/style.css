@@ -1018,6 +1018,46 @@ blockquote {
   color: #fff !important;
 }
 
+.blogPagination .paginationNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.blogPagination .nextblog, .blogPagination .preblog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.blogPagination .paginationNav .preblog span,
+.blogPagination .paginationNav .nextblog span {
+  border: 2px solid #c2915d;
+  background-color: #e8d5c1;
+  color: #bf8c55;
+  pointer-events: unset;
+  cursor: pointer;
+  width: 30px;
+  text-align: center;
+  padding: 0px 5px;
+}
+.blogPagination .paginationNav .preblog span{
+  margin-right: 10px;
+}
+.blogPagination .paginationNav .nextblog span{
+  margin-left: 10px;
+}
+
+.blogPagination .paginationNav .preblog:hover span,
+.blogPagination .paginationNav .preblog:focus span,
+.blogPagination .paginationNav .nextblog:hover span,
+.blogPagination .paginationNav .nextblog:focus span{
+  background-color: #c2915d;
+  color:#fff;
+}
+
 /* about-us css */
 .blog_maincontent {
   flex-grow: 1;
