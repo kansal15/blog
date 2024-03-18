@@ -1018,18 +1018,27 @@ blockquote {
   color: #fff !important;
 }
 
+.blogPagination {border-bottom: 1px solid #e7d3be;}
+
 .blogPagination .paginationNav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
 }
 
 .blogPagination .nextblog, .blogPagination .preblog {
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-direction: column;
 
+}
+
+.blogPagination .nextblog{
+  align-items: flex-end;
+} 
+.blogPagination .preblog{
+  align-items: flex-start;
 }
 
 .blogPagination .paginationNav .preblog span,
@@ -1043,11 +1052,45 @@ blockquote {
   text-align: center;
   padding: 0px 5px;
 }
+
 .blogPagination .paginationNav .preblog span{
   margin-right: 10px;
 }
 .blogPagination .paginationNav .nextblog span{
   margin-left: 10px;
+}
+
+.blogPagination .paginationNav .preblog .prebox,
+.blogPagination .paginationNav .nextblog .nextbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.blogPagination .paginationNav .preblog .pretitle,
+.blogPagination .paginationNav .nextblog .nexttitle{
+  font-size: 14px;
+  color: #000;
+  max-width: 450px;
+  
+}
+
+.blogPagination .paginationNav .preblog .pretitle{
+  display: flex;
+  justify-content: start;
+}
+
+.blogPagination .paginationNav .nextblog .nexttitle{
+  display: flex;
+  justify-content: end;
+}
+
+.blogPagination .paginationNav .preblog:hover .pretitle,
+.blogPagination .paginationNav .nextblog:hover .nexttitle,
+.blogPagination .paginationNav .preblog:focus .pretitle,
+.blogPagination .paginationNav .nextblog:focus .nexttitle{
+  color: #c2915d;
 }
 
 .blogPagination .paginationNav .preblog:hover span,
@@ -1925,6 +1968,14 @@ h4, .h4 {
   }
   .footer-bg {
     font-size: 0.75rem;
+  }
+  .blogPagination .paginationNav{
+    flex-direction: column;
+  }
+  .blogPagination .nextblog, .blogPagination .preblog{
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 @media only screen and (max-width: 320px) {
