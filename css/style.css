@@ -1807,6 +1807,12 @@ h6 span{
 h6 p{
   color: #d58753;
 } 
+
+#blog-post-block .wireless-img-w{
+  width: 100%;
+  max-width: 700px;
+  max-height: 320px;
+}
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .title-border-lg::before {
     position: absolute;
