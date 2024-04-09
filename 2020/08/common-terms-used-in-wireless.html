@@ -66,9 +66,158 @@
                                 <li class="list-inline-item"><i class="ti-calendar mr-2"></i> August 31, 2020</li>
                             </ul>
                             <div class="content">
-                                <iframe height="680"
-                                    src="https://drive.google.com/file/d/1PPpnLBH9xbEVdR3MtcPHlJo3QQvpCpbf/preview"
-                                    width="100%"></iframe>
+                                <p class="blog-post-body">
+                                    Common terms used in Wireless Communications
+                                </p>                              
+                            <div class="mt-5 mb-5">                               
+                                    <ol>
+                                        <li>
+                                        <b>dB (Decibel) - </b>The Decibel function conveniently represent very large to very small value on the linear scale using 
+                                            logarithms to compare one absolute measurement to another. It was originally developed to compare sound intensity levels, 
+                                            but it applies directly to power levels too. One of these values is often a standard reference value, 
+                                            in which case the decibel is used to express the level of other value relative to this reference.
+                                        <blockquote class="text-center"><span style="color: #d58753;">dB=10(logP2-logP1)	or	dB=10.log(P2/P1)</span>
+                                        </blockquote>
+                                        <p><b>P2 represent the source of interest (Whose power is to be compared), </b></p>
+                                        <p><b>P1 represent the source of comparison or reference value.</b></p>
+                                        <p><b>Log is in base of 10.</b></p>
+                                        <h6 style="color: #d58753;">Important dB facts to remember</h6>
+                                        <ol type="a">
+                                            <li>A value of 0dB means that the two absolute power values are equal.</li>
+                                            <li>A value of 3dB means the power value of interest is double the reference value; 
+                                                a value of -3dB means the power value of interest is half than power value of reference value.</li>
+                                            <li>A value of 10dB means the power value of interest is ten times the reference value; 
+                                                a value of -10dB means the power value of interest is one tenth the reference value<sup><a onclick="linkfiles('link1')">[1]</a></sup>.</li>
+                                        </ol>
+                                        </li>
+                                        <li><b>dBm - </b>dBm or decibel-milliwatts is an electrical power unit in decibels (dB), 
+                                            referenced to 1 milliwatts (mW). So, when the reference value is taken as 1mW then the dB value becomes dBm. 
+                                            Both the dB and dBm are one and the same thing and gives same result. The difference lies in the reference value i.e. P1. 
+                                            When P1 is just another power source having the power not equal to 1mW then the value is dB and when the P1 is power source having 1mW of power then the dB becomes dBm.
+                                        </li> 
+                                        <li><b>Antenna Gain - </b>A relative measure of an antenna's ability to direct or concentrate radio frequency energy in a particular direction. The measurement is typically measured in dBi (Decibels relative to an 
+                                            isotropic radiator) or in dBd (Decibels relative to a dipole radiator). This is explained below:
+                                            <ol type="a">
+                                                <li><b>dBi (dB-isotropic) - </b>Just like the transmitter and receiver power levels; wireless engineers need to compare the power of antennas. 
+                                                    To achieve this goal, a reference antenna was created or assumed with 1 large dot which radiates in all directions like sphere. It can be used as reference to compare actual antennas. This theoretical antenna is called isotropic antenna therefore the scale used to compare the powers that 
+                                                    antennas radiate compared to an isotropic antenna is called dBi.</li>
+                                                <li><b>dBd (dB-Dipole) - </b>Some wireless engineers use the existing antenna as reference in place of isotropic antenna. 
+                                                    This antenna is called dipole antenna. The scale used to compare the power that antennas radiate compared 
+                                                    to dipole antenna is called dBd.</li>
+                                                    <blockquote class="text-center"><span style="color: #d58753;">Relationship b/w dBi and dBd
+                                                        <br>dBi=dBd+2.14
+                                                        </span>
+                                                    </blockquote>
+                                            </ol>
+                                        </li>
+                                        <li><b>RSSI (Received Signal strength indicator) - </b>
+                                            RSSI is a measure of the power level that a RF client device is receiving from an access point. 
+                                            It is a measurement of how well wireless device can hear a signal from an access point. It is often expressed in dB. 
+                                            RSSI is usually the negative value. Closer to 0, the better or the higher the RSSI the better the signal.
+                                            <h6 style="color: #d58753;" class="mt-2 mb-2">Acceptable signal strengths<sup><a onclick="linkfiles('link2')">[2]</a></sup>:</h6>
+                                            <p><b>-30dBm=amazing</b></p>
+                                            <p><b>-67dBm=very good</b></p>
+                                            <p><b>-70dBm=okay</b></p>
+                                            <p><b>-80dBm=not good</b></p>
+                                            <p><b>-90dBm=unusable</b></p>
+                                            <p><b>-100dBm=No Service</b></p>
+                                        </li>
+                                        <li>
+                                            <b>SNR (Signal to Noise ratio) - </b>It is a ratio value that evaluates the signal based on noise that is seen. 
+                                            <br>SNR comprised of two values:
+                                            <ol type="a" class="fw-bold">
+                                                <li>– Signal (RSSI)</li>
+                                                <li>- Noise (Any unwanted/non-informative signal)</li>
+                                                    <blockquote class="text-center"><span style="color: #d58753;">
+                                                        SNR is measured as positive value between 0 and 120.The closer to 120 the better.
+                                                        <br>SNR (dB) = Power of Signal (dB) – Power of Noise (dB)
+                                                        </span>
+                                                    </blockquote>
+                                                 <p>Noise level is amount of interference in wireless signal, so lower the value; the better. Noise value is between 0 and -120. 
+                                                    If the noise value is close to -120 then there is little or no interference at all.</p>
+                                                    <h6 style="color: #d58753;" class="mt-2 mb-4">Any SNR above 20 is good<sup><a onclick="linkfiles('link3')">[3]</a></sup>.</h6> 
+                                                   <h6 class="mt-2 mb-2"><u>To check the RSSI and SNR login to Cisco WLC </u></h6>
+                                                   <p style="color: #d58753;">Go to <i class='fas mb-1'>&#xf061;</i> Monitor > Clients > General > Client Statistics.</p>
+                                                   <p style="color: #d58753;">Below snapshots shows the Good and Low RSSI and SNR client is receiving.</p>   
+                                            </ol>
+                                            <img src="../../images/wireless1.png" alt="post-thumb mt-4 mb-4" class="img-fluid wireless-img-w border border-dark">
+                                            <h6 class="text-center">Fig-1 Low RSSI and SNR</h6>
+                                            <img src="../../images/wireless2.png" alt="post-thumb mt-4 mb-4" class="img-fluid wireless-img-w border border-dark">
+                                            <h6 class="text-center">Fig-2 Good RSSI and SNR</h6>
+                                        </li>
+                                        <li><b>TPC (Transmit Power Control Algorithm) - </b>
+                                            The TPC algorithm, run at a fixed ten-minute interval by default, is used by the RF Group Leader to determine the APs’ RF 
+                                            proximities and adjust each band’s transmit power level lower to limit excessive cell overlap and co- channel interference. 
+                                            Whenever there is co-channel interference between two AP's in close proximities then TPC algorithm will run and lower down the power levels 
+                                            automatically to avoid the cell overlap and interference.
+                                            <p>TPC will adjust the Transmit power up or down to meet the required coverage level indicated by the TPC Threshold.</p>
+                                            <h6 style="color: #d58753;" class="mt-2 mb-1">TPC versions:</h6> 
+                                            <ol type="I">
+                                                <li>TPCv1 - Coverage Optimal Mode</li>
+                                                <li>TPCv2 - Interference Optimal Mode</li>
+                                            </ol>
+                                            <p>TPCv2 is suitable for dense networks. In this mode, there could be higher roaming delays and coverage hole incidents.</p>
+                                            <p>With TPCv1, typically, power can be kept low to gain extra capacity and reduce interference. 
+                                                Transmit power is dynamically adjusted with the goal of minimum interference.</p>
+                                            <ol type="a">
+                                                <li><b>Power level assignment Level - </b>It can be automatic, on demand or fixed.
+                                                    <p><b style="color: #d58753;">Automatic - </b>TPC can run automatically every 10 minutes i.e. 600 seconds.</p> 
+                                                    <p><b style="color: #d58753;">On demand - </b>TPC can be invoked to run once and then the power level settings will be fixed till the next TPC run.</p> 
+                                                    <p><b style="color: #d58753;">Fixed - </b>It can fix the power level globally for the bands on all the Access points. </p> 
+                                                    <blockquote class="text-center"><span style="color: #d58753;">
+                                                        <h6 class="mb-2">The power level ranges from 1 to 8.</h6>
+                                                        <p><b>1=maximum transmit power </b></p>
+                                                        <p><b>8=minimum transmit power.</b></p>
+                                                        </span>
+                                                    </blockquote>  
+                                                </li>
+                                                <li><b>Maximum and minimum power level assignment - </b>maximum and minimum power levels applied to all bands (2.4GHz and 5GHz) on 
+                                                    which the TPC is being configured. It means that all the bands transmit at maximum and minimum configured value.
+                                                    <p><b style="color: #d58753;">It ranges from -10dBm to 30dBm.</b></p>
+                                                </li>
+                                                <li><b>Power Assignment Leader - </b>It is the Controller on which TPC is configured and it will run the 
+                                                    TPC algorithm on all the associated access points.
+                                                </li>
+                                                <li><b>Last Power Level Assignment - </b>It shows the last time when TPC runs.</li>
+                                                <li><b>Power Threshold - </b>Since at least 3 AP's needed to run the TPC. So, if the fourth AP is 
+                                                    heard by the other three AP's at the Power threshold then TPC algorithm will run.</li>
+                                                <li><b>Power Neighbor Count - </b>The minimum number of neighbors an access point must have for Transmit power control algorithm to run.</li>
+                                            </ol>
+                                            <img src="../../images/wireless3.jpg" alt="post-thumb mt-4 mb-4" class="img-fluid wireless-img-w border border-dark">
+                                            <h6 class="text-center">Fig-3</h6>
+                                            <h6 class="mt-2 mb-2"><u>Fig-3 shows the TPC parameters for 802.11a band.</u></h6>
+                                            <p><b style="color: #d58753;">Power level settings per AP per radio level can be changed as shown in <b>fig-4</b> and <b>fig-5</b>.</b></p>
+                                            <blockquote><span style="color: #d58753;">Go to Wireless > Radios > 802.11b/g/n or 802.11a/n/ac > select the AP whose power is to be 
+                                                changed manually by hovering the mouse over the Blue drop down tab > Configure > Assignment method > Custom > value from 1 to 8.
+                                                </span>
+                                            </blockquote>
+                                            <img src="../../images/wireless4.png" alt="post-thumb mt-4 mb-4" class="img-fluid wireless-img-w border border-dark">
+                                            <h6 class="text-center">Fig-4</h6>
+                                            <img src="../../images/wireless5.png" alt="post-thumb mt-4 mb-4" class="img-fluid wireless-img-w border border-dark">
+                                            <h6 class="text-center">Fig-5</h6>
+                                        </li>
+                                    </ol>
+                                </div>                           
+                                <h6><u>References:</u></h6>
+                                <ol class="refLi">
+                                    <li id="link1"><a class="openLink" onclick="linkOpen('http://www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/23231-powervalues- 23231.html')">http://www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/23231-powervalues- 23231.html</a>
+                                    </li>
+                                    <li id="link2"><a class="openLink" onclick="linkOpen('http://www.metageek.com/training/resources/understanding-rssi.html')">http://www.metageek.com/training/resources/understanding-rssi.html</a>
+                                    </li>
+                                    <li id="link3"><a class="openLink" onclick="linkOpen('https://supportforums.cisco.com/discussion/10954591/snr-and-rssi-values')">https://supportforums.cisco.com/discussion/10954591/snr-and-rssi-values</a>
+                                    </li>
+                                    <li id="link4"><a class="openLink" onclick="linkOpen('http://knowledge.digi.com/articles/Knowledge_Base_Article/dBi-vs-dBd-summary ')">http://knowledge.digi.com/articles/Knowledge_Base_Article/dBi-vs-dBd-summary </a>
+                                    </li>
+                                    <li id="link5"><a class="openLink" onclick="linkOpen('http://www.speedguide.net/faq/what-is-wireless-rssi-level-418')">http://www.speedguide.net/faq/what-is-wireless-rssi-level-418 </a>
+                                    </li>
+                                    <li id="link6"><a class="openLink" onclick="linkOpen('https://rscciew.wordpress.com/2015/01/05/configure-transmit-power-control/')">https://rscciew.wordpress.com/2015/01/05/configure-transmit-power-control/</a>
+                                    </li>
+                                    <li id="link7"><a class="openLink" onclick="linkOpen('http://www.cisco.com/c/en/us/td/docs/wireless/controller/technotes/8- 3/b_RRM_White_Paper/b_RRM_White_Paper_chapter_0101.pdf')">http://www.cisco.com/c/en/us/td/docs/wireless/controller/technotes/8- 3/b_RRM_White_Paper/b_RRM_White_Paper_chapter_0101.pdf</a>
+                                    </li>
+                                    
+                                    <li id="link8"><a class="openLink" onclick="linkOpen('http://www.l-com.com/content/Article.aspx?Type=N&ID=9475')">http://www.l-com.com/content/Article.aspx?Type=N&ID=9475</a>
+                                    </li>
+                                </ol>
                             </div>
 
                             <div class="labelList">
