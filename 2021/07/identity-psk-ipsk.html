@@ -92,13 +92,13 @@
                                 </ol>
 
                                 <img src="../../images/traditional_psk.png" alt="traditional_psk"
-                                    class="img-fluid w-50 py-3">
+                                    class="img-fluid py-3">
                                 <p class="fst-italic">Fig-1 shows the traditional PSK where SSID “PSK” is having the
                                     Pre-Shared
                                     Key as
                                     “Prekey@123” and is distributed to all devices connecting to it.</p>
                                 <img src="../../images/identity-psk.png" alt="traditional_psk"
-                                    class="img-fluid w-50 py-3">
+                                    class="img-fluid  py-3">
                                 <p class="fst-italic">Fig-2 showing the SSID “iPSK” configured and different devices are
                                     being connected to the same SSID iPSK with individual keys.</p>
                                 <h6><u>Pre-requisites for Identity PSK in CISCO environment</u></h6>
@@ -108,7 +108,7 @@
                                     <li>Lightweight Access point</li>
                                     <li>Identity PSK WLAN</li>
                                 </ol>
-                                <img src="../../images/ipsk_working.png" alt="ipsk working" class="img-fluid w-50 py-3">
+                                <img src="../../images/ipsk_working.png" alt="ipsk working" class="img-fluid  py-3">
                                 <p class="fst-italic">Fig-3 showing the flow of iPSK WLAN and the necessary
                                     configuration on WLC and Radius.</p>
                                 <h6><u>Implementing iPSK in Cisco wireless environment:-</u></h6>
@@ -120,12 +120,12 @@
                                 <p>Creation of Identity PSK WLAN </p>
                                 <h6><u>Step 3-</u></h6>
                                 <p> Edit WLAN, Layer-2 choose WPA2 Policy>PSK and check MAC Filtering</p>
-                                <img src="../../images/ipskstep-3.png" alt="" class="img-fluid w-50 py-3">
+                                <img src="../../images/ipskstep-3.png" alt="" class="img-fluid  py-3">
                                 <h6><u>Step 4-</u></h6>
                                 <p>Choose Radius (ISE) Server under Security>AAA Servers</p>
                                 <h6><u>Step 5-</u></h6>
                                 <p>Check Allow AAA Override under WLAN Advanced</p>
-                                <img src="../../images/ipskstep-5.png" alt="" class="img-fluid w-50 py-3">
+                                <img src="../../images/ipskstep-5.png" alt="" class="img-fluid  py-3">
                                 <h6><u>Now, we have two scenarios --</u></h6>
                                 <ul>
                                     <li>Separate PSK for individual mac address</li>
@@ -144,29 +144,30 @@
                                 <h6><u>Step 2-</u></h6>
                                 <p>Create an authorization profile under Policy>Policy Elements>Results>Authorisation
                                     Profiles.</p>
-                                <img src="../../images/ipskstep-ise2.png" alt="" class="img-fluid w-50 py-3">
+                                <img src="../../images/ipskstep-ise2.png" alt="" class="img-fluid  py-3">
 
                                 <h6><u>Step 3-</u></h6>
                                 <p>Create Authorisation rule for individual users on basis of MAC address </p>
-                                <img src="../../images/ipskstep-ise3.png" alt="" class="img-fluid w-50 py-3">
+                                <img src="../../images/ipskstep-ise3.png" alt="" class="img-fluid  py-3">
 
                                 <h6><u>Case2- Creation of Authorisation policy based on device groups</u></h6>
                                 <h6><u>Step 1-</u></h6>
                                 <p>Create different endpoint groups for a set of different devices under
+                                    
                                     Administration>Groups>Endpoint Identity Groups</p>
 
                                 <h6><u>Step 2-</u></h6>
                                 <p>Create different Authorisation Profiles for different device groups under
                                     Policy>Policy Elements>Authorization>Authorization Profiles</p>
-                                <img src="../../images/ipskstepcase-2a.png" alt="" class="img-fluid w-50 py-3">
-                                <img src="../../images/ipskstepcase-2b.png" alt="" class="img-fluid w-50 py-3">
+                                <img src="../../images/ipskstepcase-2a.png" alt="" class="img-fluid  py-3">
+                                <img src="../../images/ipskstepcase-2b.png" alt="" class="img-fluid  py-3">
                                 <p>Devices having MAC addresses under group G1 will have to connect with WLAN-iPSK with
                                     key=”nkn@1234” and Devices MAC addresses under group G2 will have to connect with
                                     WLAN-iPSK with key=” Tech#123”</p>
 
                                 <h6><u>Step 3-</u></h6>
                                 <p>Creation of separate Authorization profiles under Policy>Authorization</p>
-                                <img src="../../images/ipskstepcase-3.png" alt="" class="img-fluid w-50 py-3">
+                                <img src="../../images/ipskstepcase-3.png" alt="" class="img-fluid  py-3">
                                 <p>Happy Browsing 😊</p>
 
                             </div>
