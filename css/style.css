@@ -709,7 +709,7 @@ textarea.form-control {
   align-items: flex-start;
   overflow: hidden;
   max-height: 250px;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 @media (max-width: 767px) {
@@ -720,7 +720,7 @@ textarea.form-control {
 
 .article-full-width .post-image img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 @media (max-width: 767px) {
