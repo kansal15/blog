@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+    <!-- slick slider -->
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+    <!-- Main Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.jpg" />
+    <link href="css/fontawesome/css/all.min.css" rel="stylesheet" />
+    <style>
+        .overlay-bg {
+            background-image: url(images/network-line.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: block;
+            position: relative;
+        }
+
+        /* Styling for heading */
+
+        #clockdiv {
+            font-family: sans-serif;
+            color: #d58753;
+            display: inline-block;
+            text-align: center;
+            font-size: 28px;
+            margin-top: 5px;
+        }
+
+        #clockdiv>div {
+            padding: 10px;
+            border-radius: 3px;
+            background: rgb(191 140 85 / 10%);
+            display: inline-block;
+            width: 90px;
+            border: 1px solid rgb(194 145 93 / 60%);
+        }
+
+        #clockdiv div>span {
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        /* Style for visible text */
+        .smalltext {
+            padding-top: 0px;
+            font-size: 14px;
+        }
+
+        .ui-switcher {
+            background-color: #bdc1c2;
+            display: inline-block;
+            height: 20px;
+            width: 48px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            vertical-align: middle;
+            position: relative;
+            cursor: pointer;
+            transition: border-color 0.25s;
+            margin: -2px 4px 0 0;
+            box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .ui-switcher:before {
+            font-family: sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            color: #ffffff;
+            line-height: 1;
+            display: inline-block;
+            position: absolute;
+            top: 6px;
+            height: 12px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .ui-switcher[aria-checked="false"]:before {
+            content: "OFF";
+            right: 7px;
+        }
+
+        .ui-switcher[aria-checked="true"]:before {
+            content: "ON";
+            left: 7px;
+        }
+
+        .ui-switcher[aria-checked="true"] {
+            background-color: #25ba9a;
+        }
+
+        .ui-switcher:after {
+            background-color: #ffffff;
+            content: "\0020";
+            display: inline-block;
+            position: absolute;
+            top: 2px;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            transition: left 0.25s;
+        }
+
+        .ui-switcher[aria-checked="false"]:after {
+            left: 2px;
+        }
+
+        .ui-switcher[aria-checked="true"]:after {
+            left: 30px;
+        }
+
+        .eventtimezone {
+            justify-content: center;
+            align-items: stretch;
+            align-content: space-between;
+            background-color: #faebda;
+            padding: 15px;
+            margin: -90px 0 40px 0px;
+            z-index: 2;
+            position: relative;
+            border: 1px solid #e2c3a3;
+            border-left: 20px solid #d58753;
+            box-shadow: 1px 4px 5px rgb(213 135 83 / 35%);
+        }
+
+        .textlightbrown {
+            color: #bf8c55;
+        }
+
+        .eStart,
+        .eEnd {
+            font-size: 18px;
+            font-weight: 600;
+            width: 60px;
+            position: relative;
+            display: inline-block;
+            padding-left: 5px;
+            margin-bottom: 5px;
+        }
+
+        .eUTC {
+            padding-left: 5px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .eTimeStart {
+
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+
+        }
+
+        .showLocaltime {
+            background-color: #d58753;
+            padding: 3px 0;
+            color: #fff;
+            border-radius: 3px;
+        }
+
+        .mrLeft {
+            margin-left: -25px;
+            margin-right: 5px;
+        }
+
+        .trainerSection .nav-link,
+        .courseDetails .nav-link {
+            min-width: 250px;
+            color: #373737;
+            border: 1px solid gray;
+            margin-bottom: 10px;
+            box-shadow: 1px 3px 5px #dbdbdb;
+        }
+
+        .trainerSection .nav-pills .nav-link.active,
+        .trainerSection .nav-pills .show>.nav-link,
+        .courseDetails .nav-pills .nav-link.active,
+        .courseDetails .nav-pills .show>.nav-link {
+            background-color: #d58753;
+            border: 1px solid #d58753;
+        }
+
+        .trainerSection .tab-content>.active,
+        .courseDetails .tab-content>.active {
+            background-color: #f9f9f9;
+            padding: 15px 20px;
+            border-radius: 5px;
+            border: 1px solid #e2c3a3;
+            box-shadow: 1px 3px 5px #dbdbdb;
+        }
+
+        .trainerName {
+            line-height: 1;
+            color: #d58753;
+        }
+
+        .trainerName span {
+            color: gray;
+            font-size: 16px;
+        }
+
+        .trainerDetails h6 {
+            color: #d58753;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blogcontainer__root">
+        <!-- preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <span class="dot"></span>
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!-- /preloader -->
+        <div class="navigation" id="myHead"></div>
+        <!-- page-title -->
+        <section class="section bg-secondary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h4>Event</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /page-title -->
+
+        <div class="overlay-bg">
+            <div style="
+            background-color: rgb(237 237 237 / 80%);
+            width: 100%;
+            height: 100%;
+            padding: 30px 0;
+            box-shadow: 1px 3px 2px rgb(171 182 191 / 20%);
+          ">
+                <main class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 style="color: #d58753; font-size: 32px; font-weight: 800;     margin-bottom: 20px;">
+                                Advanced Routing with BGP & RPKI - Malaysia</h2>
+                            <div class="d-flex " style="color: #212529">
+                                <p style="margin-bottom: 10px; padding-right: 20px;">
+                                    <i class="fa fa-regular fa-calendar textlightbrown"></i>
+                                   <span class="eStart">Start</span>
+                                   <i class="d-block"><span class="eStartTime">10:00 - 25 April 2024</span>
+                                    <span class="eUTC">(UTC +8)</span></i>
+                                </p>
+                                <p style="margin-bottom: 0; padding-right: 20px;">
+                                    <i class="fa fa-regular fa-calendar textlightbrown"></i>
+                                    <span class="eEnd">End</span>
+                                    <i class="d-block"> <span class="eEndtime">18:00 - 25 April 2024</span>                                  
+                                    <span class="eUTC">(UTC +8)</span></i>
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+
+                            <div style="color: #212529;     margin-top: 10px;">
+                                <p class="eTimeStart"> <i class="fa fa-regular fa-calendar textlightbrown"></i> Event starts</p>
+                                <p class="fst-italic">
+                                   
+                                    Thursday, 25 April 2024 at 07:30 (UTC
+                                    +05:30)
+                                </p>
+                                <div id="clockdiv">
+                                    <div>
+                                        <!-- Show No. of days -->
+                                        <span class="days" id="day"></span>
+                                        <div class="smalltext">Days</div>
+                                    </div>
+                                    <div>
+                                        <!-- Show no.of hours -->
+                                        <span class="hours" id="hour"></span>
+                                        <div class="smalltext">Hours</div>
+                                    </div>
+                                    <div>
+                                        <!-- Show no. of minutes -->
+                                        <span class="minutes" id="minute"></span>
+                                        <div class="smalltext">Minutes</div>
+                                    </div>
+                                    <div>
+                                        <!-- Show seconds -->
+                                        <span class="seconds" id="second"></span>
+                                        <div class="smalltext">Seconds</div>
+                                    </div>
+                                </div>
+                                <p id="demo"></p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 offset-md-5">
+                    <div class="d-flex flex-column eventtimezone">
+                        <div class="d-flex flex-row">
+
+
+                            <div style=" padding-right: 15px; display: flex; margin-bottom: 20px;">
+                                <img src="images/APNIC-policy.png" class="img-fluid" style="width: 150px" />
+                            </div>
+                            <div class="d-flex flex-row" style=" justify-content: space-around; width: 100%;">
+                                <div>
+                                    <p class="mb-0">
+                                        <i class="fa fa-regular fa-clock textlightbrown mrLeft"></i>
+                                        <span class="fw-bold textlightbrown">START</span>
+                                    </p>
+                                    <p class="mb-0 fw-bold fst-italic">Thu, 25 April 2024</p>
+                                    <p class="mb-0 fw-bold fst-italic">07:30 (UTC +5.5)</p>
+                                </div>
+                                <div>
+                                    <p class="mb-0">
+                                        <i class="fa fa-regular fa-clock textlightbrown mrLeft"></i>
+                                        <span class="fw-bold textlightbrown">END</span>
+                                    </p>
+                                    <p class="mb-0 fw-bold fst-italic">Thu, 25 April 2024</p>
+                                    <p class="mb-0 fw-bold fst-italic">18:00 (UTC +8)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <p class="mb-0 showLocaltime">
+                                <span class="fw-bold"> Switch Timezone: </span>
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                                Showing browser local time
+                                (Asia/Calcutta)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h5 class="mb-3"><u>Your Trainer</u></h5>
+
+                    <div class="d-flex align-items-start trainerSection">
+                        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <button class="nav-link active" id="v-pills-day1-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-day1" type="button" role="tab" aria-controls="v-pills-day1"
+                                aria-selected="true">
+                                <span>
+                                    Muzamer Mohd Azalan
+                                    <br>
+                                    Community Trainer
+                                </span>
+                            </button>
+
+                            <button class="nav-link" id="v-pills-day2-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-day2" type="button" role="tab" aria-controls="v-pills-day2"
+                                aria-selected="false">
+                                <span>
+                                    Muzamer Mohd Azalan
+                                    <br>
+                                    Community Trainer
+                                </span>
+                            </button>
+
+                            <button class="nav-link" id="v-pills-day3-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-day3" type="button" role="tab" aria-controls="v-pills-day3"
+                                aria-selected="false">
+                                <span>
+                                    Muzamer Mohd Azalan
+                                    <br>
+                                    Community Trainer
+                                </span>
+                            </button>
+                        </div>
+
+                        <div class="tab-content trainerDetails" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-day1" role="tabpanel"
+                                aria-labelledby="v-pills-day1-tab" tabindex="0">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <img src="images/muzamer-mohd-azalan.jpg" class="img-thumbnail rounded-circle"
+                                        style="width: 70px; margin-right: 15px;">
+                                    <div>
+                                        <h5 class="trainerName">
+                                            Muzamer Mohd Azalan
+                                            <br>
+                                            <span> Community Trainer</span>
+                                        </h5>
+                                    </div>
+
+
+                                </div>
+                                <hr>
+                                <div>
+
+                                    <p>Muzamer is a network engineer with 8 years experience managing the core network
+                                        for one of the biggest ISPs in Malaysia. He is currently Manager of Network
+                                        Service IP Operation for Telekom Malaysia. Muzamer shares his knowledge and
+                                        experience as a volunteer community trainer for APNIC.</p>
+                                    <h6>Delivery</h6>
+                                    <p>Face to Face</p>
+                                    <h6>Location</h6>
+                                    <p class="mb-0">MCMC Academy & Facilities </p>
+                                    <p class="mb-0"><b>Room:</b> TBA</p>
+                                    <p>MCMC Centre of Excellence, Off, Persiaran Multimedia, 63000 Cyberjaya, Selangor
+                                    </p>
+                                    <h6>Level</h6>
+                                    <p>Advanced</p>
+                                    <h6>Subject Areas</h6>
+                                    <p>BGP, RPKI</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-day2" role="tabpanel"
+                                aria-labelledby="v-pills-day2-tab" tabindex="0">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <img src="images/muzamer-mohd-azalan.jpg" class="img-thumbnail rounded-circle"
+                                        style="width: 70px; margin-right: 15px;">
+                                    <div>
+                                        <h5 class="trainerName">
+                                            Muzamer Mohd Azalan
+                                            <br>
+                                            <span> Community Trainer</span>
+                                        </h5>
+                                    </div>
+
+
+                                </div>
+                                <hr>
+                                <div>
+
+                                    <p>Muzamer is a network engineer with 8 years experience managing the core network
+                                        for one of the biggest ISPs in Malaysia. He is currently Manager of Network
+                                        Service IP Operation for Telekom Malaysia. Muzamer shares his knowledge and
+                                        experience as a volunteer community trainer for APNIC.</p>
+                                    <h6>Delivery</h6>
+                                    <p>Face to Face</p>
+                                    <h6>Location</h6>
+                                    <p>MCMC Academy & Facilities </p>
+                                    <p>Room: TBA</p>
+                                    <p>MCMC Centre of Excellence, Off, Persiaran Multimedia, 63000 Cyberjaya, Selangor
+                                    </p>
+                                    <h6>Level</h6>
+                                    <p>Advanced</p>
+                                    <h6>Subject Areas</h6>
+                                    <p>BGP, RPKI</p>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-day3" role="tabpanel"
+                                aria-labelledby="v-pills-day3-tab" tabindex="0">
+
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <img src="images/muzamer-mohd-azalan.jpg" class="img-thumbnail rounded-circle"
+                                        style="width: 70px; margin-right: 15px;">
+                                    <div>
+                                        <h5 class="trainerName">
+                                            Muzamer Mohd Azalan
+                                            <br>
+                                            <span> Community Trainer</span>
+                                        </h5>
+                                    </div>
+
+
+                                </div>
+                                <hr>
+                                <div>
+
+                                    <p>Muzamer is a network engineer with 8 years experience managing the core network
+                                        for one of the biggest ISPs in Malaysia. He is currently Manager of Network
+                                        Service IP Operation for Telekom Malaysia. Muzamer shares his knowledge and
+                                        experience as a volunteer community trainer for APNIC.</p>
+                                    <h6>Delivery</h6>
+                                    <p>Face to Face</p>
+                                    <h6>Location</h6>
+                                    <p>MCMC Academy & Facilities </p>
+                                    <p>Room: TBA</p>
+                                    <p>MCMC Centre of Excellence, Off, Persiaran Multimedia, 63000 Cyberjaya, Selangor
+                                    </p>
+                                    <h6>Level</h6>
+                                    <p>Advanced</p>
+                                    <h6>Subject Areas</h6>
+                                    <p>BGP, RPKI</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-lg-12 mt-5 mb-5">
+
+                    <h5 class="mb-3"><u>Your Course</u></h5>
+
+                    <div class="courseDetails">
+                        <!-- Centered Tabs -->
+                        <ul class="nav nav-pills" role="tablist">
+                            <li class="nav-item me-2">
+                                <a class="nav-link active" data-bs-toggle="pill" href="#courseOverview">Course
+                                    Overview</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="pill" href="#courseMaterials">Course Materials</a>
+                            </li>
+
+                        </ul>
+                        <!-- Centered Pills -->
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div id="courseOverview" class="container tab-pane active"><br>
+                                <h6>Synopsis</h6>
+                                <p>
+                                    This is an advanced routing workshop focusing on BGP operations, multihoming, and
+                                    routing security. We will explore BGP mulithoming techniques for networks looking to
+                                    peer at an Internet Exchange Point (IXP) or have multi-provider connectivity. The
+                                    workshop also includes RPKI and its part and what we should all do to secure
+                                    Internet routing.
+                                </p>
+
+                                <h6>Target Audience</h6>
+                                <p>Technical staff who are building or operating a service provider or enterprise
+                                    network with international and/or multi-provider connectivity, and considering
+                                    participation at an Internet Exchange point.</p>
+                            </div>
+
+
+                            <div id="courseMaterials" class="container tab-pane fade"><br>
+                                <h6>Time Schedule</h6>
+                                <p>The schedule is in Bangladesh Time (UTC+6)</p>
+                                <p>Please create an account on the APNIC academy before attending Hands-on Virtual Labs
+                                </p>
+                                <div class="blog-table text-center">
+                                    <table class="table table-secondary">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th >
+                                                    <p class="mb-0"><strong>Session</strong></p>
+                                                </th>
+                                                <th >
+                                                    <p class="mb-0"><strong>Time</strong></p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p class="mb-0">Session 1</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0">09:30 - 11:00</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="mb-0">Break</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0">11:00 - 11:30</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="mb-0">Session 2</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0">11:30 - 13:00</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="mb-0">Lunch</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0">13:00 - 14:00</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="mb-0">Session 3</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0">14:00 - 15:30</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="mb-0">Break</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0">15:30 - 16:00</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="mb-0">Session 4</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0">16:00 - 17:30</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bg-secondary footer-bg" id="myFooter"></div>
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $("#myHead").load("/include/header.html");
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $("#myFooter").load("/include/footer.html");
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="plugins/masonry/masonry.js"></script>
+    <!-- instafeed -->
+    <script src="plugins/instafeed/instafeed.min.js"></script>
+    <!-- headroom -->
+    <script src="plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="plugins/reading-time/readingTime.min.js"></script>
+    <!-- Main Script -->
+    <script src="js/script.js" crossorigin="anonymous"></script>
+
+    <script>
+const d = new Date("2024-05-26 08:30:00");
+const localTime = d.getTime();
+const localOffset = d.getTimezoneOffset() * 60000;
+const utc = localTime + localOffset;
+const offset = 6; // UTC of USA Eastern Time Zone is -05.00
+const usa = utc + (3600000 * offset);
+const usaTimeNow = new Date(usa).toLocaleString();
+console.log(usaTimeNow);
+
+
+
+    var utcD = new Date();
+    var offsetD = utcD.getTimezoneOffset();
+    var local = new Date(utcD.getTime() + offsetD * 60000);
+    console.log( "UTC : " + utcD +  "Local : " + local);
+
+        function getCurrentTime() {
+            let now = new Date();
+            let hour = now.getHours();
+            let minute = now.getMinutes();
+            return hour + ":" + minute;
+        }
+
+        let currentTime = getCurrentTime();
+
+        // display the current time
+        // console.log("The time is now " + currentTime);
+
+
+        // Getting formated date from date string
+        let deadline = new Date("dec 31, 2024 15:37:25").getTime();
+
+        // Calling defined function at certain interval
+        let x = setInterval(function () {
+            // Getting current date and time in required format
+            let now = new Date().getTime();
+
+            // Calculating difference
+            let t = deadline - now;
+
+            // Getting values of days,hours,minutes, seconds
+            let days = Math.floor(t / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((t % (1000 * 60)) / 1000);
+
+            // Show the output time
+            document.getElementById("day").innerHTML = days;
+            document.getElementById("hour").innerHTML = hours;
+            document.getElementById("minute").innerHTML = minutes;
+            document.getElementById("second").innerHTML = seconds;
+
+            // Show overtime output
+            if (t < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "TIME UP";
+                document.getElementById("day").innerHTML = "0";
+                document.getElementById("hour").innerHTML = "0";
+                document.getElementById("minute").innerHTML = "0";
+                document.getElementById("second").innerHTML = "0";
+            }
+        }, 1000);
+
+        var switcher = function (filter) {
+            var $haul = $("input[type=checkbox]");
+
+            if (filter !== undefined && filter.length) {
+                $haul = $haul.filter(filter);
+            }
+
+            $haul.each(function () {
+                var $checkbox = $(this).hide(),
+                    $switcher = $(document.createElement("div"))
+                        .addClass("ui-switcher ss")
+                        .attr("aria-checked", $checkbox.is(":checked"));
+
+                if ("radio" === $checkbox.attr("type")) {
+                    $switcher.attr("data-name", $checkbox.attr("name"));
+                }
+
+                toggleSwitch = function (e) {
+                    if (e.target.type === undefined) {
+                        $checkbox.trigger(e.type);
+                    }
+                    $switcher.attr("aria-checked", $checkbox.is(":checked"));
+                    if ("radio" === $checkbox.attr("type")) {
+                        $(".ui-switcher[data-name=" + $checkbox.attr("name") + "]")
+                            .not($switcher.get(0))
+                            .attr("aria-checked", false);
+                    }
+                };
+
+                $switcher.on("click", toggleSwitch);
+                $checkbox.on("click", toggleSwitch);
+
+                $switcher.insertBefore($checkbox);
+            });
+        };
+
+        switcher();
+    </script>
+</body>
+
+</html>
