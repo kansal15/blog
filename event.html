@@ -29,99 +29,36 @@
             position: relative;
         }
 
-        /* Styling for heading */
+        .overlay-shadow {
+            background-color: rgb(237 237 237 / 80%);
+            width: 100%;
+            height: 100%;
+            padding: 30px 0;
+            box-shadow: 1px 3px 2px rgb(171 182 191 / 20%);
+        }
 
-        #clockdiv {
-            font-family: sans-serif;
+        .eventHeading {
             color: #d58753;
-            display: inline-block;
-            text-align: center;
-            font-size: 28px;
-            margin-top: 5px;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 20px;
         }
 
-        #clockdiv>div {
-            padding: 10px;
-            border-radius: 3px;
-            background: rgb(191 140 85 / 10%);
-            display: inline-block;
-            width: 90px;
-            border: 1px solid rgb(194 145 93 / 60%);
+        .eventSection {
+            display: flex;
+            flex-direction: row;
         }
 
-        #clockdiv div>span {
-            font-weight: 600;
-            font-size: 24px;
+        .eventSection p {
+            margin-bottom: 10px;
+            padding-right: 20px;
+            min-width: 290px;
         }
 
-        /* Style for visible text */
-        .smalltext {
-            padding-top: 0px;
-            font-size: 14px;
+        .eventtimeblock {
+            padding-left: 20px;
         }
 
-        .ui-switcher {
-            background-color: #bdc1c2;
-            display: inline-block;
-            height: 20px;
-            width: 48px;
-            border-radius: 10px;
-            box-sizing: border-box;
-            vertical-align: middle;
-            position: relative;
-            cursor: pointer;
-            transition: border-color 0.25s;
-            margin: -2px 4px 0 0;
-            box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-        }
-
-        .ui-switcher:before {
-            font-family: sans-serif;
-            font-size: 10px;
-            font-weight: 400;
-            color: #ffffff;
-            line-height: 1;
-            display: inline-block;
-            position: absolute;
-            top: 6px;
-            height: 12px;
-            width: 20px;
-            text-align: center;
-        }
-
-        .ui-switcher[aria-checked="false"]:before {
-            content: "OFF";
-            right: 7px;
-        }
-
-        .ui-switcher[aria-checked="true"]:before {
-            content: "ON";
-            left: 7px;
-        }
-
-        .ui-switcher[aria-checked="true"] {
-            background-color: #25ba9a;
-        }
-
-        .ui-switcher:after {
-            background-color: #ffffff;
-            content: "\0020";
-            display: inline-block;
-            position: absolute;
-            top: 2px;
-            height: 16px;
-            width: 16px;
-            border-radius: 50%;
-            transition: left 0.25s;
-        }
-
-        .ui-switcher[aria-checked="false"]:after {
-            left: 2px;
-        }
-
-        .ui-switcher[aria-checked="true"]:after {
-            left: 30px;
-        }
 
         .eventtimezone {
             justify-content: center;
@@ -156,6 +93,8 @@
             padding-left: 5px;
             position: relative;
             display: inline-block;
+            color: #d58753;
+            font-weight: 600;
         }
 
         .eTimeStart {
@@ -168,9 +107,9 @@
 
         .showLocaltime {
             background-color: #d58753;
-            padding: 3px 0;
+            padding: 4px 0;
             color: #fff;
-            border-radius: 3px;
+            border-radius: 4px;
         }
 
         .mrLeft {
@@ -217,6 +156,124 @@
         .trainerDetails h6 {
             color: #d58753;
         }
+
+        .eventZoneStartEnd{
+            justify-content: space-around;
+    width: 100%;
+        }
+        .eventZoneStartEnd .eventZoneStart,
+        .eventZoneStartEnd .eventZoneEnd{
+            min-width: 200px;
+        }
+        /* Styling for heading */
+
+        #clockdiv {
+            font-family: sans-serif;
+            color: #d58753;
+            display: inline-block;
+            text-align: center;
+            font-size: 28px;
+            margin-top: 5px;
+        }
+
+        #clockdiv>div {
+            padding: 10px;
+            border-radius: 3px;
+            background: rgb(191 140 85 / 10%);
+            display: inline-block;
+            width: 90px;
+            border: 1px solid rgb(194 145 93 / 60%);
+        }
+
+        #clockdiv div>span {
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        /* Style for visible text */
+        .smalltext {
+            padding-top: 0px;
+            font-size: 14px;
+        }
+
+        .ui-switcher {
+            background-color: #efb478;
+            display: inline-block;
+            height: 18px;
+            width: 48px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            vertical-align: middle;
+            position: relative;
+            cursor: pointer;
+            transition: border-color 0.25s;
+            margin: -2px 4px 0 0;
+            box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .ui-switcher:before {
+            font-family: sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            color: #ffffff;
+            line-height: 1;
+            display: inline-block;
+            position: absolute;
+            top: 5px;
+            height: 12px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .ui-switcher[aria-checked="false"]:before {
+            content: "OFF";
+            right: 7px;
+        }
+
+        .ui-switcher[aria-checked="true"]:before {
+            content: "ON";
+            left: 7px;
+        }
+
+        .ui-switcher[aria-checked="true"] {
+            background-color: #25ba9a;
+        }
+
+        .ui-switcher:after {
+            background-color: #ffffff;
+            content: "\0020";
+            display: inline-block;
+            position: absolute;
+            top: 2px;
+            height: 14px;
+            width: 14px;
+            border-radius: 50%;
+            transition: left 0.25s;
+        }
+
+        .ui-switcher[aria-checked="false"]:after {
+            left: 2px;
+        }
+
+        .ui-switcher[aria-checked="true"]:after {
+            left: 32px;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 991px){
+            .eventSection p{    min-width: auto;}
+            .trainerSection{ flex-direction: column;}
+            .eventZoneStartEnd .eventZoneStart, 
+            .eventZoneStartEnd .eventZoneEnd{
+                min-width: auto;
+            }
+        }
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
+            .eventSection p{    min-width: auto;}
+            .eventZoneStartEnd .eventZoneStart, 
+            .eventZoneStartEnd .eventZoneEnd{
+                min-width: auto;
+            }
+            .trainerSection{ flex-direction: column;}
+        }
     </style>
 </head>
 
@@ -248,42 +305,47 @@
         <!-- /page-title -->
 
         <div class="overlay-bg">
-            <div style="
-            background-color: rgb(237 237 237 / 80%);
-            width: 100%;
-            height: 100%;
-            padding: 30px 0;
-            box-shadow: 1px 3px 2px rgb(171 182 191 / 20%);
-          ">
+            <div class="overlay-shadow">
                 <main class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h2 style="color: #d58753; font-size: 32px; font-weight: 800;     margin-bottom: 20px;">
-                                Internet Routing Series 2 - BGP Operations and Attributes - Philippines</h2>
-                            <div class="d-flex " style="color: #212529">
-                                <p style="margin-bottom: 10px; padding-right: 20px;">
+                            <h2 class="eventHeading">
+                                VNNIC Internet Conference - IPv6 Security Workshop</h2>
+                            <div class="eventSection ">
+                                <p>
                                     <i class="fa fa-regular fa-calendar textlightbrown"></i>
-                                   <span class="eStart">Start</span>
-                                   <i class="d-block"><span class="eStartTime">13:00 - 10 May 2024</span>
-                                    <span class="eUTC">(UTC +8)</span></i>
+                                    <span class="eStart">Start</span>
+                                    <i class="d-block eventtimeblock">
+                                        <span class="eStartTime"><span class="starttime">09:00</span> - 05 June
+                                            2024</span>
+                                        <input type="hidden" value="2024-06-05 9:00" placeholder="YYYY-MM-DD HH:MM"
+                                            id="geteventStart">
+                                        <input type="hidden" value="Asia/Ho_Chi_Minh" id="geteventStartCountry">
+                                        <input type="hidden" value="+06.50" id="geteventCountryUTC">
+                                        <span class="eUTC"></span>
+                                    </i>
                                 </p>
-                                <p style="margin-bottom: 0; padding-right: 20px;">
+                                <p>
                                     <i class="fa fa-regular fa-calendar textlightbrown"></i>
                                     <span class="eEnd">End</span>
-                                    <i class="d-block"> <span class="eEndtime">17:00 - 10 May 2024</span>                                  
-                                    <span class="eUTC">(UTC +8)</span></i>
+                                    <i class="d-block eventtimeblock">
+                                        <span class="eEndtime"><span class="endtime">17:30</span> - 06 June 2024</span>
+                                        <input type="hidden" value="2024-06-06 17:30" placeholder="YYYY-MM-DD HH:MM"
+                                            id="geteventEnd">
+                                        <!-- <input type="hidden" value="Asia/Ho_Chi_Minh" id="geteventEndCountry"> -->
+                                        <span class="eUTC"></span></i>
                                 </p>
 
                             </div>
                         </div>
                         <div class="col-lg-5">
 
-                            <div style="color: #212529;     margin-top: 10px;">
-                                <p class="eTimeStart"> <i class="fa fa-regular fa-calendar textlightbrown"></i> Event starts</p>
-                                <p class="fst-italic">
-                                   
-                                    Thursday, 25 April 2024 at 07:30 (UTC
-                                    +05:30)
+                            <div class="mt-2">
+                                <p class="eTimeStart"> <i class="fa fa-regular fa-calendar textlightbrown"></i> Event
+                                    starts</p>
+                                <p class="fst-italic eventtimeblock">
+
+                                    Tuesday, 06 June 2024 at <span class="starttime">09.00</span>  <span class="eUTC">(UTC +6:5)</span>
                                 </p>
                                 <div id="clockdiv">
                                     <div>
@@ -321,34 +383,35 @@
                         <div class="d-flex flex-row">
 
 
-                            <div style=" padding-right: 15px; display: flex; margin-bottom: 20px;">
+                            <div class="pe-2 d-flex mb-3">
                                 <img src="images/APNIC-policy.png" class="img-fluid" style="width: 150px" />
                             </div>
-                            <div class="d-flex flex-row" style=" justify-content: space-around; width: 100%;">
-                                <div>
+                            <div class="d-flex flex-row eventZoneStartEnd" style=" justify-content: space-around; width: 100%;">
+                                <div class="eventZoneStart">
                                     <p class="mb-0">
                                         <i class="fa fa-regular fa-clock textlightbrown mrLeft"></i>
                                         <span class="fw-bold textlightbrown">START</span>
                                     </p>
-                                    <p class="mb-0 fw-bold fst-italic">Thu, 25 April 2024</p>
-                                    <p class="mb-0 fw-bold fst-italic">07:30 (UTC +5.5)</p>
+                                    <p class="mb-0 fw-bold fst-italic">Thu, 05 June 2024</p>
+                                    <p class="mb-0 fw-bold fst-italic"><span class="starttime">09:00</span>  <span class="eUTC"></span></p>
                                 </div>
-                                <div>
+                                <div class="eventZoneEnd">
                                     <p class="mb-0">
                                         <i class="fa fa-regular fa-clock textlightbrown mrLeft"></i>
                                         <span class="fw-bold textlightbrown">END</span>
                                     </p>
-                                    <p class="mb-0 fw-bold fst-italic">Thu, 25 April 2024</p>
-                                    <p class="mb-0 fw-bold fst-italic">18:00 (UTC +8)</p>
+                                    <p class="mb-0 fw-bold fst-italic">Thu, 06 June 2024</p>
+                                    <p class="mb-0 fw-bold fst-italic"><span class="endtime">17:30</span>  <span class="eUTC"></span></p>
                                 </div>
                             </div>
                         </div>
                         <div class="text-center">
                             <p class="mb-0 showLocaltime">
                                 <span class="fw-bold"> Switch Timezone: </span>
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"
+                                    onclick="myFunction()" />
                                 Showing browser local time
-                                (Asia/Calcutta)
+                                <span class="countryName"></span>
                             </p>
                         </div>
                     </div>
@@ -365,7 +428,7 @@
                                 data-bs-target="#v-pills-day1" type="button" role="tab" aria-controls="v-pills-day1"
                                 aria-selected="true">
                                 <span>
-                                    Muzamer Mohd Azalan
+                                    Gaurav Kansal
                                     <br>
                                     Community Trainer
                                 </span>
@@ -375,7 +438,7 @@
                                 data-bs-target="#v-pills-day2" type="button" role="tab" aria-controls="v-pills-day2"
                                 aria-selected="false">
                                 <span>
-                                    Muzamer Mohd Azalan
+                                    Gaurav Kansal
                                     <br>
                                     Community Trainer
                                 </span>
@@ -385,7 +448,7 @@
                                 data-bs-target="#v-pills-day3" type="button" role="tab" aria-controls="v-pills-day3"
                                 aria-selected="false">
                                 <span>
-                                    Muzamer Mohd Azalan
+                                    Gaurav Kansal
                                     <br>
                                     Community Trainer
                                 </span>
@@ -400,7 +463,7 @@
                                         style="width: 70px; margin-right: 15px;">
                                     <div>
                                         <h5 class="trainerName">
-                                            Muzamer Mohd Azalan
+                                            Gaurav Kansal
                                             <br>
                                             <span> Community Trainer</span>
                                         </h5>
@@ -435,7 +498,7 @@
                                         style="width: 70px; margin-right: 15px;">
                                     <div>
                                         <h5 class="trainerName">
-                                            Muzamer Mohd Azalan
+                                            Gaurav Kansal
                                             <br>
                                             <span> Community Trainer</span>
                                         </h5>
@@ -472,7 +535,7 @@
                                         style="width: 70px; margin-right: 15px;">
                                     <div>
                                         <h5 class="trainerName">
-                                            Muzamer Mohd Azalan
+                                            Gaurav Kansal
                                             <br>
                                             <span> Community Trainer</span>
                                         </h5>
@@ -553,10 +616,10 @@
                                     <table class="table table-secondary">
                                         <thead class="table-dark">
                                             <tr>
-                                                <th >
+                                                <th>
                                                     <p class="mb-0"><strong>Session</strong></p>
                                                 </th>
-                                                <th >
+                                                <th>
                                                     <p class="mb-0"><strong>Time</strong></p>
                                                 </th>
                                             </tr>
@@ -657,58 +720,63 @@
     <!-- instafeed -->
     <script src="plugins/instafeed/instafeed.min.js"></script>
     <!-- headroom -->
-    <script src="plugins/headroom/headroom.js"></script>1`
+    <script src="plugins/headroom/headroom.js"></script>
     <!-- reading time -->
     <script src="plugins/reading-time/readingTime.min.js"></script>
     <!-- Main Script -->
     <script src="js/script.js" crossorigin="anonymous"></script>
+    <script src="js/moment.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://momentjs.com/downloads/moment-timezone.js" crossorigin="anonymous"></script> -->
+    <script src="js/moment-timezone-with-data-1970-2030.js"
+        crossorigin="anonymous"></script>
+    <script src="js/moment-timezone-with-data.js" crossorigin="anonymous"></script>
+
+
+
+
 
     <script>
-const d = new Date("2024-May-10 10:30:00");
-const localTime = d.getTime();
-const localOffset = d.getTimezoneOffset() * 60000;
-const utc = localTime + localOffset;
-const offset = 8; // UTC of USA Eastern Time Zone is -05.00
-const usa = utc + (3600000 * offset);
-const usaTimeNow = new Date(usa).toLocaleString();
-console.log(usaTimeNow);
-
-
-    // var utcD = new Date("2024-05-10 13:00:00");
-    // var offsetD = utcD.getTimezoneOffset();
-    // var local = new Date(utcD.getTime() + offsetD * 60000);
-    // console.log( "UTC : " + utcD +  "Local : " + local);
 
 
 
 
+        function calcTime(date, countryCodeName) {
 
+            var countryDate = moment.tz(date, 'YYYY-MM-DD hh:mm', countryCodeName);
+            var countryDateformat = countryDate.format();
 
+            // console.log(`${countryDateformat}`)
 
-function calcTime(city, offset) {
+            const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            const utcOffset = new Date().getTimezoneOffset();
+            const countryCode = timeZone;
 
+            var countryUtcOffset = moment.tz(countryCode).format('Z');
+            // console.log("UTC Offset for " + countryCode + ": " + countryUtcOffset);
 
-var d = new Date("2024-May-10 10:30:00");
+            var eventTime = new Date(countryDateformat);
+            var eventTimeZone = countryCode; // Timezone of the event, change as needed
 
-var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+            // console.log("Local Time: ", eventTime);
 
-var nd = new Date(utc + (3600000*offset));
+            var localTime = eventTime.toLocaleString('en-US', { timeZone: eventTimeZone });
+            
+            const dated = new Date(localTime);
+            function addZero(i) {
+                if (i < 10) {i = "0" + i}
+                return i;
+            }
+            const hour = addZero(dated.getHours());
+                        
+            const min = addZero(dated.getMinutes());
 
-return `The local time in  ${city} is ${nd.toLocaleString()} `
+            // console.log("Local Full Date: ", localTime + " " + hour + " " + min);
+          return [countryUtcOffset, hour, min, countryCode, localTime]; 
 
-}
+        };
 
-// get Bombay time
-console.log(calcTime("Bombay", +5.5));
-
-// get Singapore time
-console.log(calcTime("Philippines", +8));
-
-
-
-
-
-    
+        
+        /*********************************************************/
 
         function getCurrentTime() {
             let now = new Date();
@@ -719,12 +787,11 @@ console.log(calcTime("Philippines", +8));
 
         let currentTime = getCurrentTime();
 
-        // display the current time
-        // console.log("The time is now " + currentTime);
-
-
         // Getting formated date from date string
-        let deadline = new Date("May 10, 2024 10:30:00").getTime();
+        
+        let geteventDate = document.getElementById("geteventStart").value;
+                       
+        let deadline = new Date(geteventDate).getTime();
 
         // Calling defined function at certain interval
         let x = setInterval(function () {
@@ -794,6 +861,100 @@ console.log(calcTime("Philippines", +8));
         };
 
         switcher();
+      
+        var starttime=document.getElementsByClassName("starttime")[0].innerText;
+        var endtime=document.getElementsByClassName("endtime")[0].innerText;
+        // var startUTC=document.getElementsByClassName("eUTC")[0].innerText;
+        // var endUTC=document.getElementsByClassName("eUTC")[1].innerText; 
+
+        var getUTC=document.getElementById("geteventCountryUTC").value;
+
+        const startUTC  = document.querySelectorAll(".eUTC");
+                for (let i = 0; i < startUTC.length; i++) {
+                    startUTC[i].innerHTML= "(UTC "+ getUTC +")"; 
+                }
+
+        var countryName=document.getElementById("geteventStartCountry").value;
+        document.getElementsByClassName("countryName")[0].innerHTML="("+ countryName +")";
+
+         /*********************************************************/
+
+        function myFunction() {
+            var checkBox = document.getElementById("inlineCheckbox1");
+
+            // Get the output text
+            var geteventStart = document.getElementById("geteventStart");
+            var geteventStartCountry = document.getElementById("geteventStartCountry");
+            var geteventEnd = document.getElementById("geteventEnd");
+            // var geteventEndCountry = document.getElementById("geteventEndCountry");
+
+            var startEventTime= geteventStart.value;
+            var startEventCountry= geteventStartCountry.value;
+            var geteventEnd= geteventEnd.value;
+            // var endEventCountry= geteventEndCountry.value;
+          
+            // If the checkbox is checked, display the output text
+            if (inlineCheckbox1.checked == true) {
+                
+                const [countryUtcOffset, hour, min, countryCode] =calcTime(startEventTime, startEventCountry);
+                
+                const starttimeList = document.querySelectorAll(".starttime");
+                for (let i = 0; i < starttimeList.length; i++) {
+                    starttimeList[i].innerHTML= hour + ":" + min; 
+                }
+
+
+                 const starttimeeUTC = document.querySelectorAll(".eUTC");
+                 for (let i = 0; i < starttimeeUTC.length; i++) 
+                 {
+                    starttimeeUTC[i].innerHTML= "(UTC " + countryUtcOffset + ")";
+                 }              
+
+                //  document.getElementsByClassName("countryName").innerHTML=countryCode;
+               
+                const [countryUtcOffset1, hour1, min1] = calcTime(geteventEnd, startEventCountry);
+
+                const endtimeList = document.querySelectorAll(".endtime");
+                for (let i = 0; i < endtimeList.length; i++) {
+                    endtimeList[i].innerHTML= hour1 + ":" + min1; 
+                }
+
+
+                 const endtimeeUTC = document.querySelectorAll(".eUTC");
+                 for (let i = 0; i < endtimeeUTC.length; i++) 
+                 {
+                    endtimeeUTC[i].innerHTML= "(UTC " + countryUtcOffset1 + ")";
+                 }
+
+                 document.getElementsByClassName("countryName")[0].innerHTML="("+ countryCode +")";
+
+            } else {
+              
+               
+
+                // console.log(startEventCountry);
+
+                 document.getElementsByClassName("countryName")[0].innerHTML="("+ startEventCountry +")";
+
+                const starttimeListOne = document.querySelectorAll(".starttime");
+                for (let i = 0; i < starttimeListOne.length; i++) {
+                    starttimeListOne[i].innerHTML= starttime; 
+                }
+
+                const timeeUTC = document.querySelectorAll(".eUTC");
+                 for (let i = 0; i < timeeUTC.length; i++) 
+                 {
+                    timeeUTC[i].innerHTML= "(UTC "+ getUTC +")";
+                 }
+
+                 const endtimeeListTwo = document.querySelectorAll(".endtime");
+                 for (let i = 0; i < endtimeeListTwo.length; i++) 
+                 {
+                    endtimeeListTwo[i].innerHTML= endtime;
+                 }               
+
+            }
+        }
     </script>
 </body>
 
