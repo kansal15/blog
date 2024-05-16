@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+    <!-- slick slider -->
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+    <!-- Main Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.jpg" />
+    <link href="css/fontawesome/css/all.min.css" rel="stylesheet" />
+    <style>
+        .overlay-bg {
+            background-image: url(images/network-line.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: block;
+            position: relative;
+        }
+
+        .overlay-shadow {
+            background-color: rgb(237 237 237 / 80%);
+            width: 100%;
+            height: 100%;
+            padding: 30px 0;
+            box-shadow: 1px 3px 2px rgb(171 182 191 / 20%);
+        }
+
+        .eventHeading {
+            color: #d58753;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .eventSection {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .eventSection p {
+            margin-bottom: 10px;
+            padding-right: 20px;
+            min-width: 290px;
+        }
+
+        .eventtimeblock {
+            padding-left: 20px;
+        }
+
+
+        .eventtimezone {
+            justify-content: center;
+            align-items: stretch;
+            align-content: space-between;
+            background-color: #faebda;
+            padding: 15px;
+            margin: -90px 0 40px 0px;
+            z-index: 2;
+            position: relative;
+            border: 1px solid #e2c3a3;
+            border-left: 20px solid #d58753;
+            box-shadow: 1px 4px 5px rgb(213 135 83 / 35%);
+        }
+
+        .textlightbrown {
+            color: #bf8c55;
+        }
+
+        .eStart,
+        .eEnd {
+            font-size: 18px;
+            font-weight: 600;
+            width: 60px;
+            position: relative;
+            display: inline-block;
+            padding-left: 5px;
+            margin-bottom: 5px;
+        }
+
+        .eUTC {
+            padding-left: 5px;
+            position: relative;
+            display: inline-block;
+            color: #d58753;
+            font-weight: 600;
+        }
+
+        .eTimeStart {
+
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+
+        }
+
+        .showLocaltime {
+            background-color: #d58753;
+            padding: 4px 0;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        .mrLeft {
+            margin-left: -25px;
+            margin-right: 5px;
+        }
+
+        .trainerSection .nav-link,
+        .courseDetails .nav-link {
+            min-width: 250px;
+            color: #373737;
+            border: 1px solid gray;
+            margin-bottom: 10px;
+            box-shadow: 1px 3px 5px #dbdbdb;
+        }
+
+        .trainerSection .nav-pills .nav-link.active,
+        .trainerSection .nav-pills .show>.nav-link,
+        .courseDetails .nav-pills .nav-link.active,
+        .courseDetails .nav-pills .show>.nav-link {
+            background-color: #d58753;
+            border: 1px solid #d58753;
+        }
+
+        .trainerSection .tab-content>.active,
+        .courseDetails .tab-content>.active {
+            background-color: #f9f9f9;
+            padding: 15px 20px;
+            border-radius: 5px;
+            border: 1px solid #e2c3a3;
+            box-shadow: 1px 3px 5px #dbdbdb;
+        }
+
+        .trainerName {
+            line-height: 1;
+            color: #d58753;
+        }
+
+        .trainerName span {
+            color: gray;
+            font-size: 16px;
+        }
+
+        .trainerDetails h6 {
+            color: #d58753;
+        }
+
+        .eventZoneStartEnd{
+            justify-content: space-around;
+    width: 100%;
+        }
+        .eventZoneStartEnd .eventZoneStart,
+        .eventZoneStartEnd .eventZoneEnd{
+            min-width: 200px;
+        }
+        /* Styling for heading */
+
+        #clockdiv {
+            font-family: sans-serif;
+            color: #d58753;
+            display: inline-block;
+            text-align: center;
+            font-size: 28px;
+            margin-top: 5px;
+        }
+
+        #clockdiv>div {
+            padding: 10px;
+            border-radius: 3px;
+            background: rgb(191 140 85 / 10%);
+            display: inline-block;
+            width: 90px;
+            border: 1px solid rgb(194 145 93 / 60%);
+        }
+
+        #clockdiv div>span {
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        /* Style for visible text */
+        .smalltext {
+            padding-top: 0px;
+            font-size: 14px;
+        }
+
+        .ui-switcher {
+            background-color: #efb478;
+            display: inline-block;
+            height: 18px;
+            width: 48px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            vertical-align: middle;
+            position: relative;
+            cursor: pointer;
+            transition: border-color 0.25s;
+            margin: -2px 4px 0 0;
+            box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .ui-switcher:before {
+            font-family: sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            color: #ffffff;
+            line-height: 1;
+            display: inline-block;
+            position: absolute;
+            top: 5px;
+            height: 12px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .ui-switcher[aria-checked="false"]:before {
+            content: "OFF";
+            right: 7px;
+        }
+
+        .ui-switcher[aria-checked="true"]:before {
+            content: "ON";
+            left: 7px;
+        }
+
+        .ui-switcher[aria-checked="true"] {
+            background-color: #25ba9a;
+        }
+
+        .ui-switcher:after {
+            background-color: #ffffff;
+            content: "\0020";
+            display: inline-block;
+            position: absolute;
+            top: 2px;
+            height: 14px;
+            width: 14px;
+            border-radius: 50%;
+            transition: left 0.25s;
+        }
+
+        .ui-switcher[aria-checked="false"]:after {
+            left: 2px;
+        }
+
+        .ui-switcher[aria-checked="true"]:after {
+            left: 32px;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 991px){
+            .eventSection p{    min-width: auto;}
+            .trainerSection{ flex-direction: column;}
+            .eventZoneStartEnd .eventZoneStart, 
+            .eventZoneStartEnd .eventZoneEnd{
+                min-width: auto;
+            }
+        }
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
+            .eventSection p{    min-width: auto;}
+            .eventZoneStartEnd .eventZoneStart, 
+            .eventZoneStartEnd .eventZoneEnd{
+                min-width: auto;
+            }
+            .trainerSection{ flex-direction: column;}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blogcontainer__root">
+        <!-- preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <span class="dot"></span>
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!-- /preloader -->
+        <div class="navigation" id="myHead"></div>
+        <!-- page-title -->
+        <section class="section bg-secondary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h4>Event</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /page-title -->
+
+        <div class="overlay-bg">
+            <div class="overlay-shadow">
+                <main class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 class="eventHeading">
+                                VNNIC Internet Conference - IPv6 Security Workshop</h2>
+                            <div class="eventSection ">
+                                <p>
+                                    <i class="fa fa-regular fa-calendar textlightbrown"></i>
+                                    <span class="eStart">Start</span>
+                                    <i class="d-block eventtimeblock">
+                                        <span class="eStartTime"><span class="starttime">09:00</span> - 05 June
+                                            2024</span>
+                                        <input type="hidden" value="2024-06-05 9:00" placeholder="YYYY-MM-DD HH:MM"
+                                            id="geteventStart">
+                                        <input type="hidden" value="Asia/Ho_Chi_Minh" id="geteventStartCountry">
+                                        <input type="hidden" value="+06.50" id="geteventCountryUTC">
+                                        <span class="eUTC"></span>
+                                    </i>
+                                </p>
+                                <p>
+                                    <i class="fa fa-regular fa-calendar textlightbrown"></i>
+                                    <span class="eEnd">End</span>
+                                    <i class="d-block eventtimeblock">
+                                        <span class="eEndtime"><span class="endtime">17:30</span> - 06 June 2024</span>
+                                        <input type="hidden" value="2024-06-06 17:30" placeholder="YYYY-MM-DD HH:MM"
+                                            id="geteventEnd">
+                                        <!-- <input type="hidden" value="Asia/Ho_Chi_Minh" id="geteventEndCountry"> -->
+                                        <span class="eUTC"></span></i>
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+
+                            <div class="mt-2">
+                                <p class="eTimeStart"> <i class="fa fa-regular fa-calendar textlightbrown"></i> Event
+                                    starts</p>
+                                <p class="fst-italic eventtimeblock">
+
+                                    Tuesday, 06 June 2024 at <span class="starttime">09.00</span>  <span class="eUTC">(UTC +6:5)</span>
+                                </p>
+                                <div id="clockdiv">
+                                    <div>
+                                        <!-- Show No. of days -->
+                                        <span class="days" id="day"></span>
+                                        <div class="smalltext">Days</div>
+                                    </div>
+                                    <div>
+                                        <!-- Show no.of hours -->
+                                        <span class="hours" id="hour"></span>
+                                        <div class="smalltext">Hours</div>
+                                    </div>
+                                    <div>
+                                        <!-- Show no. of minutes -->
+                                        <span class="minutes" id="minute"></span>
+                                        <div class="smalltext">Minutes</div>
+                                    </div>
+                                    <div>
+                                        <!-- Show seconds -->
+                                        <span class="seconds" id="second"></span>
+                                        <div class="smalltext">Seconds</div>
+                                    </div>
+                                </div>
+                                <p id="demo"></p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 offset-md-5">
+                    <div class="d-flex flex-column eventtimezone">
+                        <div class="d-flex flex-row">
+
+
+                            <div class="pe-2 d-flex mb-3">
+                                <img src="images/APNIC-policy.png" class="img-fluid" style="width: 150px" />
+                            </div>
+                            <div class="d-flex flex-row eventZoneStartEnd" style=" justify-content: space-around; width: 100%;">
+                                <div class="eventZoneStart">
+                                    <p class="mb-0">
+                                        <i class="fa fa-regular fa-clock textlightbrown mrLeft"></i>
+                                        <span class="fw-bold textlightbrown">START</span>
+                                    </p>
+                                    <p class="mb-0 fw-bold fst-italic">Thu, 05 June 2024</p>
+                                    <p class="mb-0 fw-bold fst-italic"><span class="starttime">09:00</span>  <span class="eUTC"></span></p>
+                                </div>
+                                <div class="eventZoneEnd">
+                                    <p class="mb-0">
+                                        <i class="fa fa-regular fa-clock textlightbrown mrLeft"></i>
+                                        <span class="fw-bold textlightbrown">END</span>
+                                    </p>
+                                    <p class="mb-0 fw-bold fst-italic">Thu, 06 June 2024</p>
+                                    <p class="mb-0 fw-bold fst-italic"><span class="endtime">17:30</span>  <span class="eUTC"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <p class="mb-0 showLocaltime">
+                                <span class="fw-bold"> Switch Timezone: </span>
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"
+                                    onclick="myFunction()" />
+                                Showing browser local time
+                                <span class="countryName"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h5 class="mb-3"><u>Your Trainer</u></h5>
+
+                    <div class="d-flex align-items-start trainerSection">
+                        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <button class="nav-link active" id="v-pills-day1-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-day1" type="button" role="tab" aria-controls="v-pills-day1"
+                                aria-selected="true">
+                                <span>
+                                    Gaurav Kansal
+                                    <br>
+                                    Community Trainer
+                                </span>
+                            </button>
+
+                            <button class="nav-link" id="v-pills-day2-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-day2" type="button" role="tab" aria-controls="v-pills-day2"
+                                aria-selected="false">
+                                <span>
+                                    Gaurav Kansal
+                                    <br>
+                                    Community Trainer
+                                </span>
+                            </button>
+
+                            <button class="nav-link" id="v-pills-day3-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-day3" type="button" role="tab" aria-controls="v-pills-day3"
+                                aria-selected="false">
+                                <span>
+                                    Gaurav Kansal
+                                    <br>
+                                    Community Trainer
+                                </span>
+                            </button>
+                        </div>
+
+                        <div class="tab-content trainerDetails" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-day1" role="tabpanel"
+                                aria-labelledby="v-pills-day1-tab" tabindex="0">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <img src="images/muzamer-mohd-azalan.jpg" class="img-thumbnail rounded-circle"
+                                        style="width: 70px; margin-right: 15px;">
+                                    <div>
+                                        <h5 class="trainerName">
+                                            Gaurav Kansal
+                                            <br>
+                                            <span> Community Trainer</span>
+                                        </h5>
+                                    </div>
+
+
+                                </div>
+                                <hr>
+                                <div>
+
+                                    <p>Muzamer is a network engineer with 8 years experience managing the core network
+                                        for one of the biggest ISPs in Malaysia. He is currently Manager of Network
+                                        Service IP Operation for Telekom Malaysia. Muzamer shares his knowledge and
+                                        experience as a volunteer community trainer for APNIC.</p>
+                                    <h6>Delivery</h6>
+                                    <p>Face to Face</p>
+                                    <h6>Location</h6>
+                                    <p class="mb-0">MCMC Academy & Facilities </p>
+                                    <p class="mb-0"><b>Room:</b> TBA</p>
+                                    <p>MCMC Centre of Excellence, Off, Persiaran Multimedia, 63000 Cyberjaya, Selangor
+                                    </p>
+                                    <h6>Level</h6>
+                                    <p>Advanced</p>
+                                    <h6>Subject Areas</h6>
+                                    <p>BGP, RPKI</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-day2" role="tabpanel"
+                                aria-labelledby="v-pills-day2-tab" tabindex="0">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <img src="images/muzamer-mohd-azalan.jpg" class="img-thumbnail rounded-circle"
+                                        style="width: 70px; margin-right: 15px;">
+                                    <div>
+                                        <h5 class="trainerName">
+                                            Gaurav Kansal
+                                            <br>
+                                            <span> Community Trainer</span>
+                                        </h5>
+                                    </div>
+
+
+                                </div>
+                                <hr>
+                                <div>
+
+                                    <p>Muzamer is a network engineer with 8 years experience managing the core network
+                                        for one of the biggest ISPs in Malaysia. He is currently Manager of Network
+                                        Service IP Operation for Telekom Malaysia. Muzamer shares his knowledge and
+                                        experience as a volunteer community trainer for APNIC.</p>
+                                    <h6>Delivery</h6>
+                                    <p>Face to Face</p>
+                                    <h6>Location</h6>
+                                    <p>MCMC Academy & Facilities </p>
+                                    <p>Room: TBA</p>
+                                    <p>MCMC Centre of Excellence, Off, Persiaran Multimedia, 63000 Cyberjaya, Selangor
+                                    </p>
+                                    <h6>Level</h6>
+                                    <p>Advanced</p>
+                                    <h6>Subject Areas</h6>
+                                    <p>BGP, RPKI</p>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-day3" role="tabpanel"
+                                aria-labelledby="v-pills-day3-tab" tabindex="0">
+
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <img src="images/muzamer-mohd-azalan.jpg" class="img-thumbnail rounded-circle"
+                                        style="width: 70px; margin-right: 15px;">
+                                    <div>
+                                        <h5 class="trainerName">
+                                            Gaurav Kansal
+                                            <br>
+                                            <span> Community Trainer</span>
+                                        </h5>
+                                    </div>
+
+
+                                </div>
+                                <hr>
+                                <div>
+
+                                    <p>Muzamer is a network engineer with 8 years experience managing the core network
+                                        for one of the biggest ISPs in Malaysia. He is currently Manager of Network
+                                        Service IP Operation for Telekom Malaysia. Muzamer shares his knowledge and
+                                        experience as a volunteer community trainer for APNIC.</p>
+                                    <h6>Delivery</h6>
+                                    <p>Face to Face</p>
+                                    <h6>Location</h6>
+                                    <p>MCMC Academy & Facilities </p>
+                                    <p>Room: TBA</p>
+                                    <p>MCMC Centre of Excellence, Off, Persiaran Multimedia, 63000 Cyberjaya, Selangor
+                                    </p>
+                                    <h6>Level</h6>
+                                    <p>Advanced</p>
+                                    <h6>Subject Areas</h6>
+                                    <p>BGP, RPKI</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-lg-12 mt-5 mb-5">
+
+                    <h5 class="mb-3"><u>Your Course</u></h5>
+
+                    <div class="courseDetails">
+                        <!-- Centered Tabs -->
+                        <ul class="nav nav-pills" role="tablist">
+                            <li class="nav-item me-2">
+                                <a class="nav-link active" data-bs-toggle="pill" href="#courseOverview">Course
+                                    Overview</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="pill" href="#courseMaterials">Course Materials</a>
+                            </li>
+
+                        </ul>
+                        <!-- Centered Pills -->
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div id="courseOverview" class="container tab-pane active"><br>
+                                <h6>Synopsis</h6>
+                                <p>
+                                    This is an advanced routing workshop focusing on BGP operations, multihoming, and
+                                    routing security. We will explore BGP mulithoming techniques for networks looking to
+                                    peer at an Internet Exchange Point (IXP) or have multi-provider connectivity. The
+                                    workshop also includes RPKI and its part and what we should all do to secure
+                                    Internet routing.
+                                </p>
+
+                                <h6>Target Audience</h6>
+                                <p>Technical staff who are building or operating a service provider or enterprise
+                                    network with international and/or multi-provider connectivity, and considering
+                                    participation at an Internet Exchange point.</p>
+                            </div>
+
+
+                            <div id="courseMaterials" class="container tab-pane fade"><br>
+                                <h6>Time Schedule</h6>
+                                <p>The schedule is in Bangladesh Time (UTC+6)</p>
+                                <p>Please create an account on the APNIC academy before attending Hands-on Virtual Labs
+                                </p>
+                                <div class="blog-table text-center">
+                                    <table class="table table-secondary">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>
+                                                    <p class="mb-0"><strong>Session</strong></p>
+                                                </th>
+                                                <th>
+                                                    <p class="mb-0"><strong>Time</strong></p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p class="mb-0">Session 1</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0">09:30 - 11:00</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="mb-0">Break</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0">11:00 - 11:30</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="mb-0">Session 2</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0">11:30 - 13:00</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="mb-0">Lunch</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0">13:00 - 14:00</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="mb-0">Session 3</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0">14:00 - 15:30</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="mb-0">Break</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0">15:30 - 16:00</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="mb-0">Session 4</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0">16:00 - 17:30</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bg-secondary footer-bg" id="myFooter"></div>
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $("#myHead").load("/include/header.html");
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $("#myFooter").load("/include/footer.html");
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="plugins/masonry/masonry.js"></script>
+    <!-- instafeed -->
+    <script src="plugins/instafeed/instafeed.min.js"></script>
+    <!-- headroom -->
+    <script src="plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="plugins/reading-time/readingTime.min.js"></script>
+    <!-- Main Script -->
+    <script src="js/script.js" crossorigin="anonymous"></script>
+    <script src="js/moment.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://momentjs.com/downloads/moment-timezone.js" crossorigin="anonymous"></script> -->
+    <script src="js/moment-timezone-with-data-1970-2030.js"
+        crossorigin="anonymous"></script>
+    <script src="js/moment-timezone-with-data.js" crossorigin="anonymous"></script>
+
+
+
+
+
+    <script>
+
+
+
+
+        function calcTime(date, countryCodeName) {
+
+            var countryDate = moment.tz(date, 'YYYY-MM-DD hh:mm', countryCodeName);
+            var countryDateformat = countryDate.format();
+
+            // console.log(`${countryDateformat}`)
+
+            const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            const utcOffset = new Date().getTimezoneOffset();
+            const countryCode = timeZone;
+
+            var countryUtcOffset = moment.tz(countryCode).format('Z');
+            // console.log("UTC Offset for " + countryCode + ": " + countryUtcOffset);
+
+            var eventTime = new Date(countryDateformat);
+            var eventTimeZone = countryCode; // Timezone of the event, change as needed
+
+            // console.log("Local Time: ", eventTime);
+
+            var localTime = eventTime.toLocaleString('en-US', { timeZone: eventTimeZone });
+            
+            const dated = new Date(localTime);
+            function addZero(i) {
+                if (i < 10) {i = "0" + i}
+                return i;
+            }
+            const hour = addZero(dated.getHours());
+                        
+            const min = addZero(dated.getMinutes());
+
+            // console.log("Local Full Date: ", localTime + " " + hour + " " + min);
+          return [countryUtcOffset, hour, min, countryCode, localTime]; 
+
+        };
+
+        
+        /*********************************************************/
+
+        function getCurrentTime() {
+            let now = new Date();
+            let hour = now.getHours();
+            let minute = now.getMinutes();
+            return hour + ":" + minute;
+        }
+
+        let currentTime = getCurrentTime();
+
+        // Getting formated date from date string
+        
+        let geteventDate = document.getElementById("geteventStart").value;
+                       
+        let deadline = new Date(geteventDate).getTime();
+
+        // Calling defined function at certain interval
+        let x = setInterval(function () {
+            // Getting current date and time in required format
+            let now = new Date().getTime();
+
+            // Calculating difference
+            let t = deadline - now;
+
+            // Getting values of days,hours,minutes, seconds
+            let days = Math.floor(t / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((t % (1000 * 60)) / 1000);
+
+            // Show the output time
+            document.getElementById("day").innerHTML = days;
+            document.getElementById("hour").innerHTML = hours;
+            document.getElementById("minute").innerHTML = minutes;
+            document.getElementById("second").innerHTML = seconds;
+
+            // Show overtime output
+            if (t < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "TIME UP";
+                document.getElementById("day").innerHTML = "0";
+                document.getElementById("hour").innerHTML = "0";
+                document.getElementById("minute").innerHTML = "0";
+                document.getElementById("second").innerHTML = "0";
+            }
+        }, 1000);
+
+        var switcher = function (filter) {
+            var $haul = $("input[type=checkbox]");
+
+            if (filter !== undefined && filter.length) {
+                $haul = $haul.filter(filter);
+            }
+
+            $haul.each(function () {
+                var $checkbox = $(this).hide(),
+                    $switcher = $(document.createElement("div"))
+                        .addClass("ui-switcher ss")
+                        .attr("aria-checked", $checkbox.is(":checked"));
+
+                if ("radio" === $checkbox.attr("type")) {
+                    $switcher.attr("data-name", $checkbox.attr("name"));
+                }
+
+                toggleSwitch = function (e) {
+                    if (e.target.type === undefined) {
+                        $checkbox.trigger(e.type);
+                    }
+                    $switcher.attr("aria-checked", $checkbox.is(":checked"));
+                    if ("radio" === $checkbox.attr("type")) {
+                        $(".ui-switcher[data-name=" + $checkbox.attr("name") + "]")
+                            .not($switcher.get(0))
+                            .attr("aria-checked", false);
+                    }
+                };
+
+                $switcher.on("click", toggleSwitch);
+                $checkbox.on("click", toggleSwitch);
+
+                $switcher.insertBefore($checkbox);
+            });
+        };
+
+        switcher();
+      
+        var starttime=document.getElementsByClassName("starttime")[0].innerText;
+        var endtime=document.getElementsByClassName("endtime")[0].innerText;
+        // var startUTC=document.getElementsByClassName("eUTC")[0].innerText;
+        // var endUTC=document.getElementsByClassName("eUTC")[1].innerText; 
+
+        var getUTC=document.getElementById("geteventCountryUTC").value;
+
+        const startUTC  = document.querySelectorAll(".eUTC");
+                for (let i = 0; i < startUTC.length; i++) {
+                    startUTC[i].innerHTML= "(UTC "+ getUTC +")"; 
+                }
+
+        var countryName=document.getElementById("geteventStartCountry").value;
+        document.getElementsByClassName("countryName")[0].innerHTML="("+ countryName +")";
+
+         /*********************************************************/
+
+        function myFunction() {
+            var checkBox = document.getElementById("inlineCheckbox1");
+
+            // Get the output text
+            var geteventStart = document.getElementById("geteventStart");
+            var geteventStartCountry = document.getElementById("geteventStartCountry");
+            var geteventEnd = document.getElementById("geteventEnd");
+            // var geteventEndCountry = document.getElementById("geteventEndCountry");
+
+            var startEventTime= geteventStart.value;
+            var startEventCountry= geteventStartCountry.value;
+            var geteventEnd= geteventEnd.value;
+            // var endEventCountry= geteventEndCountry.value;
+          
+            // If the checkbox is checked, display the output text
+            if (inlineCheckbox1.checked == true) {
+                
+                const [countryUtcOffset, hour, min, countryCode] =calcTime(startEventTime, startEventCountry);
+                
+                const starttimeList = document.querySelectorAll(".starttime");
+                for (let i = 0; i < starttimeList.length; i++) {
+                    starttimeList[i].innerHTML= hour + ":" + min; 
+                }
+
+
+                 const starttimeeUTC = document.querySelectorAll(".eUTC");
+                 for (let i = 0; i < starttimeeUTC.length; i++) 
+                 {
+                    starttimeeUTC[i].innerHTML= "(UTC " + countryUtcOffset + ")";
+                 }              
+
+                //  document.getElementsByClassName("countryName").innerHTML=countryCode;
+               
+                const [countryUtcOffset1, hour1, min1] = calcTime(geteventEnd, startEventCountry);
+
+                const endtimeList = document.querySelectorAll(".endtime");
+                for (let i = 0; i < endtimeList.length; i++) {
+                    endtimeList[i].innerHTML= hour1 + ":" + min1; 
+                }
+
+
+                 const endtimeeUTC = document.querySelectorAll(".eUTC");
+                 for (let i = 0; i < endtimeeUTC.length; i++) 
+                 {
+                    endtimeeUTC[i].innerHTML= "(UTC " + countryUtcOffset1 + ")";
+                 }
+
+                 document.getElementsByClassName("countryName")[0].innerHTML="("+ countryCode +")";
+
+            } else {
+              
+               
+
+                // console.log(startEventCountry);
+
+                 document.getElementsByClassName("countryName")[0].innerHTML="("+ startEventCountry +")";
+
+                const starttimeListOne = document.querySelectorAll(".starttime");
+                for (let i = 0; i < starttimeListOne.length; i++) {
+                    starttimeListOne[i].innerHTML= starttime; 
+                }
+
+                const timeeUTC = document.querySelectorAll(".eUTC");
+                 for (let i = 0; i < timeeUTC.length; i++) 
+                 {
+                    timeeUTC[i].innerHTML= "(UTC "+ getUTC +")";
+                 }
+
+                 const endtimeeListTwo = document.querySelectorAll(".endtime");
+                 for (let i = 0; i < endtimeeListTwo.length; i++) 
+                 {
+                    endtimeeListTwo[i].innerHTML= endtime;
+                 }               
+
+            }
+        }
+    </script>
+</body>
+
+</html>
