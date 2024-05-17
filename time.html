@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer</title>
+</head>
+
+<body>
+  <div id="countdown">
+    <span class="days"></span> days
+    <span class="hours"></span> hours
+    <span class="minutes"></span> minutes
+    <span class="seconds"></span> seconds
+  </div>
+
+  <div id="clockdiv">
+    <div>
+        <!-- Show No. of days -->
+        <span class="days" id="day"></span>
+        <div class="smalltext">Days</div>
+    </div>
+    <div>
+        <!-- Show no.of hours -->
+        <span class="hours" id="hour"></span>
+        <div class="smalltext">Hours</div>
+    </div>
+    <div>
+        <!-- Show no. of minutes -->
+        <span class="minutes" id="minute"></span>
+        <div class="smalltext">Minutes</div>
+    </div>
+    <div>
+        <!-- Show seconds -->
+        <span class="seconds" id="second"></span>
+        <div class="smalltext">Seconds</div>
+    </div>
+</div>
+
+  <script>
+    // function getTimeRemaining(endtime) {
+    //   const total = Date.parse(endtime) - Date.parse(new Date());
+    //   const seconds = Math.floor((total / 1000) % 60);
+    //   const minutes = Math.floor((total / 1000 / 60) % 60);
+    //   const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+    //   const days = Math.floor(total / (1000 * 60 * 60 * 24));
+
+    //   return {
+    //     total,
+    //     days,
+    //     hours,
+    //     minutes,
+    //     seconds
+    //   };
+    // }
+
+    // let timeinterval; // Declare timeinterval outside the initializeClock function
+
+    // function initializeClock(id, endtime) {
+    //   const clock = document.getElementById(id);
+    //   const daysSpan = clock.querySelector('.days');
+    //   const hoursSpan = clock.querySelector('.hours');
+    //   const minutesSpan = clock.querySelector('.minutes');
+    //   const secondsSpan = clock.querySelector('.seconds');
+
+    //   function updateClock() {
+    //     const t = getTimeRemaining(endtime);
+
+    //     daysSpan.innerHTML = t.days;
+    //     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    //     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    //     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    //     if (t.total <= 0) {
+    //       clearInterval(timeinterval);
+    //     }
+    //   }
+
+    //   updateClock();
+    //   timeinterval = setInterval(updateClock, 1000); // Assign to the global timeinterval variable
+    // }
+
+    // // Change the time zone to the desired country
+    // const currentDate = new Date().toLocaleString('en-US', { timeZone: 'America/New_York' });
+
+    // initializeClock('countdown', currentDate);
+
+
+    const date = new Date();
+    const newYorkTime = new Date(date.toLocaleString('en-US', { timeZone: 'Asia/Ho_Chi_Minh' })).getTime();
+      console.log(newYorkTime);
+
+
+    let deadline = new Date("June 05, 2024 09:00:00").getTime();
+    console.log(deadline);
+
+
+    let t = deadline - newYorkTime;
+    
+    const p=new Date(t);
+    console.log(new Date(t));
+    // Create a countdown timer function
+    function countdown(time) {
+      // Set the interval to 1 second
+      // let t = deadline - time;
+      // console.log(new Date(time));
+
+
+      const interval = setInterval(() => {
+        // Decrement the time by 1 second
+        time -= 1000;
+
+        let days = Math.floor(time / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((time % (1000 * 60)) / 1000);
+
+        // Display the remaining time
+        console.log(`${days}, ${hours}, ${minutes}, ${seconds}`);
+
+        // If the time is up, stop the countdown
+        if (time <= 0) {
+          clearInterval(interval);
+        }
+      }, 1000);
+    }
+
+    // Start the countdown timer
+    countdown(p);
+  </script>
+</body>
+
+</html>

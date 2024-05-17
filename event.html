@@ -146,25 +146,30 @@
         .trainerName {
             line-height: 1;
             color: #d58753;
+            text-align: center;
         }
 
         .trainerName span {
             color: gray;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .trainerDetails h6 {
             color: #d58753;
+
+            border-bottom: 1px dotted #d1d1d1;
         }
 
-        .eventZoneStartEnd{
+        .eventZoneStartEnd {
             justify-content: space-around;
-    width: 100%;
+            width: 100%;
         }
+
         .eventZoneStartEnd .eventZoneStart,
-        .eventZoneStartEnd .eventZoneEnd{
-            min-width: 200px;
+        .eventZoneStartEnd .eventZoneEnd {
+            min-width: 120px;
         }
+
         /* Styling for heading */
 
         #clockdiv {
@@ -258,21 +263,71 @@
         .ui-switcher[aria-checked="true"]:after {
             left: 32px;
         }
-        @media only screen and (min-width: 768px) and (max-width: 991px){
-            .eventSection p{    min-width: auto;}
-            .trainerSection{ flex-direction: column;}
-            .eventZoneStartEnd .eventZoneStart, 
-            .eventZoneStartEnd .eventZoneEnd{
+
+        .trainerNametab {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .trainerNametab span {
+            font-size: 12px;
+        }
+
+        .course h6 {
+            color: #d58753;
+            border-bottom: 1px dotted #d1d1d1;
+            margin-bottom: 20px;
+        }
+
+        .blog-table {
+            margin: 0 auto;
+            display: block;
+            max-width: 75%;
+            width: auto;
+        }
+
+        .course .table>:not(caption)>*>* {
+            text-align: left;
+            padding-left: 15px;
+        }
+
+        .course .table p {
+            margin-bottom: 0;
+        }
+
+        .course .table th.confluenceSession {
+            background-color: rgb(33 37 41);
+            color: #fff;
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            .eventSection p {
+                min-width: auto;
+            }
+
+            .trainerSection {
+                flex-direction: column;
+            }
+
+            .eventZoneStartEnd .eventZoneStart,
+            .eventZoneStartEnd .eventZoneEnd {
                 min-width: auto;
             }
         }
+
         @media only screen and (min-width: 320px) and (max-width: 767px) {
-            .eventSection p{    min-width: auto;}
-            .eventZoneStartEnd .eventZoneStart, 
-            .eventZoneStartEnd .eventZoneEnd{
+            .eventSection p {
                 min-width: auto;
             }
-            .trainerSection{ flex-direction: column;}
+
+            .eventZoneStartEnd .eventZoneStart,
+            .eventZoneStartEnd .eventZoneEnd {
+                min-width: auto;
+            }
+
+            .trainerSection {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -341,12 +396,12 @@
                         <div class="col-lg-5">
 
                             <div class="mt-2">
-                                <p class="eTimeStart"> <i class="fa fa-regular fa-calendar textlightbrown"></i> Event
-                                    starts</p>
-                                <p class="fst-italic eventtimeblock">
+                                <!-- <p class="eTimeStart"> <i class="fa fa-regular fa-calendar textlightbrown"></i> Event
+                                    starts</p> -->
+                                <!-- <p class="fst-italic eventtimeblock">
 
                                     Tuesday, 06 June 2024 at <span class="starttime">09.00</span>  <span class="eUTC">(UTC +6:5)</span>
-                                </p>
+                                </p> -->
                                 <div id="clockdiv">
                                     <div>
                                         <!-- Show No. of days -->
@@ -378,22 +433,25 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-7 offset-md-5">
+                <div class="col-md-6 offset-md-6">
                     <div class="d-flex flex-column eventtimezone">
                         <div class="d-flex flex-row">
 
 
                             <div class="pe-2 d-flex mb-3">
-                                <img src="images/APNIC-policy.png" class="img-fluid" style="width: 150px" />
+                                <img src="images/Events.jpeg" class="img-fluid"
+                                    style="width: 150px; margin-right: 10px;" />
                             </div>
-                            <div class="d-flex flex-row eventZoneStartEnd" style=" justify-content: space-around; width: 100%;">
+                            <div class="d-flex flex-row eventZoneStartEnd"
+                                style=" justify-content: space-around; width: 100%;">
                                 <div class="eventZoneStart">
                                     <p class="mb-0">
                                         <i class="fa fa-regular fa-clock textlightbrown mrLeft"></i>
                                         <span class="fw-bold textlightbrown">START</span>
                                     </p>
                                     <p class="mb-0 fw-bold fst-italic">Thu, 05 June 2024</p>
-                                    <p class="mb-0 fw-bold fst-italic"><span class="starttime">09:00</span>  <span class="eUTC"></span></p>
+                                    <p class="mb-0 fw-bold fst-italic"><span class="starttime">09:00</span> <span
+                                            class="eUTC"></span></p>
                                 </div>
                                 <div class="eventZoneEnd">
                                     <p class="mb-0">
@@ -401,7 +459,8 @@
                                         <span class="fw-bold textlightbrown">END</span>
                                     </p>
                                     <p class="mb-0 fw-bold fst-italic">Thu, 06 June 2024</p>
-                                    <p class="mb-0 fw-bold fst-italic"><span class="endtime">17:30</span>  <span class="eUTC"></span></p>
+                                    <p class="mb-0 fw-bold fst-italic"><span class="endtime">17:30</span> <span
+                                            class="eUTC"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -410,7 +469,7 @@
                                 <span class="fw-bold"> Switch Timezone: </span>
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"
                                     onclick="myFunction()" />
-                                Showing browser local time
+                                Showing <span id="eventBrowser"></span> local time
                                 <span class="countryName"></span>
                             </p>
                         </div>
@@ -427,31 +486,31 @@
                             <button class="nav-link active" id="v-pills-day1-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-day1" type="button" role="tab" aria-controls="v-pills-day1"
                                 aria-selected="true">
-                                <span>
-                                    Gaurav Kansal
-                                    <br>
-                                    Community Trainer
-                                </span>
+                                <div class="trainerNametab">
+                                    <b>Gaurav Kansal</b>
+
+                                    <span>Community Trainer</span>
+                                </div>
                             </button>
 
                             <button class="nav-link" id="v-pills-day2-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-day2" type="button" role="tab" aria-controls="v-pills-day2"
                                 aria-selected="false">
-                                <span>
-                                    Gaurav Kansal
-                                    <br>
-                                    Community Trainer
-                                </span>
+                                <div class="trainerNametab">
+                                    <b>Gaurav Kansal</b>
+
+                                    <span>Community Trainer</span>
+                                </div>
                             </button>
 
                             <button class="nav-link" id="v-pills-day3-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-day3" type="button" role="tab" aria-controls="v-pills-day3"
                                 aria-selected="false">
-                                <span>
-                                    Gaurav Kansal
-                                    <br>
-                                    Community Trainer
-                                </span>
+                                <div class="trainerNametab">
+                                    <b>Gaurav Kansal</b>
+
+                                    <span>Community Trainer</span>
+                                </div>
                             </button>
                         </div>
 
@@ -459,8 +518,8 @@
                             <div class="tab-pane fade show active" id="v-pills-day1" role="tabpanel"
                                 aria-labelledby="v-pills-day1-tab" tabindex="0">
                                 <div class="d-flex justify-content-start align-items-center">
-                                    <img src="images/muzamer-mohd-azalan.jpg" class="img-thumbnail rounded-circle"
-                                        style="width: 70px; margin-right: 15px;">
+                                    <img src="images/gaurav_img.png" class="img-thumbnail rounded-circle"
+                                        style="width: 60px; height: 60px; margin-right: 15px;">
                                     <div>
                                         <h5 class="trainerName">
                                             Gaurav Kansal
@@ -494,8 +553,8 @@
                             <div class="tab-pane fade" id="v-pills-day2" role="tabpanel"
                                 aria-labelledby="v-pills-day2-tab" tabindex="0">
                                 <div class="d-flex justify-content-start align-items-center">
-                                    <img src="images/muzamer-mohd-azalan.jpg" class="img-thumbnail rounded-circle"
-                                        style="width: 70px; margin-right: 15px;">
+                                    <img src="images/gaurav_img.png" class="img-thumbnail rounded-circle"
+                                        style="width: 60px; height: 60px; margin-right: 15px;">
                                     <div>
                                         <h5 class="trainerName">
                                             Gaurav Kansal
@@ -531,8 +590,8 @@
                                 aria-labelledby="v-pills-day3-tab" tabindex="0">
 
                                 <div class="d-flex justify-content-start align-items-center">
-                                    <img src="images/muzamer-mohd-azalan.jpg" class="img-thumbnail rounded-circle"
-                                        style="width: 70px; margin-right: 15px;">
+                                    <img src="images/gaurav_img.png" class="img-thumbnail rounded-circle"
+                                        style="width: 60px; height: 60px; margin-right: 15px;">
                                     <div>
                                         <h5 class="trainerName">
                                             Gaurav Kansal
@@ -590,7 +649,7 @@
                         <!-- Centered Pills -->
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <div id="courseOverview" class="container tab-pane active"><br>
+                            <div id="courseOverview" class="container tab-pane active course">
                                 <h6>Synopsis</h6>
                                 <p>
                                     This is an advanced routing workshop focusing on BGP operations, multihoming, and
@@ -607,13 +666,15 @@
                             </div>
 
 
-                            <div id="courseMaterials" class="container tab-pane fade"><br>
+                            <div id="courseMaterials" class="container tab-pane fade course">
                                 <h6>Time Schedule</h6>
                                 <p>The schedule is in Bangladesh Time (UTC+6)</p>
                                 <p>Please create an account on the APNIC academy before attending Hands-on Virtual Labs
+                                    <a href="https://academy.apnic.net/en/virtual-labs/"
+                                        target="_blank">https://academy.apnic.net/en/virtual-labs/</a>
                                 </p>
                                 <div class="blog-table text-center">
-                                    <table class="table table-secondary">
+                                    <table class="table table-secondary table-bordered">
                                         <thead class="table-dark">
                                             <tr>
                                                 <th>
@@ -685,6 +746,189 @@
                                     </table>
                                 </div>
 
+                                <h6>Trainers</h6>
+
+                                <div class="blog-table text-center">
+                                    <table class="table table-secondary table-bordered">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th class="confluenceTh">
+                                                    <p><strong>Name</strong></p>
+                                                </th>
+                                                <th class="confluenceTh">
+                                                    <p><strong>Email</strong></p>
+                                                </th>
+                                                <th class="confluenceTh">
+                                                    <p><strong>Organisation</strong></p>
+                                                </th>
+                                                <th class="confluenceTh">
+                                                    <p><strong>Country</strong></p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="confluenceTd">
+                                                    <p>Warren Finch</p>
+                                                </td>
+                                                <td class="confluenceTd">
+                                                    <p>warren[at]apnic(dot)net</p>
+                                                </td>
+                                                <td class="confluenceTd">
+                                                    <p>APNIC</p>
+                                                </td>
+                                                <td class="confluenceTd">
+                                                    <p>AU</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="confluenceTd">
+                                                    <p>Subhashini Kadurugasyaya</p>
+                                                </td>
+                                                <td class="confluenceTd">
+                                                    <p>CommunityTrainers(at)apnic(dot)net</p>
+                                                </td>
+                                                <td class="confluenceTd">
+                                                    <p>APNIC Community Trainer</p>
+                                                </td>
+                                                <td class="confluenceTd">
+                                                    <p>LK</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <h6>Day 1</h6>
+
+                                <div class="blog-table text-center">
+                                    <table class="table table-secondary table-bordered">
+                                        <colgroup>
+                                           <col style="width: 141px;">
+                                           <col style="width: 617px;">
+                                        </colgroup>
+                                        <tbody>
+                                           <tr>
+                                              <th colspan="2" class="confluenceSession">
+                                                 <p><strong>Session 1 </strong></p>
+                                              </th>
+                                           </tr>
+                                           <tr>
+                                              <th class="confluenceTh">
+                                                 <p><strong>Topics</strong></p>
+                                              </th>
+                                              <td class="confluenceTd">
+                                                 <p>Agenda &amp; Introductions<br>Overview of Cybersecurity</p>
+                                              </td>
+                                           </tr>
+                                           <tr>
+                                              <th class="confluenceTh">
+                                                 <p><strong>Presentations</strong></p>
+                                              </th>
+                                              <td class="confluenceTd">
+                                                 <p><a class="external-link" href="https://training-wiki.s3.ap-southeast-1.amazonaws.com/2024/05+May/20240513_NetSec_Sri_Lanka/agenda.pdf" rel="noopener noreferrer" target="_blank">Agenda&nbsp;</a><br><a class="external-link" href="https://training-wiki.s3.ap-southeast-1.amazonaws.com/2023/netsec-20230618/information_security_overview.pdf" rel="noopener noreferrer" target="_blank">Information Security overview</a><br><a class="external-link" href="https://training-wiki.s3.ap-southeast-1.amazonaws.com/2024/05+May/20240513_NetSec_Sri_Lanka/02a_basics_threat_20240513.pdf" rel="noopener noreferrer" target="_blank">Security in Layers</a></p>
+                                              </td>
+                                           </tr>
+                                           <tr>
+                                              <th class="confluenceTh">
+                                                 <p><strong>Exercises</strong></p>
+                                              </th>
+                                              <td class="confluenceTd">
+                                                 <p><a class="external-link" href="https://github.com/chrisjd20/Blue-Team-Cheat-Sheets" rel="noopener noreferrer" target="_blank">Blue Team cheat sheets</a><br><a class="external-link" href="https://docs.google.com/spreadsheets/d/1H9_xaxQHpWaa4O_Son4Gx0YOIzlcBWMsdvePFX68EKU/pubhtml" rel="noopener noreferrer" target="_blank">APT Groups and Operations</a><br><a class="external-link" href="https://otx.alienvault.com/browse/global/pulses" rel="noopener noreferrer" target="_blank">AlienVault</a><br><a class="external-link" href="https://attack.mitre.org/" rel="noopener noreferrer" target="_blank">Mitre ATT&amp;CK</a><br><a class="external-link" href="https://www.caida.org/projects/ioda/" rel="noopener noreferrer" target="_blank">Internet Outage Detection and Analysis (IODA)</a><br><a class="external-link" href="https://ioda.inetintel.cc.gatech.edu/country/LK" rel="noopener noreferrer" target="_blank">https://ioda.inetintel.cc.gatech.edu/country/LK</a></p>
+                                                 <p><a class="external-link" href="https://tryhackme.com/path/outline/soclevel1" rel="noopener noreferrer" target="_blank">TryHackMe | SOC Level 1 Training</a></p>
+                                              </td>
+                                           </tr>
+                                           <tr>
+                                              <th class="confluenceTh">
+                                                 <p><strong>Resources</strong></p>
+                                              </th>
+                                              <td class="confluenceTd">
+                                                 <p><a class="external-link" href="https://training-wiki.s3.ap-southeast-1.amazonaws.com/2023/netsec-20230618/osi.jpg" rel="noopener noreferrer" target="_blank">osi.jpg</a><br><a class="external-link" href="https://resources.sei.cmu.edu/asset_files/specialreport/1996_003_001_496597.pdf" rel="noopener noreferrer" target="_blank">Security of the Internet</a><br><a class="external-link" href="https://unit42.paloaltonetworks.com/tag/network-security-trends/" rel="noopener noreferrer" target="_blank">Network Security Trends</a><br><a class="external-link" href="https://jacobsschool.ucsd.edu/news/release/3454" rel="noopener noreferrer" target="_blank">25% of Internet users vulnerable to infrastructure attack</a><br><a class="external-link" href="https://flipperzero.one/" rel="noopener noreferrer" target="_blank">https://flipperzero.one</a><br><a class="external-link" href="https://darknetdiaries.com/episode/" rel="noopener noreferrer" target="_blank">https://darknetdiaries.com/episode/</a><br><a class="external-link" href="https://securitytxt.org/" rel="noopener noreferrer" target="_blank">Security text file</a><br><a class="external-link" href="https://www.google.com/alerts" rel="noopener noreferrer" target="_blank">https://www.google.com/alerts</a><br><a class="external-link" href="https://seclists.org/fulldisclosure/" rel="noopener noreferrer" target="_blank">https://seclists.org/fulldisclosure/</a><br><a class="external-link" href="https://github.com/swannman/ircapabilities" rel="noopener noreferrer" target="_blank">The Incident Response Hierarchy of Needs</a><br><a class="external-link" href="https://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html" rel="noopener noreferrer" target="_blank">Pyramid of Pain</a><br><a class="external-link" href="https://youtu.be/zlAWbdSlhaQ?t=16" rel="noopener noreferrer" target="_blank">Pyramid of Pain by David Bianco</a><br><a class="external-link" href="https://youtu.be/g7YZWe6d34A" rel="noopener noreferrer" target="_blank">Pyramid of Pain - Cisco Security Alignment</a></p>
+                                              </td>
+                                           </tr>
+                                           <tr>
+                                              <th colspan="2" class="confluenceSession">
+                                                 <p><strong>Session 2 &amp; 3</strong></p>
+                                              </th>
+                                           </tr>
+                                           <tr>
+                                              <th class="confluenceTh">
+                                                 <p><strong>Topics</strong></p>
+                                              </th>
+                                              <td class="confluenceTd">
+                                                 <p>Introduction to Linux</p>
+                                              </td>
+                                           </tr>
+                                           <tr>
+                                              <th class="confluenceTh">
+                                                 <p><strong>Presentations</strong></p>
+                                              </th>
+                                              <td class="confluenceTd">
+                                                 <p><a class="external-link" href="https://training-wiki.s3.ap-southeast-1.amazonaws.com/2023/06+June/netsec-20230618/01.Fundamentals+of+Linux_v1.pdf" rel="noopener noreferrer" target="_blank">Linux Fundamentals</a></p>
+                                              </td>
+                                           </tr>
+                                           <tr>
+                                              <th class="confluenceTh">
+                                                 <p><strong>Exercises</strong></p>
+                                              </th>
+                                              <td class="confluenceTd">
+                                                 <p><a class="external-link" href="https://academy.apnic.net/virtual-labs?labId=87395" rel="noopener noreferrer" target="_blank">Linux Basics - Academy</a><br><br><a class="external-link" href="https://training-wiki.s3.ap-southeast-1.amazonaws.com/2023/netsec-20230618/02.vim_cheatsheet.pdf" rel="noopener noreferrer" target="_blank">VIM cheatsheet</a><br><a class="external-link" href="https://lab.redhat.com/tracks/unixisms" rel="noopener noreferrer" target="_blank">https://lab.redhat.com/tracks/unixisms</a><br><a class="external-link" href="https://lab.redhat.com/tracks/helpful-commands" rel="noopener noreferrer" target="_blank">https://lab.redhat.com/tracks/helpful-commands</a><br><a class="external-link" href="https://lab.redhat.com/tracks/using-file-permissions" rel="noopener noreferrer" target="_blank">https://lab.redhat.com/tracks/using-file-permissions</a><br><a class="external-link" href="https://lab.redhat.com/tracks/managing-user-basics" rel="noopener noreferrer" target="_blank">https://lab.redhat.com/tracks/managing-user-basics</a></p>
+                                              </td>
+                                           </tr>
+                                           <tr>
+                                              <th class="confluenceTh">
+                                                 <p><strong>Resources</strong></p>
+                                              </th>
+                                              <td class="confluenceTd">
+                                                 <p><a class="external-link" href="https://en.wikipedia.org/wiki/Linux_kernel_version_history" rel="noopener noreferrer" target="_blank">Kernel History</a><br><a class="external-link" href="https://upload.wikimedia.org/wikipedia/commons/8/83/Linux_Distribution_Timeline_27_02_21.svg" rel="noopener noreferrer" target="_blank">Linux Distro Tree</a><br><a class="external-link" href="https://man.cx/" rel="noopener noreferrer" target="_blank">Online Linux manual</a><br><a class="external-link" href="https://linuxupskillchallenge.org/" rel="noopener noreferrer" target="_blank">https://linuxupskillchallenge.org</a><br><a class="external-link" href="https://linuxcommand.org/" rel="noopener noreferrer" target="_blank">https://linuxcommand.org</a><br><a class="external-link" href="https://vim.rtorr.com/" rel="noopener noreferrer" target="_blank">https://vim.rtorr.com</a><br><a class="external-link" href="https://overthewire.org/wargames/bandit/bandit0.html" rel="noopener noreferrer" target="_blank">Over the Wire Bandit0</a><br><a class="external-link" href="https://explainshell.com/explain?cmd=ls+-lah" rel="noopener noreferrer" target="_blank">https://explainshell.com/explain?cmd=ls+-lah</a><br><a class="external-link" href="https://training-wiki.s3.ap-southeast-1.amazonaws.com/2023/netsec-20230618/surviving_command_line.pdf" rel="noopener noreferrer" target="_blank">Extra: Surviving the Command Line</a><br>Learning VIM<br><a class="external-link" href="https://www.openvim.com/" rel="noopener noreferrer" target="_blank">https://www.openvim.com</a><br><a class="external-link" href="https://vim-adventures.com/" rel="noopener noreferrer" target="_blank">https://vim-adventures.com</a></p>
+                                              </td>
+                                           </tr>
+                                           <tr>
+                                              <th colspan="2" class="confluenceSession">
+                                                 <p><strong>Session 4</strong></p>
+                                              </th>
+                                           </tr>
+                                           <tr>
+                                              <th class="confluenceTh">
+                                                 <p><strong>Topics</strong></p>
+                                              </th>
+                                              <td class="confluenceTd">
+                                                 <p>Device and Infrastructure Security</p>
+                                              </td>
+                                           </tr>
+                                           <tr>
+                                              <th class="confluenceTh">
+                                                 <p><strong>Presentations</strong></p>
+                                              </th>
+                                              <td class="confluenceTd">
+                                                 <p><a class="external-link" href="https://training-wiki.s3.ap-southeast-1.amazonaws.com/2023/06+June/netsec-20230618/02-infrastructure_security_fundamentals.pdf" rel="noopener noreferrer" target="_blank">Security Fundamentals - Infrastructure and Device Security</a></p>
+                                              </td>
+                                           </tr>
+                                           <tr>
+                                              <th class="confluenceTh">
+                                                 <p><strong>Exercises</strong></p>
+                                              </th>
+                                              <td class="confluenceTd">
+                                                 <p><a class="external-link" href="https://training-wiki.s3.ap-southeast-1.amazonaws.com/2023/netsec-20230618/quick-hands-on-shodan.pdf" rel="noopener noreferrer" target="_blank">Shodan</a><br><a class="external-link" href="https://training-wiki.s3.ap-southeast-1.amazonaws.com/2023/netsec-20230618/shodan_search_tls.pdf" rel="noopener noreferrer" target="_blank">Shodan CLI</a><br><a class="external-link" href="https://haveibeenpwned.com/" rel="noopener noreferrer" target="_blank">https://haveibeenpwned.com</a><br><a class="external-link" href="https://shodan.io/" rel="noopener noreferrer" target="_blank">https://shodan.io</a><br><a class="external-link" href="https://github.com/CVEProject/cvelist" rel="noopener noreferrer" target="_blank">https://github.com/CVEProject/cvelist</a><br><a class="external-link" href="https://www.stigviewer.com/" rel="noopener noreferrer" target="_blank">https://www.stigviewer.com</a><br><a class="external-link" href="https://www.cisecurity.org/cis-benchmarks" rel="noopener noreferrer" target="_blank">https://www.cisecurity.org/cis-benchmarks</a></p>
+                                                 <p><a class="external-link" href="https://help.shodan.io/the-basics/academic-upgrade" rel="noopener noreferrer" target="_blank">https://help.shodan.io/the-basics/academic-upgrade</a></p>
+                                              </td>
+                                           </tr>
+                                           <tr>
+                                              <th class="confluenceTh">
+                                                 <p><strong>Resources</strong></p>
+                                              </th>
+                                              <td class="confluenceTd">
+                                                 <p><a class="external-link" href="https://www.shodan.io/search/report?query=country%3A%22LK%22+city%3A%22Kandy%22" rel="noopener noreferrer" target="_blank">Shodan Search - Devices in Kandy</a><br><a class="external-link" href="https://www.shodan.io/search/facet?query=country%3A%22LK%22+city%3A%22Kandy%22&amp;facet=org" rel="noopener noreferrer" target="_blank">Shodan Search - List by Organisation</a><br><a class="external-link" href="https://www.shodan.io/search/facet?query=country%3A%22LK%22+city%3A%22Kandy%22&amp;facet=product" rel="noopener noreferrer" target="_blank">Shodan Search - Products</a><br><a class="external-link" href="https://github.com/jakejarvis/awesome-shodan-queries" rel="noopener noreferrer" target="_blank">https://github.com/jakejarvis/awesome-shodan-queries</a><br><a class="external-link" href="https://www.shadowserver.org/what-we-do/network-reporting/get-reports/" rel="noopener noreferrer" target="_blank">https://www.shadowserver.org/what-we-do/network-reporting/get-reports/</a></p>
+                                                 <p><a class="external-link" href="https://www.team-cymru.com/nimbus-threat-monitor" rel="noopener noreferrer" target="_blank">https://www.team-cymru.com/nimbus-threat-monitor</a></p>
+                                                 <p><a class="external-link" href="https://darknetdiaries.com/episode/67/" rel="noopener noreferrer" target="_blank">https://darknetdiaries.com/episode/67/</a></p>
+                                                 <p><a class="external-link" href="https://www.cisco.com/c/en_au/solutions/design-zone.html" rel="noopener noreferrer" target="_blank">https://www.cisco.com/c/en_au/solutions/design-zone.html</a><br><a class="external-link" href="https://pulse.internetsociety.org/blog/exploring-the-internets-router-vendor-diversity" rel="noopener noreferrer" target="_blank">Exploring the Internet’s Router Vendor Diversity (internetsociety.org)</a></p>
+                                              </td>
+                                           </tr>
+                                        </tbody>
+                                     </table>
+                                </div>
+
+
                             </div>
 
                         </div>
@@ -727,8 +971,7 @@
     <script src="js/script.js" crossorigin="anonymous"></script>
     <script src="js/moment.js" crossorigin="anonymous"></script>
     <!-- <script src="https://momentjs.com/downloads/moment-timezone.js" crossorigin="anonymous"></script> -->
-    <script src="js/moment-timezone-with-data-1970-2030.js"
-        crossorigin="anonymous"></script>
+    <script src="js/moment-timezone-with-data-1970-2030.js" crossorigin="anonymous"></script>
     <script src="js/moment-timezone-with-data.js" crossorigin="anonymous"></script>
 
 
@@ -737,7 +980,23 @@
 
     <script>
 
+        var starttime = document.getElementsByClassName("starttime")[0].innerText;
+        var endtime = document.getElementsByClassName("endtime")[0].innerText;
+        // var startUTC=document.getElementsByClassName("eUTC")[0].innerText;
+        // var endUTC=document.getElementsByClassName("eUTC")[1].innerText; 
 
+        var getUTC = document.getElementById("geteventCountryUTC").value;
+
+        const startUTC = document.querySelectorAll(".eUTC");
+        for (let i = 0; i < startUTC.length; i++) {
+            startUTC[i].innerHTML = "(UTC " + getUTC + ")";
+        }
+
+        var countryName = document.getElementById("geteventStartCountry").value;
+        document.getElementsByClassName("countryName")[0].innerHTML = "(" + countryName + ")";
+
+        var eventBrowser = document.getElementById("eventBrowser");
+        eventBrowser.innerHTML = "event"
 
 
         function calcTime(date, countryCodeName) {
@@ -752,7 +1011,7 @@
             const countryCode = timeZone;
 
             var countryUtcOffset = moment.tz(countryCode).format('Z');
-            // console.log("UTC Offset for " + countryCode + ": " + countryUtcOffset);
+            console.log("UTC Offset for " + countryCode + ": " + countryUtcOffset);
 
             var eventTime = new Date(countryDateformat);
             var eventTimeZone = countryCode; // Timezone of the event, change as needed
@@ -760,69 +1019,78 @@
             // console.log("Local Time: ", eventTime);
 
             var localTime = eventTime.toLocaleString('en-US', { timeZone: eventTimeZone });
-            
+
             const dated = new Date(localTime);
             function addZero(i) {
-                if (i < 10) {i = "0" + i}
+                if (i < 10) { i = "0" + i }
                 return i;
             }
             const hour = addZero(dated.getHours());
-                        
+
             const min = addZero(dated.getMinutes());
 
-            // console.log("Local Full Date: ", localTime + " " + hour + " " + min);
-          return [countryUtcOffset, hour, min, countryCode, localTime]; 
+            // console.log("Local Full Date: ", localTime + " " + date );
+            return [countryUtcOffset, hour, min, countryCode, localTime];
 
         };
 
-        
+
         /*********************************************************/
 
-        function getCurrentTime() {
-            let now = new Date();
-            let hour = now.getHours();
-            let minute = now.getMinutes();
-            return hour + ":" + minute;
+        function getCurrentTime(countryName) {
+
+            const nowDate = new Date();
+            const countryTimeNow = new Date(nowDate.toLocaleString('en-US', { timeZone: countryName })).getTime();
+
+            return countryTimeNow;
         }
 
-        let currentTime = getCurrentTime();
+        const currentTime = getCurrentTime(countryName);
 
-        // Getting formated date from date string
-        
+        // console.log(`countryName ${countryName} currentTime ${currentTime}`);
+
+
         let geteventDate = document.getElementById("geteventStart").value;
-                       
         let deadline = new Date(geteventDate).getTime();
+        let newTime = deadline - currentTime;
+
+        const printTime = new Date(newTime);
 
         // Calling defined function at certain interval
-        let x = setInterval(function () {
-            // Getting current date and time in required format
-            let now = new Date().getTime();
+        function countdown(time) {
 
-            // Calculating difference
-            let t = deadline - now;
+            const interval = setInterval(() => {
 
-            // Getting values of days,hours,minutes, seconds
-            let days = Math.floor(t / (1000 * 60 * 60 * 24));
-            let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-            let seconds = Math.floor((t % (1000 * 60)) / 1000);
 
-            // Show the output time
-            document.getElementById("day").innerHTML = days;
-            document.getElementById("hour").innerHTML = hours;
-            document.getElementById("minute").innerHTML = minutes;
-            document.getElementById("second").innerHTML = seconds;
+                time -= 1000;
 
-            // Show overtime output
-            if (t < 0) {
-                clearInterval(x);
-                document.getElementById("demo").innerHTML = "TIME UP";
-                document.getElementById("day").innerHTML = "0";
-                document.getElementById("hour").innerHTML = "0";
-                document.getElementById("minute").innerHTML = "0";
-                document.getElementById("second").innerHTML = "0";
-            }
-        }, 1000);
+                // Getting values of days,hours,minutes, seconds
+                let days = Math.floor(time / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((time % (1000 * 60)) / 1000);
+
+                // Show the output time
+                document.getElementById("day").innerHTML = days;
+                document.getElementById("hour").innerHTML = hours;
+                document.getElementById("minute").innerHTML = minutes;
+                document.getElementById("second").innerHTML = seconds;
+
+                // Show overtime output
+                if (time <= 0) {
+                    clearInterval(interval);
+                    document.getElementById("demo").innerHTML = "TIME UP";
+                    document.getElementById("day").innerHTML = "0";
+                    document.getElementById("hour").innerHTML = "0";
+                    document.getElementById("minute").innerHTML = "0";
+                    document.getElementById("second").innerHTML = "0";
+                }
+            }, 1000);
+        };
+
+        countdown(printTime);
+
+
 
         var switcher = function (filter) {
             var $haul = $("input[type=checkbox]");
@@ -861,23 +1129,10 @@
         };
 
         switcher();
-      
-        var starttime=document.getElementsByClassName("starttime")[0].innerText;
-        var endtime=document.getElementsByClassName("endtime")[0].innerText;
-        // var startUTC=document.getElementsByClassName("eUTC")[0].innerText;
-        // var endUTC=document.getElementsByClassName("eUTC")[1].innerText; 
 
-        var getUTC=document.getElementById("geteventCountryUTC").value;
 
-        const startUTC  = document.querySelectorAll(".eUTC");
-                for (let i = 0; i < startUTC.length; i++) {
-                    startUTC[i].innerHTML= "(UTC "+ getUTC +")"; 
-                }
 
-        var countryName=document.getElementById("geteventStartCountry").value;
-        document.getElementsByClassName("countryName")[0].innerHTML="("+ countryName +")";
-
-         /*********************************************************/
+        /*********************************************************/
 
         function myFunction() {
             var checkBox = document.getElementById("inlineCheckbox1");
@@ -888,70 +1143,69 @@
             var geteventEnd = document.getElementById("geteventEnd");
             // var geteventEndCountry = document.getElementById("geteventEndCountry");
 
-            var startEventTime= geteventStart.value;
-            var startEventCountry= geteventStartCountry.value;
-            var geteventEnd= geteventEnd.value;
+            var startEventTime = geteventStart.value;
+            var startEventCountry = geteventStartCountry.value;
+            var geteventEnd = geteventEnd.value;
             // var endEventCountry= geteventEndCountry.value;
-          
+
             // If the checkbox is checked, display the output text
             if (inlineCheckbox1.checked == true) {
-                
-                const [countryUtcOffset, hour, min, countryCode] =calcTime(startEventTime, startEventCountry);
-                
+
+                const [countryUtcOffset, hour, min, countryCode] = calcTime(startEventTime, startEventCountry);
+
                 const starttimeList = document.querySelectorAll(".starttime");
                 for (let i = 0; i < starttimeList.length; i++) {
-                    starttimeList[i].innerHTML= hour + ":" + min; 
+                    starttimeList[i].innerHTML = hour + ":" + min;
                 }
 
 
-                 const starttimeeUTC = document.querySelectorAll(".eUTC");
-                 for (let i = 0; i < starttimeeUTC.length; i++) 
-                 {
-                    starttimeeUTC[i].innerHTML= "(UTC " + countryUtcOffset + ")";
-                 }              
+                const starttimeeUTC = document.querySelectorAll(".eUTC");
+                for (let i = 0; i < starttimeeUTC.length; i++) {
+                    starttimeeUTC[i].innerHTML = "(UTC " + countryUtcOffset + ")";
+                }
 
                 //  document.getElementsByClassName("countryName").innerHTML=countryCode;
-               
+
                 const [countryUtcOffset1, hour1, min1] = calcTime(geteventEnd, startEventCountry);
 
                 const endtimeList = document.querySelectorAll(".endtime");
                 for (let i = 0; i < endtimeList.length; i++) {
-                    endtimeList[i].innerHTML= hour1 + ":" + min1; 
+                    endtimeList[i].innerHTML = hour1 + ":" + min1;
                 }
 
 
-                 const endtimeeUTC = document.querySelectorAll(".eUTC");
-                 for (let i = 0; i < endtimeeUTC.length; i++) 
-                 {
-                    endtimeeUTC[i].innerHTML= "(UTC " + countryUtcOffset1 + ")";
-                 }
+                const endtimeeUTC = document.querySelectorAll(".eUTC");
+                for (let i = 0; i < endtimeeUTC.length; i++) {
+                    endtimeeUTC[i].innerHTML = "(UTC " + countryUtcOffset1 + ")";
+                }
 
-                 document.getElementsByClassName("countryName")[0].innerHTML="("+ countryCode +")";
+                document.getElementsByClassName("countryName")[0].innerHTML = "(" + countryCode + ")";
+                eventBrowser.innerHTML = "browser";
 
             } else {
-              
-               
+
+
 
                 // console.log(startEventCountry);
 
-                 document.getElementsByClassName("countryName")[0].innerHTML="("+ startEventCountry +")";
+                document.getElementsByClassName("countryName")[0].innerHTML = "(" + startEventCountry + ")";
 
                 const starttimeListOne = document.querySelectorAll(".starttime");
                 for (let i = 0; i < starttimeListOne.length; i++) {
-                    starttimeListOne[i].innerHTML= starttime; 
+                    starttimeListOne[i].innerHTML = starttime;
                 }
 
                 const timeeUTC = document.querySelectorAll(".eUTC");
-                 for (let i = 0; i < timeeUTC.length; i++) 
-                 {
-                    timeeUTC[i].innerHTML= "(UTC "+ getUTC +")";
-                 }
+                for (let i = 0; i < timeeUTC.length; i++) {
+                    timeeUTC[i].innerHTML = "(UTC " + getUTC + ")";
+                }
 
-                 const endtimeeListTwo = document.querySelectorAll(".endtime");
-                 for (let i = 0; i < endtimeeListTwo.length; i++) 
-                 {
-                    endtimeeListTwo[i].innerHTML= endtime;
-                 }               
+                const endtimeeListTwo = document.querySelectorAll(".endtime");
+                for (let i = 0; i < endtimeeListTwo.length; i++) {
+                    endtimeeListTwo[i].innerHTML = endtime;
+                }
+
+                eventBrowser.innerHTML = "event"
 
             }
         }
