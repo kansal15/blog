@@ -376,7 +376,7 @@
                                         <input type="hidden" value="2024-06-05 9:00" placeholder="YYYY-MM-DD HH:MM"
                                             id="geteventStart">
                                         <input type="hidden" value="Asia/Ho_Chi_Minh" id="geteventStartCountry">
-                                        <input type="hidden" value="+06.50" id="geteventCountryUTC">
+                                        <input type="hidden" value="+06:50" id="geteventCountryUTC">
                                         <span class="eUTC"></span>
                                     </i>
                                 </p>
@@ -1011,7 +1011,7 @@
             const countryCode = timeZone;
 
             var countryUtcOffset = moment.tz(countryCode).format('Z');
-            console.log("UTC Offset for " + countryCode + ": " + countryUtcOffset);
+            // console.log("UTC Offset for " + countryCode + "- " + countryUtcOffset);
 
             var eventTime = new Date(countryDateformat);
             var eventTimeZone = countryCode; // Timezone of the event, change as needed
