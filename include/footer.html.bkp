@@ -3,13 +3,13 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
-            <a href="/index.html"><img src="/images/logo.png" alt="blogImg" class="img-fluid" "></a>
+            <a href="index.html"><img src="/images/logo.png" alt="blogImg" class="img-fluid" "></a>
           </div>
           <div class="col-md-4 col-sm-6 mb-4 mb-md-0 ">
             <h6>Contact Info</h6>
             <ul class="list-unstyled">
               <li class="font-secondary"><b>Address:</b> New Delhi, IN</li>
-              <li class="font-secondary"><b>Mail:</b> contact@gauravkansal.in</li>
+              <li class="font-secondary"><b>Mail:</b> gaurav.kansal@nic.in</li>
             </ul>
           </div>
           <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
@@ -23,6 +23,6 @@
       </div>
     </div>
     <div class="text-center pb-1">
-      <p><b class="mb-0">© 2019-2024 Gaurav Kansal. All rights reserved</b></p>
+      <p><b class="mb-0">© 2019-2023 Gaurav Kansal. All rights reserved</b></p>
     </div>
   </footer>
