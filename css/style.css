@@ -1813,6 +1813,72 @@ h6 p{
   max-width: 700px;
   max-height: 320px;
 }
+
+/* event-update page css */
+.overlay-bg {
+  background-image: url(../images/network-line.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: block;
+  position: relative;
+}
+
+.overlay-shadow {
+  background-color: rgb(237 237 237 / 80%);
+  width: 100%;
+  height: 100%;
+  padding: 30px 0;
+  box-shadow: 1px 3px 2px rgb(171 182 191 / 20%);
+}
+
+.eventHeading {
+  color: #d58753;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+
+.trainerSection .nav-link,
+.courseDetails .nav-link {
+  min-width: 250px;
+  color: #373737;
+  border: 1px solid gray;
+  margin-bottom: 10px;
+  box-shadow: 1px 3px 5px #dbdbdb;
+}
+
+.trainerSection .nav-pills .nav-link.active,
+.trainerSection .nav-pills .show>.nav-link,
+.courseDetails .nav-pills .nav-link.active,
+.courseDetails .nav-pills .show>.nav-link {
+  background-color: #d58753;
+  border: 1px solid #d58753;
+}
+.trainerSection .nav-pills .nav-link.active,
+.trainerSection .nav-pills .show>.nav-link,
+.courseDetails .nav-pills .nav-link.active,
+.courseDetails .nav-pills .show>.nav-link:hover {
+color: #fff !important;
+}
+.trainerSection .tab-content>.active,
+.courseDetails .tab-content>.active {
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: 1px solid #e2c3a3;
+  box-shadow: 1px 3px 5px #dbdbdb;
+}
+table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.table-event {
+  background-color: transparent !important;
+}
+table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.table-event {
+  background-color: transparent !important;
+}
+
+
+
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .title-border-lg::before {
     position: absolute;
