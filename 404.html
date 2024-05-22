@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+
+    <!-- Main Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.jpg" />
+
+
+    <link href="css/fontawesome/css/all.min.css" rel="stylesheet" />
+    <style>
+      * {
+  margin:0px auto;
+  padding: 0px;
+text-align:center;
+}
+body {
+  background-color: #D4D9ED;
+}
+.cont_principal {
+position: absolute;  
+  width: 100%;
+  height: 100%;
+overflow: hidden;
+}
+.cont_error {
+position: absolute;
+  width: 100%;
+  height: 300px;
+  top: 50%;
+  margin-top:-150px;
+}
+
+.cont_error > h1  {
+ font-family: 'Lato', sans-serif;  
+font-weight: 400;
+  font-size:150px;
+color:#fff;
+position: relative;
+left:-100%;
+transition: all 0.5s;
+}
+
+
+.cont_error > p  {
+ font-family: 'Lato', sans-serif;  
+font-weight: 300;
+  font-size:24px;
+  letter-spacing: 5px;
+color:#9294AE;
+position: relative;
+left:100%;
+transition: all 0.5s;
+    transition-delay: 0.5s;
+-webkit-transition: all 0.5s;
+ -webkit-transition-delay: 0.5s;
+}
+
+.cont_aura_1 {
+  position:absolute;
+  width:300px;
+  height: 120%;
+top:25px;
+right: -340px;
+  background-color: #8A65DF;
+box-shadow: 0px 0px  60px  20px  rgba(137,100,222,0.5);
+-webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.cont_aura_2 {
+  position:absolute;
+  width:100%;
+  height: 300px;
+right:-10%;
+bottom:-301px;
+ background-color: #8B65E4;
+box-shadow: 0px 0px 60px 10px rgba(131, 95, 214, 0.5),0px 0px  20px  0px  rgba(0,0,0,0.1);
+  z-index:5;
+transition: all 0.5s;
+-webkit-transition: all 0.5s;
+}
+
+.cont_error_active > .cont_error > h1 {
+  left:0%;
+}
+.cont_error_active > .cont_error > p {
+  left:0%;
+}
+
+.cont_error_active > .cont_aura_2 {
+    animation-name: animation_error_2;
+    animation-duration: 4s;
+  animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+transform: rotate(-20deg);    
+}
+.cont_error_active > .cont_aura_1 {
+ transform: rotate(20deg);
+  right:-170px;
+    animation-name: animation_error_1;
+    animation-duration: 4s;
+  animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@-webkit-keyframes animation_error_1 {
+  from {
+    -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+  }
+  to {  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
+  }
+}
+@-o-keyframes animation_error_1 {
+  from {
+    -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+  }
+  to {  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
+  }
+
+}
+@-moz-keyframes animation_error_1 {
+  from {
+    -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+  }
+  to {  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
+  }
+
+}
+@keyframes animation_error_1 {
+  from {
+    -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+  }
+  to {  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
+  }
+}
+
+
+
+
+@-webkit-keyframes animation_error_2 {
+  from { -webkit-transform: rotate(-15deg); 
+  transform: rotate(-15deg);
+  }
+  to { -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  }
+}
+@-o-keyframes animation_error_2 {
+  from { -webkit-transform: rotate(-15deg); 
+  transform: rotate(-15deg);
+  }
+  to { -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  }
+}
+
+@-moz-keyframes animation_error_2 {
+  from { -webkit-transform: rotate(-15deg); 
+  transform: rotate(-15deg);
+  }
+  to { -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  }
+}
+@keyframes animation_error_2 {
+  from { -webkit-transform: rotate(-15deg); 
+  transform: rotate(-15deg);
+  }
+  to { -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  }
+}
+.back-home{
+  display: inline-block;
+  border: 2px solid #222;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.75rem 1rem 0.6rem;
+  transition: all 0.2s linear;
+  box-shadow: 0 15px 15px -11px rgba(0,0,0, 0.4);
+  background: #222;
+  border-radius: 6px;
+}
+    </style>
+  </head>
+
+  <body>
+    <div class="blogcontainer__root">
+     
+     <div class="cont_principal">
+<div class="cont_error">
+  
+<h1>404</h1>  
+  <p>Page not found</p>
+  <button><a class="back-home" href="https://blog.gauravkansal.in/index.html">Back to home</a></button>
+  </div>
+<div class="cont_aura_1"></div>
+<div class="cont_aura_2"></div>
+
+</div>
+    
+      
+     
+    </div>
+    <!-- jQuery -->
+    <script src="plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+
+    <script>
+        window.onload = function(){
+document.querySelector('.cont_principal').className= "cont_principal cont_error_active";  
+  
+}
+    </script>
+  </body>
+</html>
