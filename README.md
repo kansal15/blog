@@ -17,7 +17,7 @@
 <p align="left">
 <a href="https://twitter.com/kansal15" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="kansal15" height="30" width="40" /></a>
 <a href="https://linkedin.com/in/gaurav-kansal" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="gaurav-kansal" height="30" width="40" /></a>
-<a href="/https://rss.app/feeds/ujwu2knmx2nqbwk5.xml" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="https://rss.app/feeds/ujwu2knmx2nqbwk5.xml" height="30" width="40" /></a>
+<a href="https://rss.app/feeds/ujwu2knmx2nqbwk5.xml" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="https://rss.app/feeds/ujwu2knmx2nqbwk5.xml" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
