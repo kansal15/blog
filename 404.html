@@ -12,13 +12,8 @@
     <!-- ** Plugins Needed for the Project ** -->
     <!-- Bootstrap -->
     <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
-
-    <!-- Main Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
     <!--Favicon-->
     <link rel="icon" type="image/png" href="images/favicon.jpg" />
-
-
     <link href="css/fontawesome/css/all.min.css" rel="stylesheet" />
     <style>
       * {
@@ -27,80 +22,78 @@
 text-align:center;
 }
 body {
-  background-color: #D4D9ED;
+  background-color: #f7eadb;
 }
-.cont_principal {
+.error-page {
 position: absolute;  
   width: 100%;
   height: 100%;
 overflow: hidden;
 }
-.cont_error {
+.content_error {
 position: absolute;
   width: 100%;
   height: 300px;
   top: 50%;
-  margin-top:-150px;
+  margin-top:-235px;
 }
 
-.cont_error > h1  {
- font-family: 'Lato', sans-serif;  
-font-weight: 400;
-  font-size:150px;
-color:#fff;
-position: relative;
-left:-100%;
-transition: all 0.5s;
+.content_error > h1  {
+  font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 200px;
+    color: #d5af86;
+    position: relative;
+    left: -100%;
+    transition: all 0.5s;
 }
 
-
-.cont_error > p  {
- font-family: 'Lato', sans-serif;  
-font-weight: 300;
-  font-size:24px;
-  letter-spacing: 5px;
-color:#9294AE;
-position: relative;
-left:100%;
-transition: all 0.5s;
+.content_error > p  {
+  font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    letter-spacing: 1px;
+    color: #c57c2f;
+    position: relative;
+    left: 100%;
+    margin-bottom: 2rem;
+    transition: all 0.5s;
     transition-delay: 0.5s;
--webkit-transition: all 0.5s;
- -webkit-transition-delay: 0.5s;
+    -webkit-transition: all 0.5s;
+    -webkit-transition-delay: 0.5s;
 }
-
-.cont_aura_1 {
+.cont_blog_1 {
   position:absolute;
   width:300px;
   height: 120%;
 top:25px;
 right: -340px;
-  background-color: #8A65DF;
-box-shadow: 0px 0px  60px  20px  rgba(137,100,222,0.5);
+background-color: #e0a96e;
+    box-shadow: 0px 0px 60px 5px #dcab77;
 -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
-.cont_aura_2 {
+.cont_blog_2 {
   position:absolute;
   width:100%;
   height: 300px;
 right:-10%;
-bottom:-301px;
- background-color: #8B65E4;
-box-shadow: 0px 0px 60px 10px rgba(131, 95, 214, 0.5),0px 0px  20px  0px  rgba(0,0,0,0.1);
+bottom:-355px;
+background-color: #dcab77;
+    box-shadow: 0px 0px 60px 5px #cc9f70;
   z-index:5;
 transition: all 0.5s;
 -webkit-transition: all 0.5s;
 }
 
-.cont_error_active > .cont_error > h1 {
+.content_error_active > .content_error > h1 {
   left:0%;
 }
-.cont_error_active > .cont_error > p {
+.content_error_active > .content_error > p {
   left:0%;
 }
 
-.cont_error_active > .cont_aura_2 {
+.content_error_active > .cont_blog_2 {
     animation-name: animation_error_2;
     animation-duration: 4s;
   animation-timing-function: linear;
@@ -108,9 +101,9 @@ transition: all 0.5s;
     animation-direction: alternate;
 transform: rotate(-20deg);    
 }
-.cont_error_active > .cont_aura_1 {
+.content_error_active > .cont_blog_1 {
  transform: rotate(20deg);
-  right:-170px;
+  right:-200px;
     animation-name: animation_error_1;
     animation-duration: 4s;
   animation-timing-function: linear;
@@ -157,9 +150,6 @@ transform: rotate(-20deg);
   }
 }
 
-
-
-
 @-webkit-keyframes animation_error_2 {
   from { -webkit-transform: rotate(-15deg); 
   transform: rotate(-15deg);
@@ -195,44 +185,42 @@ transform: rotate(-20deg);
 }
 .back-home{
   display: inline-block;
-  border: 2px solid #222;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 0.75rem 1rem 0.6rem;
-  transition: all 0.2s linear;
-  box-shadow: 0 15px 15px -11px rgba(0,0,0, 0.4);
-  background: #222;
-  border-radius: 6px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+    transition: all 0.2s linear;
+    box-shadow: 0 15px 15px -11px rgba(0, 0, 0, 0.4);
+    background: #a76a29;
+    border-radius: 25px;
+    font-size: 12px;
+    text-decoration: none;
+}
+.back-home:hover{
+  color: #ffffff;
 }
     </style>
   </head>
 
   <body>
-    <div class="blogcontainer__root">
-     
-     <div class="cont_principal">
-<div class="cont_error">
+    <div class="blogcontainer">   
+     <div class="error-page">
+<div class="content_error">
   
 <h1>404</h1>  
   <p>Page not found</p>
-  <button><a class="back-home" href="https://blog.gauravkansal.in/index.html">Back to home</a></button>
+  <button class="border-0"><a class="back-home" href="https://blog.gauravkansal.in/index.html">Back to home</a></button>
   </div>
-<div class="cont_aura_1"></div>
-<div class="cont_aura_2"></div>
+<div class="cont_blog_1"></div>
+<div class="cont_blog_2"></div>
 
 </div>
-    
-      
-     
     </div>
     <!-- jQuery -->
     <script src="plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
-
     <script>
         window.onload = function(){
-document.querySelector('.cont_principal').className= "cont_principal cont_error_active";  
-  
+document.querySelector('.error-page').className= "error-page content_error_active";  
 }
     </script>
   </body>
