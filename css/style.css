@@ -1824,7 +1824,6 @@ h6 p{
   display: block;
   position: relative;
 }
-
 .overlay-shadow {
   background-color: rgb(237 237 237 / 80%);
   width: 100%;
@@ -1832,15 +1831,9 @@ h6 p{
   padding: 30px 0;
   box-shadow: 1px 3px 2px rgb(171 182 191 / 20%);
 }
-
 .eventHeading {
   color: #d58753;
 }
-
-
-
-
-
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .title-border-lg::before {

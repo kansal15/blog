@@ -38,7 +38,6 @@
       border: 1px solid transparent;
       border-radius: 2px;
     }
-
     .dataTables_wrapper .dataTables_paginate .paginate_button.current,
     .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
       color: #333 !important;
@@ -98,40 +97,38 @@ tbody, td, tfoot, th, thead, tr {
     border-width: 0;
   }
   
-.nav-link,
-.courseDetails .nav-link {
-  min-width: 250px;
-  color: #373737;
-  border: 1px solid gray;
-  margin-bottom: 10px;
-  box-shadow: 1px 3px 5px #dbdbdb;
-}
+  .trainerSection .nav-link,
+        .courseDetails .nav-link {
+            min-width: 250px;
+            color: #373737;
+            border: 1px solid gray;
+            margin-bottom: 10px;
+            box-shadow: 1px 3px 5px #dbdbdb;
+        }
 
-.nav-pills .nav-link.active,
-.trainerSection .nav-pills .show>.nav-link,
-.courseDetails .nav-pills .nav-link.active,
-.courseDetails .nav-pills .show>.nav-link {
-  background-color: #d58753;
-  border: 1px solid #d58753;
-}
-.nav-pills .nav-link.active,
-.trainerSection .nav-pills .show>.nav-link,
-.courseDetails .nav-pills .nav-link.active,
-.courseDetails .nav-pills .show>.nav-link:hover {
-color: #fff !important;
-}
-.tab-content>.active,
-.courseDetails .tab-content>.active {
-  background-color: #f9f9f9;
-  padding: 0;
-  border-radius: 5px;
-  border: 1px solid #e2c3a3;
-  box-shadow: 1px 3px 5px #dbdbdb;
-}
+        .trainerSection .nav-pills .nav-link.active,
+        .trainerSection .nav-pills .show>.nav-link,
+        .courseDetails .nav-pills .nav-link.active,
+        .courseDetails .nav-pills .show>.nav-link {
+            background-color: #d58753;
+            border: 1px solid #d58753;
+            color:#fff !important;
+        }
+
+        .trainerSection .tab-content>.active,
+        .courseDetails .tab-content>.active {
+            background-color: #f9f9f9;
+            padding: 0;
+            border-radius: 5px;
+            border: 1px solid #e2c3a3;
+            box-shadow: 1px 3px 5px #dbdbdb;
+        }
+
+
 .dataTables_wrapper .dataTables_paginate {
   float: right;
   text-align: right;
-  padding: 1em 2em 1.5em 2em !important;
+  padding: 1em 2em 1em 2em !important;
 }
 .dataTables_wrapper .dataTables_info {
   clear: both;
@@ -436,14 +433,14 @@ table.dataTable thead th, table.dataTable tfoot th {
     <div class="container">
       <div class="row">
         <div class="col-lg-12 mt-5 mb-5">
-          <div class="courseDetails">
+          <div class="courseDetails trainerSection">
             <!-- Centered Tabs -->
             <ul class="nav nav-pills" role="tablist">
               <li class="nav-item me-2">
-                <a class="nav-link active currentTabs" data-bs-toggle="pill" href="#courseOverview">Upcoming Events</a>
+                <a class="nav-link eventNav active currentTabs" data-bs-toggle="pill" href="#courseOverview">Upcoming Events</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link pastTabs" data-bs-toggle="pill" href="#courseMaterials">Past Events</a>
+                <a class="nav-link eventNav pastTabs" data-bs-toggle="pill" href="#courseMaterials">Past Events</a>
               </li>
             </ul>
             <!-- Centered Pills -->
@@ -1200,6 +1197,7 @@ table.dataTable thead th, table.dataTable tfoot th {
   <script src="js/script.js" crossorigin="anonymous"></script>
 
   <script>
+    // tabs change content
     jQuery(document).ready(function($){
 	$('.currentTabs').click(function(){
 		$('.showCurrentEvent').show();
@@ -1211,8 +1209,7 @@ table.dataTable thead th, table.dataTable tfoot th {
 	});
 });
 
-
-
+// event icon change
     $(document).ready(function () {
       $("#event-table").DataTable({
         order: [[2, "desc"]],
