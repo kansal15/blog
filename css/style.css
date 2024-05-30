@@ -2034,6 +2034,16 @@ h4, .h4 {
     margin: 0 auto;
     text-align: center;
   }
+/* .webScreen{
+  display: none;
+}
+.mobileScreen{
+  display: block;
+} */
+
+
+
+
 }
 @media only screen and (max-width: 320px) {
   .rgt-block {
