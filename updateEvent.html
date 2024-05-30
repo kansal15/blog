@@ -10,14 +10,15 @@
   <!-- ** Plugins Needed for the Project ** -->
   <!-- Bootstrap -->
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+
   <!-- slick slider -->
   <link rel="stylesheet" href="plugins/slick/slick.css" />
   <!-- themefy-icon -->
   <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
   <!-- Main Stylesheet -->
   <link href="css/style.css" rel="stylesheet" />
-  <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
-  <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet" />
+  <link href="css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link href="css/responsive.dataTables.min.css" rel="stylesheet" />
 
   <!--Favicon-->
   <link rel="icon" type="image/png" href="images/favicon.jpg" />
@@ -38,6 +39,7 @@
       border: 1px solid transparent;
       border-radius: 2px;
     }
+
     .dataTables_wrapper .dataTables_paginate .paginate_button.current,
     .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
       color: #333 !important;
@@ -69,14 +71,21 @@
       background: -ms-linear-gradient(top, #585858 0%, #111 100%);
       background: -o-linear-gradient(top, #585858 0%, #111 100%);
       background: linear-gradient(to bottom, #e19653 0%, #d88753 100%);
-    } 
-    .tab-content{
+    }
+
+    .tab-content {
       position: relative;
       top: 15px;
     }
-    table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting_asc_disabled, table.dataTable thead .sorting_desc_disabled {
-    background-position: center;
-}
+
+    table.dataTable thead .sorting,
+    table.dataTable thead .sorting_asc,
+    table.dataTable thead .sorting_desc,
+    table.dataTable thead .sorting_asc_disabled,
+    table.dataTable thead .sorting_desc_disabled {
+      background-position: 100px;
+    }
+
     table.dataTable thead .sorting_desc {
       background-image: url(./images/sort_desc.png);
     }
@@ -84,68 +93,83 @@
     table.dataTable thead .sorting_asc {
       background-image: url(./images/sort_asc.png);
     }
+
     table.dataTable.no-footer {
-    border-bottom: 1.5px solid #e2c3a3;
-}
-table.dataTable thead th, table.dataTable thead td {
-    padding: 10px 10px;
-    border-bottom:  1.5px solid #e2c3a3;
-}
-tbody, td, tfoot, th, thead, tr {
-    border-color: #fff2e5;
-    border-style: solid;
-    border-width: 0;
-  }
-  
-  .trainerSection .nav-link,
-        .courseDetails .nav-link {
-            min-width: 250px;
-            color: #373737;
-            border: 1px solid gray;
-            margin-bottom: 10px;
-            box-shadow: 1px 3px 5px #dbdbdb;
-        }
+      border-bottom: 1.5px solid #e2c3a3;
+    }
 
-        .trainerSection .nav-pills .nav-link.active,
-        .trainerSection .nav-pills .show>.nav-link,
-        .courseDetails .nav-pills .nav-link.active,
-        .courseDetails .nav-pills .show>.nav-link {
-            background-color: #d58753;
-            border: 1px solid #d58753;
-            color:#fff !important;
-        }
+    table.dataTable thead th,
+    table.dataTable thead td {
+      padding: 10px 10px;
+      border-bottom: 1.5px solid #e2c3a3;
+    }
 
-        .trainerSection .tab-content>.active,
-        .courseDetails .tab-content>.active {
-            background-color: #f9f9f9;
-            padding: 0;
-            border-radius: 5px;
-            border: 1px solid #e2c3a3;
-            box-shadow: 1px 3px 5px #dbdbdb;
-        }
+    tbody,
+    td,
+    tfoot,
+    th,
+    thead,
+    tr {
+      border-color: #fff2e5;
+      border-style: solid;
+      border-width: 0;
+    }
+
+    .trainerSection .nav-link,
+    .courseDetails .nav-link {
+      min-width: 250px;
+      color: #373737;
+      border: 1px solid gray;
+      margin-bottom: 10px;
+      box-shadow: 1px 3px 5px #dbdbdb;
+    }
+
+    .trainerSection .nav-pills .nav-link.active,
+    .trainerSection .nav-pills .show>.nav-link,
+    .courseDetails .nav-pills .nav-link.active,
+    .courseDetails .nav-pills .show>.nav-link {
+      background-color: #d58753;
+      border: 1px solid #d58753;
+      color: #fff !important;
+    }
+
+    .trainerSection .tab-content>.active,
+    .courseDetails .tab-content>.active {
+      background-color: #f9f9f9;
+      padding: 0;
+      border-radius: 5px;
+      border: 1px solid #e2c3a3;
+      box-shadow: 1px 3px 5px #dbdbdb;
+    }
 
 
-.dataTables_wrapper .dataTables_paginate {
-  float: right;
-  text-align: right;
-  padding: 1em 2em 1em 2em !important;
-}
-.dataTables_wrapper .dataTables_info {
-  clear: both;
-  float: left;
-  padding: 1.5em 2em 1em 2em !important;
-}
-table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
-  background-color: #ffffff !important;
-}
-table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
-  background-color: #ffffff !important;
-}
-table.dataTable thead th, table.dataTable tfoot th {
-    font-weight: bold;
-    color: #d58753;
-    font-size: 16px;
-}
+    .dataTables_wrapper .dataTables_paginate {
+      padding: 1em 2em 1em 2em !important;
+    }
+
+    .dataTables_wrapper .dataTables_info {
+      clear: both;
+      float: left;
+      padding: 1.5em 2em 1em 2em !important;
+    }
+
+    table.dataTable.display tbody tr.odd>.sorting_1,
+    table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+      background-color: #ffffff !important;
+    }
+
+    table.dataTable.display tbody tr.even>.sorting_1,
+    table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
+      background-color: #ffffff !important;
+    }
+
+    table.dataTable thead th,
+    table.dataTable tfoot th {
+      font-weight: bold;
+      color: #d58753;
+      font-size: 16px;
+    }
+
     #event-table .spndisb {
       display: none;
     }
@@ -158,12 +182,15 @@ table.dataTable thead th, table.dataTable tfoot th {
     .con-tooltip {
       position: relative;
       background: #efe6df;
+      /* width: 100%; */
       border-radius: 9px;
-      padding: 8px 20px;
+      padding: 5px 15px;
       margin: 0;
       display: inline-block;
       transition: all 0.3s ease-in-out;
       cursor: default;
+      font-size: 12px;
+      font-weight: 600;
     }
 
     /*tooltip */
@@ -182,6 +209,7 @@ table.dataTable thead th, table.dataTable tfoot th {
       font: 16px;
       transition: all 0.3s ease-in-out;
       box-shadow: 0 0 3px rgba(56, 54, 54, 0.86);
+      text-align: center;
     }
 
     .tooltip-event p {
@@ -328,34 +356,104 @@ table.dataTable thead th, table.dataTable tfoot th {
     [tooltip][flow^="down"]:hover::after {
       animation: tooltips-vert 300ms ease-out forwards;
     }
+
     .showPastEvent {
-    display: none;
-}
+      display: none;
+    }
 
+    .eventBox {
+      animation: circle 3s infinite;
+      background: #da9353;
+      clip-path: circle(75%);
+      height: 100px;
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: 22px;
+      color: antiquewhite;
+    }
 
-.eventBox {
-  animation: circle 3s infinite;
-    background: #da9353;
-    clip-path: circle(75%);
-    height: 100px;
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    font-size: 22px;
-    color: antiquewhite;
-}
+    @keyframes circle {
+      0% {
+        clip-path: circle(75%);
+      }
 
-@keyframes circle {
-  0% { clip-path: circle(75%); }
-  50% { clip-path: circle(25%); }
-  100% { clip-path: circle(75%); }
-}
-.eventText{
-  padding: 0px 20px;
-    margin: 13px 0;
-}
+      50% {
+        clip-path: circle(25%);
+      }
+
+      100% {
+        clip-path: circle(75%);
+      }
+    }
+
+    .eventText {
+      padding: 0px 20px;
+      margin: 13px 0;
+    }
+
+    table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before,
+    table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before {
+      background-color: #d58753;
+    }
+
+    .icon-course-type {
+      width: 20px;
+      margin: 0 6px;
+    }
+
+    .upcoming-dt {
+      display: inline-block;
+    }
+
+    @media only screen and (min-width: 320px) and (max-width:767px) {
+      .tab-content {
+        font-size: 9px;
+      }
+
+      .icon-course-type {
+        width: 12px;
+      }
+
+      .con-tooltip {
+        display: flex;
+        padding: 9px 9px;
+        font-size: 9px;
+      }
+
+      .tooltip-event {
+        width: 132px;
+        font-size: 10px;
+        padding: 10px 10px;
+      }
+
+      table.dataTable.nowrap th,
+      table.dataTable.nowrap td {
+
+        font-size: 12px;
+      }
+
+      .right .tooltip::after {
+        top: 85%;
+        left: 40%;
+        transform: rotate(359deg);
+      }
+
+      .right .tooltip {
+        top: -200%;
+        left: 0%;
+      }
+
+      .dataTables_wrapper .dataTables_paginate {
+        margin-top: 0;
+      }
+
+      .dataTables_wrapper .dataTables_paginate {
+        padding: 1em 0em 1em 0em !important;
+      }
+    }
   </style>
 </head>
 
@@ -404,7 +502,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                     Register for a range of upcoming online, face-to-face and hybrid events.
                   </h6>
                 </div>
-              </div> 
+              </div>
             </div>
           </div>
         </main>
@@ -422,8 +520,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                   </h6>
                 </div>
               </div>
-              
-             
+
             </div>
           </div>
         </main>
@@ -437,7 +534,8 @@ table.dataTable thead th, table.dataTable tfoot th {
             <!-- Centered Tabs -->
             <ul class="nav nav-pills" role="tablist">
               <li class="nav-item me-2">
-                <a class="nav-link eventNav active currentTabs" data-bs-toggle="pill" href="#courseOverview">Upcoming Events</a>
+                <a class="nav-link eventNav active currentTabs" data-bs-toggle="pill" href="#courseOverview">Upcoming
+                  Events</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link eventNav pastTabs" data-bs-toggle="pill" href="#courseMaterials">Past Events</a>
@@ -447,13 +545,13 @@ table.dataTable thead th, table.dataTable tfoot th {
             <!-- Tab panes -->
             <div class="tab-content">
               <div id="courseOverview" class="container tab-pane active">
-              
+
                 <table class="table event-data display responsive nowrap" id="event-table" style="width: 100%">
                   <thead>
                     <tr>
                       <th data-orderable="false">Event Type</th>
                       <th data-orderable="false">Event Name</th>
-                      <th>Event Date</th>
+                      <th data-priority="1">Event Date</th>
                       <th data-orderable="false">Duration</th>
                       <th data-orderable="false">Delivery</th>
                       <th data-orderable="false">Registration</th>
@@ -463,9 +561,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                     <tr>
                       <td class="table-event">
                         <div class="con-tooltip right">
-                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon"
-                            style="width: 25px" />
-                          Workshop
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />Workshop
                           <div class="tooltip tooltip-event">
                             <p>
                               Face-to-face course that covers theory and labs
@@ -478,7 +574,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                       <td>1 days</td>
                       <td>Face to Face</td>
                       <td>
-                        <div>
+                        <div class="upcoming-dt">
                           <span tooltip="Registration link coming soon">Coming Soon</span>
                         </div>
                       </td>
@@ -486,8 +582,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                     <tr>
                       <td class="table-event">
                         <div class="con-tooltip right">
-                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                            style="width: 30px" />
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
                           Workshop
                           <div class="tooltip tooltip-event">
                             <p>
@@ -501,7 +596,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                       <td>2 days</td>
                       <td>Face to Face</td>
                       <td>
-                        <div>
+                        <div class="upcoming-dt">
                           <span tooltip="Registration link coming soon">Coming Soon</span>
                         </div>
                       </td>
@@ -509,8 +604,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                     <tr>
                       <td class="table-event">
                         <div class="con-tooltip right">
-                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                            style="width: 30px" />
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
                           Workshop
                           <div class="tooltip tooltip-event">
                             <p>
@@ -524,7 +618,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                       <td>3 days</td>
                       <td>Face to Face</td>
                       <td>
-                        <div>
+                        <div class="upcoming-dt">
                           <span tooltip="Registration link coming soon">Coming Soon</span>
                         </div>
                       </td>
@@ -532,8 +626,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                     <tr>
                       <td class="table-event">
                         <div class="con-tooltip right">
-                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                            style="width: 30px" />
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
                           Workshop
                           <div class="tooltip tooltip-event">
                             <p>
@@ -547,7 +640,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                       <td>4 days</td>
                       <td>Face to Face</td>
                       <td>
-                        <div>
+                        <div class="upcoming-dt">
                           <span tooltip="Registration link coming soon">Coming Soon</span>
                         </div>
                       </td>
@@ -555,8 +648,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                     <tr>
                       <td class="table-event">
                         <div class="con-tooltip right">
-                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                            style="width: 30px" />
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
                           Workshop
                           <div class="tooltip tooltip-event">
                             <p>
@@ -570,7 +662,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                       <td>5 days</td>
                       <td>Face to Face</td>
                       <td>
-                        <div>
+                        <div class="upcoming-dt">
                           <span tooltip="Registration link coming soon">Coming Soon</span>
                         </div>
                       </td>
@@ -578,8 +670,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                     <tr>
                       <td class="table-event">
                         <div class="con-tooltip right">
-                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                            style="width: 30px" />
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
                           Workshop
                           <div class="tooltip tooltip-event">
                             <p>
@@ -593,7 +684,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                       <td>6 days</td>
                       <td>Face to Face</td>
                       <td>
-                        <div>
+                        <div class="upcoming-dt">
                           <span tooltip="Registration link coming soon">Coming Soon</span>
                         </div>
                       </td>
@@ -601,8 +692,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                     <tr>
                       <td class="table-event">
                         <div class="con-tooltip right">
-                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                            style="width: 30px" />
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
                           Workshop
                           <div class="tooltip tooltip-event">
                             <p>
@@ -616,7 +706,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                       <td>7 days</td>
                       <td>Face to Face</td>
                       <td>
-                        <div>
+                        <div class="upcoming-dt">
                           <span tooltip="Registration link coming soon">Coming Soon</span>
                         </div>
                       </td>
@@ -624,8 +714,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                     <tr>
                       <td class="table-event">
                         <div class="con-tooltip right">
-                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                            style="width: 30px" />
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
                           Workshop
                           <div class="tooltip tooltip-event">
                             <p>
@@ -639,7 +728,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                       <td>8 days</td>
                       <td>Face to Face</td>
                       <td>
-                        <div>
+                        <div class="upcoming-dt">
                           <span tooltip="Registration link coming soon">Coming Soon</span>
                         </div>
                       </td>
@@ -647,8 +736,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                     <tr>
                       <td class="table-event">
                         <div class="con-tooltip right">
-                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                            style="width: 30px" />
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
                           Workshop
                           <div class="tooltip tooltip-event">
                             <p>
@@ -662,7 +750,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                       <td>9 days</td>
                       <td>Face to Face</td>
                       <td>
-                        <div>
+                        <div class="upcoming-dt">
                           <span tooltip="Registration link coming soon">Coming Soon</span>
                         </div>
                       </td>
@@ -670,8 +758,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                     <tr>
                       <td class="table-event">
                         <div class="con-tooltip right">
-                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                            style="width: 30px" />
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
                           Workshop
                           <div class="tooltip tooltip-event">
                             <p>
@@ -687,7 +774,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                       <td>10 days</td>
                       <td>Face to Face</td>
                       <td>
-                        <div>
+                        <div class="upcoming-dt">
                           <span tooltip="Registration link coming soon">Coming Soon</span>
                         </div>
                       </td>
@@ -695,8 +782,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                     <tr>
                       <td class="table-event">
                         <div class="con-tooltip right">
-                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                            style="width: 30px" />
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
                           Workshop
                           <div class="tooltip tooltip-event">
                             <p>
@@ -712,7 +798,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                       <td>11 days</td>
                       <td>Face to Face</td>
                       <td>
-                        <div>
+                        <div class="upcoming-dt">
                           <span tooltip="Registration link coming soon">Coming Soon</span>
                         </div>
                       </td>
@@ -720,8 +806,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                     <tr>
                       <td class="table-event">
                         <div class="con-tooltip right">
-                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                            style="width: 30px" />
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
                           Workshop
                           <div class="tooltip tooltip-event">
                             <p>
@@ -737,7 +822,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                       <td>12 days</td>
                       <td>Face to Face</td>
                       <td>
-                        <div>
+                        <div class="upcoming-dt">
                           <span tooltip="Registration link coming soon">Coming Soon</span>
                         </div>
                       </td>
@@ -745,8 +830,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                     <tr>
                       <td class="table-event">
                         <div class="con-tooltip right">
-                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                            style="width: 30px" />
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
                           Workshop
                           <div class="tooltip tooltip-event">
                             <p>
@@ -762,7 +846,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                       <td>13 days</td>
                       <td>Face to Face</td>
                       <td>
-                        <div>
+                        <div class="upcoming-dt">
                           <span tooltip="Registration link coming soon">Coming Soon</span>
                         </div>
                       </td>
@@ -770,8 +854,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                     <tr>
                       <td class="table-event">
                         <div class="con-tooltip right">
-                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                            style="width: 30px" />
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
                           Workshop
                           <div class="tooltip tooltip-event">
                             <p>
@@ -787,7 +870,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                       <td>14 days</td>
                       <td>Face to Face</td>
                       <td>
-                        <div>
+                        <div class="upcoming-dt">
                           <span tooltip="Registration link coming soon">Coming Soon</span>
                         </div>
                       </td>
@@ -795,8 +878,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                     <tr>
                       <td class="table-event">
                         <div class="con-tooltip right">
-                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                            style="width: 30px" />
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
                           Workshop
                           <div class="tooltip tooltip-event">
                             <p>
@@ -812,7 +894,7 @@ table.dataTable thead th, table.dataTable tfoot th {
                       <td>15 days</td>
                       <td>Face to Face</td>
                       <td>
-                        <div>
+                        <div class="upcoming-dt">
                           <span tooltip="Registration link coming soon">Coming Soon</span>
                         </div>
                       </td>
@@ -820,344 +902,324 @@ table.dataTable thead th, table.dataTable tfoot th {
                   </tbody>
                 </table>
               </div>
-
               <div id="courseMaterials" class="container tab-pane fade">
-            
-                  <table class="table event-data display responsive nowrap" id="event-table2" style="width: 100%">
-                    <thead>
-                      <tr>
-                        <th data-orderable="false">Event Type</th>
-                        <th data-orderable="false">Event Name</th>
-                        <th>Event Date</th>
-                        <th data-orderable="false">Delivery</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="table-event">
-                          <div class="con-tooltip right">
-                            <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon"
-                              style="width: 25px" />
-                            Workshop
-                            <div class="tooltip tooltip-event">
-                              <p>
-                                Face-to-face course that covers theory and
-                                labs
-                              </p>
-                            </div>
+                <table class="table event-data display responsive nowrap" id="event-table2" style="width: 100%">
+                  <thead>
+                    <tr>
+                      <th data-orderable="false">Event Type</th>
+                      <th data-orderable="false">Event Name</th>
+                      <th data-priority="1">Event Date</th>
+                      <th data-orderable="false">Delivery</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="table-event">
+                        <div class="con-tooltip right">
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
+                          Workshop
+                          <div class="tooltip tooltip-event">
+                            <p>
+                              Face-to-face course that covers theory and
+                              labs
+                            </p>
                           </div>
-                        </td>
-                        <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
-                        <td>
-                          <span class="spndisb">20240901</span>1-Sep-2024
-                        </td>
+                        </div>
+                      </td>
+                      <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
+                      <td>
+                        <span class="spndisb">20240901</span>1-Sep-2024
+                      </td>
 
-                        <td>Face to Face</td>
-                      </tr>
-                      <tr>
-                        <td class="table-event">
-                          <div class="con-tooltip right">
-                            <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                              style="width: 30px" />
-                            Workshop
-                            <div class="tooltip tooltip-event">
-                              <p>
-                                Face-to-face course that covers theory and
-                                labs
-                              </p>
-                            </div>
+                      <td>Face to Face</td>
+                    </tr>
+                    <tr>
+                      <td class="table-event">
+                        <div class="con-tooltip right">
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
+                          Workshop
+                          <div class="tooltip tooltip-event">
+                            <p>
+                              Face-to-face course that covers theory and
+                              labs
+                            </p>
                           </div>
-                        </td>
-                        <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
-                        <td>
-                          <span class="spndisb">20240902</span>2-Sep-2024
-                        </td>
+                        </div>
+                      </td>
+                      <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
+                      <td>
+                        <span class="spndisb">20240902</span>2-Sep-2024
+                      </td>
 
-                        <td>Face to Face</td>
-                      </tr>
-                      <tr>
-                        <td class="table-event">
-                          <div class="con-tooltip right">
-                            <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                              style="width: 30px" />
-                            Workshop
-                            <div class="tooltip tooltip-event">
-                              <p>
-                                Face-to-face course that covers theory and
-                                labs
-                              </p>
-                            </div>
+                      <td>Face to Face</td>
+                    </tr>
+                    <tr>
+                      <td class="table-event">
+                        <div class="con-tooltip right">
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
+                          Workshop
+                          <div class="tooltip tooltip-event">
+                            <p>
+                              Face-to-face course that covers theory and
+                              labs
+                            </p>
                           </div>
-                        </td>
-                        <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
-                        <td>
-                          <span class="spndisb">20240903</span>3-Sep-2024
-                        </td>
+                        </div>
+                      </td>
+                      <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
+                      <td>
+                        <span class="spndisb">20240903</span>3-Sep-2024
+                      </td>
 
-                        <td>Face to Face</td>
-                      </tr>
-                      <tr>
-                        <td class="table-event">
-                          <div class="con-tooltip right">
-                            <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                              style="width: 30px" />
-                            Workshop
-                            <div class="tooltip tooltip-event">
-                              <p>
-                                Face-to-face course that covers theory and
-                                labs
-                              </p>
-                            </div>
+                      <td>Face to Face</td>
+                    </tr>
+                    <tr>
+                      <td class="table-event">
+                        <div class="con-tooltip right">
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
+                          Workshop
+                          <div class="tooltip tooltip-event">
+                            <p>
+                              Face-to-face course that covers theory and
+                              labs
+                            </p>
                           </div>
-                        </td>
-                        <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
-                        <td>
-                          <span class="spndisb">20240904</span>4-Sep-2024
-                        </td>
+                        </div>
+                      </td>
+                      <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
+                      <td>
+                        <span class="spndisb">20240904</span>4-Sep-2024
+                      </td>
 
-                        <td>Face to Face</td>
-                      </tr>
-                      <tr>
-                        <td class="table-event">
-                          <div class="con-tooltip right">
-                            <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                              style="width: 30px" />
-                            Workshop
-                            <div class="tooltip tooltip-event">
-                              <p>
-                                Face-to-face course that covers theory and
-                                labs
-                              </p>
-                            </div>
+                      <td>Face to Face</td>
+                    </tr>
+                    <tr>
+                      <td class="table-event">
+                        <div class="con-tooltip right">
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
+                          Workshop
+                          <div class="tooltip tooltip-event">
+                            <p>
+                              Face-to-face course that covers theory and
+                              labs
+                            </p>
                           </div>
-                        </td>
-                        <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
-                        <td>
-                          <span class="spndisb">20240905</span>5-Sep-2024
-                        </td>
+                        </div>
+                      </td>
+                      <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
+                      <td>
+                        <span class="spndisb">20240905</span>5-Sep-2024
+                      </td>
 
-                        <td>Face to Face</td>
-                      </tr>
-                      <tr>
-                        <td class="table-event">
-                          <div class="con-tooltip right">
-                            <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                              style="width: 30px" />
-                            Workshop
-                            <div class="tooltip tooltip-event">
-                              <p>
-                                Face-to-face course that covers theory and
-                                labs
-                              </p>
-                            </div>
+                      <td>Face to Face</td>
+                    </tr>
+                    <tr>
+                      <td class="table-event">
+                        <div class="con-tooltip right">
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
+                          Workshop
+                          <div class="tooltip tooltip-event">
+                            <p>
+                              Face-to-face course that covers theory and
+                              labs
+                            </p>
                           </div>
-                        </td>
-                        <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
-                        <td>
-                          <span class="spndisb">20240906</span>6-Sep-2024
-                        </td>
+                        </div>
+                      </td>
+                      <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
+                      <td>
+                        <span class="spndisb">20240906</span>6-Sep-2024
+                      </td>
 
-                        <td>Face to Face</td>
-                      </tr>
-                      <tr>
-                        <td class="table-event">
-                          <div class="con-tooltip right">
-                            <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                              style="width: 30px" />
-                            Workshop
-                            <div class="tooltip tooltip-event">
-                              <p>
-                                Face-to-face course that covers theory and
-                                labs
-                              </p>
-                            </div>
+                      <td>Face to Face</td>
+                    </tr>
+                    <tr>
+                      <td class="table-event">
+                        <div class="con-tooltip right">
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
+                          Workshop
+                          <div class="tooltip tooltip-event">
+                            <p>
+                              Face-to-face course that covers theory and
+                              labs
+                            </p>
                           </div>
-                        </td>
-                        <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
-                        <td>
-                          <span class="spndisb">20240907</span>7-Sep-2024
-                        </td>
+                        </div>
+                      </td>
+                      <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
+                      <td>
+                        <span class="spndisb">20240907</span>7-Sep-2024
+                      </td>
 
-                        <td>Face to Face</td>
-                      </tr>
-                      <tr>
-                        <td class="table-event">
-                          <div class="con-tooltip right">
-                            <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                              style="width: 30px" />
-                            Workshop
-                            <div class="tooltip tooltip-event">
-                              <p>
-                                Face-to-face course that covers theory and
-                                labs
-                              </p>
-                            </div>
+                      <td>Face to Face</td>
+                    </tr>
+                    <tr>
+                      <td class="table-event">
+                        <div class="con-tooltip right">
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
+                          Workshop
+                          <div class="tooltip tooltip-event">
+                            <p>
+                              Face-to-face course that covers theory and
+                              labs
+                            </p>
                           </div>
-                        </td>
-                        <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
-                        <td>
-                          <span class="spndisb">20240908</span>8-Sep-2024
-                        </td>
+                        </div>
+                      </td>
+                      <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
+                      <td>
+                        <span class="spndisb">20240908</span>8-Sep-2024
+                      </td>
 
-                        <td>Face to Face</td>
-                      </tr>
-                      <tr>
-                        <td class="table-event">
-                          <div class="con-tooltip right">
-                            <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                              style="width: 30px" />
-                            Workshop
-                            <div class="tooltip tooltip-event">
-                              <p>
-                                Face-to-face course that covers theory and
-                                labs
-                              </p>
-                            </div>
+                      <td>Face to Face</td>
+                    </tr>
+                    <tr>
+                      <td class="table-event">
+                        <div class="con-tooltip right">
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
+                          Workshop
+                          <div class="tooltip tooltip-event">
+                            <p>
+                              Face-to-face course that covers theory and
+                              labs
+                            </p>
                           </div>
-                        </td>
-                        <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
-                        <td>
-                          <span class="spndisb">20240909</span>9-Sep-2024
-                        </td>
+                        </div>
+                      </td>
+                      <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
+                      <td>
+                        <span class="spndisb">20240909</span>9-Sep-2024
+                      </td>
 
-                        <td>Face to Face</td>
-                      </tr>
-                      <tr>
-                        <td class="table-event">
-                          <div class="con-tooltip right">
-                            <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                              style="width: 30px" />
-                            Workshop
-                            <div class="tooltip tooltip-event">
-                              <p>
-                                Face-to-face course that covers theory and
-                                labs
-                              </p>
-                            </div>
+                      <td>Face to Face</td>
+                    </tr>
+                    <tr>
+                      <td class="table-event">
+                        <div class="con-tooltip right">
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
+                          Workshop
+                          <div class="tooltip tooltip-event">
+                            <p>
+                              Face-to-face course that covers theory and
+                              labs
+                            </p>
                           </div>
-                        </td>
-                        <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
-                        <td>
-                          <span class="spndisb">20240910</span>10-Sep-2024
-                        </td>
+                        </div>
+                      </td>
+                      <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
+                      <td>
+                        <span class="spndisb">20240910</span>10-Sep-2024
+                      </td>
 
-                        <td>Face to Face</td>
-                      </tr>
-                      <tr>
-                        <td class="table-event">
-                          <div class="con-tooltip right">
-                            <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                              style="width: 30px" />
-                            Workshop
-                            <div class="tooltip tooltip-event">
-                              <p>
-                                Face-to-face course that covers theory and
-                                labs
-                              </p>
-                            </div>
+                      <td>Face to Face</td>
+                    </tr>
+                    <tr>
+                      <td class="table-event">
+                        <div class="con-tooltip right">
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon"/>
+                          Workshop
+                          <div class="tooltip tooltip-event">
+                            <p>
+                              Face-to-face course that covers theory and
+                              labs
+                            </p>
                           </div>
-                        </td>
-                        <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
-                        <td>
-                          <span class="spndisb">20240911</span>11-Sep-2024
-                        </td>
+                        </div>
+                      </td>
+                      <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
+                      <td>
+                        <span class="spndisb">20240911</span>11-Sep-2024
+                      </td>
 
-                        <td>Face to Face</td>
-                      </tr>
-                      <tr>
-                        <td class="table-event">
-                          <div class="con-tooltip right">
-                            <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                              style="width: 30px" />
-                            Workshop
-                            <div class="tooltip tooltip-event">
-                              <p>
-                                Face-to-face course that covers theory and
-                                labs
-                              </p>
-                            </div>
+                      <td>Face to Face</td>
+                    </tr>
+                    <tr>
+                      <td class="table-event">
+                        <div class="con-tooltip right">
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
+                          Workshop
+                          <div class="tooltip tooltip-event">
+                            <p>
+                              Face-to-face course that covers theory and
+                              labs
+                            </p>
                           </div>
-                        </td>
-                        <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
-                        <td>
-                          <span class="spndisb">20240912</span>12-Sep-2024
-                        </td>
+                        </div>
+                      </td>
+                      <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
+                      <td>
+                        <span class="spndisb">20240912</span>12-Sep-2024
+                      </td>
 
-                        <td>Face to Face</td>
-                      </tr>
-                      <tr>
-                        <td class="table-event">
-                          <div class="con-tooltip right">
-                            <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                              style="width: 30px" />
-                            Workshop
-                            <div class="tooltip tooltip-event">
-                              <p>
-                                Face-to-face course that covers theory and
-                                labs
-                              </p>
-                            </div>
+                      <td>Face to Face</td>
+                    </tr>
+                    <tr>
+                      <td class="table-event">
+                        <div class="con-tooltip right">
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon"/>
+                          Workshop
+                          <div class="tooltip tooltip-event">
+                            <p>
+                              Face-to-face course that covers theory and
+                              labs
+                            </p>
                           </div>
-                        </td>
-                        <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
-                        <td>
-                          <span class="spndisb">20240913</span>13-Sep-2024
-                        </td>
+                        </div>
+                      </td>
+                      <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
+                      <td>
+                        <span class="spndisb">20240913</span>13-Sep-2024
+                      </td>
 
-                        <td>Face to Face</td>
-                      </tr>
-                      <tr>
-                        <td class="table-event">
-                          <div class="con-tooltip right">
-                            <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                              style="width: 30px" />
-                            Workshop
-                            <div class="tooltip tooltip-event">
-                              <p>
-                                Face-to-face course that covers theory and
-                                labs
-                              </p>
-                            </div>
+                      <td>Face to Face</td>
+                    </tr>
+                    <tr>
+                      <td class="table-event">
+                        <div class="con-tooltip right">
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
+                          Workshop
+                          <div class="tooltip tooltip-event">
+                            <p>
+                              Face-to-face course that covers theory and
+                              labs
+                            </p>
                           </div>
-                        </td>
-                        <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
-                        <td>
-                          <span class="spndisb">20240914</span>14-Sep-2024
-                        </td>
+                        </div>
+                      </td>
+                      <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
+                      <td>
+                        <span class="spndisb">20240914</span>14-Sep-2024
+                      </td>
 
-                        <td>Face to Face</td>
-                      </tr>
-                      <tr>
-                        <td class="table-event">
-                          <div class="con-tooltip right">
-                            <img class="icon-course-type mr-2" src="images/event-icon.png" alt="wk icon"
-                              style="width: 30px" />
-                            Workshop
-                            <div class="tooltip tooltip-event">
-                              <p>
-                                Face-to-face course that covers theory and
-                                labs
-                              </p>
-                            </div>
+                      <td>Face to Face</td>
+                    </tr>
+                    <tr>
+                      <td class="table-event">
+                        <div class="con-tooltip right">
+                          <img class="icon-course-type mr-2" src="images/event-icon.png" alt="event icon" />
+                          Workshop
+                          <div class="tooltip tooltip-event">
+                            <p>
+                              Face-to-face course that covers theory and
+                              labs
+                            </p>
                           </div>
-                        </td>
-                        <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
-                        <td>
-                          <span class="spndisb">20240915</span>15-Sep-2024
-                        </td>
-
-                        <td>Face to Face</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                
+                        </div>
+                      </td>
+                      <td><a href="">mnNOG6 – DNS/DNSSEC Workshop</a></td>
+                      <td>
+                        <span class="spndisb">20240915</span>15-Sep-2024
+                      </td>
+                      <td>Face to Face</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <div class="bg-secondary footer-bg" id="myFooter"></div>
     <div class="progress-wrap">
       <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -1165,6 +1227,7 @@ table.dataTable thead th, table.dataTable tfoot th {
       </svg>
     </div>
   </div>
+
   <!-- jQuery -->
   <script src="plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
 
@@ -1177,10 +1240,9 @@ table.dataTable thead th, table.dataTable tfoot th {
   </script>
   <!-- Bootstrap JS -->
   <script src="plugins/bootstrap/bootstrap.min.js"></script>
-
-  <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
-  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+  <!-- datatable JS -->
+  <script src="js/jquery.dataTables.min.js"></script>
+  <script src="js/dataTables.responsive.min.js"></script>
 
   <!-- slick slider -->
   <script src="plugins/slick/slick.min.js"></script>
@@ -1198,18 +1260,18 @@ table.dataTable thead th, table.dataTable tfoot th {
 
   <script>
     // tabs change content
-    jQuery(document).ready(function($){
-	$('.currentTabs').click(function(){
-		$('.showCurrentEvent').show();
-		$('.showPastEvent').hide();
-	});
-	$('.pastTabs').click(function(){
-		$('.showPastEvent').show();
-		$('.showCurrentEvent').hide();
-	});
-});
+    jQuery(document).ready(function ($) {
+      $('.currentTabs').click(function () {
+        $('.showCurrentEvent').show();
+        $('.showPastEvent').hide();
+      });
+      $('.pastTabs').click(function () {
+        $('.showPastEvent').show();
+        $('.showCurrentEvent').hide();
+      });
+    });
 
-// event icon change
+    // event icon change
     $(document).ready(function () {
       $("#event-table").DataTable({
         order: [[2, "desc"]],
