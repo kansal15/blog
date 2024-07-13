@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Gaurav Kansal</h1>
-<h3 align="center">A passionate frontend developer from India</h3>
+<h3 align="center">A Wi-Fi enthusiast, DNS guy from India</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=kansal15&label=Profile%20views&color=0e75b6&style=flat" alt="kansal15" /> </p>
 
@@ -9,15 +9,15 @@
 
 - 📝 I regularly write articles on [https://blog.gauravkansal.in/](https://blog.gauravkansal.in/)
 
-- 💬 Ask me about **DNS, WI-FI, TLS/SSL, Networks**
+- 💬 Ask me about **DNS, Wi-Fi, TLS/SSL, Networks, Network Security**
 
 - 📫 How to reach me **contact@gauravKansal.in**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://twitter.com/kansal15" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="kansal15" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/gaurav-kansal" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="gaurav-kansal" height="30" width="40" /></a>
-<a href="https://rss.app/feeds/ujwu2knmx2nqbwk5.xml" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="https://rss.app/feeds/ujwu2knmx2nqbwk5.xml" height="30" width="40" /></a>
+<a href="https://twitter.com/kansal15" target="blank"><img align="center" src="images/icons/socialMedia/twitter.svg" alt="kansal15" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/gaurav-kansal" target="blank"><img align="center" src="images/icons/ocialMedia/linked-in-alt.svg" alt="gaurav-kansal" height="30" width="40" /></a>
+<a href="https://rss.app/feeds/ujwu2knmx2nqbwk5.xml" target="blank"><img align="center" src="images/icons/socialMedia/rss.svg" alt="https://rss.app/feeds/ujwu2knmx2nqbwk5.xml" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
