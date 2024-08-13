@@ -17,7 +17,6 @@
 <p align="left">
 <a href="https://twitter.com/kansal15" target="_blank"><img align="center" src="images/icons/socialMedia/twitter.svg" alt="kansal15" height="30" width="40" /></a>
 <a href="https://linkedin.com/in/gaurav-kansal" target="_blank"><img align="center" src="images/icons/socialMedia/linked-in-alt.svg" alt="gaurav-kansal" height="30" width="40" /></a>
-<a href="https://rss.app/feeds/ujwu2knmx2nqbwk5.xml" target="_blank"><img align="center" src="images/icons/socialMedia/rss.svg" alt="https://rss.app/feeds/ujwu2knmx2nqbwk5.xml" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
