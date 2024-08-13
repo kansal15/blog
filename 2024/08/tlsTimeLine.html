@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+
+
+    
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>SSL/TLS Progress</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> Aug 13, 2024</li>
+                            </ul>
+                          
+                            <div class="content">
+                                <h5 class="mt-0">SSL/TLS Timeline</h5>
+                                <hr/>
+                                <div class="main-timeline8">
+                                    
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">SSL v1</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">Mid 1994</h3>
+                                            <p class="description">
+                                                Original SSL protocol was developed at Netscape but due to its security flaws version 1.0 was never released.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">SSL v2</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">November 1994</h3>
+                                            <p class="description">
+                                                Netscape develops SSL v2, an encryption protocol designed to support the Web as a hot new commerce platform.This first secure protocol version shipped in Netscape Navigator 1.1 in March 1995.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">SSL v3</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">November 1995</h3>
+                                            <p class="description">
+                                                SSL v2 is shot down because of serious security issues. Consequently, Netscape scrambles to release SSLv3. 
+                                                This protocol seems good enough for now and the golden era of the Web begins. The specification was eventually published as RFC 6101.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">TLS v1.0</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">January 1999</h3>
+                                            <p class="description">
+                                                In 1996, an IETF working group is formed to standardize SSL. Even though the resulting protocol is almost identical to SSL v3, 
+                                                the process takes 3 years. TLS v1.0 is published as RFC 2246. Microsoft forces the change of protocol name to Transport Layer Security (TLS),
+                                                creating a confusion that continues to this day.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">TLS v1.2</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">April 2006</h3>
+                                            <p class="description">
+                                                A new version of TLS is released as RFC 5246, although hardly anyone notices. 
+                                                A major new feature in this version is authenticated (AEAD) encryption, which removes the need for streaming and block ciphers 
+                                                (and thus the inherently vulnerable CBC mode).
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">MD5 Weakness</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">December 2008</h3>
+                                            <p class="description">
+                                                A group of researchers led by Alex Sotirov and Marc Stevens exploit MD5 weaknesses to trick RapidSSL into effectively giving them their own CA certificate,
+                                                which they could use to issue certificates for any web site in the world. They backdate the root certificate to prevent abuse. 
+                                                MD5 is promptly retired. Full collisions in MD5 were discovered several years earlier, in 2004,
+                                                but most the world ignored the finding, eventually prompting the researchers to take action.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Insecure renegotiation</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">August 2009</h3>
+                                            <p class="description">
+                                                Marsh Ray discovers that, via renegotiation, one TCP connection can be used for two separate TLS channels. 
+                                                Critically, from the server perspective, there's only one data stream. Abuses are possible when one stream belongs to the user
+                                                and another stream belongs to the victim.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">SSLstrip</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">August 2009</h3>
+                                            <p class="description">
+                                                Moxie Marlinspike releases sslstrip to demonstrate bypassing encryption by hijacking plaintext communication and tricking end users
+                                                into believing they are safe.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">NUL byte attacks</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">August 2009</h3>
+                                            <p class="description">
+                                                At the Black Hat conference in the US, Dan Kaminsky and Moxie Marlinspike
+                                                independently demonstrate silent MITM attacks made possible by incorrect handling of the NUL byte in the major
+                                                SSL/TLS stacks.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Prohibiting SSL Version 2.0</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">March 2011</h3>
+                                            <p class="description">
+                                                The IETF attempts to formally deprecate SSL v2 by publishing RFC 6176. 
+                                                According to reports, 54% HTTPS servers supported this obsolete protocol version in 2011.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">BEAST</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">June 2011</h3>
+                                            <p class="description">
+                                                The BEAST attack is released to exploit predictable IVs in TLS 1.0. 
+                                                Even though this problem had been fixed in TLS 1.1 released in 2006 and TLS 1.2 in 2008,
+                                                no one actually uses these newer protocol versions. 
+                                                Browsers will take about 2 more years to deploy TLS 1.2
+                                                and servers many years longer. We have no choice but to rely on browser counter-measures in the meantime. 
+                                                BEAST is the first attack to show how rich browser functionality can be abused to attack cryptography
+                                                from multiple vantage points. Many similar attacks will follow.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Google deploys forward secrecy</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">November 2011</h3>
+                                            <p class="description">
+                                                In a major improvement, Google deploys forward secrecy, making sure private key compromises can't be used to retroactively 
+                                                uncover captured encrypted traffic.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">GlobalSign</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">March 2011</h3>
+                                            <p class="description">
+                                                Servers hacked by "Comodohacker", an Iranian student halting the issuance of certifcates.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Flame</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">May 2012</h3>
+                                            <p class="description">
+                                                The Iranian CERT discloses the existence of Flame, a malware used in targeted cyber attacks against Iran. 
+                                                Flame is possibly the first cyberweapon that could have operated as early as 2007.
+                                                In a stunning turn of events, it transpired that Flame exploited an MD5 collision of its own to obtain a fraudulent CA certificate.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Microsoft blocks RSA keys below 1024 bits</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">August 2012</h3>
+                                            <p class="description">
+                                                As CPU power continues to increase, low-strength private keys are coming under threat.
+                                                Microsoft updated Windows to start blocking RSA keys weaker than 1024 bits.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">CRIME</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">September 2012</h3>
+                                            <p class="description">
+                                                Duong and Rizzo strike again with a working exploit against TLS compression,just when some browsers begin to support it. 
+                                                The offending functionality is quickly rolled back.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Lucky 13</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">February 2013</h3>
+                                            <p class="description">
+                                                AlFardan and Paterson publish Lucky 13, their attack on CBC suites. 
+                                                In TLS, block encryption is designed to authenticate plaintext (rather than ciphertext), 
+                                                which creates an opportunity for the attacker to execute padding oracle attacks.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">RC4 biases</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">March 2013</h3>
+                                            <p class="description">
+                                                New attacks against RC4 are discovered. Previously, it was thought that RC4 weaknesses don't affect TLS much, 
+                                                but that was shown to be wrong. 
+                                                This research marks the death of RC4, although it will take a couple of years before it actually happens.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Certificate Transparency</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">March 2013</h3>
+                                            <p class="description">
+                                                Google launches Certificate Transparency (CT), which is a long-term effort to have a public record of all public certificates.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">TIME</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">March 2013</h3>
+                                            <p class="description">
+                                                Tal Be'ery presents TIME, a way of abusing information leakage stemming from HTTP compression (and then encryption).
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Edward Snowden</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">May 2013</h3>
+                                            <p class="description">
+                                                Edward Snowden releases thousands of classified NSA documents to selected journalists, 
+                                                changing the public's perspective of the Internet forever. 
+                                                We eventually realise the extent of passive monitoring of plaintext communication.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">BREACH</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">August 2013</h3>
+                                            <p class="description">
+                                                The BREACH attack also exploits HTTP compression that's used before encryption. 
+                                                This attack is released with a PoC tool that retrieves CSRF tokens from real sites in less than a minute. 
+                                                Although not easy to exploit, compression before encryption remains a real problem for all web applications.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Work on TLS 1.3 begins</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">August 2013</h3>
+                                            <p class="description">
+                                                Although TLS 1.2 seems good enough for now, it's clear that it can't support the next few decades of Internet evolution.
+                                                Thus, work on the next-generation encryption protocol begins.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">ChaCha20-Poly1305</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">October 2013</h3>
+                                            <p class="description">
+                                                After a long time, another AEAD encryption is introduced to the ecosystem when Google starts to use ChaCha20-Poly1305 TLS suites.
+                                                These suites will later be standardised for everyone to deploy.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Triple Handshake Attack</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">March 2014</h3>
+                                            <p class="description">
+                                                New research called Triple Handshake Attack is published and renegotiation in TLS needs to be fixed again. The attack is quite exciting, but doesn't have much practical impact.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Heartbleed</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">April 2014</h3>
+                                            <p class="description">
+                                                A critical vulnerability in OpenSSL, a very widely used TLS library, is discovered.
+                                                If exploited, Heartbleed enables attackers to retrieve process memory from vulnerable servers,
+                                                often resulting in private key compromise. Because of tremendous hype associated with the attack,
+                                                most public servers fix the vulnerability practically overnight. 
+                                                A long tail of vulnerable devices remains, though. 
+                                                Heartbleed's biggest contribution is showing the world how severely underfunded the OpenSSL project was in its 20 years of existence. 
+                                                In the following months, large organisations start contributing to the project and a big cleanup begins.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Bleichenbacher Side Channels Atatcks</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">August 2014</h3>
+                                            <p class="description">
+                                                Christopher Meyer et al. present their new research, applying the Bleichenbacher attach from 1998 to the modern TLS stacks.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">BERserk Vulnerability</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">September 2014</h3>
+                                            <p class="description">
+                                                BERserk is an RSA signature forgery attack due to incorrect parsing of ASN.
+                                                1 in Mozilla NSS. It's a modern example of the Bleichenbacher attack.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">POODLE</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">October 2014</h3>
+                                            <p class="description">
+                                                It is discovered that SSL v3 doesn't actually have a defence against padding oracle attacks. 
+                                                Fortunately, attacks are generally not that easy to carry out and most of the world can use better protocols.
+                                                Most sites realise they can turn off this older protocol version without anyone noticing. 
+                                                In response to POODLE, browsers stop falling back to SSL v3 on TLS connection failure.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">POODLE TLS</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">December 2014</h3>
+                                            <p class="description">
+                                                Shortly thereafter, it is discovered that, even though TLS 1.0 does have built-in defences against padding oracle attacks, 
+                                                some implementations don't implement them correctly. This new problem is named POODLE TLS.
+                                                This discovery shines light on the fact that most protocol implementations aren't tested in adversarial conditions.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Prohibiting RC4 Cipher Suites</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">February 2015</h3>
+                                            <p class="description">
+                                                The IETF publishes RFC 7465 to formally prohibit usage of the weak but ever-popular RC4 cipher.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">SMACK</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">March 2015</h3>
+                                            <p class="description">
+                                                SMACK is an acronym for State Machine AttaCKs. 
+                                                It targets weaknesses in the implementations of the TLS state machine in various libraries.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">FREAK</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">March 2015</h3>
+                                            <p class="description">
+                                                The researchers behind the FREAK attack disclose that any server using export cryptography can be exploited via a flaw in many client TLS implementations. 
+                                                Initially it was thought that the problem exists only with OpenSSL, but Schannel and Secure Transport were later found to be vulnerable too.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">HTTP Public Key Pinning</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">April 2015</h3>
+                                            <p class="description">
+                                                After many years of discussions, RFC 7469 is released to enable any to use public key pinning to protect themselves from fraudulently-issued certificates.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">TLS Fallback SCSV</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">April 2015</h3>
+                                            <p class="description">
+                                                A defence against protocol downgrade attacks is published as RFC 7507. The reactions are mixed; Chrome and Firefox decide to support it, but Microsoft doesn't like the idea.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Logjam</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">May 2015</h3>
+                                            <p class="description">
+                                                Logjam is an attack against weak Diffie-Hellman key exchange which is used by some servers. 
+                                                In essence, an active network attacker forces use of a weak cipher suite 
+                                                (e.g., a suite that uses 512-bit DH parameters) then breaks the connection in real-time.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Deprecating SSL Version 3.0</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">June 2015</h3>
+                                            <p class="description">
+                                                After POODLE, the IETF deprecates SSL v3 in RFC 7568.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">More POODLEs Expected</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">July 2015</h3>
+                                            <p class="description">
+                                                In two blog posts, titled There are more POODLEs in the forest and The POODLE has friends, 
+                                                researcher and TLS developer Yngve Nysæter Pettersen published results of his research 
+                                                into TLS implementation problems similar to the POODLE attack.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Elliptic Curves for Security</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">January 2016</h3>
+                                            <p class="description">
+                                                The Crypto Forum Research Group (CFRG) releases RFC 7748 to standardise two new elliptic curves, Curve25519 and Curve448.
+                                                These curves are not only modern and forward-looking, but will help those are not comfortable relying on the controversial NIST curves.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">SLOTH</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">January 2016</h3>
+                                            <p class="description">
+                                                Researchers from INRIA demonstrate SLOTH (Security Losses from Obsolete and Truncated Transcript Hashes, CVE-2015-7575),
+                                                which exploits the fact that many clients and servers continue to support RSA-MD5 signatures, 
+                                                even though they are now considered insecure.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">TLS 1.3 Ready or Not? Workshop</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">February 2016</h3>
+                                            <p class="description">
+                                                Previous versions of SSL and TLS were either rushed (SSL v2 and SSL v3) or maintenance efforts (TLS v1.0-v1.2). With TLS v1.3,
+                                                the working group is taking a different approach; after more than two years in development,
+                                                a workshop is held to carefully analyse the new designs.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Google stops using RC4 and SSLv3</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">June 2016</h3>
+                                            <p class="description">
+                                                In an important step to show the world that RC4 and SSLv3 are no longer needed, Google switches off these obsolete encryption features.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Google enables HSTS</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">July 2016</h3>
+                                            <p class="description">
+                                                Blaming the complexities of their infrastructure for the delay, Google finally announce enabling HSTS on www.google.com.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">SWEET32 Dangers of 64-bit block size</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">August 2016</h3>
+                                            <p class="description">
+                                                A new attack called Sweet32 emphasizes the weaknesses of ciphers that use 64-bit blocks,
+                                                exploited via the Birthday paradox. Ciphers such as 3DES and Blowfish (the default in OpenVPN) are affected.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Higher Web Traffic Encrypted</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">October 2016</h3>
+                                            <p class="description">
+                                                Mozilla announced that more than 50% of their page loads are now delivered over HTTPS.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Chrome requires CT for all new certificates</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">April 2018</h3>
+                                            <p class="description">
+                                                From April 2018 Chrome requires that all publicly issued certificates support Certificate Transparency.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">PCI Council deprecates TLS 1.0</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">July 2018</h3>
+                                            <p class="description">
+                                                From July 2018, PCI-compliant merchants must not support TLS 1.0. Originally, this date was intended to be in July 2016,
+                                                but that was not realistic because of too many users relying on obsolete technology that doesn't support modern protocols.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">TLS 1.3 was defined in RFC 8446</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">August 2018</h3>
+                                            <p class="description">
+                                                On March 21st, 2018, TLS 1.3 has was finalized, after going through 28 drafts. And as of August 2018, the final version of TLS 1.3 is now published (RFC 8446). It is based on the earlier TLS 1.2 specification.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Firefox and Chrome enabled TLS1.3 (Final)</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">October 2018</h3>
+                                            <p class="description">
+                                                Firefox (63) and Chrome (70) shipped with final version of TLS1.3 for outgoing connections.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">TLS Implementation Vulnerabilities</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">February 2019</h3>
+                                            <p class="description">
+                                                The attack leverages a side-channel leak via cache access timings of these implementations in order to break the RSA key exchanges of TLS implementations.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">LE touches 1 Billion mark</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">February 2020</h3>
+                                            <p class="description">
+                                                Let's Encrypt has issued over billion certificates since its inception. Billionth one being issued on February 27th, 2020.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">The Intelligence coup of the century</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">February 2020</h3>
+                                            <p class="description">
+                                                How the CIA used Crypto AG, a Swiss company, to compromise the security of many nations. <a href="https://www.washingtonpost.com/graphics/2020/world/national-security/cia-crypto-encryption-machines-espionage/" target="_blank">https://www.washingtonpost.com/graphics/2020/world/national-security/cia-crypto-encryption-machines-espionage/</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Mozilla's eradicate TLS 1.0 and 1.1</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">March 2020</h3>
+                                            <p class="description">
+                                                Mozilla Firefox will require user intervention to connect to websites using the TLS 1.0 or 1.1 protocol from March 2020 as compliance to PCI Data Security Standards.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">LE moves forward for improving privacy on web</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">17 September 2020</h3>
+                                            <p class="description">
+                                                On Thursday, September 3rd, 2020, Let’s Encrypt issued six new certificates: one root, four intermediates, and one cross-sign. These new certificates are part of our larger plan to improve privacy on the web, by making ECDSA end-entity certificates widely available, and by making certificates smaller.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">DigiCert release new IoT Device Manager</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">December 2020</h3>
+                                            <p class="description">
+                                                DigiCert IoT Device Manager™ now enables manufacturers to embed certificates on chips prior to manufacturing and generate certificate requests directly from an edge device.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">LE Extends android device compatibility</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">December 2020</h3>
+                                            <p class="description">
+                                                LE developed a way for older Android devices to retain their ability to visit sites that use Let’s Encrypt certificates after our cross-signed intermediates expire.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">TLS1.0 and TLS1.1 Deprecates</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">March 2021</h3>
+                                            <p class="description">
+                                                The Internet Engineering Task Force has published RFC 8996, which formally deprecates Transport Layer Security (TLS) versions 1.0 (RFC 2246) and 1.1 (RFC 4346).
+                                            </p>
+                                        </div>
+                                    </div>
+
+				    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Thousands of Godaddy certificates won't work in macOS 11.4 and iOS 14.6</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">April 2021</h3>
+                                            <p class="description">
+                                                Certificates issued between April 21 and April 27 2021, will not work in said verisons due to buypassing of new requirements by Godaddy. There are over 7600 SSL certificates and Safari will show an error saying "This Connection is Not Private"
+                                                <a href="https://sslmate.com/blog/post/apples_new_ct_policy" target="_blank"> More Info </a>
+                                            </p>
+                                        </div>
+                                    </div><!-- comment -->
+
+
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">End of FTP in Browsers</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">July 2021</h3>
+                                            <p class="description">
+                                                Mozilla Firefox has removed the support of FTP from version 90 onwards. Chrome has already removed the support of FTP. https://www.mozilla.org/en-US/firefox/90.0/releasenotes/
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Speed at scale: Let’s Encrypt serving Shopify’s 4.5 million domains</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">September 2021</h3>
+                                            <p class="description">
+                                                Let’s Encrypt certificates cover 4.5 million domains for Shopify. That means a more secure and privacy-respecting Web for all of Shopify’s merchants who, in 2020, created $307 billion in economic impact around the world. And it means a more secure Web for everyone visiting and engaging with a Shopify merchant.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Apple Deprecates Outdated TLS Protocols in iOS, macOS</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">September 2021</h3>
+                                            <p class="description">
+                                                Apple is depreciating TLS 1.0 and 1.1 in both iOS and macOS. Currently, TLS 1.0 and 1.1 are not supported in iOS 15 and macOS 12, but all support will be removed in the future.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">NSA warned organizations of ALPACA</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">October 2021</h3>
+                                            <p class="description">
+                                                The NSA recommended that organizations inventory the current scope of wildcard certificates in use and, going forward, limit the use of wildcard certificates to avoid this type of attack.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Microsoft fails in patching a Zero Day</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">December 2021</h3>
+                                            <p class="description">
+                                                Every version of Windows is at risk due to a scary zero-day vulnerability after Microsoft failed to properly patch a similar flaw, a cybersecurity researcher claims.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">LE strengthens its presence in Europe</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">December 2021</h3>
+                                            <p class="description">
+                                                OVHcloud, the largest hosting provider in Europe, has used Let’s Encrypt for TLS certificates since 2016. Over 10,000 certificates are issued from Let’s Encrypt to OVHcloud every day. As the company continues to expand into North America, they predict that number will grow.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">LE receives funding from Ford Foundation</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">February 2022</h3>
+                                            <p class="description">
+                                                LE receives $1M grant from The Ford Foundation supports ISRG’s security and privacy mission.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Let's Encrypt Receives the Levchin Prize for real world cryptography</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">April 2022</h3>
+                                            <p class="description">
+                                                On April 13, 2022, the Real World Crypto steering committee presented the Max Levchin Prize for Real-World Cryptography to Let’s Encrypt.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Let's Encrypt now supports ACME-CAA: closing the DV loophole</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">December 2022</h3>
+                                            <p class="description">
+                                                The concept of ACME-CAA is extremely simple; the CAA record is extended so that rather than naming a CA, it names a specific account at a specific CA. In short, this means that only someone with your ACME account private key can obtain certificates.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Android to add support for TrustCor root certificate</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">December 2022</h3>
+                                            <p class="description">After TrustCor CA's trsutworthiness issue, major organisations have distrusted the former CA. This will cause all the certificates issued by TrustCor CA to be identified as untrsuted.</p>
+                                            <p class="description"> However, updating the root CA store for mobile devices takes time therefore certificate store changes will be updated in Android 14 release.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Security issues discovered in Turkish Certificate Authority.**</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">December 2022</h3>
+                                            <p class="description">
+                                                Independent security researcher find administrative issues in security panel of Turkish CA. Apparently everything is written in Turkish and this can be easily exploited by bad actors.
+                                            </p>
+                                        </div>
+                                    </div><!-- comment -->
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Chrome approves a a new CT Log for inclusion.**</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">December 2022</h3>
+                                            <p class="description">
+                                                Trust Asia Log2024-2 (<a href="https://ct2024.trustasia.com/log2024" target="_blank">https://ct2024.trustasia.com/log2024</a>) having completed their application and successfully undergone compliance monitoring.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Microsoft Edge to make changes to its SSL/TLS Verification method.</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">December 2022</h3>
+                                            <p class="description">
+                                                In current versions of Microsoft Edge, both the certificate trust list and the certificate verifier logic are provided by underlying operating system (OS) platform and future versions of Microsoft Edge, both the certificate trust list and the certificate verifier will be provided by and shipped with the browser. This will decouple the list and verifier from the host operating system’s root store.
+                                            </p>
+                                        </div>
+                                    </div><!-- comment -->
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">ISRG publishes their Annual 2022 report</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">December 2022</h3>
+                                            <p class="description">
+                                                <a href="https://www.abetterinternet.org/documents/2022-ISRG-Annual-Report.pdf" target="_blank">https://www.abetterinternet.org/documents/2022-ISRG-Annual-Report.pdf</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Webistes over ssl failing with Transparency error</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">March 2023</h3>
+                                            <p class="description">
+                                                Over 1,50,000 certificates issued between March 15 or 16, 2023 will not load due to an incident that happened at sectigo a CT Logger. The migration was mostly successful, except for one rather significant problem: the new log software had been configured with the private key of a test log called "Dodo".<br>
+                                                The problem was there for a 20 hour window. Although the CAs should have Sabre's publick key to validate the SCT signature but certificate authorities are prone to sloppiness and shortcut-taking.
+                                            </p>
+                                        </div>
+                                    </div><!-- comment -->
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Thousands of Godaddy certificates won't work in macOS 11.4 and iOS 14.6</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">March 2021</h3>
+                                            <p class="description">
+                                                Certificates issued between April 21 and April 27 2021, will not work in said verisons due to buypassing of new requirements by Godaddy. There are over 7600 SSL certificates and Safari will show an error saying "This Connection is Not Private"
+						<a href="https://sslmate.com/blog/post/apples_new_ct_policy" target="_blank"> More Info </a>
+					    </p>
+                                        </div>
+                                    </div><!-- comment -->
+                                </div>
+                            </div>
+
+                            <div class="labelList">
+                                <div class="labelIcon"><i class="fa-solid fa-tags"></i></div>
+                                <div class="labelText">TLS</div>
+                            </div>
+                            <div class="pagination blogPagination my-4">
+                                <div class="paginationNav pull-right">
+
+                                    <a href=" javascript:void(0);" title="Previous" rel="" class="preblog disable opacity-50">
+                                        <div class="prebox">
+                                            <span><i class="fa fa-angle-left fa-lg"></i> </span>
+                                            Previous
+                                        </div> 
+                                        <p></p>
+                                    </a>
+
+
+                                    <a href="../../2024/08/epicCAFails.html" title="Next" rel="" class="nextblog">
+                                     
+                                      <div class="nextbox">Next<span><i class="fa fa-angle-right fa-lg"></i></span> </div>  
+                                        <p class="nexttitle">EPIC CA Fails</p> 
+                                                                         
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="disqus_thread"></div>
+                    </div>
+                    <!-- /blog post -->
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- /Main content -->
+
+    <!-- content of the sidebar-->
+    <div id="showsidebar"></div>
+
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- jQuery -->
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+    <script>
+        var geturl = window.location.href;
+        // console.log(geturl);
+        var disqus_config = function () {
+            this.page.url = geturl;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = geturl; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://gauravkansal-in.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>
