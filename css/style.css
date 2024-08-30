@@ -1673,9 +1673,9 @@ blockquote {
 }
 
 .u-text-3 {
-  font-size: 1.25rem;
+  font-size: 1.00rem;
   width: auto;
-  margin: 30px 0 0;
+  margin: 20px auto 0 auto;
 }
 .u-text-2 {
   width: 65%;
@@ -1707,6 +1707,16 @@ blockquote {
 .refLi li.active::marker{
   color:#1ba11b;
 }
+
+.linerow{
+  display: flex;
+    justify-content: flex-start;
+    align-items: self-start;
+    text-align: left;
+}
+.linerow span{    width: 140px; 
+   display: inline-block;
+  }
 /* #Progress
 ================================================== */
 
@@ -2213,6 +2223,10 @@ h6 p{
     font-size: 0.83rem;
   }
 
+  .linerow span {
+    width: 110px;
+}
+
   .left-shape-1 {
     width: 90px;
     height: 90px;
@@ -2347,7 +2361,7 @@ h4, .h4 {
     .u-text-3 {
     font-size: 0.625rem;
     width: auto;
-    margin: 30px 0 0;
+    margin: 15px auto;
   }
 .u-text-2 {
     font-size: 0.625rem;
@@ -2418,6 +2432,9 @@ h4, .h4 {
   margin:0 35px 0 45px
 }
 
+.linerow span {
+  width: 110px;
+}
 
 }
 @media only screen and (max-width: 320px) {
@@ -2430,6 +2447,10 @@ h4, .h4 {
 }
 .u-text-3 {
   font-size: 0.625rem;
+  margin: 10px auto 0 auto;
+}
+.linerow span {
+  width: 85px;
 }
 .left-shape-2 {
   width: 50px;
