@@ -62,7 +62,9 @@
 							<div class="content">
 								<img src="../images/masonary-post/voting.jpg" alt="post-thumb" class="img-fluid mb-4">
 								<p class="blog-post-body">
-								.LB ccTLD (a Country Code Top Level Domain for Lebanon) was delegated by IANA to Nabil Bukhalid at the American University of Beirut (AUB) in 1993. For nearly thirty years, the domain’s management was led by Mr. Bukhalid. 
+								.LB ccTLD (a Country Code Top Level Domain for Lebanon) was delegated by IANA to Nabil Bukhalid at the American University of Beirut (AUB) in 1993. 
+								<sup><a onclick="linkfiles('link1')">[1]</a></sup>
+								For nearly thirty years, the domain’s management was led by Mr. Bukhalid. 
 								  </p>
 								<p>*** write paragraph</p>
 								<ol type="i">
@@ -134,18 +136,16 @@
 							
 
 								<h6><u>References: </u></h6>
-								<ol>
-									<li><a
-											href="https://www.mail-archive.com/opendnssec-user@lists.opendnssec.org/msg01788.html">https://www.mail-archive.com/opendnssec-user@lists.opendnssec.org/msg01788.html</a>
-									</li>
-									<li><a
-											href="https://stackoverflow.com/questions/14930460/how-to-verify-dnskey-by-using-its-corresponding-ds">https://stackoverflow.com/questions/14930460/how-to-verify-dnskey-by-using-its-corresponding-ds</a>
-									</li>
+								<ol class="refLi">
+									<li id="link1"><a class="openLink"
+                                            onclick="linkOpen('https://icannwiki.org/.lb')">https://icannwiki.org/.lb</a> </li>
+
 								</ol>
 							</div>
 							<div class="labelList">
                                 <div class="labelIcon"><i class="fa-solid fa-tags"></i></div>
-                                <div class="labelText">TLS</div>
+                                <div class="labelText">DNS</div>
+				<div class="labelText">TLD</div>
                             </div>
                             <div class="pagination blogPagination my-4">
                                 <div class="paginationNav pull-right">
@@ -159,7 +159,7 @@
                                     </a>
 
 
-                                    <a href="../../2024/08/epicCAFails.html" title="Next" rel="" class="nextblog">
+                                    <a href="../../2024/08/tlsTimeLine.html" title="Next" rel="" class="nextblog">
                                      
                                       <div class="nextbox">Next<span><i class="fa fa-angle-right fa-lg"></i></span> </div>  
                                         <p class="nexttitle">Next Heading</p> 
@@ -189,7 +189,7 @@
     </svg>
   </div>
 
-  <script src="../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
   <script>
     $('#myHead').load('../../include/header.html');
     $(document).ready(function () {
