@@ -21,6 +21,16 @@
     <!--Favicon-->
     <link rel="icon" type="image/png" href="images/favicon.jpg">
     <link href="css/fontawesome/css/all.min.css" rel="stylesheet" />
+    
+    <!-- for including 2025 onwards blogs. Added by GK on 22.Feb.2025 -->
+    <script src="plugins/jQuery/jquery.js"></script> 
+    <script> 
+    $(function(){
+      $("#includedContent").load("2025-onwards-articles.html"); 
+    });
+    </script> 
+    
+    
 </head>
 <body>
     <!-- preloader -->
@@ -73,6 +83,13 @@
                     <input type='hidden' id='current_page' />
                     <input type='hidden' id='show_per_page' />
                     <div class="page" id="pagingBox">
+                        
+                        
+                        <!-- for including 2025 onwards blogs. Added by GK on 22.Feb.2025 -->
+                        <div id="includedContent"></div>
+                        
+                        
+                        
                         <div class="mb-60 TLSCatArtical">
                             <article class="article-full-width">
                                 <div class="post-image">
@@ -123,6 +140,9 @@
                             </article>
                         </div>
 
+                        
+                        <!-- for including 2025 onwards blogs. Added by GK on 22.Feb.2025 -->
+                        <div id="includedContent"></div>
 
                         <div class="mb-60 dnsCatArtical">
                             <article class="article-full-width">
@@ -179,7 +199,7 @@
                             </article>
                         </div>
 
-                        <div class="mb-60 apnicCatArtical wifiCatArtical">
+                        <div class="mb-60 apnicCatArtical">
                             <article class="article-full-width">
                                 <div class="post-image">
                                     <img class="img-fluid" src="images/masonary-post/thank-you.jpg" alt="post-thumb">
