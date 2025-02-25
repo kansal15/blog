@@ -22,7 +22,7 @@
         <link rel="icon" type="image/png" href="../../images/favicon.jpg">
         <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
         <style>
-    .blog-table {
+   .blog-table {
     margin: 20px auto;
     display: block;
     width: 50%;
@@ -39,7 +39,7 @@
     .blog-table .table tr td a{
       color: #a67540;
     }
-    .blog-table .table tr th{
+    .blog-table .table thead tr th{
       background-color: #cba384;
     }
     .blog-table .table>:not(caption)>*>*{
@@ -47,8 +47,18 @@
     border-bottom-width: 0;
     box-shadow: none;
     }
-    .blog-table .table tr:nth-child(even) td{
+    .blog-table .table tbody tr:nth-child(odd) td{
       background-color: #fbece0;
+    }
+    .blog-table .table tbody tr:nth-child(odd) th{
+      background-color: #ffefe1;
+    }
+    .blog-table .table tbody tr:nth-child(even) th{
+      background-color: #ddc3ae;
+    }
+    .blog-table .table tbody tr td p{
+      font-size: 14px;
+    color: #393939;
     }
   </style>
     </head>
