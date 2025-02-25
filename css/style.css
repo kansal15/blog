@@ -960,11 +960,15 @@ blockquote {
   display: none;
 }
 .blog-table {
-  margin: 0 auto;
+  margin: 20px auto;
   display: block;
   width: 50%;
-}
-
+  border: 1px solid #cba384;
+  border-radius: 5px;
+  padding: 10px;
+  background: #ebddd0;
+  }
+ 
 .blog-post-body::first-letter {
   float: left;
   font-size: 70px;
@@ -977,6 +981,38 @@ blockquote {
   color: #bf8c56;
 }
 
+.blog-table .table,
+.blog-table .table tbody,
+.blog-table .table tr{
+  margin-bottom: 0px;
+}
+.blog-table .table tr td a{
+  color: #a67540;
+}
+.blog-table .table thead tr th{
+  background-color: #cba384;
+}
+.blog-table .table>:not(caption)>*>*{
+  background-color: rgb(223 197 176 / 50%);
+border-bottom-width: 0;
+box-shadow: none;
+}
+.blog-table .table tbody tr:nth-child(odd) td{
+  background-color: #fbece0;
+}
+.blog-table .table tbody tr:nth-child(odd) th{
+  background-color: #f7e8db;
+}
+.blog-table .table tbody tr:nth-child(even) th{
+  background-color: #ddc3ae;
+}
+.blog-table .table tbody tr td p{
+  font-size: 14px;
+color: #393939;
+}
+.blog-table .table tbody tr td.comment{
+  border-bottom: 1px solid #ebddd0;
+}
 
 .paginationNav {
   display: flex;
