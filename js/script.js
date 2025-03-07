@@ -10,6 +10,7 @@
 
     // Preloader js    
     $(window).on('load', function () {
+     
         $('.preloader').fadeOut(700);
     });
 
@@ -242,7 +243,7 @@ $(document).ready(function () {
     $('.categories-list li').each(function (i) {
 
         var classname = $(this).attr('class');
-        let list = $(".page > div").filter(`.${classname}Artical`).length;
+        let list = $(".page .mb-60").filter(`.${classname}Artical`).length;
         $(`.${classname}value`).html(`(${list})`);
 
     });
@@ -253,8 +254,8 @@ $(document).ready(function () {
     function filterGroup(group) {
         if (activeCat != group) {
 
-            $(".page > div").filter("." + group).show().addClass("catlist");
-            $(".page > div").filter(":not(." + group + ")").hide().removeClass("catlist");
+            $(".page .mb-60").filter("." + group).show().addClass("catlist");
+            $(".page .mb-60").filter(":not(." + group + ")").hide().removeClass("catlist");
             activeCat = group;
         }
     }
