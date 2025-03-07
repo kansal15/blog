@@ -243,7 +243,7 @@ $(document).ready(function () {
     $('.categories-list li').each(function (i) {
 
         var classname = $(this).attr('class');
-        let list = $(".page .mb-60").filter(`.${classname}Artical`).length;
+        var list = $(".page .mb-60").filter(`.${classname}Artical`).length;
         $(`.${classname}value`).html(`(${list})`);
 
     });
