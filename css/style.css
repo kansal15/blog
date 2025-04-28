@@ -2154,6 +2154,10 @@ h6 p{
   color: #830303;
 }
 
+.post-summary {
+    text-align: justify;
+}
+
 .timeline {
   padding-left: 0px;
   padding-right: 0px;
