@@ -243,7 +243,7 @@ $(document).ready(function () {
     $('.categories-list li').each(function (i) {
 
         var classname = $(this).attr('class');
-        var list = $(".page .mb-60").filter(`.${classname}Artical`).length;
+        var list = $(".page .mb-60").filter(`.${classname}Articles`).length;
         $(`.${classname}value`).html(`(${list})`);
 
     });
@@ -362,7 +362,7 @@ $(document).ready(function () {
         $('#cat_page_navigation').show();
         let categoriesClass = $(this).parent().attr("class");
         event.preventDefault();
-        filterGroup(`${categoriesClass}Artical`);
+        filterGroup(`${categoriesClass}Articles`);
         const elementtwo = $('.page').find('.catlist');
         // console.log(elementtwo);
         paginateChildrentwo($('.page'), elementtwo);
