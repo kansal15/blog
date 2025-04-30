@@ -91,7 +91,9 @@ h6,
 }
 #blog-post-block ol li {
 margin-bottom:5px;
+font-weight: bold;
 }
+
 #blog-post-block p {
 margin-bottom:10px;
 white-space: normal;
