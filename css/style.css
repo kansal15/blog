@@ -666,7 +666,7 @@ textarea.form-control {
 
 .hero-section {
   padding: 0;
-  background-image: linear-gradient(#fff 45%, rgb(194 145 92 / 38%) 0);
+  background-image: linear-gradient(#fff 32%, rgb(194 145 92 / 38%) 0);
   z-index: 2;
   position: relative;
 }
