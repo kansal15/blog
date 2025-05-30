@@ -2383,12 +2383,12 @@ cursor: pointer;
   }
   h1,
   .h1 {
-    font-size: 7vw;
+    font-size: 34px;
   }
 
   h2,
   .h2 {
-    font-size: 3vw;
+    font-size: 14px
   }
 h4, .h4 {
     font-size: 1rem;
@@ -2555,6 +2555,9 @@ h4, .h4 {
 
 .blog-heading-h2 {
   margin-bottom: 24px;
+}
+.followingicon li{
+  margin-left: 0 !important;
 }
 
 .title-border-lg::before {
