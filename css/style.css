@@ -405,7 +405,7 @@ a.text-dark:hover {
 }
 
 .blog-heading-h2 {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 .form-control {
   border: 0;
@@ -510,6 +510,14 @@ textarea.form-control {
   }
 }
 
+.welcometext{
+  margin-top: 0;
+  padding-top: 0;
+}
+.followingicon{
+  margin-bottom: 20px;
+}
+
 .navbar .dropdown-item:active {
   color: #fff;
   background-color: #bf8c55;
@@ -568,8 +576,8 @@ textarea.form-control {
   content: "";
   height: 2px;
   width: 300px;
-  left: -45px;
-  bottom: -30px;
+  left: 0;
+  bottom: -10px;
   background: #b77e3e;
 }
 
@@ -666,7 +674,7 @@ textarea.form-control {
 
 .hero-section {
   padding: 0;
-  background-image: linear-gradient(#fff 32%, rgb(194 145 92 / 38%) 0);
+  background-image: linear-gradient(#fff 25%, rgb(194 145 92 / 38%) 0);
   z-index: 2;
   position: relative;
 }
@@ -2240,11 +2248,16 @@ cursor: pointer;
     content: "";
     bottom: -5px;
   }
-  .blog-heading-h2 {
-    margin-bottom: 40px;
-  }
+  
   .media-body {
     font-size: 12px;
+  }
+  .welcometext{
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .blog-heading-h2 {
+    margin-bottom: 25px;
   }
  }
 
@@ -2253,15 +2266,21 @@ cursor: pointer;
     position: absolute;
     content: "";
     bottom: -5px;
+    width: 260px;
   }
 
   .blog-heading-h2 {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
   }
 
   .media-body {
     font-size: 12px;
   }
+
+  .welcometext {
+    margin-top: 0;
+    padding-top: 10px;
+}
   
 }
 
@@ -2332,6 +2351,24 @@ cursor: pointer;
 .timeline .timeline-list.right .date {
     right: -30px !important;
 }
+.welcometext {
+  margin-top: 0;
+  padding-top: 8px;
+}
+
+.blog-heading-h2 {
+  margin-bottom: 20px;
+}
+
+.title-border-lg::before {
+  height: 2px;
+  width: 250px;
+  bottom: -10px;
+}
+.hero-section .list-inline{
+  margin-bottom: 15px !important;
+}
+
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -2346,12 +2383,12 @@ cursor: pointer;
   }
   h1,
   .h1 {
-    font-size: 10vw;
+    font-size: 7vw;
   }
 
   h2,
   .h2 {
-    font-size: 5vw;
+    font-size: 3vw;
   }
 h4, .h4 {
     font-size: 1rem;
@@ -2366,6 +2403,10 @@ h4, .h4 {
   .rgt-block {
     width: 300px;
     height: 300px;
+}
+
+.hero-section{
+  padding-left: 10px;
 }
 
   .left-shape-1 {
@@ -2505,6 +2546,34 @@ h4, .h4 {
 
 .linerow span {
   width: 110px;
+}
+
+.welcometext {
+  margin-top: 0;
+  padding-top: 8px;
+}
+
+.blog-heading-h2 {
+  margin-bottom: 24px;
+}
+
+.title-border-lg::before {
+  height: 2px;
+  width: 35vw;
+  bottom: -10px;
+}
+.hero-section .list-inline{
+  margin-bottom: 15px !important;
+}
+
+.article-full-width .post-meta {
+  max-width: 100%;
+}
+
+.article-full-width .post-image{
+  width: 300px;
+  max-height: 230px;
+  align-items: center;
 }
 
 }
