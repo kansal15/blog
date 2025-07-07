@@ -8,10 +8,12 @@
 	<!-- mobile responsive meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta property="og:title" content="" />
-        <meta property="og:description" content="" />
-        <meta property="og:image" content="" />
-        <meta property="og:url" content="https://blog.gauravkansal.in/" />
+        <meta property="og:title" content="India going to delicense the lower 6 GHz band (5925MHz to 6425 MHz)" />
+        <meta property="og:description" content="On 16th of May 2025, Ministry of Communication under Government of India, has published the 
+              draft rules for the Use of Low Power and Very Low Power Wireless Access System including Radio Local Area Network in Lower 6 GHz band 
+              (Exemption from Licensing Requirement)." />
+        <meta property="og:image" content="../../images/2025/India-opens-up-the-6-GHz.jpg" />
+        <meta property="og:url" content="https://blog.gauravkansal.in/2025/06/India-going-to-open-up-the-6GHz-lower-band-for-Wi-Fi.html" />
         <meta property="og:type" content="article" />
   
 	<!-- ** Plugins Needed for the Project ** -->
@@ -245,7 +247,7 @@
                                                                     </h5>
                                                                     
                                                                     <p align="justify">
-                                                                        <b> I. EIRP (Effective Isotropic Radiated Power)</b> represents the maximum power that an antenna can radiate 
+                                                                        <b><u> I. EIRP (Effective Isotropic Radiated Power)</u></b> represents the maximum power that an antenna can radiate 
                                                                         in a particular direction, considering all the components of the transmission system. It’s a key metric used to 
                                                                         ensure that wireless transmissions comply with regulatory power limits.
                                                                         <br />
@@ -266,7 +268,7 @@
                                                                         taking into account all the gains and losses in the transmission path. It's a key factor for both network performance and regulatory compliance.
                                                                     </p>    
                                                                     <p align="justify">   
-                                                                        <b> II. PSD (Power Spectral Density)</b> typically expressed in units like dBm/MHz, describes how the total 
+                                                                        <b><u> II. PSD (Power Spectral Density)</u></b> typically expressed in units like dBm/MHz, describes how the total 
                                                                         transmit power of a Wireless device is distributed across its operating frequency band.
                                                                         
                                                                         Think it in this way:</p>
@@ -281,12 +283,30 @@
                                                                     PSD has become particularly relevant with the introduction of Wi-Fi 6E (operating in the 6 GHz band). In 2.4 GHz and 5 GHz, 
                                                                     focus was often on a constant EIRP regardless of the channel width. However, with Wi-Fi 6E, the approach has shifted to a constant PSD.
                                                                     <br/>
-                                                                    <b>Relationship between EIRP and PSD:</b>
+                                                                    
+                                                                    <ul>
+                                                                        <li>
+                                                                            <b>Constant EIRP: </b> If you doubled the channel bandwidth, the total power remained the same. This meant that 
+                                                                            the power per unit of frequency (PSD) actually decreased. This could lead to a Signal-to-Noise Ratio (SNR) penalty for wider channels, 
+                                                                            making them less effective than narrower channels in some scenarios.
+                                                                        </li><!-- comment -->
+                                                                        <li>
+                                                                            <b>Constant PSD:</b> If you double the channel bandwidth, the total EIRP can also double. 
+                                                                            This is because you're maintaining the same power density across the wider spectrum. 
+                                                                            This helps to maintain a consistent SNR across different channel widths, making wider channels (like 80 MHz and 160 MHz, 
+                                                                            which are more common in 6 GHz) much more viable for high-density deployments and high-throughput applications 
+                                                                            without a significant signal quality penalty.
+                                                                        </li>
+                                                                    </ul>
+                                                                    
+                                                                    <blockquote>
+                                                                    <u>Relationship between EIRP and PSD:</u>
                                                                     <br/>
                                                                     There's a direct relationship between EIRP and PSD, as the total power is essentially the integral of the power spectral density over the bandwidth. 
                                                                     A simplified relationship is:
                                                                     <br/>
-                                                                    <b> EIRP (dBm) = PSD (dBm/MHz) + 10 * log10(Channel Width in MHz) </b> <br />
+                                                                    EIRP (dBm) = PSD (dBm/MHz) + 10 * log10(Channel Width in MHz) <br />
+                                                                    </blockquote>
                                                                     
                                                                     <div class="blog-table text-center" style="width:70%">
 										<table class="table table-secondary" >
@@ -350,8 +370,15 @@
                                                                     For a given PSD limit, a wider channel allows for a higher total EIRP. In nutshell, while EIRP tells us the overall strength of the Wi-Fi signal, 
                                                                     PSD provides a more granular view of how that power is distributed across the frequency spectrum. 
                                                                     </p>
-                                                                                        
                                                                     
+                                                                    
+                                                                    <p align="justify">   
+                                                                        <b><u> III. Out-of-Band Emissions:</u></b>
+                                                                    Out-of-band emissions (OOBE) are unwanted emissions that occur outside the assigned frequency band or channel of a transmitting device. 
+                                                                    These emissions are tightly regulated to prevent interference with adjacent channels and services.
+                                                                    Maximum EIRP Density for OOBE is the maximum power per unit bandwidth (typically in dBm/MHz) that is allowed to be 
+                                                                    radiated by a device in the out-of-band region.
+                                                                    </p>
                                                                     
                                                                     
                                                                     
@@ -361,7 +388,7 @@
 
 								  
 							
-
+                                                                    <br /><br />
 								<h6><u>References: </u></h6>
 								<ol>
                                                                     <li id="link1"><a class="openLink"
