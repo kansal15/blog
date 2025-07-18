@@ -2,215 +2,266 @@
 <html lang="en">
 
 <head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V78EBX66N1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-V78EBX66N1');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KKQWN7J6');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="Are Public DNS Resolvers under pressure ?" />
+    <meta property="og:description"
+        content="The story of OpenDNS exit from France & Belgium AND face off between Quad9 and Sony Music" />
+    <meta property="og:image" content="../../images/2025/dnsImage.jpg" />
+    <meta property="og:url" content="https://blog.gauravkansal.in/2025/04/Public-Resolvers-under-pressure.html" />
+    <meta property="og:type" content="article" />
+
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
     
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V78EBX66N1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
 
-          gtag('config', 'G-V78EBX66N1');
-        </script>
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+    <style>
         
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-KKQWN7J6');</script>
-        <!-- End Google Tag Manager -->
-
-	<meta charset="utf-8">
-	<title>Gaurav Kansal Blog</title>
-  
-	<!-- mobile responsive meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        
-        <meta property="og:title" content="Are Public DNS Resolvers under pressure ?" />
-        <meta property="og:description" content="The story of OpenDNS exit from France & Belgium AND face off between Quad9 and Sony Music" />
-        <meta property="og:image" content="../../images/2025/dnsImage.jpg" />
-        <meta property="og:url" content="https://blog.gauravkansal.in/2025/04/Public-Resolvers-under-pressure.html" />
-        <meta property="og:type" content="article" />
-
-  
-	<!-- ** Plugins Needed for the Project ** -->
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
-	<!-- slick slider -->
-	<link rel="stylesheet" href="../../plugins/slick/slick.css">
-	<!-- themefy-icon -->
-	<link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
-	<!-- Main Stylesheet -->
-	<link href="../../css/style.css" rel="stylesheet">
-	<!--Favicon-->
-	<link rel="icon" type="image/png" href="../../images/favicon.jpg">
-	<link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
-  </head>
+    </style>
+</head>
 
 <body>
-     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKQWN7J6"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKQWN7J6" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- preloader -->
-	<div class="preloader">
-		<div class="loader">
-			<span class="dot"></span>
-			<div class="dots">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-		</div>
-	</div>
-	<!-- /preloader -->
-        
-	<!-- preloader -->
-	<div class="preloader">
-		<div class="loader">
-			<span class="dot"></span>
-			<div class="dots">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-		</div>
-	</div>
-	<!-- /preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
 
-	<div class="navigation" id="myHead"></div>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
 
-	<!-- page-title -->
-	<section class="section bg-secondary">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<h4>Are Public DNS Resolvers under pressure ? </h4>
-                                        The story of OpenDNS exit from France & Belgium
-                                        AND face off between Quad9 and Sony Music
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- /page-title -->
+    <div class="navigation" id="myHead"></div>
 
-	<!--Main content-->
-	<section class="mt-1" id="blog-post-block">
-		<div class="card mb-2">
-			<div class="container-fluid">
-				<div class="row">
-					<!-- blog post -->
-					<div class="col-lg-12">
-						<div class="card-block">
-                                                    <ul class="list-inline d-flex justify-content-between py-3">
-                                                    <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
-                                                    href="https://www.gauravkansal.in/index.html" target="_blank">Gaurav Kansal</a></li>
-                                                    <li class="list-inline-item"><i class="ti-calendar mr-2"></i> Apr 30, 2025</li>
-                                                    </ul>
-							<div class="content">
-                                                            <!--
+    <!-- page-title -->
+    <section class="section bg-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>Are Public DNS Resolvers under pressure ? </h4>
+                    The story of OpenDNS exit from France & Belgium
+                    AND face off between Quad9 and Sony Music
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html" target="_blank">Gaurav Kansal</a>
+                                </li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> Apr 30, 2025</li>
+                            </ul>
+                            <div class="content">
+                                <!--
                                 <img src="../../images/2025/dnsImage.jpg" alt="post-thumb" class="img-fluid mb-4">
                                                             -->
-								
-								<p class="blog-post-body" align="justify">
-								DNS is the phone directory of the Internet. We, humans, access the websites (information) through domain names, and the system (web browser) 
-                                                                fetches the content on behalf of the user through the IP address and serves the content to the end user. 
-                                                                Domain Name System (DNS) translates the domain names to an IP address. 
-								So, if DNS restricts the domain access, then the user shall not be able to access that domain, and that makes the DNS an easy and 
-                                                                cheap solution to restrict (and block) the domains/web portals. 
-								  </p>
-                                                                  
-								<p align="justify"> By default, end users use the resolver DNS of their ISPs. 
-                                                                    Apart from ISPs' resolvers, multiple public resolvers are also available for free usage, like 1.10.10.10 (Indian Public DNS), 
-                                                                    1.1.1.1 (Cloudflare), 8.8.8.8 (Google), 9.9.9.9 (Quad9), 208.67.220.220 (OpenDNS), etc. 
-                                                                </p>
-                                                                <p align="justify">    
-                                                                    Generally, Open Public Resolvers advocates for free, neutral and trusted access to the Internet and are against any restriction or blocking at the DNS level.
-                                                                </p>
-                                                                <!-- paste html view here-->
-                                                                
-                                                                
-                                                                <p align="justify"> 
-                                                                    
-                                                                    In the recent past, open public resolvers are receiving decrees from courts and the governments across nations for restricting the 
-                                                                    access of certain domains for a variety of reasons.  
-                                                                    This article will cover and list the few notable attempts here - 
-                                                                    <br /><br />
-                                                                    </p>
-								<ol  type="i">
-									<li> 
-                                                                            <p align="justify">
-                                                                                <b>Quad9 Turns the Sony Case Around in Dresden</b> <br/>
-                                                                            On 18th June 2021, Sony Music obtained an injunction from the District Court in Hamburg, Germany (the first of its kind) that requires 
-                                                                            Quad9 (9.9.9.9 public resolver) to block the popular pirate site
-                                                                            <sup><a onclick="linkfiles('link1')">[1]</a></sup> <sup><a onclick="linkfiles('link2')">[2]</a></sup>. <br/>
-                                                                            <b>This is the first instance of its type in which the copyright-holder industry has sought to compel a recursive public DNS operator 
-                                                                                to block access to Internet domain name, and is thought to be a precedent-setting case with far-reaching consequences. </b>
-                                                                            Quad9 immediately announced that it would contest the injunction and, on 24th June, announced that it had retained German counsel 
-                                                                            and would be filing an objection to the injunction.
-                                                                            <br />
-                                                                            On 31st August, 2021, Quad9 filed an objection to the injunction, citing a number of flaws in the legal arguments made by Sony, 
-                                                                            but principally hinging on the fact that ISPs (which actually have a business relationship with infringing parties) are exempted 
-                                                                            from third-party liability, despite the fact that they also operate DNS recursive resolvers, and 
-                                                                            that it's a misinterpretation of the law to exclude independent recursive resolvers from that exemption. <br/>
-                                                                            Many other public resolvers also echoed their voices in support of Quad9, including 
-                                                                            <a target="_blank" href="https://www.dnsfilter.com/"> DNSFilter </a> <sup><a onclick="linkfiles('link3')">[3]</a></sup>. 
-                                                                            <br />
-                                                                            
-                                                                            <b>On 06th December 2023, the court ruled in favour of Quad9.
-                                                                              <sup><a onclick="linkfiles('link4')">[4]</a></sup>
-                                                                              <sup><a onclick="linkfiles('link5')">[5]</a></sup>
-                                                                            </b>
-                                                                            </p>
-									</li>
-                                                                        
-									<li> 
-                                                                            <p align="justify"> 
-                                                                                <b>A French court has ordered Google, Cloudflare, and Cisco to poison their DNS resolvers to prevent 
-                                                                                    circumvention of blocking measures (June 2024).
-                                                                                    <sup><a onclick="linkfiles('link6')">[6]</a></sup></b> <br/>
-                                                                                In June 2024, a French court accepts the request of Canal+ to tighten up previously obtained anti-piracy measures. 
-                                                                                The court ordered Google, Cloudflare, and Cisco to poison their DNS records to prevent these third-party services 
-                                                                                from acting as workarounds for existing pirate site blockades. 
-                                                                                <sup><a onclick="linkfiles('link7')">[7]</a></sup> <br />
-                                                                               
-                                                                                This all begins in 2023, when Canal+ went to court in France with the goal of obtaining an order requiring local ISPs to 
-                                                                                block over 100 pirate sports streaming sites. The French court accepted the request and ordered ISPs including 
-                                                                                Orange, SFR, OutreMer Télécom, Free, and Bouygues Télécom to implement technical measures to prevent access to 
-                                                                                Footybite.co, Streamcheck.link, SportBay.sx, TVFutbol.info, and Catchystream.com, and dozens of others. <br />
-                                                                                Since the ISPs have their own DNS resolvers for use by their own customers, these were configured to provide 
-                                                                                non-authentic responses to deny access to the sites in question.
-                                                                                Somewhat inevitably, some of the ISP's users reconfigured their machines to use third-party DNS servers, 
-                                                                                including those provided by Cloudflare, Google, and Cisco. <br />
-                                                                                
-                                                                                To prevent these workarounds, Canal+ took legal action against three popular public DNS providers – Cloudflare (1.1.1.1), 
-                                                                                Google (8.8.8.8), and Cisco (208.69.38.205) – demanding blocking measures similar to those already implemented by 
-                                                                                French ISPs under Article L333-10 of the French Sports Code.
-                                                                                The Paris judicial court responded in May 2024 by handing down two orders; one concerning Premier League matches 
-                                                                                and the other relating to matches played in the Champions League. The court ordered Google, Cloudflare, and Cisco 
-                                                                                to implement measures to prevent French internet users from using their services to access around 117 pirate domains.
-                                                                                
-                                                                                <b>Google previously indicated it would comply, but OpenDNS Suspends Entire Service to the Whole of France 
-                                                                                    <sup><a onclick="linkfiles('link8')">[8]</a></sup>.</b>
-                                                                                
-                                                                                <div class="row">
-                                                                                    <div class="col">
-                                                                                <a href="https://torrentfreak.com/opendns-suspends-service-in-france-due-to-canal-piracy-blocking-order-240629/" target="_blank">        
-                                                                                <img src="../../images/2025/opendns-suspends-service-in-france-due-to-canal-piracy-blocking-order.jpg" 
-                                                                                     alt="image" class="img-fluid w-100 py-3 border" style="border-color: #000 !important;"> </a>
-                                                                                    </div>
-                                                                                    <div class="col">
-                                                                                <a href="https://www.reddit.com/r/google/comments/1dh5ekc/a_french_court_has_ordered_google_cloudflare_and/?rdt=46720" target="_blank">
-                                                                                <img src="../../images/2025/french_court_has_ordered_google_cloudflare.jpg" 
-                                                                                     alt="image" class="img-fluid w-100 py-3 border" style="border-color: #000 !important;"></a>
-                                                                                    </div>
-                                                                      
-                                                                                </div>
-                                                                                
-                                                                                <!--
+
+                                <p class="blog-post-body" align="justify">
+                                    DNS is the phone directory of the Internet. We, humans, access the websites
+                                    (information) through domain names, and the system (web browser)
+                                    fetches the content on behalf of the user through the IP address and serves the
+                                    content to the end user.
+                                    Domain Name System (DNS) translates the domain names to an IP address.
+                                    So, if DNS restricts the domain access, then the user shall not be able to access
+                                    that domain, and that makes the DNS an easy and
+                                    cheap solution to restrict (and block) the domains/web portals.
+                                </p>
+
+                                <p align="justify"> By default, end users use the resolver DNS of their ISPs.
+                                    Apart from ISPs' resolvers, multiple public resolvers are also available for free
+                                    usage, like 1.10.10.10 (Indian Public DNS),
+                                    1.1.1.1 (Cloudflare), 8.8.8.8 (Google), 9.9.9.9 (Quad9), 208.67.220.220 (OpenDNS),
+                                    etc.
+                                </p>
+                                <p align="justify">
+                                    Generally, Open Public Resolvers advocates for free, neutral and trusted access to
+                                    the Internet and are against any restriction or blocking at the DNS level.
+                                </p>
+                                <!-- paste html view here-->
+
+
+                                <p align="justify">
+
+                                    In the recent past, open public resolvers are receiving decrees from courts and the
+                                    governments across nations for restricting the
+                                    access of certain domains for a variety of reasons.
+                                    This article will cover and list the few notable attempts here -
+                                    <br /><br />
+                                </p>
+                                <ol type="i">
+                                    <li>
+                                        <p align="justify">
+                                            <b>Quad9 Turns the Sony Case Around in Dresden</b> <br />
+                                            On 18th June 2021, Sony Music obtained an injunction from the District Court
+                                            in Hamburg, Germany (the first of its kind) that requires
+                                            Quad9 (9.9.9.9 public resolver) to block the popular pirate site
+                                            <sup><a onclick="linkfiles('link1')">[1]</a></sup> <sup><a
+                                                    onclick="linkfiles('link2')">[2]</a></sup>. <br />
+                                            <b>This is the first instance of its type in which the copyright-holder
+                                                industry has sought to compel a recursive public DNS operator
+                                                to block access to Internet domain name, and is thought to be a
+                                                precedent-setting case with far-reaching consequences. </b>
+                                            Quad9 immediately announced that it would contest the injunction and, on
+                                            24th June, announced that it had retained German counsel
+                                            and would be filing an objection to the injunction.
+                                            <br />
+                                            On 31st August, 2021, Quad9 filed an objection to the injunction, citing a
+                                            number of flaws in the legal arguments made by Sony,
+                                            but principally hinging on the fact that ISPs (which actually have a
+                                            business relationship with infringing parties) are exempted
+                                            from third-party liability, despite the fact that they also operate DNS
+                                            recursive resolvers, and
+                                            that it's a misinterpretation of the law to exclude independent recursive
+                                            resolvers from that exemption. <br />
+                                            Many other public resolvers also echoed their voices in support of Quad9,
+                                            including
+                                            <a target="_blank" href="https://www.dnsfilter.com/"> DNSFilter </a> <sup><a
+                                                    onclick="linkfiles('link3')">[3]</a></sup>.
+                                            <br />
+
+                                            <b>On 06th December 2023, the court ruled in favour of Quad9.
+                                                <sup><a onclick="linkfiles('link4')">[4]</a></sup>
+                                                <sup><a onclick="linkfiles('link5')">[5]</a></sup>
+                                            </b>
+                                        </p>
+                                    </li>
+
+                                    <li>
+                                        <p align="justify">
+                                            <b>A French court has ordered Google, Cloudflare, and Cisco to poison their
+                                                DNS resolvers to prevent
+                                                circumvention of blocking measures (June 2024).
+                                                <sup><a onclick="linkfiles('link6')">[6]</a></sup></b> <br />
+                                            In June 2024, a French court accepts the request of Canal+ to tighten up
+                                            previously obtained anti-piracy measures.
+                                            The court ordered Google, Cloudflare, and Cisco to poison their DNS records
+                                            to prevent these third-party services
+                                            from acting as workarounds for existing pirate site blockades.
+                                            <sup><a onclick="linkfiles('link7')">[7]</a></sup> <br />
+
+                                            This all begins in 2023, when Canal+ went to court in France with the goal
+                                            of obtaining an order requiring local ISPs to
+                                            block over 100 pirate sports streaming sites. The French court accepted the
+                                            request and ordered ISPs including
+                                            Orange, SFR, OutreMer Télécom, Free, and Bouygues Télécom to implement
+                                            technical measures to prevent access to
+                                            Footybite.co, Streamcheck.link, SportBay.sx, TVFutbol.info, and
+                                            Catchystream.com, and dozens of others. <br />
+                                            Since the ISPs have their own DNS resolvers for use by their own customers,
+                                            these were configured to provide
+                                            non-authentic responses to deny access to the sites in question.
+                                            Somewhat inevitably, some of the ISP's users reconfigured their machines to
+                                            use third-party DNS servers,
+                                            including those provided by Cloudflare, Google, and Cisco. <br />
+
+                                            To prevent these workarounds, Canal+ took legal action against three popular
+                                            public DNS providers – Cloudflare (1.1.1.1),
+                                            Google (8.8.8.8), and Cisco (208.69.38.205) – demanding blocking measures
+                                            similar to those already implemented by
+                                            French ISPs under Article L333-10 of the French Sports Code.
+                                            The Paris judicial court responded in May 2024 by handing down two orders;
+                                            one concerning Premier League matches
+                                            and the other relating to matches played in the Champions League. The court
+                                            ordered Google, Cloudflare, and Cisco
+                                            to implement measures to prevent French internet users from using their
+                                            services to access around 117 pirate domains.
+
+                                            <b>Google previously indicated it would comply, but OpenDNS Suspends Entire
+                                                Service to the Whole of France
+                                                <sup><a onclick="linkfiles('link8')">[8]</a></sup>.</b>
+
+                                        <div class="row ">
+                                            <div class="col border border-dark me-2 sm-screen">
+                                                <div class=" p-1 image-hight" >
+                                                    <a href="https://torrentfreak.com/opendns-suspends-service-in-france-due-to-canal-piracy-blocking-order-240629/"
+                                                    target="_blank">
+                                                    <img src="../../images/2025/opendns-suspends-service-in-france-due-to-canal-piracy-blocking-order.jpg"
+                                                        alt="image" class="img-fluid w-100 m-0 p-0  zoomImage"> </a>
+                                                </div>
+                                            </div>
+                                            <div class="col  border border-dark sm-screen">
+                                                <div class=" p-1 image-hight">
+
+                                                
+                                                    <a href="https://www.reddit.com/r/google/comments/1dh5ekc/a_french_court_has_ordered_google_cloudflare_and/?rdt=46720"
+                                                    target="_blank">
+                                                    <img src="../../images/2025/french_court_has_ordered_google_cloudflare.jpg"
+                                                        alt="image" class="img-fluid w-100 m-0 p-0 zoomImage"></a>
+                                                    </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!--
                                                                                 <div>
                                                                                 <div class="row">
                                                                                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -228,36 +279,49 @@
                                                                                 </div>
                                                                                 </div>
                                                                                 -->
-                                                                                
-                                                                                </p>
-									</li>
-									
-									<li> 
-                                                                            <p align="justify"> 
-                                                                                <b>OpenDNS quits Belgium 
-                                                                                    <sup><a onclick="linkfiles('link9')">[9]</a></sup>
-                                                                                  </b> <br />
-                                                                                    In a brief statement, citing court orders, <b>Cisco announced that (effectively from 11th April 2025) the OpenDNS service is not available to users in Belgium.</b>
-                                                                                <sup><a onclick="linkfiles('link10')">[10]</a></sup>
-                                                                                As per <a target="_blank" href="https://torrentfreak.com/">TorrentFreak</a>,  Cisco's withdrawal is almost certainly linked 
-                                                                                to an IPTV piracy blocking order obtained by DAZN, as it requires OpenDNS, Cloudflare and Google to block over 100 pirate sites 
-                                                                                or face fines of €100,000 per day. Google was also ordered to de-index from search results. 
-                                                                                Cisco’s suspension of OpenDNS in Belgium mirrors its response to a similar court order in France in 2024. 
-                                                                                Both statements were delivered without fanfare, which may suggest that the company prefers not to be seen as taking a stand.
-                                                                                <br />
-                                                                                During the evening of April 5, Belgian media reported that a major blocking campaign was underway to protect content licensed 
-                                                                                by DAZN and 12th Player, most likely football matches from Belgium’s Pro League. DAZN described the action as 
-                                                                                “the first of its kind” and a “real step forward” in the fight against content piracy.
-                                                                                
-                                                                                <div class="row">
-                                                                                    <div class="col">
-                                                                                <a href="https://torrentfreak.com/opendns-quits-belgium-under-threat-of-piracy-blocks-or-fines-of-e100k-per-day-250416/" target="_blank">        
-                                                                                <img src="../../images/2025/opendns-quits-belgium-under-threat-of-piracy-blocks-or-fines-of-e100k-per-day.jpg" 
-                                                                                     alt="image" class="img-fluid w-50 py-3 border" style="border-color: #000 !important;"> </a>
-                                                                                    </div>
-                                                                                </div>
-                                                                                        
-                                                                                <!--
+
+                                        </p>
+                                    </li>
+
+                                    <li>
+                                        <p align="justify">
+                                            <b>OpenDNS quits Belgium
+                                                <sup><a onclick="linkfiles('link9')">[9]</a></sup>
+                                            </b> <br />
+                                            In a brief statement, citing court orders, <b>Cisco announced that
+                                                (effectively from 11th April 2025) the OpenDNS service is not available
+                                                to users in Belgium.</b>
+                                            <sup><a onclick="linkfiles('link10')">[10]</a></sup>
+                                            As per <a target="_blank" href="https://torrentfreak.com/">TorrentFreak</a>,
+                                            Cisco's withdrawal is almost certainly linked
+                                            to an IPTV piracy blocking order obtained by DAZN, as it requires OpenDNS,
+                                            Cloudflare and Google to block over 100 pirate sites
+                                            or face fines of €100,000 per day. Google was also ordered to de-index from
+                                            search results.
+                                            Cisco’s suspension of OpenDNS in Belgium mirrors its response to a similar
+                                            court order in France in 2024.
+                                            Both statements were delivered without fanfare, which may suggest that the
+                                            company prefers not to be seen as taking a stand.
+                                            <br />
+                                            During the evening of April 5, Belgian media reported that a major blocking
+                                            campaign was underway to protect content licensed
+                                            by DAZN and 12th Player, most likely football matches from Belgium’s Pro
+                                            League. DAZN described the action as
+                                            “the first of its kind” and a “real step forward” in the fight against
+                                            content piracy.
+
+                                        <div class="row">
+                                            <div class="col  sm-screen">
+                                                <div class="border border-dark p-1 image-hight w-50 mx-auto">
+                                                    <a href="https://torrentfreak.com/opendns-quits-belgium-under-threat-of-piracy-blocks-or-fines-of-e100k-per-day-250416/"
+                                                    target="_blank">
+                                                    <img src="../../images/2025/opendns-quits-belgium-under-threat-of-piracy-blocks-or-fines-of-e100k-per-day.jpg"
+                                                        alt="image" class="img-fluid w-100 m-0 p-0"> </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--
                                                                                 <div>
                                                                                 <div class="row">
                                                                                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -270,145 +334,167 @@
                                                                                 </div>
                                                                                 </div>
                                                                                 -->
-                                                                                
-                                                                            </p>
-									</li>
-								</ol>
-                                                                    
-                                                                    <p><b>Public Opinion on DNS Policing</b></p>
-                                                                    <p align="justify"> 
-                                                                        <a href="https://www.linkedin.com/in/david-reed-82811b19/" target="_blank">David Reed</a> wrote on LinkedIn that - 
-                                                                        <i>
-                                                                        The Internet is not "owned". The illusion of hierarchical control is created by the idea that there is a hierarchical 
-                                                                        power centered in ICANN. And most States think they deserve to control everything (claiming it is to protect their people, 
-                                                                        but that's a pretext only; they don't protect their people's rights, they protect the State). 
-                                                                        </i> <br />
-                                                                        <a href="https://www.linkedin.com/in/jcurran/" target="_blank">John Curran </a> wrote
-                                                                        <i>public DNS resolvers should be neutral - 100% agreed. Of course, we provided governments no mechanism to exercise 
-                                                                            what they viewed as their public policy imperative... so of course outcomes like this are the result. 
-                                                                            Some mutual constructive engagement on the underlying requirements that they perceive and possible 
-                                                                            solutions might go a lot further than just responding with circumventation – routing around governments just encourages deeper intervention.</i>
-                                                                        <br/><br />
-                                                                        A full discussion on the DNS Policing is available here -
-                                                                    </p>    
-                                                                    
-                                                                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7318555758168604674" height="463" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-								
-                                                        
-                                                                    
-							
 
-								<h6><u>References: </u></h6>
-								<ol class="refLi">
-									<li id="link1"><a class="openLink"
-                                                                                          onclick="linkOpen('https://torrentfreak.com/sony-wins-pirate-site-blocking-order-against-dns-resolver-quad9-210621/')"> Sony Wins Pirate Site Blocking Order Against DNS-Resolver Quad9 (Updated)
-											</a>
-									</li>
-                                                                        <li id="link1"><a class="openLink"
-                                                                                          onclick="linkOpen('https://en.wikipedia.org/wiki/Quad9#Sony_Music_injunction')"> Sony Music injunction - wikipedia 
-											</a>
-									</li>
-                                                                        <li id="link3"><a class="openLink"
-                                                                                          onclick="linkOpen('https://www.dnsfilter.com/blog/quad9-injunction-dnsfilter-response')"> 
-                                                                                DNSFilter CEO Responds to Quad9 Injunction: “DNS resolvers should not police the internet for copyright violations” 
-											</a>
-									</li>
-                                                                        <li id="link4"><a class="openLink"
-                                                                                          onclick="linkOpen('https://www.quad9.net/uploads/URT_05_12_2023_en_Korr_MH_en2_2e629b1f7b.pdf')"> 
-                                                                                FINAL JUDGMENT
-											</a>
-									</li>
-                                                                        <li id="link5"><a class="openLink"
-                                                                                          onclick="linkOpen('https://www.quad9.net/news/blog/quad9-turns-the-sony-case-around-in-dresden/')"> 
-                                                                                Quad9 Turns the Sony Case Around in Dresden
-											</a>
-									</li>
-                                                                        <li id="link6"><a class="openLink"
-                                                                                          onclick="linkOpen('https://www.reddit.com/r/google/comments/1dh5ekc/a_french_court_has_ordered_google_cloudflare_and/?rdt=46720')"> 
-                                                                                A French court has ordered Google, Cloudflare, and Cisco to poison their DNS resolvers to prevent circumvention of blocking measures
+                                        </p>
+                                    </li>
+                                </ol>
 
-											</a>
-									</li>
-                                                                        <li id="link7"><a class="openLink"
-                                                                                          onclick="linkOpen('https://torrentfreak.com/opendns-suspends-service-in-france-due-to-canal-piracy-blocking-order-240629/')"> 
-                                                                                OpenDNS Suspends Service in France Due to Canal+ Piracy Blocking Order
-											</a>
-									</li>
-                                                                        <li id="link8"><a class="openLink"
-                                                                                          onclick="linkOpen('https://support.opendns.com/hc/en-us/articles/27951404269204-OpenDNS-Service-Not-Available-To-Users-In-France-and-Portugal')"> 
-                                                                                OpenDNS Service Not Available To Users In France and Portugal
-											</a>
-									</li>
-                                                                        
-                                                                        <li id="link9"><a class="openLink"
-                                                                                          onclick="linkOpen('https://torrentfreak.com/opendns-quits-belgium-under-threat-of-piracy-blocks-or-fines-of-e100k-per-day-250416/')"> 
-                                                                                OpenDNS Quits Belgium Under Threat of Piracy Blocks or Fines of €100K Per Day
-											</a>
-									</li>
-                                                                        <li id="link10"><a class="openLink"
-                                                                                          onclick="linkOpen('https://community.cisco.com/t5/security-knowledge-base/opendns-service-currently-not-available-to-users-in-belgium/ta-p/5283479')"> 
-                                                                                OpenDNS Service Currently Not Available To Users In Belgium
-											</a>
-									</li>
-									
-								</ol>
-							</div>
-							<div class="labelList">
+                                <p><b>Public Opinion on DNS Policing</b></p>
+                                <p align="justify">
+                                    <a href="https://www.linkedin.com/in/david-reed-82811b19/" target="_blank">David
+                                        Reed</a> wrote on LinkedIn that -
+                                    <i>
+                                        The Internet is not "owned". The illusion of hierarchical control is created by
+                                        the idea that there is a hierarchical
+                                        power centered in ICANN. And most States think they deserve to control
+                                        everything (claiming it is to protect their people,
+                                        but that's a pretext only; they don't protect their people's rights, they
+                                        protect the State).
+                                    </i> <br />
+                                    <a href="https://www.linkedin.com/in/jcurran/" target="_blank">John Curran </a>
+                                    wrote
+                                    <i>public DNS resolvers should be neutral - 100% agreed. Of course, we provided
+                                        governments no mechanism to exercise
+                                        what they viewed as their public policy imperative... so of course outcomes like
+                                        this are the result.
+                                        Some mutual constructive engagement on the underlying requirements that they
+                                        perceive and possible
+                                        solutions might go a lot further than just responding with circumventation –
+                                        routing around governments just encourages deeper intervention.</i>
+                                    <br /><br />
+                                    A full discussion on the DNS Policing is available here -
+                                </p>
+                                <div class="iframe-container">
+                                    
+                                <iframe class="responsive-iframe"
+                                    src="https://www.linkedin.com/embed/feed/update/urn:li:share:7318555758168604674"
+                                    height="463" width="504" frameborder="0" allowfullscreen=""
+                                    title="Embedded post"></iframe>
+
+                                </div>
+
+
+
+                                <h6><u>References: </u></h6>
+                                <ol class="refLi">
+                                    <li id="link1"><a class="openLink"
+                                            onclick="linkOpen('https://torrentfreak.com/sony-wins-pirate-site-blocking-order-against-dns-resolver-quad9-210621/')">
+                                            Sony Wins Pirate Site Blocking Order Against DNS-Resolver Quad9 (Updated)
+                                        </a>
+                                    </li>
+                                    <li id="link1"><a class="openLink"
+                                            onclick="linkOpen('https://en.wikipedia.org/wiki/Quad9#Sony_Music_injunction')">
+                                            Sony Music injunction - wikipedia
+                                        </a>
+                                    </li>
+                                    <li id="link3"><a class="openLink"
+                                            onclick="linkOpen('https://www.dnsfilter.com/blog/quad9-injunction-dnsfilter-response')">
+                                            DNSFilter CEO Responds to Quad9 Injunction: “DNS resolvers should not police
+                                            the internet for copyright violations”
+                                        </a>
+                                    </li>
+                                    <li id="link4"><a class="openLink"
+                                            onclick="linkOpen('https://www.quad9.net/uploads/URT_05_12_2023_en_Korr_MH_en2_2e629b1f7b.pdf')">
+                                            FINAL JUDGMENT
+                                        </a>
+                                    </li>
+                                    <li id="link5"><a class="openLink"
+                                            onclick="linkOpen('https://www.quad9.net/news/blog/quad9-turns-the-sony-case-around-in-dresden/')">
+                                            Quad9 Turns the Sony Case Around in Dresden
+                                        </a>
+                                    </li>
+                                    <li id="link6"><a class="openLink"
+                                            onclick="linkOpen('https://www.reddit.com/r/google/comments/1dh5ekc/a_french_court_has_ordered_google_cloudflare_and/?rdt=46720')">
+                                            A French court has ordered Google, Cloudflare, and Cisco to poison their DNS
+                                            resolvers to prevent circumvention of blocking measures
+
+                                        </a>
+                                    </li>
+                                    <li id="link7"><a class="openLink"
+                                            onclick="linkOpen('https://torrentfreak.com/opendns-suspends-service-in-france-due-to-canal-piracy-blocking-order-240629/')">
+                                            OpenDNS Suspends Service in France Due to Canal+ Piracy Blocking Order
+                                        </a>
+                                    </li>
+                                    <li id="link8"><a class="openLink"
+                                            onclick="linkOpen('https://support.opendns.com/hc/en-us/articles/27951404269204-OpenDNS-Service-Not-Available-To-Users-In-France-and-Portugal')">
+                                            OpenDNS Service Not Available To Users In France and Portugal
+                                        </a>
+                                    </li>
+
+                                    <li id="link9"><a class="openLink"
+                                            onclick="linkOpen('https://torrentfreak.com/opendns-quits-belgium-under-threat-of-piracy-blocks-or-fines-of-e100k-per-day-250416/')">
+                                            OpenDNS Quits Belgium Under Threat of Piracy Blocks or Fines of €100K Per
+                                            Day
+                                        </a>
+                                    </li>
+                                    <li id="link10"><a class="openLink"
+                                            onclick="linkOpen('https://community.cisco.com/t5/security-knowledge-base/opendns-service-currently-not-available-to-users-in-belgium/ta-p/5283479')">
+                                            OpenDNS Service Currently Not Available To Users In Belgium
+                                        </a>
+                                    </li>
+
+                                </ol>
+                            </div>
+                            <div class="labelList">
                                 <div class="labelIcon"><i class="fa-solid fa-tags"></i></div>
                                 <div class="labelText">DNS</div>
                             </div>
                             <div class="pagination blogPagination my-4">
                                 <div class="paginationNav pull-right">
 
-                                    <a href="../../2025/06/India-going-to-open-up-the-6GHz-lower-band-for-Wi-Fi.html" title="Previous" rel="" class="preblog">
+                                    <a href="../../2025/06/India-going-to-open-up-the-6GHz-lower-band-for-Wi-Fi.html"
+                                        title="Previous" rel="" class="preblog">
                                         <div class="prebox">
                                             <span><i class="fa fa-angle-left fa-lg"></i> </span>
                                             Previous
-                                        </div> 
-                                        <p class="pretitle">India going to delicense the lower 6 GHz band (5925MHz to 6425 MHz)</p>
+                                        </div>
+                                        <p class="pretitle">India going to delicense the lower 6 GHz band (5925MHz to
+                                            6425 MHz)</p>
                                     </a>
 
 
-                                    <a href="../../2025/02/the-history-and-the-present-of-.IN-ccTLD.html" title="Next" rel="" class="nextblog">
-                                     
-                                      <div class="nextbox">Next<span><i class="fa fa-angle-right fa-lg"></i></span> </div>  
-                                        <p class="nexttitle">The history and the present of .IN</p> 
-                                                                         
+                                    <a href="../../2025/02/the-history-and-the-present-of-.IN-ccTLD.html" title="Next"
+                                        rel="" class="nextblog">
+
+                                        <div class="nextbox">Next<span><i class="fa fa-angle-right fa-lg"></i></span>
+                                        </div>
+                                        <p class="nexttitle">The history and the present of .IN</p>
+
                                     </a>
                                 </div>
                             </div>
 
-						</div>
-						<div id="disqus_thread"></div>
-					</div>
-					<!-- /blog post -->
-				</div>
-			</div>
-		</div>
-		</div>
-	</section>
-	<!-- /Main content -->
+                        </div>
+                        <div id="disqus_thread"></div>
+                    </div>
+                    <!-- /blog post -->
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- /Main content -->
 
-	<div id="showsidebar"></div>
+    <div id="showsidebar"></div>
 
-  <div class="bg-secondary footer-bg" id="myFooter"></div>
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
 
-  <div class="progress-wrap">
-    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-    </svg>
-  </div>
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
 
-  <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
-  <script>
-    $('#myHead').load('../../include/header.html');
-    $(document).ready(function () {
-      $("#skipnone").remove();
-    });
-    $('#myFooter').load('../../include/footer.html');
-    $('#showsidebar').load('../../include/sidebarShow.html');
-  </script>
-     <script>
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+    <script>
         var geturl = window.location.href;
         // console.log(geturl);
         var disqus_config = function () {
@@ -425,19 +511,19 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
             Disqus.</a></noscript>
-  <!-- Bootstrap JS -->
-  <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
-  <!-- slick slider -->
-  <script src="../../plugins/slick/slick.min.js"></script>
-  <!-- masonry -->
-  <script src="../../plugins/masonry/masonry.js"></script>
-  <!-- headroom -->
-  <script src="../../plugins/headroom/headroom.js"></script>
-  <!-- reading time -->
-  <script src="../../plugins/reading-time/readingTime.min.js"></script>
-
-  <!-- Main Script -->
-  <script src="../../js/script.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+  
+    <!-- Main Script -->
+    <script src="../../js/script.js" crossorigin="anonymous"></script>
 
 
 </body>

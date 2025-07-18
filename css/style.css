@@ -2242,6 +2242,27 @@ cursor: pointer;
   background: rgba(0,0,0,0);
 }
 
+.image-hight{
+  max-height: 500px;
+  overflow: hidden;
+}
+.iframe-container{
+  position: relative;
+width: 70%;
+overflow: hidden;
+padding-top: 35%; /* 4:3 Aspect Ratio */
+}
+.responsive-iframe {
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+width: 100%;
+height: 100%;
+border: none;
+}
+
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .title-border-lg::before {
     position: absolute;
@@ -2578,6 +2599,17 @@ h4, .h4 {
   max-height: 230px;
   align-items: center;
 }
+
+.sm-screen{
+  flex: 0 0 auto;
+    width: 100%;
+}
+
+.iframe-container {
+  width: 100%;
+  padding-top: 80%;
+}
+
 
 }
 @media only screen and (max-width: 320px) {
