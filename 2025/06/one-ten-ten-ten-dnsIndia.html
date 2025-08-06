@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V78EBX66N1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-V78EBX66N1');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KKQWN7J6');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="Are Public DNS Resolvers under pressure ?" />
+    <meta property="og:description"
+        content="The story of OpenDNS exit from France & Belgium AND face off between Quad9 and Sony Music" />
+    <meta property="og:image" content="../../images/2025/dnsImage.jpg" />
+    <meta property="og:url" content="https://blog.gauravkansal.in/2025/04/Public-Resolvers-under-pressure.html" />
+    <meta property="og:type" content="article" />
+
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+    <style>
+        .content *{
+            margin-bottom: 0;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 40px;
+          padding-top: 30px;
+        }
+
+        .main-logo {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 0;
+        }
+
+        .ip-address {
+            font-size: 8rem;
+            font-family:'Arial', sans-serif;
+            font-weight: 900;
+            background: linear-gradient(45deg, #FF9933 0%, #FFFFFF 50%, #138808 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease-in-out infinite;
+            letter-spacing: 2px;
+            text-shadow: 0 0 30px rgba(255,153,51,0.3);
+            margin-bottom: 0;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .dns-label {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            font-weight: 600;
+            margin-top: 15px;
+            letter-spacing: 3px;
+        }
+
+        .india-label {
+            font-size: 1rem;
+            color: #7f8c8d;
+            font-weight: 500;
+            margin-top: 5px;
+            letter-spacing: 1px;
+        }
+
+        .tricolor-bar {
+            width: 300px;
+            height: 6px;
+            background: linear-gradient(to right, #FF9933 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #138808 66.66%);
+            margin: 20px auto;
+            border-radius: 3px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .network-dots {
+            position: absolute;
+            top: -20px;
+            right: -30px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .dot:nth-child(1) {
+            background: #FF9933;
+            animation-delay: 0s;
+        }
+
+        .dot:nth-child(2) {
+            background: #FFFFFF;
+            border: 2px solid #FF9933;
+            animation-delay: 0.3s;
+        }
+
+        .dot:nth-child(3) {
+            background: #138808;
+            animation-delay: 0.6s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            color: #95a5a6;
+            margin-top: 15px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKQWN7J6" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
+
+    <div class="navigation" id="myHead"></div>
+
+    <!-- page-title -->
+    <section class="section bg-secondary">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>1.10.10.10 DNS India </h4>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
+
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html" target="_blank">Gaurav Kansal</a>
+                                </li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> Aug 06, 2025</li>
+                            </ul>
+                            <div class="content">
+                                <div class="logo-container">
+                                    <div class="main-logo">
+                                        <div class="network-dots">
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                        </div>
+                                        <div class="ip-address">1.10.10.10</div>
+                                    </div>
+                                    <div class="tricolor-bar"></div>
+                                    <div class="dns-label">DNS INDIA</div>
+                                    <div class="india-label">भारत का डीएनएस सेवा</div>
+                                    <div class="tagline">Secure • Fast • Reliable</div>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                        <div id="disqus_thread"></div>
+                    </div>
+                    <!-- /blog post -->
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- /Main content -->
+
+    <div id="showsidebar"></div>
+
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+    <script>
+        var geturl = window.location.href;
+        // console.log(geturl);
+        var disqus_config = function () {
+            this.page.url = geturl;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = geturl; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://gauravkansal-in.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
+  
+    <!-- Main Script -->
+    <script src="../../js/script.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
