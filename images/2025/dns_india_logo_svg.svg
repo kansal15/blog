@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400">
+  <defs>
+    <!-- Gradient that replicates the CSS background-size: 200% 200% and background-position animation -->
+    <linearGradient id="movingGradient" x1="-100%" y1="-100%" x2="100%" y2="100%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#FF9933"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#138808"/>
+      <!-- This mimics the CSS background-position: 0% 50% to 100% 50% animation -->
+      <animate attributeName="y1" values="-100%;0%;-100%" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="x1" values="-100%;-50%;-100%" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="100%;200%;100%" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="100%;150%;100%" dur="3s" repeatCount="indefinite"/>
+    </linearGradient>
+    
+    <!-- Tricolor bar gradient -->
+    <linearGradient id="tricolorBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF9933"/>
+      <stop offset="33.33%" stop-color="#FF9933"/>
+      <stop offset="33.33%" stop-color="#FFFFFF"/>
+      <stop offset="66.66%" stop-color="#FFFFFF"/>
+      <stop offset="66.66%" stop-color="#138808"/>
+      <stop offset="100%" stop-color="#138808"/>
+    </linearGradient>
+            
+  </defs>
+  
+  <!-- White background container -->
+  <rect x="0" y="0" width="1200" height="400" fill="white" rx="20"/>
+  
+  <!-- Network dots with exact CSS pulse animation -->
+  <g transform="translate(800, 80)">
+    <!-- Dot 1: Orange/Saffron -->
+    <circle cx="0" cy="0" r="6" fill="#FF9933">
+      <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.7;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Dot 2: White with orange border -->
+    <circle cx="16" cy="0" r="6" fill="#FFFFFF" stroke="#FF9933" stroke-width="2">
+      <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.7;1" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Dot 3: Green -->
+    <circle cx="32" cy="0" r="6" fill="#138808">
+      <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.7;1" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Main IP address text with animated gradient fill -->
+  <text x="500" y="200" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="120" font-weight="900" fill="url(#movingGradient)"  letter-spacing="2px">1.10.10.10</text>
+  
+  <!-- Tricolor bar -->
+  <rect x="350" y="260" width="300" height="6" fill="url(#tricolorBar)" rx="3" filter="url(#barDropShadow)"/>
+  
+  <!-- DNS INDIA text -->
+  <text x="500" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#2c3e50" letter-spacing="3px">DNS INDIA</text>
+  
+  <!-- Hindi text -->
+  <text x="500" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="500" fill="#7f8c8d" letter-spacing="1px">भारत का डीएनएस सेवा</text>
+  
+  <!-- Tagline -->
+  <text x="500" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#95a5a6">Secure • Fast • Reliable</text>
+<!-- Code injected by live-server -->
+
+</svg>
