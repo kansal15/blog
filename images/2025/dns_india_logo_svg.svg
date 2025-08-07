@@ -52,7 +52,7 @@
   <text x="500" y="200" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="120" font-weight="900" fill="url(#movingGradient)"  letter-spacing="2px">1.10.10.10</text>
   
   <!-- Tricolor bar -->
-  <rect x="350" y="260" width="300" height="6" fill="url(#tricolorBar)" rx="3" filter="url(#barDropShadow)"/>
+  <rect x="350" y="260" width="300" height="6" fill="url(#tricolorBar)" rx="3" filter="url(#barDropShadow)"/> 
   
   <!-- DNS INDIA text -->
   <text x="500" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#2c3e50" letter-spacing="3px">Indian Public DNS</text>
