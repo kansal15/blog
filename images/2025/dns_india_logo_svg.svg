@@ -55,10 +55,10 @@
   <rect x="350" y="260" width="300" height="6" fill="url(#tricolorBar)" rx="3" filter="url(#barDropShadow)"/>
   
   <!-- DNS INDIA text -->
-  <text x="500" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#2c3e50" letter-spacing="3px">DNS INDIA</text>
+  <text x="500" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#2c3e50" letter-spacing="3px">Indian Public DNS</text>
   
   <!-- Hindi text -->
-  <text x="500" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="500" fill="#7f8c8d" letter-spacing="1px">भारत का डीएनएस सेवा</text>
+  <text x="500" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="500" fill="#7f8c8d" letter-spacing="1px">भारत की डी.एन.एस. सेवा</text>
   
   <!-- Tagline -->
   <text x="500" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#95a5a6">Secure • Fast • Reliable</text>
