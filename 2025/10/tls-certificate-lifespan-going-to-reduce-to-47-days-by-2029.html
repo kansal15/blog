@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Gaurav Kansal Blog</title>
+  
+	<!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="https://blog.gauravkansal.in/" />
+        <meta property="og:type" content="article" />
+  
+	<!-- ** Plugins Needed for the Project ** -->
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+	<!-- slick slider -->
+	<link rel="stylesheet" href="../../plugins/slick/slick.css">
+	<!-- themefy-icon -->
+	<link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+	<!-- Main Stylesheet -->
+	<link href="../../css/style.css" rel="stylesheet">
+	<!--Favicon-->
+	<link rel="icon" type="image/png" href="../../images/favicon.jpg">
+	<link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+  </head>
+
+<body>
+	<!-- preloader -->
+	<div class="preloader">
+		<div class="loader">
+			<span class="dot"></span>
+			<div class="dots">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+	<!-- /preloader -->
+
+	<div class="navigation" id="myHead"></div>
+
+	<!-- page-title -->
+	<section class="section bg-secondary">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h4>The TLS certificate lifespan is officially set to be reduced to a maximum validity of 47 days by March 15, 2029</h4>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /page-title -->
+
+	<!--Main content-->
+	<section class="mt-1" id="blog-post-block">
+		<div class="card mb-2">
+			<div class="container-fluid">
+				<div class="row">
+					<!-- blog post -->
+					<div class="col-lg-12">
+					<div class="card-block">
+                                        <ul class="list-inline d-flex justify-content-between py-3">
+                                        <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html" target="_blank">Gaurav Kansal</a></li>
+                                        <li class="list-inline-item"><i class="ti-calendar mr-2"></i> October 04, 2025</li>
+                                        </ul>            
+							<div class="content">
+							<!--	
+                                                            <img src="../../images/masonary-post/voting.jpg" alt="post-thumb" class="img-fluid mb-4">
+							-->
+                                                                <p align="justify">
+                                                                    The TLS certificate lifespan is officially set to be drastically reduced to a maximum validity of 47 days by March 15, 2029. 
+                                                                    This change, approved by the CA/Browser Forum on April 11, 2025, through
+                                                                    <b> <u><a target="_blank" href="https://groups.google.com/a/groups.cabforum.org/g/servercert-wg/c/bvWh5RN6tYI"> Ballot SC-081v3 </a></u> </b>
+                                                                    (which has been proposed by Clint Wilson (Apple) and endorsed by Nick France (Sectigo), Ryan Dickson (Google Chrome), and Ben Wilson (Mozilla)) 
+                                                                    represents a significant shift from the current maximum lifespan of 398 days 
+                                                                    and is being phased in over several years to improve internet security and encourage automation in certificate management.	
+                                                                <sup><a onclick="linkfiles('link1')">[1]</a></sup>
+                                                                </p>
+                                                               
+									<h6><u>Reasons for the changes</u></h6>
+                                                                
+                                                                            <ol type="i">
+                                                                            <li> 
+                                                                                <p align="justify">
+                                                                                    <b>Enhanced Security:</b> Shorter certificate lifespans reduce the window of opportunity for attackers to 
+                                                                                exploit compromised certificates. 
+                                                                                If a certificate or its private key is compromised, the damage potential is limited to the certificate's shorter validity period. 
+                                                                                This reduces reliance on often unreliable certificate revocation mechanisms.
+                                                                                </p>
+                                                                            </li>
+                                                                            <li> 
+                                                                                <p align="justify">
+                                                                                    <b>Improved Cryptographic Agility:</b> Frequent renewals encourage faster adoption of updated cryptographic algorithms and security standards, 
+                                                                                helping organizations stay resilient against emerging threats, including preparation for quantum-safe cryptography.
+                                                                                </p>
+                                                                            </li>
+                                                                            <li> 
+                                                                                <p align="justify">
+                                                                                    <b>Reduced Risk of Outdated Information:</b> Long-lived certificates may contain outdated organizational or domain validation information. 
+                                                                                Shorter lifespans ensure validation data is refreshed more frequently, reducing risks associated with stale or incorrect data.
+                                                                            </li>
+                                                                            <li> 
+                                                                                <p align="justify">
+                                                                                    <b>Encouragement of Automation:</b> The increased frequency of certificate renewals (up to 8-12 times per year by 2029) makes manual 
+                                                                                management impractical and error-prone. This change pushes organizations toward automated certificate life cycle management solutions, 
+                                                                                which improve operational efficiency and reduce the risk of outages due to expired certificates.
+                                                                            </li>
+                                                                            </ol>
+                                                                        
+                                                                        
+                                                                        <h6><u>Impact on Organizations</u></h6>
+                                                                
+                                                                            <ol type="i">
+                                                                            <li> 
+                                                                                <p align="justify">
+                                                                                    <b>Renewal Frequency:</b> Organizations will need to renew certificates roughly twice a year by 2026, quarterly by 2027, 
+                                                                                    and monthly by 2029, increasing operational workload significantly.
+                                                                                </p>
+                                                                            </li>
+                                                                            <li> 
+                                                                                <p align="justify">
+                                                                                    <b>Validation Reuse Periods:</b> The period during which domain control validation (DCV) and subject identity information (SII) 
+                                                                                    can be reused will also shrink. For example, DCV reuse will drop from 398 days currently to 10 days by 2029, 
+                                                                                    requiring more frequent domain revalidation.
+                                                                                </p>
+                                                                            </li>
+                                                                            <li> 
+                                                                                <p align="justify">
+                                                                                    <b>Operational Challenges:</b> Manual renewal and validation processes will become untenable. 
+                                                                                    Without automation, organizations face higher risks of service disruption, compliance issues, and security lapses.
+                                                                            </li>
+                                                                            <li> 
+                                                                                <p align="justify">
+                                                                                    <b>Cost Considerations:</b> Despite the increased renewal frequency, shorter lifespans do not necessarily mean higher costs. 
+                                                                                    Many providers offer multi-year coverage plans allowing multiple re-issues within the purchased period, helping manage expenses.
+                                                                            </li>
+                                                                            </ol>
+                                                                        
+                                                                        
+                                                                        
+									
+								  </div>
+
+								  <blockquote><span style="color: #d58753;"> Conclusion </span>
+                                                                      <p align="justify"><b>
+                                                                      1. The reduction in the TLS certificate lifespans to 47 days by 2029 is a landmark move to strengthen digital security by limiting exposure 
+                                                                      to compromised certificates and encouraging rapid adoption of new security standards. This change will require organizations 
+                                                                      to overhaul their certificate management strategies, with automation becoming essential to handle the increased renewal frequency and 
+                                                                      validation demands. While operationally challenging, this evolution aims to create a more secure and resilient internet ecosystem.
+                                                                          </b> </p>
+                                                                      
+                                                                      <p align="justify"><b>
+                                                                      2. This transition has been driven and supported by major industry players including Apple, Google, Mozilla, Microsoft, and 
+                                                                      leading certificate authorities like Sectigo, reflecting a unified commitment to enhancing trust and security online.
+                                                                          </b> </p>
+								</blockquote>
+                                            
+                                            
+
+								<h6><u>References: </u></h6>
+								<ol>
+                                                                    <li id="link1"><a class="openLink"
+                                                                                          onclick="linkOpen('https://cabforum.org/2025/04/11/ballot-sc081v3-introduce-schedule-of-reducing-validity-and-data-reuse-periods/')"> 
+                                                                            Ballot SC081v3: Introduce Schedule of Reducing Validity and Data Reuse Periods
+											</a>
+									</li>
+                                                                    
+								</ol>
+							</div>
+							<div class="labelList">
+                                <div class="labelIcon"><i class="fa-solid fa-tags"></i></div>
+                                <div class="labelText">TLS</div>
+                            </div>
+                            <div class="pagination blogPagination my-4">
+                                <div class="paginationNav pull-right">
+
+                                    <a href=" javascript:void(0);" title="Previous" rel="" class="preblog disable opacity-50">
+                                        <div class="prebox">
+                                            <span><i class="fa fa-angle-left fa-lg"></i> </span>
+                                            Previous
+                                        </div> 
+                                        <p>Previous Heading</p>
+                                    </a>
+
+
+                                    <a href="../../2024/08/epicCAFails.html" title="Next" rel="" class="nextblog">
+                                     
+                                      <div class="nextbox">Next<span><i class="fa fa-angle-right fa-lg"></i></span> </div>  
+                                        <p class="nexttitle">Next Heading</p> 
+                                                                         
+                                    </a>
+                                </div>
+                            </div>
+
+						</div>
+						<div id="disqus_thread"></div>
+					</div>
+					<!-- /blog post -->
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<!-- /Main content -->
+
+	<div id="showsidebar"></div>
+
+  <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+
+  <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+  <script>
+    $('#myHead').load('../../include/header.html');
+    $(document).ready(function () {
+      $("#skipnone").remove();
+    });
+    $('#myFooter').load('../../include/footer.html');
+    $('#showsidebar').load('../../include/sidebarShow.html');
+  </script>
+     <script>
+        var geturl = window.location.href;
+        // console.log(geturl);
+        var disqus_config = function () {
+            this.page.url = geturl;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = geturl; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://gauravkansal-in.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+  <!-- Bootstrap JS -->
+  <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- slick slider -->
+  <script src="../../plugins/slick/slick.min.js"></script>
+  <!-- masonry -->
+  <script src="../../plugins/masonry/masonry.js"></script>
+  <!-- headroom -->
+  <script src="../../plugins/headroom/headroom.js"></script>
+  <!-- reading time -->
+  <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+  <!-- Main Script -->
+  <script src="../../js/script.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
