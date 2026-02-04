@@ -2,404 +2,487 @@
 <html lang="en">
 
 <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V78EBX66N1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-V78EBX66N1');
-        </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V78EBX66N1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-V78EBX66N1');
+    </script>
 
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-KKQWN7J6');</script>
-        <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KKQWN7J6');</script>
+    <!-- End Google Tag Manager -->
 
-	<meta charset="utf-8">
-	<title>Gaurav Kansal Blog</title>
-  
-	<!-- mobile responsive meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta property="og:title" content="Opening India’s Lower 6 GHz Band for Wireless Use: A Strategic Regulatory Landmark" />
-        <meta property="og:description" content="On January 20, 2026, the Ministry of Communications, Government of India, issued a landmark 
+    <meta charset="utf-8">
+    <title>Gaurav Kansal Blog</title>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:title"
+        content="Opening India’s Lower 6 GHz Band for Wireless Use: A Strategic Regulatory Landmark" />
+    <meta property="og:description"
+        content="On January 20, 2026, the Ministry of Communications, Government of India, issued a landmark 
               Gazette notification titled 'Use of Low Power and Very Low Power Wireless Access System including Radio Local Area Network in Lower 6 GHz band 
               (Exemption from Licensing Requirement) Rules, 2026.' 
               This move officially de-licenses the lower portion of the 6 GHz spectrum, aligning India 
               with global wireless standards and paving the way for advanced technologies like Wi-Fi 6E and Wi-Fi 7." />
-       
-        <meta property="og:image" content="https://blog.gauravkansal.in/images/2025/India-opens-up-the-6-GHz.jpg" />
-        <meta property="og:url" content="https://blog.gauravkansal.in/2026/01/Opening-India-Lower-6-GHz-Band-for-Wireless-Use:-A-Strategic-Regulatory-Landmark.html" />
-        <meta property="og:type" content="article" />
-  
-	<!-- ** Plugins Needed for the Project ** -->
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
-	<!-- slick slider -->
-	<link rel="stylesheet" href="../../plugins/slick/slick.css">
-	<!-- themefy-icon -->
-	<link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
-	<!-- Main Stylesheet -->
-	<link href="../../css/style.css" rel="stylesheet">
-	<!--Favicon-->
-	<link rel="icon" type="image/png" href="../../images/favicon.jpg">
-	<link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
-        
-        <style>
-                                                                            /* Table Styling */
-                                                                        table {
-                                                                            width: 90%;
-                                                                            border-collapse: collapse;
-                                                                            margin: 25px 0;
-                                                                            background-color: #fff;
-                                                                            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-                                                                            font-family: 'Times New Roman', Times, serif;
-                                                                        }
-                                                                        th, td {
-                                                                            padding: 12px 10px;
-                                                                            border: 1px solid #ddd;
-                                                                            text-align: left;
-                                                                            font-family: 'Times New Roman', Times, serif;
-                                                                        }
-                                                                        th {
-                                                                            background-color: #d8b583;
-                                                                            color: white;
-                                                                            font-weight: 600;
-                                                                            font-family: 'Times New Roman', Times, serif;
-                                                                        }
-                                                                        tr:nth-child(even) {
-                                                                            background-color: #f2f2f2;
-                                                                        }
-                                                                        /* Highlight Classes */
-                                                                        .highlight-positive {
-                                                                            color: #155724;
-                                                                            background-color: #d4edda;
-                                                                            padding: 2px 5px;
-                                                                            border-radius: 3px;
-                                                                            font-weight: bold;
-                                                                        }
-                                                                        .highlight-neutral {
-                                                                            color: #383d41;
-                                                                            background-color: #e2e3e5;
-                                                                            padding: 2px 5px;
-                                                                            border-radius: 3px;
-                                                                            font-weight: bold;
-                                                                        }
-                                                                        blockquote {
-                                                                            background-color: #eef7fa;
-                                                                            border-left: 4px solid #17a2b8;
-                                                                            margin: 20px 0;
-                                                                            padding: 15px;
-                                                                            font-size: 0.95em;
-                                                                        }
-                                                                        </style>
-  </head>
+
+    <meta property="og:image" content="https://blog.gauravkansal.in/images/2025/India-opens-up-the-6-GHz.jpg" />
+    <meta property="og:url"
+        content="https://blog.gauravkansal.in/2026/01/Opening-India-Lower-6-GHz-Band-for-Wireless-Use:-A-Strategic-Regulatory-Landmark.html" />
+    <meta property="og:type" content="article" />
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../../plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+    <!-- Main Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="../../images/favicon.jpg">
+    <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+
+    <style>
+        /* Table Styling */
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        th,
+        td {
+            padding: 12px 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        th {
+            background-color: #d8b583;
+            color: white;
+            font-weight: 600;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Highlight Classes */
+        .highlight-positive {
+            color: #155724;
+            background-color: #d4edda;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .highlight-neutral {
+            color: #383d41;
+            background-color: #e2e3e5;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        blockquote {
+            background-color: #eef7fa;
+            border-left: 4px solid #17a2b8;
+            margin: 20px 0;
+            padding: 15px;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKQWN7J6"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKQWN7J6" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- preloader -->
-	<div class="preloader">
-		<div class="loader">
-			<span class="dot"></span>
-			<div class="dots">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-		</div>
-	</div>
-	<!-- /preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /preloader -->
 
-	<div class="navigation" id="myHead"></div>
+    <div class="navigation" id="myHead"></div>
 
-	<!-- page-title -->
-	<section class="section bg-secondary">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-12">
-					<h4 style="font-family: 'Times New Roman', Times, serif; font-size: 24px;">
-                                            Opening India’s Lower 6 GHz Band for Wireless Usage : A Strategic Regulatory Landmark</h4>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- /page-title -->
+    <!-- page-title -->
+    <section class="section bg-secondary">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 style="font-family: 'Times New Roman', Times, serif; font-size: 24px;">
+                        Opening India’s Lower 6 GHz Band for Wireless Usage : A Strategic Regulatory Landmark</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page-title -->
 
-	<!--Main content-->
-	<section class="mt-1" id="blog-post-block">
-		<div class="card mb-2">
-			<div class="container-fluid">
-				<div class="row">
-					<!-- blog post -->
-					<div class="col-lg-12">
-					<div class="card-block">
-                                        <ul class="list-inline d-flex justify-content-between py-3">
-                                        <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
-                                        href="https://www.gauravkansal.in/index.html" target="_blank">Gaurav Kansal</a></li>
-                                        <li class="list-inline-item"><i class="ti-calendar mr-2"></i> Jan 21, 2026</li>
-                                        </ul>
-							<div class="content">
-                                                            <!-- comment 
+    <!--Main content-->
+    <section class="mt-1" id="blog-post-block">
+        <div class="card mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- blog post -->
+                    <div class="col-lg-12">
+                        <div class="card-block">
+                            <ul class="list-inline d-flex justify-content-between py-3">
+                                <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html" target="_blank">Gaurav Kansal</a>
+                                </li>
+                                <li class="list-inline-item"><i class="ti-calendar mr-2"></i> Jan 21, 2026</li>
+                            </ul>
+                            <div class="content">
+                                <!-- comment 
 								<img src="../../images/2025/6-GHz-icon.jpg" alt="post-thumb" class="img-fluid mb-4">
 								-->
-                                                                
-                                                                    <p align="justify" style="font-family: 'Times New Roman', Times, serif; font-size: 22px;"> 
-                                                                        On January 20, 2026, the Ministry of Communications, Government of India, issued a landmark Gazette notification titled 
-                                                                        <a target="_blank" href="Gazette%20on%20the%20Use%20of%20Low%20Power%20and%20Very%20Low%20Power%20Wireless%20Access%20System%20in%20Lower%206%20GHz%20band%20-%202026.pdf"> 
-                                                                            Use of Low Power and Very Low Power Wireless Access System including Radio Local Area Network in Lower 6 GHz band 
-                                                                        (Exemption from Licensing Requirement) Rules, 2026. </a> <sup><a onclick="linkfiles('link1')">[1]</a></sup> 
 
-                                                                        Through this gazette notification, Government of India has <b>officially de-licensed the lower portion of the 6 GHz spectrum</b>, 
-                                                                        for the Wireless ecosystem, aligning India with global wireless standards and 
-                                                                        paving the way for advanced technologies like Wi-Fi 6E and Wi-Fi 7. 
-                                                                        
-                                                                    </p>
-                                                                    <p align="justify" style="font-family: 'Times New Roman', Times, serif; font-size: 22px;">
-                                                                The goal was to boost consumer and enterprise Wi-Fi speeds and support next-gen Wi-Fi 6E & 7.
-                                                                It aligns India with many other countries that have opened 6 GHz for unlicensed use.
-                                                                Wi-Fi is seen as a complementary technology to mobile broadband, allowing data offload and reducing congestion.
-                                                                India’s National Frequency Allocation Plan also reserves upper 6 GHz (6425–7125 MHz) for licensed mobile/IMT (5G/6G future use).
-                                                                The U.S. FCC permitted unlicensed use of the full 6 GHz band (up to ~7125 MHz) earlier.
-                                                                Many countries (96+ as of Jan 2026) now allow license-free 6 GHz operations.
+                                <p align="justify"
+                                    style="font-family: 'Times New Roman', Times, serif; font-size: 22px;">
+                                    On January 20, 2026, the Ministry of Communications, Government of India, issued a
+                                    landmark Gazette notification titled
+                                    <a target="_blank"
+                                        href="Gazette%20on%20the%20Use%20of%20Low%20Power%20and%20Very%20Low%20Power%20Wireless%20Access%20System%20in%20Lower%206%20GHz%20band%20-%202026.pdf">
+                                        Use of Low Power and Very Low Power Wireless Access System including Radio Local
+                                        Area Network in Lower 6 GHz band
+                                        (Exemption from Licensing Requirement) Rules, 2026. </a> <sup><a
+                                            onclick="linkfiles('link1')">[1]</a></sup>
+
+                                    Through this gazette notification, Government of India has <b>officially de-licensed
+                                        the lower portion of the 6 GHz spectrum</b>,
+                                    for the Wireless ecosystem, aligning India with global wireless standards and
+                                    paving the way for advanced technologies like Wi-Fi 6E and Wi-Fi 7.
+
+                                </p>
+                                <p align="justify"
+                                    style="font-family: 'Times New Roman', Times, serif; font-size: 22px;">
+                                    The goal was to boost consumer and enterprise Wi-Fi speeds and support next-gen
+                                    Wi-Fi 6E & 7.
+                                    It aligns India with many other countries that have opened 6 GHz for unlicensed use.
+                                    Wi-Fi is seen as a complementary technology to mobile broadband, allowing data
+                                    offload and reducing congestion.
+                                    India’s National Frequency Allocation Plan also reserves upper 6 GHz (6425–7125 MHz)
+                                    for licensed mobile/IMT (5G/6G future use).
+                                    The U.S. FCC permitted unlicensed use of the full 6 GHz band (up to ~7125 MHz)
+                                    earlier.
+                                    Many countries (96+ as of Jan 2026) now allow license-free 6 GHz operations.
 
 
 
-                                                                    </p>
-                                                                    <br />
-                                                                    
-                                                                    <h5 style="font-family: 'Times New Roman', Times, serif; font-size: 22px;"><b>
-                                                                            1. Key Highlights of the Notification</b> </h5>
-                                                                    <p align="justify" style="font-family: 'Times New Roman', Times, serif; font-size: 20px;"> 
-                                                                    The primary objective of these rules is to allow the establishment and operation of wireless equipment in the 
-                                                                    5925–6425 MHz (500 MHz) band without the need for an individual license or frequency assignment. </p>
-                                                                    
-                                                                    <div class="blog-table text-center" style="width:75%">
-										<table class="table table-secondary" align="left;" style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
-										  <thead>
-											<tr>
-											  <th scope="col" align="left;">Feature</th>
-											  <th scope="col" align="left;">Details</th>
-											  </tr>
-										  </thead>
-										  <tbody>
-											<tr>
-											  <th scope="row" align="left;">Frequency Band</th>
-											  <td align="left;"> 5925 MHz to 6425 MHz (Lower 6 GHz) </a></td>
-											  </tr>
-                                                                                        <tr>
-											  <th scope="row">Regulatory Basis</th>
-											  <td> Shared, non-interference, and non-protection basis </a></td>
-											</tr>
-                                                                                        <tr>
-											  <th scope="row">Primary Use Cases</th>
-											  <td> Low Power Indoor (LPI) and Very Low Power (VLP) Outdoor systems </a></td>
-											</tr>
-                                                                                        <tr>
-											  <th scope="row">Channel Bandwidth</th>
-                                                                                          <td> Supports ultra-wide channels up to <b>320 MHz</b> </a></td>
-											</tr>
-                                                                                        <tr>
-											  <th scope="row">Effective Date</th>
-											  <td> January 20, 2026 (Date of publication) </a></td>
-											</tr>
-                                                                                    </tbody>
-										</table>
-									  </div>
-                                                                        <br />
-                                                                        <p align="justify" style="font-family: 'Times New Roman', Times, serif; font-size: 22px;"> 
-                                                                            <b>Technical Specifications </b> </p>
-                                                                        <p align="justify" style="font-family: 'Times New Roman', Times, serif; font-size: 20px;"> 
-                                                                            To prevent interference with existing licensed services, the government has mandated strict power limits:
-                                                                        </p>
-                                                                            <ul align="justify" style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
-                                                                            <li class='mb-0'>
-                                                                                <b>Low Power Indoor (LPI):</b> Maximum Equivalent Isotropically Radiated Power (e.i.r.p.) of <b>30 dBm</b> 
-                                                                                and a Power Spectral Density (PSD) of <b>11 dBm/MHz.</b>
-                                                                            </li> 
-                                                                                <li class='mb-0'>
-                                                                                    <b>Very Low Power (VLP) Outdoor:</b> Maximum e.i.r.p. of <b>14 dBm</b> and a PSD of <b>1 dBm/MHz.</b>
-                                                                            </li>
-                                                                            </ul>
-                                                                <blockquote>
-                                                                <strong>Note :</strong><br>
-                                                                I have covered EIRP and PSD in detail in the EIRP, PSD and Out-of-Band Emission (OOBE) section of my
-                                                                <a target="_blank" href="https://blog.gauravkansal.in/2025/06/India-going-to-open-up-the-6GHz-lower-band-for-Wi-Fi.html"> 
-                                                                    previous blog</a><br>
-                                                                <strong>EIRP:</strong> Equivalent Isotropically Radiated Power | <strong>PSD:</strong> Power Spectral Density
-                                                                </blockquote>
-                                                                        <br /><br />
-                                                                    
-                                                                    <h5 style="font-family: 'Times New Roman', Times, serif; font-size: 22px;"><b>
-                                                                            2. Permitted and Prohibited Operations</b> </h5>
-                                                                        <p align="justify" style="font-family: 'Times New Roman', Times, serif; font-size: 20px;"> 
-                                                                            While the band is now "open," the Gazette specifies clear boundaries for its usage:</p>
-                                                                        <p align="justify" style="font-family: 'Times New Roman', Times, serif; font-size: 20px;"> 
-                                                                        ✅ Permitted Usage
-                                                                        <ul align="justify" style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
-                                                                            <li class='mb-0'><strong>Next-Gen Wi-Fi:</strong> High-speed internet for smart homes and offices.</li>
-                                                                            <li class='mb-0'><strong>Advanced Gadgets:</strong> Use in AR/VR headsets, gaming consoles, and smart wearables.</li>
-                                                                            <li class='mb-0'><strong>Enterprise Networks:</strong> Reliable connectivity for industrial IoT and automation.</li>
-                                                                        </ul>
-                                                                        <p align="justify" style="font-family: 'Times New Roman', Times, serif; font-size: 20px;"> 
-                                                                        ❌ Specific Prohibitions
-                                                                        <ul align="justify" style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
-                                                                            <li class='mb-0'><strong>Oil Platforms:</strong> Usage is strictly prohibited.</li>
-                                                                            <li class='mb-0'><strong>Moving Vehicles:</strong> Indoor use is banned in cars, trains, and boats.</li>
-                                                                            <li class='mb-0'><strong>Aviation:</strong> Prohibited in aircraft unless flying above 10,000 feet.</li>
-                                                                            <li class='mb-0'><strong>Drones:</strong> Communication with Unmanned Aerial Systems (UAS) is forbidden.</li>
-                                                                        </ul>
-                                                                        
-                                                                        <h5 style="font-family: 'Times New Roman', Times, serif; font-size: 22px;"><b>
-                                                                                3. The Future of the Upper 6 GHz Band</b></h5>
-                                                                        <p align="justify" style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
-                                                                            While the <strong>Lower 6 GHz</strong> (up to 6425 MHz) is now open, the <strong>Upper 6 GHz</strong> band (6425–7125 MHz) 
-                                                                            remains under the National Frequency Allocation Plan (NFAP) and is currently reserved for licensed 5G/6G mobile services.</p>
-                                                                        <br>
-                                                                <h5 style="font-family: 'Times New Roman', Times, serif; font-size: 22px;"><b>
-                                                                4. Specific deviations between the proposed 
-                                                                <a target="_blank" href="../../2025/06/Draft%20Use%20of%20Low%20Power%20and%20Very%20Low%20Power%20Wireless%20Access%20System%20including%20Radio%20Local%20Area%20Network%20in%20Lower%206%20GHz%20band%20(Exemption%20from%20Licensing%20Requirement)%20Rules,%202025.pdf">
-                                                                    Draft Gazette </a> (published in May 2025) and the 
-                                                                <a target="_blank" href="Gazette%20on%20the%20Use%20of%20Low%20Power%20and%20Very%20Low%20Power%20Wireless%20Access%20System%20in%20Lower%206%20GHz%20band%20-%202026.pdf">
-                                                                    Final Gazette</a> (published in January 2026).</b></h5>
-                                                                <p align="justify" style="font-family: 'Times New Roman', Times, serif; font-size: 20px;"> </p>
+                                </p>
+                                <br />
 
-                                                                        
-                                                                        <table>
-                                                                        <thead>
-                                                                            <tr>
-                                                                                <th style="width: 15%;">Parameter</th>
-                                                                                <th style="width: 20%;">Draft Notification<br><small>(May 2025)</small></th>
-                                                                                <th style="width: 20%;">Final Notification<br><small>(Jan 2026)</small></th>
-                                                                                <th style="width: 45%;">Technical Impact</th>
-                                                                            </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td><strong>Frequency Range</strong></td>
-                                                                            <td>5925 – 6425 MHz</td>
-                                                                            <td><strong>5925 – 6425 MHz</strong></td>
-                                                                            <td><span class="highlight-neutral">Unchanged</span><br>The upper band (6425–7125 MHz) remains reserved for licensed IMT (5G/6G).</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td><strong>LPI Max EIRP</strong></td>
-                                                                            <td>30 dBm (1 Watt)</td>
-                                                                            <td><strong>30 dBm (1 Watt)</strong></td>
-                                                                            <td><span class="highlight-neutral">Unchanged</span><br>Total radiated power ceiling remains the same.</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td><strong>LPI Max PSD</strong></td>
-                                                                            <td>5 dBm / MHz</td>
-                                                                            <td><strong>11 dBm / MHz</strong></td>
-                                                                            <td><span class="highlight-positive">CRITICAL CHANGE (+6 dB)</span><br>Allows 4x higher power density, essential for maintaining signal quality in wider channels.</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td><strong>VLP Max EIRP</strong></td>
-                                                                            <td>14 dBm (25 mW)</td>
-                                                                            <td><strong>14 dBm (25 mW)</strong></td>
-                                                                            <td><span class="highlight-neutral">Unchanged</span><br>Keeps outdoor interference risk low for satellite uplinks.</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td><strong>VLP Max PSD</strong></td>
-                                                                            <td>-5 dBm / MHz</td>
-                                                                            <td><strong>1 dBm / MHz</strong></td>
-                                                                            <td><span class="highlight-positive">CRITICAL CHANGE (+6 dB)</span><br>Improves outdoor short-range connectivity (e.g., AR/VR headsets).</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-        
-                                                                <blockquote>
-                                                                    <strong>Definitions:</strong><br>
-                                                                    <strong>LPI:</strong> Low Power Indoor | <strong>VLP:</strong> Very Low Power (Outdoor)<br>
-                                                                    <strong>EIRP:</strong> Equivalent Isotropically Radiated Power | <strong>PSD:</strong> Power Spectral Density
-                                                                </blockquote>
-                                                                            
-                                                                <br>                            
-                                                <h5 style="font-family: 'Times New Roman', Times, serif; font-size: 22px;"><b>
-                                                        5. Analysis of Changes: Draft Gazette vs. Final Gazette </b></h5>                            
-                                                                    
-                                                <h6 style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
-                                                    A. The "PSD Boost" and Wi-Fi 7</h6>
-        <p style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
-            The most meaningful technical shift is the increase in Power Spectral Density (PSD) for Indoor (LPI) devices 
-            from <strong>5 dBm/MHz</strong> to <strong>11 dBm/MHz</strong>.</p>
-        <ul style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
-            <li><strong>The Problem with the Draft:</strong> Wi-Fi 7 introduces ultra-wide <strong>320 MHz channels</strong>. 
-                Under the old draft limit of 5 dBm/MHz, spreading energy across such a wide channel would result in a very low 
-                signal-to-noise ratio (SNR) at the receiver, effectively shrinking the coverage area to a single room.</li>
-            <li><strong>The Final Rule Solution:</strong> By raising the limit to 11 dBm/MHz, the rules now allow devices to 
-                utilize the full 320 MHz channel width without suffering a drastic drop in range. This aligns India's technical 
-                specs closer to <strong>ETSI (Europe)</strong> standards, ensuring that global Wi-Fi 7 chipsets can operate efficiently in 
-                India without aggressive firmware throttling.</li>
-        </ul>
+                                <h5 style="font-family: 'Times New Roman', Times, serif; font-size: 22px;"><b>
+                                        1. Key Highlights of the Notification</b> </h5>
+                                <p align="justify"
+                                    style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    The primary objective of these rules is to allow the establishment and operation of
+                                    wireless equipment in the
+                                    5925–6425 MHz (500 MHz) band without the need for an individual license or frequency
+                                    assignment. </p>
 
-        <h6 style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
-            B. The Spectrum Split (500 MHz vs. 1200 MHz)</h6>
-        <p style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
-            The Ministry has maintained a "Middle Path" approach to frequency allocation:</p>
-        <ul style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
-            <li><strong>Delicensed (5925–6425 MHz):</strong> Dedicated to Wi-Fi 6E/7.</li>
-            <li><strong>Reserved (6425–7125 MHz):</strong> Retained for potential auction to Telcos for 6G (IMT).</li>
-        </ul>
-        
-        <p style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
-            <strong>Technical Consequence:</strong> While India misses out on the full 7x160 MHz channel capacity available in the US 
-            (which delicensed the full 1200 MHz), the 500 MHz block still allows for <strong>one continuous 320 MHz channel</strong> 
-            or <strong>three 160 MHz channels</strong>, sufficient for gigabit-class indoor connectivity.</p>                        
-            
-        <br>
-                <h5 style="font-family: 'Times New Roman', Times, serif; font-size: 22px;"><b>
-                        6. Conclusion</b></h5>
-        <p style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
-            The Final Gazette represents a pragmatic compromise. It secures the critical <strong>Lower 6 GHz</strong> band 
-            for the Wi-Fi ecosystem while technically optimizing the power rules (PSD) to ensure that the next generation of routers can 
-            actually deliver on their speed promises.</p>
-                                                                           
-                                                                        
-                                                                        
-                                                                        
-                                                                        
-                                                                        
-                                                                      <br /><br /><br />
-                                                                      
-                                                                      
-                                                                      
-        <!-- Have to add the image of the final 6 GHz allocation plan                                                
+                                <div class="blog-table text-center" >
+                                    <table class="table table-secondary" align="left;"
+                                        style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" align="left;">Feature</th>
+                                                <th scope="col" align="left;">Details</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row" align="left;">Frequency Band</th>
+                                                <td align="left;"> 5925 MHz to 6425 MHz (Lower 6 GHz) </a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Regulatory Basis</th>
+                                                <td> Shared, non-interference, and non-protection basis </a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Primary Use Cases</th>
+                                                <td> Low Power Indoor (LPI) and Very Low Power (VLP) Outdoor systems
+                                                    </a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Channel Bandwidth</th>
+                                                <td> Supports ultra-wide channels up to <b>320 MHz</b> </a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Effective Date</th>
+                                                <td> January 20, 2026 (Date of publication) </a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <br />
+                                <p align="justify"
+                                    style="font-family: 'Times New Roman', Times, serif; font-size: 22px;">
+                                    <b>Technical Specifications </b>
+                                </p>
+                                <p align="justify"
+                                    style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    To prevent interference with existing licensed services, the government has mandated
+                                    strict power limits:
+                                </p>
+                                <ul align="justify"
+                                    style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    <li class='mb-0'>
+                                        <b>Low Power Indoor (LPI):</b> Maximum Equivalent Isotropically Radiated Power
+                                        (e.i.r.p.) of <b>30 dBm</b>
+                                        and a Power Spectral Density (PSD) of <b>11 dBm/MHz.</b>
+                                    </li>
+                                    <li class='mb-0'>
+                                        <b>Very Low Power (VLP) Outdoor:</b> Maximum e.i.r.p. of <b>14 dBm</b> and a PSD
+                                        of <b>1 dBm/MHz.</b>
+                                    </li>
+                                </ul>
+                                <blockquote>
+                                    <strong>Note :</strong><br>
+                                    I have covered EIRP and PSD in detail in the EIRP, PSD and Out-of-Band Emission
+                                    (OOBE) section of my
+                                    <a target="_blank"
+                                        href="https://blog.gauravkansal.in/2025/06/India-going-to-open-up-the-6GHz-lower-band-for-Wi-Fi.html">
+                                        previous blog</a><br>
+                                    <strong>EIRP:</strong> Equivalent Isotropically Radiated Power |
+                                    <strong>PSD:</strong> Power Spectral Density
+                                </blockquote>
+                                <br /><br />
+
+                                <h5 style="font-family: 'Times New Roman', Times, serif; font-size: 22px;"><b>
+                                        2. Permitted and Prohibited Operations</b> </h5>
+                                <p align="justify"
+                                    style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    While the band is now "open," the Gazette specifies clear boundaries for its usage:
+                                </p>
+                                <p align="justify"
+                                    style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    ✅ Permitted Usage
+                                <ul align="justify"
+                                    style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    <li class='mb-0'><strong>Next-Gen Wi-Fi:</strong> High-speed internet for smart
+                                        homes and offices.</li>
+                                    <li class='mb-0'><strong>Advanced Gadgets:</strong> Use in AR/VR headsets, gaming
+                                        consoles, and smart wearables.</li>
+                                    <li class='mb-0'><strong>Enterprise Networks:</strong> Reliable connectivity for
+                                        industrial IoT and automation.</li>
+                                </ul>
+                                <p align="justify"
+                                    style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    ❌ Specific Prohibitions
+                                <ul align="justify"
+                                    style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    <li class='mb-0'><strong>Oil Platforms:</strong> Usage is strictly prohibited.</li>
+                                    <li class='mb-0'><strong>Moving Vehicles:</strong> Indoor use is banned in cars,
+                                        trains, and boats.</li>
+                                    <li class='mb-0'><strong>Aviation:</strong> Prohibited in aircraft unless flying
+                                        above 10,000 feet.</li>
+                                    <li class='mb-0'><strong>Drones:</strong> Communication with Unmanned Aerial Systems
+                                        (UAS) is forbidden.</li>
+                                </ul>
+
+                                <h5 style="font-family: 'Times New Roman', Times, serif; font-size: 22px;"><b>
+                                        3. The Future of the Upper 6 GHz Band</b></h5>
+                                <p align="justify"
+                                    style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    While the <strong>Lower 6 GHz</strong> (up to 6425 MHz) is now open, the
+                                    <strong>Upper 6 GHz</strong> band (6425–7125 MHz)
+                                    remains under the National Frequency Allocation Plan (NFAP) and is currently
+                                    reserved for licensed 5G/6G mobile services.</p>
+                                <br>
+                                <h5 style="font-family: 'Times New Roman', Times, serif; font-size: 22px;"><b>
+                                        4. Specific deviations between the proposed
+                                        <a target="_blank"
+                                            href="../../2025/06/Draft%20Use%20of%20Low%20Power%20and%20Very%20Low%20Power%20Wireless%20Access%20System%20including%20Radio%20Local%20Area%20Network%20in%20Lower%206%20GHz%20band%20(Exemption%20from%20Licensing%20Requirement)%20Rules,%202025.pdf">
+                                            Draft Gazette </a> (published in May 2025) and the
+                                        <a target="_blank"
+                                            href="Gazette%20on%20the%20Use%20of%20Low%20Power%20and%20Very%20Low%20Power%20Wireless%20Access%20System%20in%20Lower%206%20GHz%20band%20-%202026.pdf">
+                                            Final Gazette</a> (published in January 2026).</b></h5>
+                                <p align="justify"
+                                    style="font-family: 'Times New Roman', Times, serif; font-size: 20px;"> </p>
+
+                                <div class="table-responsive">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 15%;">Parameter</th>
+                                            <th style="width: 20%;">Draft Notification<br><small>(May 2025)</small></th>
+                                            <th style="width: 20%;">Final Notification<br><small>(Jan 2026)</small></th>
+                                            <th style="width: 45%;">Technical Impact</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Frequency Range</strong></td>
+                                            <td>5925 – 6425 MHz</td>
+                                            <td><strong>5925 – 6425 MHz</strong></td>
+                                            <td><span class="highlight-neutral">Unchanged</span><br>The upper band
+                                                (6425–7125 MHz) remains reserved for licensed IMT (5G/6G).</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>LPI Max EIRP</strong></td>
+                                            <td>30 dBm (1 Watt)</td>
+                                            <td><strong>30 dBm (1 Watt)</strong></td>
+                                            <td><span class="highlight-neutral">Unchanged</span><br>Total radiated power
+                                                ceiling remains the same.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>LPI Max PSD</strong></td>
+                                            <td>5 dBm / MHz</td>
+                                            <td><strong>11 dBm / MHz</strong></td>
+                                            <td><span class="highlight-positive">CRITICAL CHANGE (+6
+                                                    dB)</span><br>Allows 4x higher power density, essential for
+                                                maintaining signal quality in wider channels.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>VLP Max EIRP</strong></td>
+                                            <td>14 dBm (25 mW)</td>
+                                            <td><strong>14 dBm (25 mW)</strong></td>
+                                            <td><span class="highlight-neutral">Unchanged</span><br>Keeps outdoor
+                                                interference risk low for satellite uplinks.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>VLP Max PSD</strong></td>
+                                            <td>-5 dBm / MHz</td>
+                                            <td><strong>1 dBm / MHz</strong></td>
+                                            <td><span class="highlight-positive">CRITICAL CHANGE (+6
+                                                    dB)</span><br>Improves outdoor short-range connectivity (e.g., AR/VR
+                                                headsets).</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                                <blockquote>
+                                    <strong>Definitions:</strong><br>
+                                    <strong>LPI:</strong> Low Power Indoor | <strong>VLP:</strong> Very Low Power
+                                    (Outdoor)<br>
+                                    <strong>EIRP:</strong> Equivalent Isotropically Radiated Power |
+                                    <strong>PSD:</strong> Power Spectral Density
+                                </blockquote>
+
+                                <br>
+                                <h5 style="font-family: 'Times New Roman', Times, serif; font-size: 22px;"><b>
+                                        5. Analysis of Changes: Draft Gazette vs. Final Gazette </b></h5>
+
+                                <h6 style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    A. The "PSD Boost" and Wi-Fi 7</h6>
+                                <p style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    The most meaningful technical shift is the increase in Power Spectral Density (PSD)
+                                    for Indoor (LPI) devices
+                                    from <strong>5 dBm/MHz</strong> to <strong>11 dBm/MHz</strong>.</p>
+                                <ul style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    <li><strong>The Problem with the Draft:</strong> Wi-Fi 7 introduces ultra-wide
+                                        <strong>320 MHz channels</strong>.
+                                        Under the old draft limit of 5 dBm/MHz, spreading energy across such a wide
+                                        channel would result in a very low
+                                        signal-to-noise ratio (SNR) at the receiver, effectively shrinking the coverage
+                                        area to a single room.</li>
+                                    <li><strong>The Final Rule Solution:</strong> By raising the limit to 11 dBm/MHz,
+                                        the rules now allow devices to
+                                        utilize the full 320 MHz channel width without suffering a drastic drop in
+                                        range. This aligns India's technical
+                                        specs closer to <strong>ETSI (Europe)</strong> standards, ensuring that global
+                                        Wi-Fi 7 chipsets can operate efficiently in
+                                        India without aggressive firmware throttling.</li>
+                                </ul>
+
+                                <h6 style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    B. The Spectrum Split (500 MHz vs. 1200 MHz)</h6>
+                                <p style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    The Ministry has maintained a "Middle Path" approach to frequency allocation:</p>
+                                <ul style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    <li><strong>Delicensed (5925–6425 MHz):</strong> Dedicated to Wi-Fi 6E/7.</li>
+                                    <li><strong>Reserved (6425–7125 MHz):</strong> Retained for potential auction to
+                                        Telcos for 6G (IMT).</li>
+                                </ul>
+
+                                <p style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    <strong>Technical Consequence:</strong> While India misses out on the full 7x160 MHz
+                                    channel capacity available in the US
+                                    (which delicensed the full 1200 MHz), the 500 MHz block still allows for <strong>one
+                                        continuous 320 MHz channel</strong>
+                                    or <strong>three 160 MHz channels</strong>, sufficient for gigabit-class indoor
+                                    connectivity.
+                                </p>
+
+                                <br>
+                                <h5 style="font-family: 'Times New Roman', Times, serif; font-size: 22px;"><b>
+                                        6. Conclusion</b></h5>
+                                <p style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    The Final Gazette represents a pragmatic compromise. It secures the critical
+                                    <strong>Lower 6 GHz</strong> band
+                                    for the Wi-Fi ecosystem while technically optimizing the power rules (PSD) to ensure
+                                    that the next generation of routers can
+                                    actually deliver on their speed promises.</p>
+
+
+
+
+
+
+                                <br /><br /><br />
+
+
+
+                                <!-- Have to add the image of the final 6 GHz allocation plan                                                
         <div class="mb-0">
             <img src="../../images/2025/Proposed-6-GHz-channel-allocation-for-unlicensed-usage-in-India.jpg" alt="image" class="img-fluid w-100 py-3 border" style="border-color: #000 !important;">
         </div>
         <div style="text-align: center;"><u> Img 1 - Proposed 6 GHz channel allocation for unlicensed usage in India</u></div>
         -->
-                                                                								  
-							
-                                                                    
-								<h6 style="font-family: 'Times New Roman', Times, serif; font-size: 20px;"><u>References: </u></h6>
-								<ol style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
-                                                                    
-                                                                    <li id="link1"><a class="openLink"
-                                                                                          onclick="linkOpen('Gazette%20on%20the%20Use%20of%20Low%20Power%20and%20Very%20Low%20Power%20Wireless%20Access%20System%20in%20Lower%206%20GHz%20band%20-%202026.pdf')"> 
-                                                                            Gazette on the Use of Low Power and Very Low Power Wireless Access System including Radio Local Area Network in 
-                                                                            Lower 6 GHz band (Exemption from Licensing Requirement) Rules, 2026.</a>
-                                                                    </li>
-                                                                    <li id="link2"><a class="openLink"
-                                                                                          onclick="linkOpen('https://en.wikipedia.org/wiki/Unlicensed_National_Information_Infrastructure')"> 
-                                                                            Unlicensed National Information Infrastructure</a>
-                                                                    </li>
-                                                                    <li id="link3"><a class="openLink"
-                                                                                          onclick="linkOpen('https://blogs.juniper.net/en-us/industry-solutions-and-trends/power-spectral-density')"> 
-                                                                            Power Spectral Density</a>
-                                                                    </li>
-                                                                    
-								</ol>
-							</div>
-							<div class="labelList">
+
+
+
+                                <h6 style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+                                    <u>References: </u></h6>
+                                <ol style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+
+                                    <li id="link1"><a class="openLink"
+                                            onclick="linkOpen('Gazette%20on%20the%20Use%20of%20Low%20Power%20and%20Very%20Low%20Power%20Wireless%20Access%20System%20in%20Lower%206%20GHz%20band%20-%202026.pdf')">
+                                            Gazette on the Use of Low Power and Very Low Power Wireless Access System
+                                            including Radio Local Area Network in
+                                            Lower 6 GHz band (Exemption from Licensing Requirement) Rules, 2026.</a>
+                                    </li>
+                                    <li id="link2"><a class="openLink"
+                                            onclick="linkOpen('https://en.wikipedia.org/wiki/Unlicensed_National_Information_Infrastructure')">
+                                            Unlicensed National Information Infrastructure</a>
+                                    </li>
+                                    <li id="link3"><a class="openLink"
+                                            onclick="linkOpen('https://blogs.juniper.net/en-us/industry-solutions-and-trends/power-spectral-density')">
+                                            Power Spectral Density</a>
+                                    </li>
+
+                                </ol>
+                            </div>
+                            <div class="labelList">
                                 <div class="labelIcon"><i class="fa-solid fa-tags"></i></div>
                                 <div class="labelText">WiFi</div>
                                 <div class="labelText">Policy</div>
@@ -408,55 +491,57 @@
                             <div class="pagination blogPagination my-4">
                                 <div class="paginationNav pull-right">
 
-                                    <a href="" title="Previous" rel="" class="preblog">
+                                    <a href="" title="Previous" rel="" class="preblog disable opacity-50">
                                         <div class="prebox">
                                             <span><i class="fa fa-angle-left fa-lg"></i> </span>
                                             Previous
-                                        </div> 
-                                        <p class="pretitle"></p>
+                                        </div>
+                                        <p class="pretitle">Previous Heading</p>
                                     </a>
 
 
-                                    <a href="../../2025/04/Public-Resolvers-under-pressure.html" title="Next" rel="" class="nextblog">
-                                     
-                                      <div class="nextbox">Next<span><i class="fa fa-angle-right fa-lg"></i></span> </div>  
-                                        <p class="nexttitle">Are Public DNS Resolvers under pressure ?</p> 
-                                                                         
+                                    <a href="../../2025/10/tls-certificate-lifespan-going-to-reduce-to-47-days-by-2029.html" title="Next" rel=""
+                                        class="nextblog">
+
+                                        <div class="nextbox">Next<span><i class="fa fa-angle-right fa-lg"></i></span>
+                                        </div>
+                                        <p class="nexttitle">The TLS certificate lifespan is officially set to be reduced to a maximum validity of 47 days by March 15, 2029</p>
+
                                     </a>
                                 </div>
                             </div>
 
-						</div>
-						<div id="disqus_thread"></div>
-					</div>
-					<!-- /blog post -->
-				</div>
-			</div>
-		</div>
-		</div>
-	</section>
-	<!-- /Main content -->
+                        </div>
+                        <div id="disqus_thread"></div>
+                    </div>
+                    <!-- /blog post -->
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- /Main content -->
 
-	<div id="showsidebar"></div>
+    <div id="showsidebar"></div>
 
-  <div class="bg-secondary footer-bg" id="myFooter"></div>
+    <div class="bg-secondary footer-bg" id="myFooter"></div>
 
-  <div class="progress-wrap">
-    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-    </svg>
-  </div>
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
 
-  <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
-  <script>
-    $('#myHead').load('../../include/header.html');
-    $(document).ready(function () {
-      $("#skipnone").remove();
-    });
-    $('#myFooter').load('../../include/footer.html');
-    $('#showsidebar').load('../../include/sidebarShow.html');
-  </script>
-     <script>
+    <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+    <script>
+        $('#myHead').load('../../include/header.html');
+        $(document).ready(function () {
+            $("#skipnone").remove();
+        });
+        $('#myFooter').load('../../include/footer.html');
+        $('#showsidebar').load('../../include/sidebarShow.html');
+    </script>
+    <script>
         var geturl = window.location.href;
         // console.log(geturl);
         var disqus_config = function () {
@@ -473,19 +558,19 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
             Disqus.</a></noscript>
-  <!-- Bootstrap JS -->
-  <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
-  <!-- slick slider -->
-  <script src="../../plugins/slick/slick.min.js"></script>
-  <!-- masonry -->
-  <script src="../../plugins/masonry/masonry.js"></script>
-  <!-- headroom -->
-  <script src="../../plugins/headroom/headroom.js"></script>
-  <!-- reading time -->
-  <script src="../../plugins/reading-time/readingTime.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <!-- masonry -->
+    <script src="../../plugins/masonry/masonry.js"></script>
+    <!-- headroom -->
+    <script src="../../plugins/headroom/headroom.js"></script>
+    <!-- reading time -->
+    <script src="../../plugins/reading-time/readingTime.min.js"></script>
 
-  <!-- Main Script -->
-  <script src="../../js/script.js" crossorigin="anonymous"></script>
+    <!-- Main Script -->
+    <script src="../../js/script.js" crossorigin="anonymous"></script>
 
 
 </body>
