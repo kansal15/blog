@@ -1,2 +1,7 @@
 contact1.html
 include/footer.html.bkp
+/nbproject/private/
+/nbproject/
+.vscode/
+.DS_Store
+.vscode/*
