@@ -2,6 +2,26 @@
 <html lang="en">
 
 <head>
+
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V78EBX66N1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-V78EBX66N1');
+        </script>
+    
+        <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KKQWN7J6');</script>
+    <!-- End Google Tag Manager -->
+
+
     <meta charset="utf-8">
     <title>TLS Timeline | Gaurav Kansal Blog</title>
     <!-- mobile responsive meta -->
@@ -122,6 +142,20 @@
                                     </div>
                                     <div class="timeline">
                                         <span class="timeline-icon"></span>
+                                        <span class="year">TLS v1.1</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">April 2006</h3>
+                                            <p class="description">
+                                                TLS v1.1 is published as <a href="https://datatracker.ietf.org/doc/html/rfc4346" target="_blank" rel="noopener">
+                                                    RFC 4346</a>, a minor but important update to TLS v1.0. It adds protection against
+                                                Cipher Block Chaining (CBC) attacks by adding an explicit Initialization Vector (IV) for each record,
+                                                and improves handling of padding errors. Adoption remains slow, with most browsers and servers
+                                                continuing to rely on TLS v1.0 for years afterward.                                                                                               
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
                                         <span class="year">TLS v1.2</span>
                                         <div class="timeline-content">
                                             <h3 class="title">August 2008</h3>
@@ -209,6 +243,16 @@
                                     </div>
                                     <div class="timeline">
                                         <span class="timeline-icon"></span>
+                                        <span class="year">GlobalSign</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">March 2011</h3>
+                                            <p class="description">
+                                                Servers hacked by "Comodohacker", an Iranian student halting the issuance of certifcates.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
                                         <span class="year">Google deploys forward secrecy</span>
                                         <div class="timeline-content">
                                             <h3 class="title">November 2011</h3>
@@ -218,16 +262,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="timeline">
-                                        <span class="timeline-icon"></span>
-                                        <span class="year">GlobalSign</span>
-                                        <div class="timeline-content">
-                                            <h3 class="title">March 2011</h3>
-                                            <p class="description">
-                                                Servers hacked by "Comodohacker", an Iranian student halting the issuance of certifcates.
-                                            </p>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="timeline">
                                         <span class="timeline-icon"></span>
                                         <span class="year">Flame</span>
@@ -380,11 +415,11 @@
                                     </div>
                                     <div class="timeline">
                                         <span class="timeline-icon"></span>
-                                        <span class="year">Bleichenbacher Side Channels Atatcks</span>
+                                        <span class="year">Bleichenbacher Side Channels Attacks</span>
                                         <div class="timeline-content">
                                             <h3 class="title">August 2014</h3>
                                             <p class="description">
-                                                Christopher Meyer et al. present their new research, applying the Bleichenbacher attach from 1998 to the modern TLS stacks.
+                                                Christopher Meyer et al. present their new research, applying the Bleichenbacher attacks from 1998 to the modern TLS stacks.
                                             </p>
                                         </div>
                                     </div>
@@ -715,7 +750,7 @@
                                         <div class="timeline-content">
                                             <h3 class="title">April 2021</h3>
                                             <p class="description">
-                                                Certificates issued between April 21 and April 27 2021, will not work in said verisons due to buypassing of new requirements by Godaddy. There are over 7600 SSL certificates and Safari will show an error saying "This Connection is Not Private"
+                                                Certificates issued between April 21 and April 27 2021, will not work in said verisons due to bypassing of new requirements by Godaddy. There are over 7600 SSL certificates and Safari will show an error saying "This Connection is Not Private"
                                                 <a href="https://sslmate.com/blog/post/apples_new_ct_policy" target="_blank"> More Info </a>
                                             </p>
                                         </div>
@@ -748,7 +783,7 @@
                                         <div class="timeline-content">
                                             <h3 class="title">September 2021</h3>
                                             <p class="description">
-                                                Apple is depreciating TLS 1.0 and 1.1 in both iOS and macOS. Currently, TLS 1.0 and 1.1 are not supported in iOS 15 and macOS 12, but all support will be removed in the future.
+                                                Apple is deprecating TLS 1.0 and 1.1 in both iOS and macOS. Currently, TLS 1.0 and 1.1 are not supported in iOS 15 and macOS 12, but all support will be removed in the future.
                                             </p>
                                         </div>
                                     </div>
@@ -817,7 +852,7 @@
                                         <span class="year">Android to add support for TrustCor root certificate</span>
                                         <div class="timeline-content">
                                             <h3 class="title">December 2022</h3>
-                                            <p class="description">After TrustCor CA's trsutworthiness issue, major organisations have distrusted the former CA. This will cause all the certificates issued by TrustCor CA to be identified as untrsuted.</p>
+                                            <p class="description">After TrustCor CA's trustworthiness issue, major organisations have distrusted the former CA. This will cause all the certificates issued by TrustCor CA to be identified as untrusted.</p>
                                             <p class="description"> However, updating the root CA store for mobile devices takes time therefore certificate store changes will be updated in Android 14 release.</p>
                                         </div>
                                     </div>
@@ -833,7 +868,7 @@
                                     </div><!-- comment -->
                                     <div class="timeline">
                                         <span class="timeline-icon"></span>
-                                        <span class="year">Chrome approves a a new CT Log for inclusion.**</span>
+                                        <span class="year">Chrome approves a new CT Log for inclusion.**</span>
                                         <div class="timeline-content">
                                             <h3 class="title">December 2022</h3>
                                             <p class="description">
@@ -863,18 +898,20 @@
                                     </div>
                                     <div class="timeline">
                                         <span class="timeline-icon"></span>
-                                        <span class="year">Webistes over ssl failing with Transparency error</span>
+                                        <span class="year">Websites over ssl failing with Transparency error</span>
                                         <div class="timeline-content">
                                             <h3 class="title">March 2023</h3>
                                             <p class="description">
                                                 Over 1,50,000 certificates issued between March 15 or 16, 2023 will not load due to an incident that happened at sectigo a CT Logger. The migration was mostly successful, except for one rather significant problem: the new log software had been configured with the private key of a test log called "Dodo".<br>
-                                                The problem was there for a 20 hour window. Although the CAs should have Sabre's publick key to validate the SCT signature but certificate authorities are prone to sloppiness and shortcut-taking.
+                                                The problem was there for a 20 hour window. Although the CAs should have Sabre's public key to validate the SCT signature but certificate authorities are prone to sloppiness and shortcut-taking.
                                             </p>
                                         </div>
                                     </div>
                                     
                                 </div>
                             </div>
+<p><em>Timeline references and historical details partly drawn from 
+    <a href="https://books.google.co.in/books?id=fQOLBAAAQBAJ" target= "_blank" rel="noopener">Bulletproof SSL and TLS</a> by Ivan Ristić.</em></p>
 
                             <div class="labelList">
                                 <div class="labelIcon"><i class="fa-solid fa-tags"></i></div>
