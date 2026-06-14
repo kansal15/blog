@@ -22,11 +22,11 @@
     <!-- End Google Tag Manager -->
 
     <meta charset="utf-8">
-    <title>Epic CA Fails: A History of Certificate Authority Incidents (2008–2024) | Gaurav Kansal Blog</title>
+    <title>Epic CA Fails: A History of Certificate Authority Incidents (2008–2025) | Gaurav Kansal Blog</title>
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:title" content="EPIC CA Fails: A History of Certificate Authority Incidents (2008–2024)" />
+    <meta property="og:title" content="EPIC CA Fails: A History of Certificate Authority Incidents (2008–2025)" />
     <meta property="og:description" content="In cryptography, a certificate authority or certification authority (CA) is an entity that signs, and issues digital certificates. A digital certificate certifies the ownership of a public key by the named subject of the certificate. A CA acts as a trusted third party—trusted both by the subject (owner) of the certificate and by the party relying upon the certificate." />
     <meta property="og:image" content="https://blog.gauravkansal.in/images/caError.jpg" />
     <meta property="og:url" content="https://blog.gauravkansal.in/2024/08/epicCAFails.html" />
@@ -70,7 +70,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <h4>EPIC CA Fails: A History of Certificate Authority Incidents (2008–2024)</h4>
+                    <h4>EPIC CA Fails: A History of Certificate Authority Incidents (2008–2025)</h4>
                 </div>
             </div>
         </div>
@@ -363,7 +363,15 @@
                                             <h3 class="title">January 2017</h3>
                                             <p class="description">
                                                 <b class="pheader">Business Partner Blunder</b> 
-                                                Overriding Symantec compliance flags to bypass domain validation.
+                                                CrossCert, a South Korean CA 
+                                                operating as a Symantec affiliate, was found to have deliberately 
+                                                overridden Symantec's own compliance flags — internal warning 
+                                                systems designed to catch domain validation problems — in order to 
+                                                push certificates through faster. Rather than investigating why the 
+                                                flags were being raised, CrossCert simply bypassed them. This was 
+                                                not a technology failure; it was a process failure driven by 
+                                                commercial pressure, and it directly contributed to Mozilla's 
+                                                broader investigation into Symantec's reseller network.
                                             </p>
                                         </div>
                                     </div>
@@ -408,7 +416,16 @@
                                             <h3 class="title">August 2016</h3>
                                             <p class="description">
                                                 <b class="pheader">Technology Malfunction</b>
-                                                Faulty upgrade allows certain servers to bypass authentication process.
+                                                A faulty software upgrade in GoDaddy's 
+                                                certificate issuance pipeline introduced a flaw that allowed certain 
+                                                servers to bypass the domain authentication process entirely — 
+                                                meaning certificates could be issued without properly confirming 
+                                                that the requester actually controlled the domain. GoDaddy 
+                                                discovered the issue internally and revoked the affected 
+                                                certificates. While there was no evidence of malicious exploitation, 
+                                                the incident underlined how a routine upgrade, if not properly 
+                                                tested, can quietly undermine the entire validation chain that 
+                                                certificates are built upon.
                                             </p>
                                         </div>
                                     </div>
