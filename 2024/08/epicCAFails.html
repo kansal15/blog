@@ -208,10 +208,15 @@
                                         <div class="timeline-content">
                                             <h3 class="title">September 2017</h3>
                                             <p class="description">
-                                                <b class="pheader">Inadequate Control</b>
-                                                Symantec had issued many certificates without proper validation due to
-                                                malfeasance by Symantec, leading to the distrust of Symantec by all
-                                                major platforms.
+                                                <b class="pheader">Inadequate Control</b> Google's investigation revealed that Symantec 
+                                                had mis-issued over 30,000 certificates over several years, many without 
+                                                proper domain validation. What made this particularly serious was that 
+                                                Symantec, through its brands (GeoTrust, Thawte, RapidSSL, VeriSign), 
+                                                controlled nearly 30% of all trusted certificates on the web at the time. 
+                                                After a prolonged and public dispute, Google Chrome gradually distrusted 
+                                                all Symantec-issued certificates, forcing Symantec to sell its CA business 
+                                                to DigiCert in 2017 — effectively ending one of the oldest names in 
+                                                internet security.
                                             </p>
                                         </div>
                                     </div>
@@ -232,8 +237,8 @@
                                         <div class="timeline-content">
                                             <h3 class="title">January 2017</h3>
                                             <p class="description">
-                                                <b class="pheader">Business Partner Blunder</b>
-                                                Overriding Symantec compliance flags to bypass domain validations.
+                                                <b class="pheader">Business Partner Blunder</b> 
+                                                Overriding Symantec compliance flags to bypass domain validation.
                                             </p>
                                         </div>
                                     </div>
@@ -243,8 +248,14 @@
                                         <div class="timeline-content">
                                             <h3 class="title">October 2016</h3>
                                             <p class="description">
-                                                <b class="pheader">Abuse of Trust</b>
-                                                Numerous questionable practices such as backdating SHA-1 certificates.
+                                                <b class="pheader">Abuse of Trust</b> An investigation by Mozilla revealed that WoSign, 
+                                                a major Chinese CA, had engaged in numerous questionable practices — 
+                                                most notably backdating SHA-1 certificates to before the industry-wide 
+                                                deadline of January 1, 2016, in order to circumvent the deprecation of 
+                                                the weak algorithm. WoSign had also secretly acquired StartCom without 
+                                                disclosing the ownership change to browser vendors, violating CA 
+                                                transparency requirements. Both WoSign and StartCom were subsequently 
+                                                distrusted by Apple, Mozilla and Google.
                                             </p>
                                         </div>
                                     </div>
@@ -277,7 +288,7 @@
                                             <h3 class="title">August 2016</h3>
                                             <p class="description">
                                                 <b class="pheader">Abuse of Trust</b>
-                                                Caught issuing certificates to Non-domain owners.
+                                                Caught issuing certificates to non-domain owners.
                                             </p>
                                         </div>
                                     </div>
@@ -332,8 +343,14 @@
                                         <div class="timeline-content">
                                             <h3 class="title">March 2015</h3>
                                             <p class="description">
-                                                <b class="pheader">Abuse of Trust</b>
-                                                Unconstrained intermediate certificate issued for network interception.
+                                                <b class="pheader">Abuse of Trust</b> China's Internet Network Information Center (CNNIC) 
+                                                issued an unconstrained intermediate certificate to an Egyptian company, 
+                                                MCS Holdings, which used it inside a firewall to intercept HTTPS traffic. 
+                                                The incident sparked fierce debate because CNNIC is operated by the 
+                                                Chinese government, raising concerns about state-sponsored surveillance. 
+                                                Google and Mozilla subsequently removed CNNIC from their trusted root 
+                                                stores — one of the very few times a major government-backed CA has 
+                                                been distrusted by browser vendors.
                                             </p>
                                         </div>
                                     </div>
@@ -343,8 +360,12 @@
                                         <div class="timeline-content">
                                             <h3 class="title">July 2014</h3>
                                             <p class="description">
-                                                <b class="pheader">Inadequate Control</b>
-                                                Weak process mis-issued several unauthorized google certificates.
+                                                <b class="pheader">Inadequate Control</b> India's National Informatics Centre (NIC), 
+                                                operating under the Controller of Certifying Authorities (CCA India), 
+                                                mis-issued several unauthorized certificates for Google domains. 
+                                                The NIC was an intermediate CA under the India CCA root. Mozilla, 
+                                                Google and Microsoft responded by constraining the India CCA root 
+                                                to only issue certificates for .in domains, effectively limiting its scope permanently.
                                             </p>
                                         </div>
                                     </div>
@@ -354,8 +375,16 @@
                                         <div class="timeline-content">
                                             <h3 class="title">December 2013</h3>
                                             <p class="description">
-                                                <b class="pheader">Business Partner Blunder</b>
-                                                Subordinate CA mis-issued intermediate certificate, later abused by user.
+                                                <b class="pheader">Business Partner Blunder</b> France's national cybersecurity agency 
+                                                ANSSI issued an unconstrained subordinate CA certificate to the French 
+                                                Treasury's network monitoring team. This intermediate certificate was 
+                                                then used to issue fake certificates for Google domains, enabling 
+                                                traffic interception inside government networks. When discovered, 
+                                                Google, Mozilla and Microsoft distrusted the specific ANSSI 
+                                                intermediate. ANSSI acknowledged the incident and stated the 
+                                                certificates were used only on internal government networks, 
+                                                though this did not diminish the seriousness of the breach of 
+                                                CA baseline requirements.
                                             </p>
                                         </div>
                                     </div>
@@ -365,9 +394,14 @@
                                         <div class="timeline-content">
                                             <h3 class="title">December 2012</h3>
                                             <p class="description">
-                                                <b class="pheader">Human Error</b>
-                                                Issues two intermediate certificates, enabling user to perform MITM
-                                                attacks.
+                                                <b class="pheader">Human Error</b> TrustWave issued two subordinate CA certificates 
+                                                to a corporate customer for use in SSL inspection (man-in-the-middle) 
+                                                appliances — effectively allowing the customer to intercept and decrypt 
+                                                HTTPS traffic of their own employees. While TrustWave argued this was 
+                                                a legitimate enterprise use case, the broader security community 
+                                                condemned it as a fundamental abuse of CA trust, since the certificates 
+                                                could technically be used to impersonate any website on the Internet. 
+                                                TrustWave subsequently committed to never issuing such certificates again.
                                             </p>
                                         </div>
                                     </div>
@@ -388,8 +422,16 @@
                                         <div class="timeline-content">
                                             <h3 class="title">August 2011</h3>
                                             <p class="description">
-                                                <b class="pheader">Hacker Compromise</b>
-                                                Hacked Systems issued hundreds of fraudulent certificates.
+                                                <b class="pheader">Hacker Compromise</b> In one of the most catastrophic CA breaches 
+                                                ever recorded, DigiNotar's systems were compromised by an Iranian hacker 
+                                                known as "Comodohacker". Over 500 fraudulent certificates were issued, 
+                                                including one for *.google.com that was actively used to intercept 
+                                                Gmail traffic of approximately 300,000 Iranian users. The Dutch 
+                                                government, which relied on DigiNotar for citizen-facing services, 
+                                                was severely impacted. Within weeks of the breach becoming public, 
+                                                all major browsers distrusted DigiNotar, effectively putting the CA 
+                                                out of business permanently. It remains the only major CA to have 
+                                                been completely destroyed by a security incident.
                                             </p>
                                         </div>
                                     </div>
