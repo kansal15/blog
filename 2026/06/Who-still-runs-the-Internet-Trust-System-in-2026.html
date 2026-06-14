@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V78EBX66N1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-V78EBX66N1');
+        </script>
+    
+        <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KKQWN7J6');</script>
+    <!-- End Google Tag Manager -->
+
+
+	<meta charset="utf-8">
+	<title>Who Still Runs the Internet's Trust System? A 2026 Guide to Certificate Authorities | Gaurav Kansal Blog</title>
+  
+	<!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="https://blog.gauravkansal.in/" />
+        <meta property="og:type" content="article" />
+  
+	<!-- ** Plugins Needed for the Project ** -->
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+	<!-- slick slider -->
+	<link rel="stylesheet" href="../../plugins/slick/slick.css">
+	<!-- themefy-icon -->
+	<link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+	<!-- Main Stylesheet -->
+	<link href="../../css/style.css" rel="stylesheet">
+	<!--Favicon-->
+	<link rel="icon" type="image/png" href="../../images/favicon.jpg">
+	<link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+	<style>
+        body #blog-post-block{
+            font-size: 19px;
+        }
+        #blog-post-block p{
+            text-align: justify;
+        }
+    </style>
+  </head>
+
+<body>
+	<!-- preloader -->
+	<div class="preloader">
+		<div class="loader">
+			<span class="dot"></span>
+			<div class="dots">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+	<!-- /preloader -->
+
+	<div class="navigation" id="myHead"></div>
+
+	<!-- page-title -->
+	<section class="section bg-secondary">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12">
+					<h4>Who Still Runs the Internet's Trust System? A 2026 Guide to Certificate Authorities</h4>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /page-title -->
+
+	<!--Main content-->
+	<section class="mt-1" id="blog-post-block">
+		<div class="card mb-2">
+			<div class="container-fluid">
+				<div class="row">
+					<!-- blog post -->
+					<div class="col-lg-12">
+					<div class="card-block">
+                                        <ul class="list-inline d-flex justify-content-between py-3">
+                                        <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html" target="_blank">Gaurav Kansal</a></li>
+                                        <li class="list-inline-item"><i class="ti-calendar mr-2"></i> June 14, 2026</li>
+                                        </ul>            
+							<div class="content">
+								<img src="../../images/2026/ca_landscape_2026_banner.png" alt="post-thumb" class="img-fluid mb-4">
+								<p align="justify">
+	Every time you see a padlock in your browser, a Certificate Authority (CA) is silently doing its job — 
+  vouching that the website you are visiting is who it claims to be. Most of us never think about this. 
+  We just expect the padlock to be there. But behind that little icon is an industry that has been 
+  consolidating, evolving, and in some cases, collapsing, at a remarkable pace. Companies that were 
+  household names in security circles a decade ago have been swallowed up, shut down, or stripped of 
+  browser trust. New players — including some of the world's largest tech companies — have quietly 
+  become major issuers. And one non-profit organisation now issues more certificates than everyone 
+  else combined. </p>
+
+   
+<p>
+  This post takes a clear-eyed look at who is still in the CA business in 2026, who owns them, 
+  how many certificates they are actually issuing, and what has changed. If you have not already, 
+  it is worth reading these companion posts first to get the full picture:
+</p>
+ 
+<ul>
+  <li>
+    <a href="https://blog.gauravkansal.in/2024/08/tlsTimeLine.html">A Chronicle of SSL/TLS: From Netscape's First Draft to TLS 1.3</a> 
+    — the complete history of the protocols that CAs secure
+  </li>
+  <li>
+    <a href="https://blog.gauravkansal.in/2024/08/epicCAFails.html">EPIC CA Fails: A History of Certificate Authority Incidents (2008–2025)</a> 
+    — the blunders, breaches and cover-ups that shaped CA trust
+  </li>
+</ul>
+ 
+<p>Consider this post the third in that series — the story of who survived, who grew, 
+	and who is now in charge of your browser's trust.</p>
+ 
+ 
+<hr/>
+ 
+<h3>The Big Picture First</h3>
+ 
+<p>
+  The CA market is growing. The global Certificate Authority market is valued at approximately 
+  <strong>$232 million in 2026</strong> and is projected to reach nearly $400 million by 2031, 
+  growing at around 11% annually. That growth is being driven by the explosion of IoT devices, 
+  stricter compliance mandates, and the fact that every connected device now needs a certificate 
+  of some kind to communicate securely.
+</p>
+<p>
+  But here is the striking reality of today's CA landscape: <strong>six organisations issue 
+  roughly 90% of all certificates on the internet</strong>. And one of them — a non-profit 
+  you have probably heard of — issues more than half of all certificates on the web entirely 
+  for free. The SSL certificate market has never been more concentrated, and the commercial 
+  players are fighting hard over the remaining slice.
+</p>
+ 
+<p>
+  As of <strong>June 2026</strong>, there are over <strong>110 million active SSL/TLS 
+  certificates</strong> on the internet. The United States alone accounts for over 61 million 
+  of them. And 87% of all websites now use HTTPS by default — up from just 18.5% a decade ago. 
+  The padlock is no longer a luxury. It is the baseline.
+</p>
+ 
+<hr/>
+ 
+<h3>The CA Landscape in 2026 — Who Is Who</h3>
+ 
+<p>Below is a detailed breakdown of every significant CA currently operating, who owns them, 
+and where they stand in the market.</p>
+ 
+<hr/>
+ 
+<h4>1. Let's Encrypt (ISRG) — The Giant That Changed Everything</h4>
+ 
+<p><strong>Owner:</strong> Internet Security Research Group (ISRG) — a US non-profit<br/>
+<strong>Headquarters:</strong> San Francisco, California, USA<br/>
+<strong>Founded:</strong> 2015<br/>
+<strong>Type:</strong> Non-profit / Free CA<br/>
+<strong>Market Share (June 2026, W3Techs):</strong> 64.7% of all websites | 68.2% CA market share<br/>
+<strong>Certificates Issued:</strong> ~10 million per day as of late 2025; 54.4% of all public SSL/TLS certificates issued in Q1 2026 by volume (Cloudflare CT data)</p>
+ 
+<p>
+  There is no way to talk about the current CA landscape without starting here. Let's Encrypt 
+  is not just the largest CA — it has fundamentally changed what the internet looks like. When 
+  it launched in 2015, the idea of a CA giving away certificates for free, automatically, to 
+  anyone with a domain was genuinely radical. The commercial CA industry thought it was 
+  potentially suicidal. They were half right — it was suicidal for the commercial mass-market 
+  certificate business. But for the internet as a whole, it was transformative.
+</p>
+ 
+<p>
+  Run by the non-profit Internet Security Research Group (ISRG), Let's Encrypt crossed one 
+  billion total certificates issued in 2020. By late 2025 it was issuing around ten million 
+  certificates every single day. Its ACME protocol — which automates the entire process of 
+  getting and renewing a certificate — has become a web standard and is now supported by 
+  virtually every major hosting provider and web server.
+</p>
+ 
+<p>
+  <strong>Who sponsors ISRG?</strong> Mozilla, Google, Cisco, AWS, EFF, and hundreds of 
+  other organisations. It runs on donations and sponsorships. For context, it has around 
+  20 full-time staff and secures a significant portion of the world's encrypted web traffic.
+</p>
+ 
+<hr/>
+ 
+<h4>2. GlobalSign (GMO Group) — The Quiet Giant</h4>
+ 
+<p><strong>Owner:</strong> GMO Internet Group (Japan)<br/>
+<strong>Headquarters:</strong> Portsmouth, New Hampshire, USA (operational HQ); Tokyo, Japan (parent)<br/>
+<strong>Founded:</strong> 1996<br/>
+<strong>Type:</strong> Commercial CA<br/>
+<strong>Market Share (June 2026, W3Techs):</strong> 19.4% of all websites | 20.4% CA market share<br/>
+<strong>Position by Volume:</strong> A distant second in website usage; dominant in enterprise managed PKI</p>
+  
+<p>
+  GlobalSign is one of the oldest CAs still operating and, in terms of website usage share, 
+  the second largest after Let's Encrypt. What is interesting is how that 19.4% share breaks 
+  down — GlobalSign is disproportionately strong in enterprise PKI, managed certificate 
+  services, and IoT device identity. It is not competing with Let's Encrypt for the free 
+  DV certificate market. It is doing something different and doing it very well.
+</p>
+<p>
+  Its parent company, GMO Internet Group, is a Japanese conglomerate that owns and operates 
+  a wide range of internet infrastructure businesses. GlobalSign operates under the GMO 
+  GlobalSign brand and has been quietly building out certificate lifecycle management 
+  (CLM) automation tools — most recently launching its LifeCycleX platform in September 
+  2025 and TLS Connect in April 2026, aimed specifically at small and medium businesses 
+  that need automation but cannot afford enterprise-scale solutions.
+</p>
+<p>
+  GlobalSign has no known pending distrust actions and maintains a clean compliance record 
+  in all major browser root programs. It is arguably the most stable large commercial CA 
+  in the market right now.
+</p>
+ 
+<hr/>
+ 
+<h4>3. Sectigo — The New Entrust, Literally</h4>
+ 
+<p><strong>Owner:</strong> Private equity-backed (Scottsdale, AZ)<br/>
+<strong>Headquarters:</strong> Scottsdale, Arizona, USA<br/>
+<strong>Founded:</strong> 1998 (as Comodo CA; rebranded Sectigo in 2018)<br/>
+<strong>Type:</strong> Commercial CA<br/>
+<strong>Market Share (June 2026, W3Techs):</strong> 5.0% of all websites | 5.3% CA market share<br/>
+<strong>Position by Volume:</strong> Surged to 11.7% of all CT-logged certificates in Q1 2026 (+41.2% QoQ)</p>
+ 
+<p>
+  Sectigo has had quite a year. Originally the CA arm of Comodo (yes, the same Comodo that 
+  features prominently in my Epic CA Fails post), it rebranded as Sectigo in 2018 after 
+  being spun out as an independent company. It has since grown steadily in the commercial 
+  CA space, particularly in the small and medium business certificate market.
+</p>
+ <p>
+  But the really significant development came in <strong>January 2025</strong>, when Sectigo 
+  acquired Entrust's public certificate business after Google, Mozilla, and Apple distrusted 
+  Entrust's roots. Overnight, Sectigo doubled its enterprise client base and inherited the 
+  challenge of migrating a huge number of Entrust customers onto its own trusted infrastructure. 
+  Sectigo's CEO Kevin Weiss publicly acknowledged the migration would take around 90 days, 
+  possibly longer.
+</p>
+<p>
+  Its Q1 2026 volume surge of 41.2% quarter-on-quarter is significant and largely attributed 
+  to Cloudflare's Universal SSL programme (which uses Sectigo/ZeroSSL certificates for its 
+  free HTTPS offering) and continued free-tier expansion. Sectigo also owns the ZeroSSL brand, 
+  which offers free DV certificates and competes directly with Let's Encrypt.
+</p>
+<hr/>
+ 
+<h4>4. GoDaddy — The Hosting Giant's CA Arm</h4>
+ 
+<p><strong>Owner:</strong> GoDaddy Inc. (NYSE: GDDY) — publicly traded<br/>
+<strong>Headquarters:</strong> Tempe, Arizona, USA<br/>
+<strong>Type:</strong> Commercial CA (integrated with hosting)<br/>
+<strong>Market Share (June 2026, W3Techs):</strong> 3.6% of all websites | 3.8% CA market share<br/>
+<strong>Position by Volume:</strong> 5.9% of all CT-logged certificates in Q1 2026</p>
+ 
+<p>
+  GoDaddy's CA business is deeply integrated into its web hosting empire. When someone buys 
+  a hosting plan from GoDaddy and clicks "add SSL", there is a good chance the certificate 
+  that gets issued comes from GoDaddy's own CA. This makes GoDaddy's market share somewhat 
+  self-referential — it mostly reflects GoDaddy's dominance in the web hosting market rather 
+  than independent certificate sales.
+</p>
+<p>
+  The CA has had its share of incidents (see my <a href="https://blog.gauravkansal.in/2024/08/epicCAFails.html">
+	EPIC CA Fails</a> post), including the August 
+  2016 authentication bypass and a 2022 data breach that exposed certificate-related 
+  data for approximately 1.2 million customers. But it remains operational and trusted 
+  in all major browser root programs. Its focus is convenience for GoDaddy's own 
+  customer base rather than competing in the enterprise PKI space.
+</p>
+<hr/>
+
+<h4>5. DigiCert Group — The Enterprise Standard</h4>
+ 
+<p><strong>Owner:</strong> Clearlake Capital Group and TA Associates (private equity) — acquired October 2025<br/>
+<strong>Headquarters:</strong> Lehi, Utah, USA<br/>
+<strong>Founded:</strong> 2003<br/>
+<strong>Type:</strong> Commercial CA — enterprise-focused<br/>
+<strong>Brands:</strong> DigiCert, GeoTrust, Thawte, RapidSSL (all acquired from Symantec in 2017)<br/>
+<strong>Market Share (June 2026, W3Techs):</strong> 1.7% of all websites | 1.8% CA market share<br/>
+<strong>Position by Volume:</strong> 6.6% of all CT-logged certificates in Q1 2026</p>
+
+<p>
+  DigiCert is the CA you find securing the largest organisations in the world. Banks, 
+  governments, Fortune 500 companies, critical infrastructure — DigiCert's bread and 
+  butter is high-assurance certificates for organisations that need more than a free 
+  DV certificate and are willing to pay for it. Its W3Techs website share of 1.7% looks 
+  underwhelming compared to Let's Encrypt, but that is the wrong way to read it. DigiCert 
+  does not compete in the free or SMB market at all — it competes for contracts worth 
+  hundreds of thousands of dollars per year.
+</p> 
+<p>
+  Its ownership changed in <strong>October 2025</strong>, when private equity firms 
+  Clearlake Capital Group and TA Associates acquired it from Thoma Bravo (which had 
+  owned it since 2015). DigiCert has been named a Leader in the IDC MarketScape for 
+  Worldwide Certificate Lifecycle Management in 2026 and recently acquired Valimail 
+  (September 2025) to bolster its email authentication capabilities.
+</p>
+<p>
+  The July 2024 mass revocation incident — where DigiCert revoked over 83,000 certificates 
+  belonging to 6,800 customers due to a domain validation bug — was its most significant 
+  public stumble. The episode sparked serious debate about the CA/Browser Forum's 24-hour 
+  revocation rule and whether it is practical at scale. You can read the full account of 
+  this and other CA incidents in our 
+  <a href="https://blog.gauravkansal.in/2024/08/epicCAFails.html">EPIC CA Fails</a> post.
+</p>
+
+<hr/>
+<h4>6. Amazon Trust Services — The Cloud Incumbent</h4>
+ 
+<p><strong>Owner:</strong> Amazon Web Services (Amazon.com Inc.)<br/>
+<strong>Headquarters:</strong> Seattle, Washington, USA<br/>
+<strong>Founded:</strong> 2016<br/>
+<strong>Type:</strong> Commercial CA — AWS-integrated<br/>
+<strong>Position by Volume:</strong> 3.8% of all CT-logged certificates in Q1 2026<br/>
+<strong>W3Techs Share:</strong> Under 0.1% (certificates largely not visible on public website endpoints)</p>
+ 
+<p>
+  Amazon Trust Services is a fascinating CA because most of its certificates are not 
+  securing public websites — they are securing internal AWS infrastructure, API endpoints, 
+  IoT devices, and services within the Amazon ecosystem. This is why its W3Techs share 
+  (which measures certificates on public-facing websites) looks tiny while its Certificate 
+  Transparency volume (which captures all issued certificates) is comparatively substantial.
+</p>
+<p>
+  Through AWS Certificate Manager (ACM), Amazon issues free certificates to AWS customers 
+  for use within AWS services. These are massively popular but largely invisible on the 
+  public web. Amazon Trust Services is a quietly significant CA that most end users will 
+  never directly encounter.
+</p>
+<hr/>
+ 
+<h4>7. Google Trust Services — The Search Giant's Stake in PKI</h4>
+ 
+<p><strong>Owner:</strong> Alphabet Inc. (Google)<br/>
+<strong>Headquarters:</strong> Mountain View, California, USA<br/>
+<strong>Founded:</strong> 2017 (acquired GlobalSign's CA operations in part)<br/>
+<strong>Type:</strong> Commercial CA — Google ecosystem-focused<br/>
+<strong>Position by Volume:</strong> <strong>16.7%</strong> of all CT-logged certificates in Q1 2026 — the second largest by volume</p>
+ 
+<p>
+  This is the most surprising name on the list for many people. Google runs its own CA — 
+  and it has quietly become the second largest issuer of SSL/TLS certificates in the world 
+  by volume, sitting at 16.7% of all publicly logged certificates in Q1 2026, ahead of 
+  Sectigo in raw issuance terms.
+</p>
+<p>
+  Google Trust Services primarily issues certificates for Google's own products and services 
+  (Google.com, YouTube, Gmail, Google Cloud, etc.) and also issues free certificates to 
+  Google Cloud customers. Like Amazon, much of its issuance is within its own ecosystem 
+  and does not show up prominently in W3Techs' website-facing surveys. It also championed 
+  the Certificate Transparency (CT) initiative that now requires all publicly trusted 
+  certificates to be logged — making it both a major CA and the primary architect of 
+  the system that monitors CAs.
+   Understanding how those certificates actually work is 
+  covered in detail in our posts on the 
+  <a href="https://blog.gauravkansal.in/2015/09/tls-handshake.html">TLS Handshake</a>, 
+  <a href="https://blog.gauravkansal.in/2015/09/cipher-suites.html">Cipher Suites</a>, and 
+  <a href="https://blog.gauravkansal.in/2015/09/server-name-indication-sni.html">Server Name Indication (SNI)</a>.
+</p>
+<hr/>
+ 
+<h4>8. Microsoft — The Fastest Growing CA You Have Never Heard Of</h4>
+ 
+<p><strong>Owner:</strong> Microsoft Corporation (NASDAQ: MSFT)<br/>
+<strong>Headquarters:</strong> Redmond, Washington, USA<br/>
+<strong>Type:</strong> Commercial CA — Azure ecosystem<br/>
+<strong>Position by Volume:</strong> Issued 20.65 million certificates in Q1 2026, up 500% from Q4 2025; April 2026 alone produced 28.8 million — more than all of Q1</p>
+
+<p>
+  If one number from 2026's CA data stands out, it is this: Microsoft's certificate 
+  issuance grew by <strong>500% in a single quarter</strong>. In Q4 2025 it issued 
+  3.44 million certificates. In Q1 2026 that jumped to 20.65 million. April 2026 
+  alone was 28.8 million. Analysts tracking Certificate Transparency logs describe 
+  this as the largest single-quarter growth of any CA on record, and assess it as 
+  structural — driven by Azure's expanding role in managing certificate issuance 
+  for enterprise cloud customers — rather than a one-off anomaly.
+</p> 
+<p>
+  Microsoft has been deeply embedded in the CA ecosystem for decades through its 
+  Active Directory Certificate Services (AD CS) for internal enterprise PKI, but 
+  its push into publicly trusted certificates via Azure is a newer and increasingly 
+  significant development. Watch this space.
+</p>
+<hr/>
+ 
+<h4>9. Actalis — The Italian Outsider</h4>
+ 
+<p><strong>Owner:</strong> Aruba S.p.A. (Italy)<br/>
+<strong>Headquarters:</strong> Milan, Italy<br/>
+<strong>Type:</strong> Commercial CA<br/>
+<strong>Market Share (June 2026, W3Techs):</strong> 0.6% of all websites | 0.7% CA market share</p>
+ 
+<p>
+  Actalis is the CA arm of Aruba S.p.A., one of Italy's largest cloud and web hosting 
+  providers. It holds a small but stable share of the European market and is trusted in 
+  all major browser root programs. Its share is modest by global standards but significant 
+  within Italy and the wider European market. It is a good example of a regional CA that 
+  has maintained a clean record and serves a defined geographic customer base rather than 
+  competing globally.
+</p> 
+<hr/>
+ 
+<h4>10. Certum — The Polish Holdout</h4>
+ 
+<p><strong>Owner:</strong> Asseco Data Systems (Poland)<br/>
+<strong>Headquarters:</strong> Szczecin, Poland<br/>
+<strong>Type:</strong> Commercial CA<br/>
+<strong>Market Share (June 2026, W3Techs):</strong> 0.5% of all websites | 0.5% CA market share</p>
+
+<p>
+  Certum, operated by Asseco Data Systems (a Polish tech conglomerate), is one of the 
+  few remaining significant European-headquartered commercial CAs that is neither 
+  US-owned nor Japanese-owned. It is particularly strong in the Polish and Central 
+  European market and offers a broad range of certificate types including qualified 
+  electronic signatures under EU eIDAS regulations — a market segment where it has 
+  a strong reputation. Its global share is small but its regional relevance is real.
+</p> 
+<hr/>
+ 
+<h3>The Fallen and the Distrusted</h3>
+ 
+<p>Any honest 2026 CA landscape piece has to acknowledge who is no longer at the table in the same way.
+The full story of each of these failures is documented in our 
+<a href="https://blog.gauravkansal.in/2024/08/epicCAFails.html">EPIC CA Fails</a> post, but here is the summary:
+</p>
+
+<p>
+  <strong>Entrust</strong> sold its public certificate business to Sectigo in January 2025, 
+  following the decision by Google, Mozilla, and Apple to stop trusting Entrust roots for 
+  new certificates issued after October 2024. It remains a player in private PKI and 
+  identity solutions, but its era as a publicly trusted CA in the traditional sense is over.
+</p> 
+<p>
+  <strong>Chunghwa Telecom and Netlock</strong> were distrusted by Google Chrome in 
+  August 2025 following documented patterns of compliance failures and broken improvement 
+  commitments. Their certificates issued after July 31, 2025 trigger security warnings 
+  in Chrome.
+</p>
+<p>
+  <strong>DigiNotar</strong> was destroyed by its 2011 breach and no longer exists.
+</p>
+<p>
+  <strong>Symantec's CA</strong> was sold to DigiCert in 2017 following Google's 
+  distrust action. The Symantec, GeoTrust, Thawte, and RapidSSL brands now all 
+  issue under DigiCert's trusted roots.  For context on the CA certificate chain 
+  and how trust hierarchies actually work, see our post on 
+  <a href="https://blog.gauravkansal.in/2015/09/ca-certificate-chain-and-traceroute-of.html">CA Certificate Chain</a>.
+</p>
+<p>
+<strong>TrustCor</strong> was removed from browser root programs in 2022 after 
+  security researchers uncovered troubling ties between TrustCor and US intelligence 
+  contractors.
+</p> 
+<hr/>
+ 
+<h3>Notable Smaller Players Still Operating</h3>
+ 
+<p>
+  Beyond the big names, there are a number of smaller CAs still operating with sub-0.1% 
+  market share on W3Techs but serving specific regional or sector niches:
+</p>
+<p>
+  <strong>SSL.com</strong> — US-based commercial CA, popular with smaller businesses. 
+  Had a significant DCV vulnerability in April 2025 that led to wrongful issuance of 
+  certificates for high-profile domains including Alibaba Cloud, but it was caught, 
+  patched, and remains trusted. Also operates as an intermediate for other certificate 
+  resellers.
+</p>
+<p>
+  <strong>IdenTrust</strong> — Best known as the organisation that cross-signed 
+  Let's Encrypt's early certificates, giving them instant browser trust before 
+  ISRG's own roots were embedded in browsers. IdenTrust is heavily focused on 
+  US federal government and healthcare PKI and maintains a very low public web profile.
+</p>
+<p>
+  <strong>Secom Trust (Japan)</strong> — 0.2% W3Techs market share, significant 
+  in Japan's government and enterprise PKI space.
+</p>
+<p>
+  <strong>Buypass (Norway)</strong> — A Norwegian state-owned CA offering free 
+  DV certificates via ACME. Competes with Let's Encrypt in the Nordic market 
+  and offers a useful fallback for organisations that want geographic diversity 
+  in their CA choices.
+</p>
+<p>
+  <strong>ZeroSSL</strong> — Owned by Sectigo, ZeroSSL offers free 90-day DV 
+  certificates with an ACME endpoint. It has grown significantly as an alternative 
+  to Let's Encrypt and is widely used by Cloudflare's Universal SSL infrastructure.
+</p>
+<p>
+  <strong>HARICA (Greece)</strong> — Academic CA operated by the Greek Universities 
+  Network. Primarily serves Greek academic institutions but is trusted in major 
+  browser root programs. An interesting example of an academic community-run CA 
+  that has maintained compliance and trust for decades.
+</p>
+<p>
+  <strong>SwissSign</strong> — Swiss Post-owned CA, focused on Swiss government 
+  and enterprise clients. Strong alignment with Swiss data sovereignty requirements.
+</p>
+<p>
+  <strong>Deutsche Telekom</strong> — Germany's former state telecom still operates 
+  a CA focused on German enterprises and government, competing alongside Bundesdruckerei 
+  in the German market.
+</p>
+<hr/>
+ 
+<h3>The Big Trend: Certificate Lifetimes Are Shrinking</h3>
+<p>
+  One more thing worth knowing as you look at this landscape: the rules are changing fast. 
+  The CA/Browser Forum — the industry body that sets baseline requirements for CAs — 
+  adopted new rules in March 2025 that are dramatically shortening how long certificates 
+  can be valid. As of <strong>March 15, 2026</strong>, maximum certificate validity has 
+  dropped to <strong>200 days</strong>. It will fall to 100 days in March 2027, and by 
+  March 2029, certificates will be capped at just <strong>47 days</strong>. 
+</p>
+<p>
+  This is a seismic shift. It means that by 2029, every certificate on the internet will 
+  need to be renewed roughly every six weeks. Manual renewal becomes essentially impossible 
+  at any scale. Automation — through ACME and certificate lifecycle management platforms — 
+  stops being a nice-to-have and becomes mandatory. This change will squeeze smaller, 
+  manual-process CAs out of the market and further advantage automated platforms like 
+  Let's Encrypt, ZeroSSL, Buypass, and the CLM automation tools being built by DigiCert, 
+  GlobalSign, and Sectigo. The CA industry in 2029 will look very different from the 
+  one we have today.
+</p>
+ 
+<hr/>
+<h3>Summary Table</h3>
+ 
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse; width:100%; font-size:14px;">
+  <thead style="background-color:#1D9E75; color:#FFFFFF;">
+    <tr>
+      <th>Certifying Authority</th>
+      <th>Owner</th>
+      <th>HQ</th>
+      <th>W3Techs Share (Jun 2026)</th>
+      <th>CT Volume Share (Q1 2026)</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Let's Encrypt (ISRG)</td><td>Non-profit (ISRG)</td><td>USA</td><td>64.7%</td><td>54.4%</td><td>✅ Active</td></tr>
+    <tr style="background-color:#f0f0f0;"><td>GlobalSign</td><td>GMO Group (Japan)</td><td>USA/Japan</td><td>19.4%</td><td>~1%</td><td>✅ Active</td></tr>
+    <tr><td>Sectigo / ZeroSSL</td><td>Private Equity</td><td>USA</td><td>5.0%</td><td>11.7%</td><td>✅ Active (acquired Entrust CA)</td></tr>
+    <tr style="background-color:#f0f0f0;"><td>GoDaddy</td><td>GoDaddy Inc. (Public)</td><td>USA</td><td>3.6%</td><td>5.9%</td><td>✅ Active</td></tr>
+    <tr><td>DigiCert Group</td><td>Clearlake Capital / TA</td><td>USA</td><td>1.7%</td><td>6.6%</td><td>✅ Active</td></tr>
+    <tr style="background-color:#f0f0f0;"><td>Google Trust Services</td><td>Alphabet / Google</td><td>USA</td><td>&lt;0.1%</td><td>16.7%</td><td>✅ Active</td></tr>
+    <tr><td>Amazon Trust Services</td><td>Amazon / AWS</td><td>USA</td><td>&lt;0.1%</td><td>3.8%</td><td>✅ Active</td></tr>
+    <tr style="background-color:#f0f0f0;"><td>Microsoft</td><td>Microsoft Corp.</td><td>USA</td><td>&lt;0.1%</td><td>~2% (growing fast)</td><td>✅ Active / Fastest growing</td></tr>
+    <tr><td>Actalis</td><td>Aruba S.p.A. (Italy)</td><td>Italy</td><td>0.6%</td><td>&lt;0.1%</td><td>✅ Active</td></tr>
+    <tr style="background-color:#f0f0f0;"><td>Certum</td><td>Asseco (Poland)</td><td>Poland</td><td>0.5%</td><td>&lt;0.1%</td><td>✅ Active</td></tr>
+    <tr><td>IdenTrust</td><td>HID Global (US)</td><td>USA</td><td>&lt;0.1%</td><td>&lt;0.1%</td><td>✅ Active (US Gov/Healthcare)</td></tr>
+    <tr style="background-color:#f0f0f0;"><td>SSL.com</td><td>SSL Corp. (Private)</td><td>USA</td><td>&lt;0.1%</td><td>&lt;0.1%</td><td>✅ Active (patched 2025 DCV bug)</td></tr>
+    <tr><td>Buypass</td><td>Norwegian State</td><td>Norway</td><td>&lt;0.1%</td><td>&lt;0.1%</td><td>✅ Active (free DV via ACME)</td></tr>
+    <tr style="background-color:#f0f0f0;"><td>Entrust</td><td>Entrust Corp.</td><td>Canada/USA</td><td>&lt;0.1%</td><td>N/A</td><td>⚠️ Public CA business sold to Sectigo (Jan 2025)</td></tr>
+    <tr><td>Chunghwa Telecom</td><td>Taiwanese Govt</td><td>Taiwan</td><td>&lt;0.1%</td><td>N/A</td><td>❌ Chrome-distrusted Aug 2025</td></tr>
+    <tr style="background-color:#f0f0f0;"><td>Netlock</td><td>Private (Hungary)</td><td>Hungary</td><td>&lt;0.1%</td><td>N/A</td><td>❌ Chrome-distrusted Aug 2025</td></tr>
+    <tr><td>DigiNotar</td><td>—</td><td>Netherlands</td><td>—</td><td>—</td><td>❌ Defunct (2011 breach)</td></tr>
+    <tr style="background-color:#f0f0f0;"><td>Symantec CA</td><td>—</td><td>—</td><td>—</td><td>—</td><td>❌ Sold to DigiCert (2017)</td></tr>
+    <tr><td>TrustCor</td><td>—</td><td>—</td><td>—</td><td>—</td><td>❌ Removed from roots (2022)</td></tr>
+  </tbody>
+</table>
+ 
+<hr/>
+ 
+<h3>Closing Thoughts</h3>
+<p>
+  The Certificate Authority landscape in 2026 looks nothing like it did ten years ago. 
+  A non-profit has eaten the mass market. The tech giants — Google, Amazon, and 
+  increasingly Microsoft — have become major issuers within their own ecosystems. 
+  The traditional commercial CAs are consolidating, with Sectigo now managing what 
+  was once Entrust's customer base. And the rules around certificate lifetimes are 
+  about to force a wave of automation adoption that will reshape the market again 
+  by the end of the decade.
+</p>
+<p>
+  What has not changed is why any of this matters. The entire security model of the 
+  web rests on these organisations doing their jobs correctly, consistently, and 
+  transparently. When they do not — as my <a href="https://blog.gauravkansal.in/2024/08/epicCAFails.html">Epic CA Fails</a> 
+  series documents in painful detail — the consequences can range from embarrassing to catastrophic. 
+  If you want to understand the underlying mechanics of why a 
+  compromised CA is so dangerous, our posts on 
+  <a href="https://blog.gauravkansal.in/2015/09/tls-session-resumption.html">TLS Session Resumption</a>, 
+  <a href="https://blog.gauravkansal.in/2015/09/flaw-in-serverkeyexchange-messages-of.html">Flaws in ServerKeyExchange Messages</a>, 
+  and the 
+  <a href="https://blog.gauravkansal.in/2015/09/freak-factoring-attack-on-rsa-export.html">FREAK Attack</a> 
+  explain the protocol-level impact in detail.
+  The consolidation we are seeing is not inherently bad, but it does mean that the 
+  failures of a smaller number of players now have larger consequences. Browser 
+  vendors, particularly Google, have shown they are willing to act when CAs fall 
+  short. That accountability — more than any technical standard — is what keeps 
+  the whole system honest.
+</p>
+
+<hr/>
+ 
+<p><em>
+  Data sources: W3Techs SSL Certificate Authority Market Share (June 13, 2026), 
+  Cloudflare Radar Certificate Transparency (Q1 2026) via TechnologyChecker.io, 
+  Mordor Intelligence CA Market Report (2026), Let's Encrypt / ISRG Blog (December 2025), 
+  BleepingComputer, The Hacker News, SecurityWeek. Market shares reflect the date of publication 
+  (as of June 2026) and will change over time.
+</em></p>
+ 
+							</div>
+
+							<div class="labelList">
+                                <div class="labelIcon"><i class="fa-solid fa-tags"></i></div>
+                                <div class="labelText">TLS</div>
+                            </div>
+
+                            <div class="pagination blogPagination my-4">
+                                <div class="paginationNav pull-right">
+                                    <a href=" javascript:void(0);" title="Previous" rel="" class="preblog disable opacity-50">
+                                        <div class="prebox">
+                                            <span><i class="fa fa-angle-left fa-lg"></i> </span>
+                                            Previous
+                                        </div> 
+                                        <p>Previous Heading</p>
+                                    </a>
+                                    <a href="../../2026/01/Opening-India-Lower-6-GHz-Band-for-Wireless-Use-A-Strategic-Regulatory-Landmark.html" title="Next" rel="" class="nextblog">
+                                      <div class="nextbox">Next<span><i class="fa fa-angle-right fa-lg"></i></span> </div>  
+                                        <p class="nexttitle">India Delicenses 6 GHz Wi-Fi: Rules for Wi-Fi 6E & 7</p>                                           
+                                    </a>
+                                </div>
+                            </div>
+
+						</div>
+						<div id="disqus_thread"></div>
+					</div>
+					<!-- /blog post -->
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<!-- /Main content -->
+
+	<div id="showsidebar"></div>
+
+  <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+
+  <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+  <script>
+    $('#myHead').load('../../include/header.html');
+    $(document).ready(function () {
+      $("#skipnone").remove();
+    });
+    $('#myFooter').load('../../include/footer.html');
+    $('#showsidebar').load('../../include/sidebarShow.html');
+  </script>
+     <script>
+        var geturl = window.location.href;
+        // console.log(geturl);
+        var disqus_config = function () {
+            this.page.url = geturl;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = geturl; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://gauravkansal-in.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+  <!-- Bootstrap JS -->
+  <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- slick slider -->
+  <script src="../../plugins/slick/slick.min.js"></script>
+  <!-- masonry -->
+  <script src="../../plugins/masonry/masonry.js"></script>
+  <!-- headroom -->
+  <script src="../../plugins/headroom/headroom.js"></script>
+  <!-- reading time -->
+  <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+  <!-- Main Script -->
+  <script src="../../js/script.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
