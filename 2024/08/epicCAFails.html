@@ -125,6 +125,107 @@
                                                 Transparency mailing list.
                                         </div>
                                     </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Chunghwa Telecom & Netlock</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">June 2025</h3>
+                                            <p class="description">
+					                        <b class="pheader">Compliance Failures — Chrome Distrust</b>
+                                                Google announced that Chrome 139 (released August 2025) would 
+                                                stop trusting TLS certificates issued by two CAs: Chunghwa 
+                                                Telecom (Taiwan's largest telecoms company and operator of 
+                                                the ePKI CA) and Netlock (a Hungarian CA offering digital 
+                                                identity and electronic signature services). The decision 
+                                                came after a sustained period of monitoring by Google's Chrome 
+                                                Root Program team, which documented a consistent pattern of 
+                                                compliance failures, broken improvement commitments, and a 
+                                                failure to make any measurable progress in response to 
+                                                publicly reported incidents. <br/>
+                                                This was not a single dramatic breach — it was the slow 
+                                                erosion of trust through repeated small failures and broken 
+                                                promises. Google's statement made this clear: "These patterns 
+                                                represent a loss of integrity and fall short of expectations, 
+                                                eroding trust in these CA Owners as publicly-trusted 
+                                                certificate issuers trusted by default in Chrome." Any 
+                                                certificates issued by either CA after July 31, 2025 began 
+                                                triggering full-page "Your connection is not private" 
+                                                warnings in Chrome. It is worth noting that Apple had already 
+                                                quietly distrusted a Netlock root certificate in November 2024, 
+                                                foreshadowing Google's more public action. Entrust had 
+                                                sold its certificate business to Sectigo following a similar 
+                                                distrust action in late 2024.
+                                                <br/>
+                                                <a href="https://thehackernews.com/2025/06/google-chrome-to-distrust-two.html" 
+                                                target="_blank" rel="noopener">The Hacker News Report</a>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">SSL.com</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">April 2025</h3>
+                                            <p class="description">
+					                        <b class="pheader">Inadequate Control — Domain Validation Flaw</b>
+                                                A security researcher discovered a critical vulnerability in 
+                                                SSL.com's domain control validation (DCV) process. The flaw lay 
+                                                in how SSL.com implemented the email-to-DNS-TXT-contact 
+                                                validation method — it was incorrectly treating the hostname of 
+                                                an approver's email address as a verified domain. In practice, 
+                                                this meant that anyone with an email address at a target domain 
+                                                (even a regular employee, not an administrator) could obtain a 
+                                                valid TLS certificate for that entire domain. <br/>
+
+                                                To prove the flaw, the researcher created a DNS TXT record for 
+                                                a test domain using an @aliyun.com email address and successfully 
+                                                obtained a fraudulent certificate for aliyun.com — the official 
+                                                website of Alibaba Cloud, one of the world's largest cloud 
+                                                providers. SSL.com identified 11 additional certificates that 
+                                                had been wrongly issued using the same method and revoked them 
+                                                all. The vulnerable DCV method was immediately disabled while 
+                                                a fix was developed. The incident was a stark reminder that 
+                                                even the most fundamental CA process — confirming you own a 
+                                                domain before issuing a certificate for it — can be subtly 
+                                                and dangerously broken. <br/>
+                                                <a href="https://www.securityweek.com/ssl-com-scrambles-to-patch-certificate-issuance-vulnerability/" 
+                                                target="_blank" rel="noopener">SecurityWeek Report</a>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">DigiCert Mass Revocation</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">July 2024</h3>
+                                            <p class="description">
+					                        <b class="pheader">Technology Malfunction — Mass Revocation Crisis</b>
+                                                In one of the most disruptive CA incidents in recent memory, 
+                                                DigiCert discovered a five-year-old programming bug in its 
+                                                domain control verification (DCV) process. The flaw meant that 
+                                                some CNAME-based domain validations were being processed without 
+                                                the required underscore prefix in the random validation value — 
+                                                a small technical omission, but one that broke CA/Browser Forum 
+                                                rules. Under those rules, DigiCert had no choice but to revoke 
+                                                all affected certificates within 24 hours. <br/>
+                                                The scale was staggering — over 83,000 certificates belonging 
+                                                to around 6,800 customers were impacted, with Censys identifying 
+                                                more than 33,000 of them actively in use on the public web at 
+                                                the time. <br/>
+                                                One affected company, Alegeus (a healthcare financial tech firm), 
+                                                went as far as seeking a court order to delay revocation, 
+                                                citing severe risk to its operations. CISA issued an official 
+                                                alert urging critical infrastructure operators to act 
+                                                immediately. DigiCert eventually allowed limited extensions for 
+                                                critical infrastructure operators, but all affected certificates 
+                                                were revoked no later than August 3, 2024. The incident 
+                                                reignited a long-running debate about whether the CA/Browser 
+                                                Forum's 24-hour revocation rule is realistic for large-scale 
+                                                incidents. <br/>
+                                                <a href="https://www.digicert.com/support/certificate-revocation-incident" 
+                                                target="_blank" rel="noopener">DigiCert Incident Report</a> | 
+                                                <a href="https://www.cisa.gov/news-events/alerts/2024/07/30/digicert-certificate-revocations" 
+                                                target="_blank" rel="noopener">CISA Alert</a>
+                                        </div>
+                                    </div>
 
                                     <div class="timeline">
                                         <span class="timeline-icon"></span>
