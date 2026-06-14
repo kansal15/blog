@@ -102,6 +102,30 @@
                                 </p>
                                 <hr/>
                                 <div class="main-timeline8">
+
+                                    <div class="timeline">
+                                        <span class="timeline-icon"></span>
+                                        <span class="year">Fina CA / Cloudflare 1.1.1.1</span>
+                                        <div class="timeline-content">
+                                            <h3 class="title">September 2025</h3>
+                                            <p class="description">
+					                        <b class="pheader">Unauthorised Issuance</b>
+                                                Cloudflare was notified through its vulnerability disclosure 
+                                                programme that Fina CA — a lesser-known certificate authority — 
+                                                had been issuing unauthorised certificates for 1.1.1.1, 
+                                                Cloudflare's globally used public DNS resolver service. The 
+                                                unauthorised issuance had been going on quietly since February 
+                                                2024 and produced twelve certificates for 1.1.1.1 over an 
+                                                18-month period — all without Cloudflare's knowledge or 
+                                                permission. Cloudflare confirmed there was no evidence of 
+                                                active exploitation, noting that an attacker would also need 
+                                                the corresponding private key and would need to intercept 
+                                                traffic to 1.1.1.1 to cause harm. The certificates were 
+                                                revoked and the incident was flagged via the Certificate 
+                                                Transparency mailing list.
+                                        </div>
+                                    </div>
+
                                     <div class="timeline">
                                         <span class="timeline-icon"></span>
                                         <span class="year">Entrust</span>
@@ -266,7 +290,13 @@
                                             <h3 class="title">October 2016</h3>
                                             <p class="description">
                                                 <b class="pheader">Technology Malfunction</b>
-                                                OCR failure results in issuing of certificates to the wrong entities.
+                                                Comodo's automated certificate issuance 
+                                                system suffered an OCR (optical character recognition) failure during 
+                                                document processing, causing it to misread validation documents and 
+                                                issue certificates to the wrong entities. It was a reminder that 
+                                                automation without sufficient checks can introduce its own category 
+                                                of errors — the system was doing exactly what it was told, just 
+                                                based on the wrong input.
                                             </p>
                                         </div>
                                     </div>
@@ -299,7 +329,14 @@
                                             <h3 class="title">July 2016</h3>
                                             <p class="description">
                                                 <b class="pheader">Technology Malfunction</b>
-                                                Dangling markup injection issues arbitrary wildcard certificates.
+                                                A dangling markup injection 
+                                                vulnerability in Comodo's web-based certificate request interface 
+                                                allowed an attacker to manipulate the validation process and obtain 
+                                                arbitrary wildcard certificates. Wildcard certificates cover an 
+                                                entire domain and all its subdomains, meaning a single fraudulently 
+                                                obtained wildcard cert could be used to impersonate any part of a 
+                                                target organisation's web presence. Comodo patched the vulnerability 
+                                                and revoked the affected certificates.
                                             </p>
                                         </div>
                                     </div>
@@ -412,7 +449,16 @@
                                             <h3 class="title">September 2011</h3>
                                             <p class="description">
                                                 <b class="pheader">Compromise</b>
-                                                Voluntarily suspended issuance while investigating breach.
+                                                In September 2011, just weeks after the DigiNotar 
+                                                disaster was making headlines, GlobalSign — one of Europe's largest 
+                                                CAs — made the cautious decision to voluntarily suspend all certificate 
+                                                issuance while it investigated a claimed breach by the same hacker 
+                                                who attacked DigiNotar. The investigation ultimately found that only 
+                                                a small portion of GlobalSign's web infrastructure had been touched, 
+                                                and no fraudulent certificates had been issued. GlobalSign resumed 
+                                                issuance after completing its investigation, but the incident 
+                                                highlighted just how rattled the entire CA industry was in the 
+                                                aftermath of DigiNotar.
                                             </p>
                                         </div>
                                     </div>
@@ -442,7 +488,15 @@
                                             <h3 class="title">June 2011</h3>
                                             <p class="description">
                                                 <b class="pheader">Hacker Compromise</b>
-                                                Breach causes CA to temporarily suspend certificate issuance.
+                                                StartCom, an Israeli CA, was targeted by 
+                                                the same attacker responsible for the Comodo reseller breach earlier 
+                                                that year. The CEO of StartCom, Eddy Nigg, personally discovered the 
+                                                intrusion and managed to shut it down before any fraudulent 
+                                                certificates could be issued. While StartCom avoided a full-blown 
+                                                crisis, the breach was a warning sign — one that went largely 
+                                                unheeded. The CA would later resurface in controversy in 2016 when 
+                                                it was acquired by WoSign and subsequently distrusted by all major 
+                                                browsers alongside its new parent company.
                                             </p>
                                         </div>
                                     </div>
@@ -468,7 +522,11 @@
                                             <h3 class="title">December 2008</h3>
                                             <p class="description">
                                                 <b class="pheader">Business Partner Blunder</b>
-                                                Mis-issued certificate for login.live.com via emails.
+                                                Comodo reseller CertStar mis-issued 
+                                                a certificate for login.live.com without performing proper domain 
+                                                validation checks, relying solely on email-based verification. 
+                                                This exposed a systemic weakness in how Comodo managed its reseller 
+                                                network's validation practices.
                                             </p>
                                         </div>
                                     </div>
@@ -478,8 +536,11 @@
                                         <div class="timeline-content">
                                             <h3 class="title">July 2008</h3>
                                             <p class="description">
-                                                <b class="pheader">Inadequate Control</b>
-                                                Mis-issued certificate for login.live.com via emails.
+                                                <b class="pheader">Inadequate Control</b> Thawte mis-issued a certificate for 
+                                                login.live.com to an unauthorized requestor. The incident highlighted 
+                                                weaknesses in the domain validation process where certificates could 
+                                                be obtained simply by demonstrating control of a related email address 
+                                                rather than actual domain ownership.
                                             </p>
                                         </div>
                                     </div>
