@@ -22,11 +22,11 @@
     <!-- End Google Tag Manager -->
 
     <meta charset="utf-8">
-    <title>Epic CA Fails | Gaurav Kansal Blog</title>
+    <title>Epic CA Fails: A History of Certificate Authority Incidents (2008–2024) | Gaurav Kansal Blog</title>
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:title" content="EPIC CA Fails" />
+    <meta property="og:title" content="EPIC CA Fails: A History of Certificate Authority Incidents (2008–2024)" />
     <meta property="og:description" content="In cryptography, a certificate authority or certification authority (CA) is an entity that signs, and issues digital certificates. A digital certificate certifies the ownership of a public key by the named subject of the certificate. A CA acts as a trusted third party—trusted both by the subject (owner) of the certificate and by the party relying upon the certificate." />
     <meta property="og:image" content="https://blog.gauravkansal.in/images/caError.jpg" />
     <meta property="og:url" content="https://blog.gauravkansal.in/2024/08/epicCAFails.html" />
@@ -70,7 +70,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <h4>EPIC CA Fails</h4>
+                    <h4>EPIC CA Fails: A History of Certificate Authority Incidents (2008–2024)</h4>
                 </div>
             </div>
         </div>
@@ -91,8 +91,15 @@
                                 <li class="list-inline-item"><i class="ti-calendar mr-2"></i> Aug 13, 2024</li>
                             </ul>
 
-                            <div class="content">
-                                <h5 class="mt-0">EPIC CA Fails</h5>
+                            <p>
+                                Certificate Authorities are the backbone of trust on the Internet. 
+                                When you see that padlock in your browser, you are trusting a CA — 
+                                sometimes blindly. But what happens when that trust is misplaced? 
+                                Over the years, some of the biggest names in the CA world have made 
+                                mistakes that ranged from embarrassing to genuinely dangerous. 
+                                This is a chronicle of those moments — the blunders, the breaches, 
+                                and the cover-ups that shaped how the web thinks about certificate trust today.
+                                </p>
                                 <hr/>
                                 <div class="main-timeline8">
                                     <div class="timeline">
@@ -101,10 +108,10 @@
                                         <div class="timeline-content">
                                             <h3 class="title">June 2024</h3>
                                             <p class="description">
-					    <b class="pheader">Entrust Incident March-May 2024 <br> (Google Chrome 127
+					                        <b class="pheader">Entrust Incident March-May 2024 <br> (Google Chrome 127
                                                     and higher distrust certificates issued by Entrust roots whose
                                                     earliest Signed Certificate Timestamp (SCT) is dated after October
-						    31, 2024)</b> <br>
+						                            31, 2024)</b> <br>
                                                 Entrust, one of the oldest Certification Authorities (CAs), is in
                                                 trouble with Mozilla and other root stores. In the last several years,
                                                 going back to 2020, there have been multiple persistent technical
@@ -112,17 +119,17 @@
                                                 happens once, or even a couple of times, and when it’s handled well. But
                                                 according to Mozilla and others, it hasn’t been. Over time, frustration
                                                 grew. Promises were made, then broken. Finally, in May, Mozilla compiled
-						a list of recent issues and asked Entrust to formally respond.<br>
-                                                <a href="https://www.feistyduck.com/newsletter/issue_114_entrust_in_trouble"
-						   target="_blank"> Entrust in Trouble </a> <br>
+						                        a list of recent issues and asked Entrust to formally respond.<br>
+                                                <b><a href="https://www.feistyduck.com/newsletter/issue_114_entrust_in_trouble"
+						                        target="_blank"> Entrust in Trouble </a> <br>
                                                 <a href="https://wiki.mozilla.org/CA/Entrust_Issues"
-						   target="_blank">Summary of Entrust Incidents - March-May 2024 </a> <br>
+						                        target="_blank">Summary of Entrust Incidents - March-May 2024 </a> <br>
                                                 <a href="https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/LhTIUMFGHNw/m/uKzergzqAAAJ"
-						   target="_blank"> Recent Entrust Compliance Incidents - Google Group <br>
+						                        target="_blank"> Recent Entrust Compliance Incidents - Google Group <br>
                                                 </a>
                                                 <a href="https://security.googleblog.com/2024/06/sustaining-digital-certificate-security.html"
                                                     target="_blank"> Sustaining Digital Certificate Security - Entrust
-                                                    Certificate Distrust - Google Security Blog </a>
+                                                    Certificate Distrust - Google Security Blog </a></b>
                                             </p>
                                         </div>
                                     </div>
@@ -133,7 +140,7 @@
                                             <h3 class="title">June 2023</h3>
                                             <p class="description">
                                                 <b class="pheader">Lets Encrypt's Signature Saga: A Tale of Certificates
-                                                    Gone Astray</b>
+                                                    Gone Astray</b> <br/>
                                                 Let's Encrypt, a popular certificate authority, recently experienced an
                                                 outage resulting in the issuance of certificates with invalid
                                                 signatures. The incident occurred during a planned change in their
@@ -144,9 +151,9 @@
                                                 issuance, resolved the issue, and revoked the affected certificates as
                                                 per the Baseline Requirements. To delve into the incident's details,
                                                 including the root cause and impact, you can refer to the detailed blog
-						post available at: <br> 
-						<a href="https://www.agwa.name/blog/post/last_weeks_lets_encrypt_downtime"
-     target="_blank">https://www.agwa.name/blog/post/last_weeks_lets_encrypt_downtime</a>.
+						                        post available at: <br> 
+						                        <a href="https://www.agwa.name/blog/post/last_weeks_lets_encrypt_downtime"
+                                                 target="_blank">https://www.agwa.name/blog/post/last_weeks_lets_encrypt_downtime</a>.
                                             </p>
                                         </div>
                                     </div>
@@ -157,43 +164,44 @@
                                             <h3 class="title">June 2023</h3>
                                             <p class="description">
                                                 <b class="pheader">HiCA's Unconventional Certificate Obtaining Process
-							Raises Concerns</b> <br>
+							                    Raises Concerns</b> <br>
                                                 HiCA, has been found injecting arbitrary code into the certificate
                                                 obtaining process, raising questions about its safety and intentions.
                                                 The company's deviation from standard ACME protocols and its use of
                                                 unconventional practices, including executing remote commands, pose
                                                 potential security risks. For more details on the incident and its
-						impact, refer to the comprehensive analysis in the detailed post: <br>
-						<a  href="https://github.com/acmesh-official/acme.sh/issues/4659"
+                                                impact, refer to the comprehensive analysis in the detailed post: <br>
+                                                <a  href="https://github.com/acmesh-official/acme.sh/issues/4659"
                                                     target="_blank">https://github.com/acmesh-official/acme.sh/issues/4659</a>.
                                             </p>
                                         </div>
                                     </div>
+
                                     <div class="timeline">
                                         <span class="timeline-icon"></span>
                                         <span class="year">Let's Encrypt</span>
                                         <div class="timeline-content">
                                             <h3 class="title">March 2020</h3>
                                             <p class="description">
-                                                <b class="pheader">Boulder Bug</b>
-                                                Let's Encrypt discovered a bug that lead to revocation millions of
-                                                issued certificates issued.
+                                                <b class="pheader">Boulder Bug</b> Let's Encrypt discovered a bug that led to the 
+                                                revocation of millions of issued certificates.
                                             </p>
                                         </div>
                                     </div>
+
                                     <div class="timeline">
                                         <span class="timeline-icon"></span>
                                         <span class="year">Symantec</span>
                                         <div class="timeline-content">
                                             <h3 class="title">March 2018</h3>
                                             <p class="description">
-                                                <b class="pheader">Private Keys Breach</b>
-                                                Due to compromise of private keys, Digicert announced revocation of
-                                                approx 20k Symantec certificates including GeoTrust, Thawte and RapidSSL
-                                                Brand.
+                                                <b class="pheader">Private Keys Breach</b> Due to compromise of private keys, DigiCert 
+                                                announced the revocation of approximately 20,000 Symantec certificates 
+                                                including GeoTrust, Thawte and RapidSSL brands.
                                             </p>
                                         </div>
                                     </div>
+
                                     <div class="timeline">
                                         <span class="timeline-icon"></span>
                                         <span class="year">Symantec</span>
@@ -214,7 +222,7 @@
                                             <h3 class="title">September 2017</h3>
                                             <p class="description">
                                                 <b class="pheader">Inadequate Control</b>
-                                                Numerous issures centering around the mis-issues of SSL certificates.
+                                                Numerous issues centering around the mis-issued of SSL certificates.
                                             </p>
                                         </div>
                                     </div>
@@ -225,7 +233,7 @@
                                             <h3 class="title">January 2017</h3>
                                             <p class="description">
                                                 <b class="pheader">Business Partner Blunder</b>
-                                                Overriding Symantec complaince flags to bypass domain validations.
+                                                Overriding Symantec compliance flags to bypass domain validations.
                                             </p>
                                         </div>
                                     </div>
@@ -302,7 +310,7 @@
                                             <h3 class="title">September 2015</h3>
                                             <p class="description">
                                                 <b class="pheader">Human Error</b>
-                                                Mis-issues test certificates without review by authentication personal.
+                                                Mis-issued test certificates without review by authentication personnel.
                                             </p>
                                         </div>
                                     </div>
@@ -313,7 +321,7 @@
                                             <h3 class="title">March 2015</h3>
                                             <p class="description">
                                                 <b class="pheader">Inadequate Control</b>
-                                                Issued certificate to a misconfigured priviledged email on Microsoft's
+                                                Issued certificate to a misconfigured privileged email on Microsoft's
                                                 live.fi.
                                             </p>
                                         </div>
@@ -325,7 +333,7 @@
                                             <h3 class="title">March 2015</h3>
                                             <p class="description">
                                                 <b class="pheader">Abuse of Trust</b>
-                                                Unconstrained intermdetiate certificate issued for network interception.
+                                                Unconstrained intermediate certificate issued for network interception.
                                             </p>
                                         </div>
                                     </div>
@@ -347,7 +355,7 @@
                                             <h3 class="title">December 2013</h3>
                                             <p class="description">
                                                 <b class="pheader">Business Partner Blunder</b>
-                                                Subordnate CA mis-issued intermdeiate certificate, later abused by user.
+                                                Subordinate CA mis-issued intermediate certificate, later abused by user.
                                             </p>
                                         </div>
                                     </div>
@@ -398,13 +406,16 @@
                                     </div>
                                     <div class="timeline">
                                         <span class="timeline-icon"></span>
-                                        <span class="year">DeckGlobalTrust.it</span>
+                                        <span class="year">GlobalTrust.it (Comodo Reseller)</span>
                                         <div class="timeline-content">
                                             <h3 class="title">March 2011</h3>
                                             <p class="description">
                                                 <b class="pheader">Hacker Compromise</b>
-                                                Comodo reseller bypasses security mechanism to mis-issue Mozilla.com
-                                                certificate.
+                                                <br/>
+                                                A Comodo reseller, GlobalTrust.it, was compromised by an attacker 
+                                                who used stolen credentials to mis-issue fraudulent certificates 
+                                                for high-profile domains including Mozilla.com, Google.com, 
+                                                and login.yahoo.com.
                                             </p>
                                         </div>
                                     </div>
@@ -415,7 +426,7 @@
                                             <h3 class="title">December 2008</h3>
                                             <p class="description">
                                                 <b class="pheader">Business Partner Blunder</b>
-                                                Mis-issues certificate for login.live.com via emails.
+                                                Mis-issued certificate for login.live.com via emails.
                                             </p>
                                         </div>
                                     </div>
@@ -426,12 +437,20 @@
                                             <h3 class="title">July 2008</h3>
                                             <p class="description">
                                                 <b class="pheader">Inadequate Control</b>
-                                                Mis-issues certificate for login.live.com via emails.
+                                                Mis-issued certificate for login.live.com via emails.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <hr/>
+                            <p>
+                            <em>This list is not exhaustive — the CA ecosystem has had many more 
+                            incidents over the years. If you spot a missing entry or an error, 
+                            drop a comment below.</em>
+                            </p>
+
 
                             <div class="labelList">
                                 <div class="labelIcon"><i class="fa-solid fa-tags"></i></div>
@@ -446,7 +465,7 @@
                                             <span><i class="fa fa-angle-left fa-lg"></i> </span>
                                             Previous
                                         </div>
-                                        <p class="pretitle">SSL/TLS Progress</p>
+                                        <p class="pretitle">A Chronicle of SSL/TLS: From Netscape's First Draft to TLS 1.3</p>
                                     </a>
 
 
