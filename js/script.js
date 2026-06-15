@@ -123,16 +123,6 @@
 
 // Pagination in index page js
 
-// js 1
-
-
-// $('.page').paginathing({
-//   perPage: 4,
-//   insertAfter: '.page',
-//   pageNumbers: true,
-//   ulClass: 'profile-pagination-wrap align-center mt-4'
-// });
-
 
 $(document).ready(function () {
 
@@ -151,7 +141,7 @@ $(document).ready(function () {
         let offsetStart;
         let offsetEnd;
         let currentPage = 1;
-        let elementsPerPage = 4;
+        let elementsPerPage = 6;
  
         var nmbrOfPages = Math.ceil(elements.length / elementsPerPage);
 
