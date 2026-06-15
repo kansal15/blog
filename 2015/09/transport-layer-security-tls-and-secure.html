@@ -2,14 +2,35 @@
 <html lang="zxx">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V78EBX66N1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-V78EBX66N1');
+        </script>
+    
+        <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KKQWN7J6');</script>
+    <!-- End Google Tag Manager -->
+
+
     <meta charset="utf-8">
-    <title>Gaurav Kansal Blog</title>
+    <title>TLS and SSL Explained: What They Are, How They Work, and Where We Stand in 2026 | Gaurav Kansal Blog</title>
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta property="og:title" content="Transport Layer Security (TLS) and Secure Sockets Layer (SSL)" />
-    <meta property="og:description" content="Transport Layer Security (TLS) is a successor of Secure Sockets Layer (SSL) and its a cryptographic protocol used for establishing an encrypted link between a Server and a Client over a public network." />
-    <meta property="og:image" content="	https://blog.gauravkansal.in/images/tls-ssl.jpg" />
+    <meta property="og:description" content="TLS is the protocol that puts the padlock in your browser. This post explains what 
+                    TLS and SSL actually are, how they evolved from SSL 1.0 through TLS 1.3, and what 
+                    the current state of play looks like in 2026." />
+    <meta property="og:image" content="	https://blog.gauravkansal.in/images/prev-years/ssl_tls_version_timeline.png" />
     <meta property="og:url" content="https://blog.gauravkansal.in/2015/09/transport-layer-security-tls-and-secure.html" />
     <meta property="og:type" content="article" />
 
@@ -50,7 +71,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h4>
-                        Transport Layer Security (TLS) and Secure Sockets Layer (SSL)
+                        TLS and SSL Explained: What They Are, How They Work, and Where We Stand in 2026
                     </h4>
                 </div>
             </div>
@@ -71,35 +92,257 @@
                                         href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
                                 <li class="list-inline-item"><i class="ti-calendar mr-2"></i> September 08, 2015</li>
                             </ul>
+                            
+                            <div style="background-color: #f0f7f4; border-left: 4px solid #1D9E75; 
+                            padding: 10px 16px; margin-bottom: 20px; border-radius: 4px;
+                            font-size: 0.9em; color: #444;">
+                            📅 <strong>Originally published:</strong> September 08, 2015 &nbsp;|&nbsp; 
+                            🔄 <strong>Last updated:</strong> June 2026 — revised to reflect TLS 1.3 
+                            as the current standard, deprecation of TLS 1.0 &amp; 1.1, and 2026 best practices.
+                            </div>
+
                             <div class="content">
-                                <p class="blog-post-body">
-                                    Transport Layer Security (TLS) is a successor of Secure Sockets Layer (SSL) and its
+                                <p align="justify">
+                                If you have ever clicked a padlock icon in your browser and wondered what it 
+                                actually means, this post is for you. That little symbol tells you the connection 
+                                between your browser and the website you are visiting is encrypted — and the 
+                                protocol doing that encryption is called TLS. Most people call it SSL out of habit, 
+                                even though SSL itself was retired years ago. The two names have become so 
+                                intertwined that even security professionals use them interchangeably. So let's 
+                                untangle that, and explain what TLS actually is, how it got here, and what 
+                                version you should be using today.
+                                </p>
+
+
+
+<div style="margin: 28px 0 32px 0;">
+  <p style="font-size:0.85em; color:#666; margin-bottom:8px; font-style:italic;">
+    📊 The SSL/TLS version journey at a glance — scroll down for the full story of each version.
+  </p>
+
+  <div style="overflow-x:auto; -webkit-overflow-scrolling:touch;">
+    <svg width="100%" viewBox="0 0 680 420"
+         style="display:block; min-width:480px;"
+         role="img"
+         xmlns="http://www.w3.org/2000/svg">
+
+      <title>SSL to TLS version timeline — 1994 to 2026</title>
+      <desc>
+        A horizontal timeline showing the journey from SSL 1.0 in 1994 through
+        SSL 2.0, SSL 3.0, TLS 1.0, TLS 1.1, TLS 1.2, to TLS 1.3 in 2018,
+        with deprecated versions marked in red, TLS 1.2 in blue, and TLS 1.3
+        in green as the current standard.
+      </desc>
+
+      <!-- Heading -->
+      <text x="340" y="36" font-family="sans-serif" font-size="15"
+            font-weight="600" fill="#1a5276" text-anchor="middle"
+            letter-spacing="0.5">
+        THE JOURNEY FROM SSL TO TLS · 1994 – 2026
+      </text>
+
+      <!-- Legend -->
+      <rect x="40"  y="56" width="160" height="22" rx="4" fill="#f5b7b1" opacity="0.5"/>
+      <text x="50"  y="71" font-family="sans-serif" font-size="11" fill="#922b21">● Deprecated / Broken</text>
+      <rect x="220" y="56" width="160" height="22" rx="4" fill="#aed6f1" opacity="0.5"/>
+      <text x="230" y="71" font-family="sans-serif" font-size="11" fill="#1a5276">● Acceptable (TLS 1.2 only)</text>
+      <rect x="400" y="56" width="140" height="22" rx="4" fill="#a9dfbf" opacity="0.5"/>
+      <text x="410" y="71" font-family="sans-serif" font-size="11" fill="#1e8449">● Current Standard</text>
+
+      <!-- Main timeline axis -->
+      <line x1="60" y1="200" x2="630" y2="200" stroke="#bdc3c7" stroke-width="2"/>
+      <line x1="622" y1="193" x2="636" y2="200" stroke="#bdc3c7" stroke-width="2"/>
+      <line x1="622" y1="207" x2="636" y2="200" stroke="#bdc3c7" stroke-width="2"/>
+
+      <!-- ── SSL 1.0 ── -->
+      <line x1="88"  y1="196" x2="88"  y2="204" stroke="#922b21" stroke-width="2"/>
+      <text x="88"  y="220" font-family="sans-serif" font-size="10" fill="#7f8c8d" text-anchor="middle">1994</text>
+      <circle cx="88" cy="200" r="10" fill="#922b21" stroke="#f1948a" stroke-width="1.5"/>
+      <text x="88" y="204" font-family="sans-serif" font-size="8" font-weight="700"
+            fill="#fff" text-anchor="middle">S1</text>
+      <rect x="44"  y="112" width="88" height="58" rx="6"
+            fill="#fdedec" stroke="#e74c3c" stroke-width="1"/>
+      <text x="88"  y="130" font-family="sans-serif" font-size="11" font-weight="700"
+            fill="#922b21" text-anchor="middle">SSL 1.0</text>
+      <text x="88"  y="145" font-family="sans-serif" font-size="10"
+            fill="#e74c3c" text-anchor="middle">Never released</text>
+      <text x="88"  y="160" font-family="sans-serif" font-size="10"
+            fill="#e74c3c" text-anchor="middle">Critical flaws</text>
+      <line x1="88" y1="170" x2="88" y2="190"
+            stroke="#e74c3c" stroke-width="1" stroke-dasharray="3 2"/>
+
+      <!-- ── SSL 2.0 ── -->
+      <line x1="168" y1="196" x2="168" y2="204" stroke="#922b21" stroke-width="2"/>
+      <text x="168" y="186" font-family="sans-serif" font-size="10" fill="#7f8c8d" text-anchor="middle">1995</text>
+      <circle cx="168" cy="200" r="10" fill="#922b21" stroke="#f1948a" stroke-width="1.5"/>
+      <text x="168" y="204" font-family="sans-serif" font-size="8" font-weight="700"
+            fill="#fff" text-anchor="middle">S2</text>
+      <rect x="124" y="242" width="88" height="58" rx="6"
+            fill="#fdedec" stroke="#e74c3c" stroke-width="1"/>
+      <text x="168" y="260" font-family="sans-serif" font-size="11" font-weight="700"
+            fill="#922b21" text-anchor="middle">SSL 2.0</text>
+      <text x="168" y="275" font-family="sans-serif" font-size="10"
+            fill="#e74c3c" text-anchor="middle">Feb 1995</text>
+      <text x="168" y="290" font-family="sans-serif" font-size="10"
+            fill="#e74c3c" text-anchor="middle">RFC 6176 dep.</text>
+      <line x1="168" y1="210" x2="168" y2="242"
+            stroke="#e74c3c" stroke-width="1" stroke-dasharray="3 2"/>
+
+      <!-- ── SSL 3.0 ── -->
+      <line x1="248" y1="196" x2="248" y2="204" stroke="#922b21" stroke-width="2"/>
+      <text x="248" y="220" font-family="sans-serif" font-size="10" fill="#7f8c8d" text-anchor="middle">1996</text>
+      <circle cx="248" cy="200" r="10" fill="#922b21" stroke="#f1948a" stroke-width="1.5"/>
+      <text x="248" y="204" font-family="sans-serif" font-size="8" font-weight="700"
+            fill="#fff" text-anchor="middle">S3</text>
+      <rect x="204" y="112" width="88" height="58" rx="6"
+            fill="#fdedec" stroke="#e74c3c" stroke-width="1"/>
+      <text x="248" y="130" font-family="sans-serif" font-size="11" font-weight="700"
+            fill="#922b21" text-anchor="middle">SSL 3.0</text>
+      <text x="248" y="145" font-family="sans-serif" font-size="10"
+            fill="#e74c3c" text-anchor="middle">1996</text>
+      <text x="248" y="160" font-family="sans-serif" font-size="10"
+            fill="#e74c3c" text-anchor="middle">POODLE (2014)</text>
+      <line x1="248" y1="170" x2="248" y2="190"
+            stroke="#e74c3c" stroke-width="1" stroke-dasharray="3 2"/>
+
+      <!-- ── TLS 1.0 ── -->
+      <line x1="348" y1="196" x2="348" y2="204" stroke="#922b21" stroke-width="2"/>
+      <text x="348" y="186" font-family="sans-serif" font-size="10" fill="#7f8c8d" text-anchor="middle">1999</text>
+      <circle cx="348" cy="200" r="10" fill="#922b21" stroke="#f1948a" stroke-width="1.5"/>
+      <text x="348" y="204" font-family="sans-serif" font-size="8" font-weight="700"
+            fill="#fff" text-anchor="middle">T1</text>
+      <rect x="304" y="242" width="88" height="58" rx="6"
+            fill="#fdedec" stroke="#e74c3c" stroke-width="1"/>
+      <text x="348" y="260" font-family="sans-serif" font-size="11" font-weight="700"
+            fill="#922b21" text-anchor="middle">TLS 1.0</text>
+      <text x="348" y="275" font-family="sans-serif" font-size="10"
+            fill="#e74c3c" text-anchor="middle">RFC 2246</text>
+      <text x="348" y="290" font-family="sans-serif" font-size="10"
+            fill="#e74c3c" text-anchor="middle">Dep. RFC 8996</text>
+      <line x1="348" y1="210" x2="348" y2="242"
+            stroke="#e74c3c" stroke-width="1" stroke-dasharray="3 2"/>
+
+      <!-- ── TLS 1.1 ── -->
+      <line x1="418" y1="196" x2="418" y2="204" stroke="#922b21" stroke-width="2"/>
+      <text x="418" y="220" font-family="sans-serif" font-size="10" fill="#7f8c8d" text-anchor="middle">2006</text>
+      <circle cx="418" cy="200" r="10" fill="#922b21" stroke="#f1948a" stroke-width="1.5"/>
+      <text x="418" y="204" font-family="sans-serif" font-size="8" font-weight="700"
+            fill="#fff" text-anchor="middle">T2</text>
+      <rect x="374" y="112" width="88" height="58" rx="6"
+            fill="#fdedec" stroke="#e74c3c" stroke-width="1"/>
+      <text x="418" y="130" font-family="sans-serif" font-size="11" font-weight="700"
+            fill="#922b21" text-anchor="middle">TLS 1.1</text>
+      <text x="418" y="145" font-family="sans-serif" font-size="10"
+            fill="#e74c3c" text-anchor="middle">RFC 4346</text>
+      <text x="418" y="160" font-family="sans-serif" font-size="10"
+            fill="#e74c3c" text-anchor="middle">Dep. RFC 8996</text>
+      <line x1="418" y1="170" x2="418" y2="190"
+            stroke="#e74c3c" stroke-width="1" stroke-dasharray="3 2"/>
+
+      <!-- ── TLS 1.2 ── -->
+      <line x1="488" y1="196" x2="488" y2="204" stroke="#1a5276" stroke-width="2"/>
+      <text x="488" y="186" font-family="sans-serif" font-size="10" fill="#7f8c8d" text-anchor="middle">2008</text>
+      <circle cx="488" cy="200" r="11" fill="#1a5276" stroke="#5dade2" stroke-width="1.5"/>
+      <text x="488" y="204" font-family="sans-serif" font-size="8" font-weight="700"
+            fill="#fff" text-anchor="middle">T3</text>
+      <rect x="444" y="242" width="88" height="68" rx="6"
+            fill="#eaf4fb" stroke="#2e86c1" stroke-width="1"/>
+      <text x="488" y="260" font-family="sans-serif" font-size="11" font-weight="700"
+            fill="#1a5276" text-anchor="middle">TLS 1.2</text>
+      <text x="488" y="275" font-family="sans-serif" font-size="10"
+            fill="#2e86c1" text-anchor="middle">RFC 5246</text>
+      <text x="488" y="290" font-family="sans-serif" font-size="10"
+            fill="#2e86c1" text-anchor="middle">Acceptable</text>
+      <text x="488" y="304" font-family="sans-serif" font-size="10"
+            fill="#2e86c1" text-anchor="middle">fallback only</text>
+      <line x1="488" y1="210" x2="488" y2="242"
+            stroke="#2e86c1" stroke-width="1" stroke-dasharray="3 2"/>
+
+      <!-- ── TLS 1.3 ── -->
+      <line x1="588" y1="196" x2="588" y2="204" stroke="#1e8449" stroke-width="2"/>
+      <text x="588" y="225" font-family="sans-serif" font-size="10" fill="#7f8c8d" text-anchor="middle">2018</text>
+      <circle cx="588" cy="200" r="14" fill="#1e8449" stroke="#27ae60" stroke-width="2"/>
+      <text x="588" y="205" font-family="sans-serif" font-size="9" font-weight="700"
+            fill="#fff" text-anchor="middle">1.3</text>
+      <rect x="530" y="100" width="116" height="78" rx="8"
+            fill="#eafaf1" stroke="#27ae60" stroke-width="1.5"/>
+      <text x="588" y="120" font-family="sans-serif" font-size="12" font-weight="700"
+            fill="#1e8449" text-anchor="middle">TLS 1.3 ✓</text>
+      <text x="588" y="137" font-family="sans-serif" font-size="10"
+            fill="#27ae60" text-anchor="middle">RFC 8446 · 2018</text>
+      <text x="588" y="152" font-family="sans-serif" font-size="10"
+            fill="#27ae60" text-anchor="middle">Current standard</text>
+      <text x="588" y="167" font-family="sans-serif" font-size="10" font-weight="600"
+            fill="#1e8449" text-anchor="middle">Use this today ✓</text>
+      <line x1="588" y1="178" x2="588" y2="186"
+            stroke="#27ae60" stroke-width="1.5" stroke-dasharray="3 2"/>
+
+      <!-- Footer note -->
+      <text x="340" y="362" font-family="sans-serif" font-size="11"
+            fill="#7f8c8d" text-anchor="middle">
+        SSL 1.0 – TLS 1.1: deprecated &amp; disabled in all major browsers
+        · TLS 1.2: acceptable fallback · TLS 1.3: use this
+      </text>
+
+      <!-- Certificate lifetime strip -->
+      <rect x="40" y="378" width="600" height="28" rx="5"
+            fill="#eafaf1" stroke="#27ae60" stroke-width="0.5"/>
+      <text x="340" y="396" font-family="sans-serif" font-size="11"
+            fill="#1e8449" text-anchor="middle">
+        Certificate max validity: 200 days (Mar 2026) → 100 days (Mar 2027)
+        → 47 days (Mar 2029)
+      </text>
+    </svg>
+  </div>
+</div>
+
+                                <p>For the full history of how SSL became TLS and what happened along the way, 
+                                    see our <a href="https://blog.gauravkansal.in/2024/08/tlsTimeline.html">
+                                    SSL/TLS Timeline</a>. For a deeper look at what happens during an actual TLS 
+                                    connection, see our posts on the 
+                                    <a href="https://blog.gauravkansal.in/2015/09/tls-handshake.html">TLS Handshake</a> 
+                                    and <a href="https://blog.gauravkansal.in/2015/09/cipher-suites.html">Cipher Suites</a>.</p>
+                                <hr>
+
+                                <p align="justify">
+                                    Transport Layer Security (TLS) is a successor of Secure Sockets Layer (SSL) and it's
                                     a cryptographic protocol used for establishing an encrypted link between a Server
                                     and a Client over a public network.
-
                                 </p>
-                                <p>They use X.509 certificates and hence asymmetric cryptography to authenticate the
+                                <p align="justify">They use X.509 certificates and hence asymmetric cryptography to authenticate the
                                     certificate holder to its clients, and to negotiate a symmetric session key. This
                                     session key is used to encrypt the data communication between client and server.
                                     This allows message confidentiality and authenticity.</p>
 
-                                <p>TLS is widely used in applications like:-</p>
-
-                                <ul>
-                                    <li> Email</li>
-                                    <li>Web Broswing</li>
-                                    <li>VoIP</li>
+                                <p>TLS secures virtually all encrypted communication on the modern internet, including:</p>
+                                <ul style="margin: 8px 0; padding-left: 20px;">
+                                <li style="margin-bottom: 4px; line-height: 1.5;">Web browsing (HTTPS)</li>
+                                <li style="margin-bottom: 4px; line-height: 1.5;">Email (SMTP, IMAP, POP3 over TLS)</li>
+                                <li style="margin-bottom: 4px; line-height: 1.5;">Voice over IP (VoIP) and video calling</li>
+                                <li style="margin-bottom: 4px; line-height: 1.5;">Instant messaging and chat applications</li>
+                                <li style="margin-bottom: 4px; line-height: 1.5;">API communication between services and apps</li>
+                                <li style="margin-bottom: 4px; line-height: 1.5;">IoT device communication</li>
+                                <li style="margin-bottom: 4px; line-height: 1.5;">VPN protocols (including WireGuard and OpenVPN in TLS mode)</li>
+                                <li style="margin-bottom: 4px; line-height: 1.5;">Database connections</li>
+                                <li style="margin-bottom: 4px; line-height: 1.5;">Code repositories and DevOps pipelines (Git over HTTPS, CI/CD)</li>
                                 </ul>
-
-                                <p>Because of the use of X.509 certificates, CAs and PKI infrastructure are necessary to
+                                <br/>
+                                <p align="justify">Because of the use of X.509 certificates, CAs and PKI infrastructure are necessary to
                                     verify the certificates and for the establishment of chain-of trust.</p>
+                                <p>For a detailed look at how that 
+                                chain works, see our post on the 
+                                <a href="https://blog.gauravkansal.in/2015/09/ca-certificate-chain-and-traceroute-of.html">
+                                CA Certificate Chain</a>, and for the organisations that operate that infrastructure 
+                                today, see our <a href="https://blog.gauravkansal.in/2026/06/Who-still-runs-the-Internet-Trust-System-in-2026.html">
+                                2026 Certificate Authority Landscape guide</a>.</p>
+                                
 
-                                <p>TLS is an Internet Engineering Task Force (IETF) standards track protocol, first
-                                    defined in 1999 and updated in RFC 5246 (August 2008) and RFC 6176 (March 2011). It
-                                    is based on the earlier SSL specifications (1994, 1995, 1996) developed by Netscape
+                                <p align="justify">TLS is an Internet Engineering Task Force (IETF) standards track protocol, first
+                                    defined in 1999 and updated in RFC 5246 (August 2008), RFC 6176 (March 2011) and
+                                    RFC 8446 (August 2018). It is based on the earlier SSL specifications (1994, 1995, 1996) developed by Netscape
                                     Communications.</p>
-
-                                <h6 class="pt-3"><u>History and present development </u></h6>
+                                <hr>
+                                <h5 class="pt-3"><u>History and present development </u></h5>
                                 <ul>
                                     <li>
                                         <div>
@@ -128,25 +371,38 @@
                                     <li>
                                         <div>
                                             <b>PCT</b>
-
-                                            <p><b>Private Communications Technology (PCT)</b> 1.0 was a protocol
-                                                developed by Microsoft in the mid-1990s. PCT was designed to address
-                                                security flaws in version 2.0 of Netscape's Secure Sockets Layer
-                                                protocol and to force Netscape to hand control of the then-proprietary
-                                                SSL protocol to an open standards body. PCT has since been superseded by
-                                                SSLv3 and Transport Layer Security. For a while it was still supported
-                                                by Internet Explorer, but PCT 1.0 has been disabled since IE 5. It is
-                                                still found in IIS and in the Windows operating system libraries,
-                                                although in Windows Server 2003 it is disabled by default.
-                                            </p>
+                                            <p>
+                                            <strong>A brief historical footnote:</strong> In the mid-1990s, Microsoft developed 
+                                            a competing protocol called Private Communications Technology (PCT 1.0), designed 
+                                            to address flaws in SSL 2.0 and pressure Netscape into handing SSL to an open 
+                                            standards body. PCT was eventually superseded by SSL 3.0 and TLS, and has been 
+                                            effectively dead since Internet Explorer 5. It is mentioned here purely for 
+                                            historical completeness.
+                                            </p> 
                                         </div>
                                     </li>
                                     <li>
                                         <div>
                                             <b>TLS 1.0</b>
                                             <p>
-                                                TLS 1.1 was defined in RFC 4346 in April 2006. It is an update from TLS
-                                                version 1.0.
+                                            TLS 1.0 was defined in <a href="https://datatracker.ietf.org/doc/html/rfc2246" 
+                                            target="_blank" rel="noopener">RFC 2246</a> in January 1999 — the first version 
+                                            of the protocol to carry the TLS name rather than SSL. It was almost identical 
+                                            to SSL 3.0, with minor differences. For years it was the internet's workhorse. 
+                                            But time was not kind to it — TLS 1.0 is now fully deprecated (RFC 8996, 2021) 
+                                            and disabled by default in all major browsers and operating systems.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <b>TLS 1.1</b>
+                                            <p>
+                                            TLS 1.1 was defined in <a href="https://datatracker.ietf.org/doc/html/rfc4346" 
+                                            target="_blank" rel="noopener">RFC 4346</a> in April 2006. Its main contribution 
+                                            was adding an explicit Initialization Vector (IV) to protect against CBC attacks. 
+                                            Like TLS 1.0, it has since been deprecated in RFC 8996 (March 2021) and is 
+                                            no longer supported by Chrome, Firefox, Safari, or Edge.
                                             </p>
                                             <p>Significant differences in this version include:</p>
                                             <ol type="I">
@@ -168,7 +424,7 @@
                                             <b>TLS 1.2</b>
                                             <p>
                                                 TLS 1.2 was defined in RFC 5246 in August 2008. It is based on the
-                                                earlier TLS 1.1 specification. Many major changes has been done in TLS
+                                                earlier TLS 1.1 specification. Many major changes were made in TLS
                                                 1.2.
                                             </p>
                                             <p>All TLS versions were further refined in RFC 6176 in March 2011 removing
@@ -178,70 +434,73 @@
                                     </li>
                                     <li>
                                         <div>
-                                            <b>TLS 1.3 (draft)</b>
-                                            <p>As of September 2015, TLS 1.3 is a working draft, and details are
-                                                provisional and incomplete. It is based on the earlier TLS 1.2
-                                                specification. Major differences from TLS 1.2 include:</p>
-                                            <ul class="pt-3" style="color: #cd8c46;">
-                                                <li style="margin-bottom: 0.1em;">Removed support for weak and lesser
-                                                    used named curves</li>
-                                                <li style="margin-bottom: 0.1em;">Removed support for MD5 and SHA-224
-                                                    hashes with signatures</li>
-                                                <li style="margin-bottom: 0.1em;">Required digital signatures even when
-                                                    a previous configuration is used</li>
-                                                <li style="margin-bottom: 0.1em;">Integration of HKDF and the
-                                                    semi-ephemeral DH proposal</li>
-                                                <li style="margin-bottom: 0.1em;">Replacement of resumption with&nbsp;<a
-                                                        href="https://en.wikipedia.org/wiki/TLS-PSK"
-                                                        style="background: none; color: #1ba11b; text-decoration: none;"
-                                                        title="TLS-PSK" wotsearchprocessed="true">PSK</a>&nbsp;and
-                                                    tickets</li>
-                                                <li style="margin-bottom: 0.1em;">Relegation of ClientKeyShare to an
-                                                    appendix</li>
-                                                <li style="margin-bottom: 0.1em;">Support for 1-RTT handshakes and
-                                                    initial support for 0-RTT</li>
-                                                <li style="margin-bottom: 0.1em;">Dropped support for many insecure or
-                                                    obsolete features including,&nbsp;<a
-                                                        href="https://en.wikipedia.org/wiki/Data_compression"
-                                                        style="background: none; color: #1ba11b; text-decoration: none;"
-                                                        title="Data compression"
-                                                        wotsearchprocessed="true">compression</a>, renegotiation, non-<a
-                                                        href="https://en.wikipedia.org/wiki/Authenticated_encryption"
-                                                        style="background: none; color: #1ba11b; text-decoration: none;"
-                                                        title="Authenticated encryption"
-                                                        wotsearchprocessed="true">AEAD</a>&nbsp;ciphers, static&nbsp;<a
-                                                        href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)"
-                                                        style="background: none; color: #1ba11b; text-decoration: none;"
-                                                        title="RSA (cryptosystem)"
-                                                        wotsearchprocessed="true">RSA</a>&nbsp;and&nbsp;<a
-                                                        href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange"
-                                                        style="background: none; color: #1ba11b; text-decoration: none;"
-                                                        title="Diffie–Hellman key exchange"
-                                                        wotsearchprocessed="true">DH</a>&nbsp;key exchange,
-                                                    custom&nbsp;<a
-                                                        href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange"
-                                                        style="background: none; color: #1ba11b; text-decoration: none;"
-                                                        title="Diffie–Hellman key exchange"
-                                                        wotsearchprocessed="true">DHE</a>&nbsp;groups, point format
-                                                    negotiation, Change Cipher Spec protocol, Hello message UNIX time,
-                                                    and the length field AD input to AEAD ciphers</li>
-                                                <li style="margin-bottom: 0.1em;">Prohibition of SSL or RC4 negotiation
-                                                    for backwards compatibility</li>
-                                                <li style="margin-bottom: 0.1em;">Integrated usage of session hash</li>
-                                                <li style="margin-bottom: 0.1em;">The record layer version number has
-                                                    been frozen and deprecated for improved backwards compatibility</li>
-                                                <li style="margin-bottom: 0.1em;">Movement of some security related
-                                                    algorithm details from an appendix to the specification</li>
+                                            <b>TLS 1.3 — The Current Standard</b>
+                                            <p>
+                                            TLS 1.3 was finalised in August 2018 as 
+                                            <a href="https://datatracker.ietf.org/doc/html/rfc8446" target="_blank" 
+                                            rel="noopener">RFC 8446</a> and is now the version you should be running. 
+                                            It was not a minor update — it was a ground-up rethink of the protocol, 
+                                            cutting away a decade's worth of accumulated complexity and insecure legacy features.
+                                            </p>
+                                            <p>
+                                            The biggest improvements over TLS 1.2 are:
+                                            </p>
+                                            <ul>
+                                            <li><strong>Faster handshake</strong> — TLS 1.3 completes in one round trip 
+                                            instead of two, meaning encrypted connections are established faster. 
+                                            It even supports zero round-trip (0-RTT) resumption for returning visitors.</li>
+                                            <li><strong>Forward secrecy by default</strong> — Static RSA key exchange 
+                                            (which allowed past sessions to be decrypted if the private key was ever 
+                                            compromised) is gone. All key exchanges in TLS 1.3 use ephemeral keys, 
+                                            meaning past sessions stay private even if a key is stolen later.</li>
+                                            <li><strong>Removed weak algorithms</strong> — MD5, SHA-1, RC4, DES, 3DES, 
+                                            export-grade ciphers, and CBC mode ciphers are all removed. Only strong, 
+                                            modern authenticated encryption (AEAD) ciphers are permitted.</li>
+                                            <li><strong>Encrypted handshake</strong> — Much more of the handshake 
+                                            itself is now encrypted, reducing the amount of metadata an observer 
+                                            can collect about the connection.</li>
                                             </ul>
+                                            <p>
+                                            As of June 2026, TLS 1.3 is supported by all major browsers and accounts 
+                                            for over 70% of web traffic. If your server is not offering TLS 1.3, 
+                                            it is time to update your configuration.
+                                            </p>        
+                                    <hr>            
+                                    <h5>What Should You Disable Today?</h5>
+                                    <p>
+                                    If you manage a server, here is the short version of where things stand:
+                                    </p>
+                                    <ul>
+                                    <li><strong>SSL 2.0 and SSL 3.0</strong> — Disabled everywhere. Deprecated in 
+                                    RFC 6176 and RFC 7568 respectively. POODLE killed SSL 3.0 in 2014.</li>
+                                    <li><strong>TLS 1.0 and TLS 1.1</strong> — Both deprecated in 
+                                    <a href="https://datatracker.ietf.org/doc/html/rfc8996" target="_blank" 
+                                    rel="noopener">RFC 8996 (March 2021)</a>. Disabled by default in Chrome, 
+                                    Firefox, Safari and Edge since 2020–2021. You should not be running these.</li>
+                                    <li><strong>TLS 1.2</strong> — Still widely used and acceptable, but TLS 1.3 
+                                    should be your preferred version. Certificate lifetime changes (200 days max 
+                                    as of March 2026, dropping to 47 days by 2029) make automation increasingly 
+                                    important regardless of version.</li>
+                                    <li><strong>TLS 1.3</strong> — This is what you should be running. Enable it 
+                                    on your servers and make sure TLS 1.2 is your fallback, not 1.0 or 1.1.</li>
+                                    </ul>
                                         </div>
-                                    </li>
-                                </ul>
 
-                                <h6><u>For a details list of browser supporting TLS and SSL, please refer the below
-                                        link:-</u></h6>
-                                <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security#Web_browsers"
-                                    target="_blank">https://en.wikipedia.org/wiki/Transport_Layer_Security#Web_browsers</a>
-
+                                    <hr/>
+                                    <p>
+                                    TLS has come a long way from Netscape's first draft in 1994. What started as a 
+                                    proprietary protocol for securing credit card transactions has become the 
+                                    invisible foundation of the entire encrypted web. The lesson of its history is 
+                                    that cryptography does not age well — algorithms that seemed unbreakable in 1995 
+                                    were broken within a decade. TLS 1.3 is the best version of this protocol we have 
+                                    ever had, but it will not be the last. Stay current, automate your renewals, and 
+                                    keep an eye on what comes next.
+                                    </p>
+                                    <p><em>
+                                    This post was originally written in September 2015 and has been substantially 
+                                    updated in June 2026 to reflect current protocol versions, deprecations, and 
+                                    best practices.
+                                    </em></p>
                             </div>
 
 
