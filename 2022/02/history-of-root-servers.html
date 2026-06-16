@@ -22,13 +22,13 @@
     
 
   <meta charset="utf-8">
-  <title>History of the Root DNS Servers | Gaurav Kansal Blog</title>
+  <title>13 by Name, Thousands by Number: A History of the Root Servers | Gaurav Kansal Blog</title>
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:title" content="History of Root Servers" />
-  <meta property="og:description" content="History of ROOT-SERVERS (A Journey from 4 nodes to 13 nodes 
-  at present)" />
+  <meta property="og:title" content="13 by Name, Thousands by Number: A History of the Root Servers" />
+  <meta property="og:description" content="13 by Name, Thousands by Number: 
+  A History of the Root Servers (A Journey from 4 nodes to 13 nodes at present)" />
   <meta property="og:image" content="	https://blog.gauravkansal.in/images/root_server.jpg" />
   <meta property="og:url" content="https://blog.gauravkansal.in/2022/02/history-of-root-servers.html" />
   <meta property="og:type" content="article" />
@@ -46,6 +46,8 @@
   <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" href="../../images/favicon.jpg">
   <link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+
+  
 </head>
 
 <body>
@@ -69,7 +71,9 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12">
-          <h4> History of Root Servers</h4>
+          <h4> 13 by Name, Thousands by Number: A History of the Root Servers</h4>
+          <h6>From the four university machines to ~1,950 anycast instances worldwide — 
+            the quiet infrastructure behind the internet's most persistent DNS myth: "there are only 13 root servers."</h6>
         </div>
       </div>
     </div>
@@ -90,10 +94,26 @@
                     href="https://www.gauravkansal.in/index.html">Gaurav Kansal</a></li>
                 <li class="list-inline-item"><i class="ti-calendar mr-2"></i> February 15, 2022</li>
               </ul>
-              <img src="../../images/root_server.jpg" alt="post-thumb" class="img-fluid mb-4">
+
+              <hr>
+                      <!-- for including Vertical Timeline. Added by GK on 16th June 2026-->
+                       <!-- Vertical Timeline image will be for mobile devices and Horizontal Timeline for desktops-->
+                        <div class="text-center">
+                        <div class="d-inline d-md-none" id="includeVerticalTimeline"></div>
+                        <div class="d-none d-md-inline" id="includeHorizontalTimeline"></div>
+                        </div>
+              <hr>
+
+ 
+
               <div class="content">
                 <p>
-                  History of ROOT-SERVERS (A Journey from 4 nodes to 13 nodes at present)
+                  Every time you type a web address, your device asks a question that ultimately has to start somewhere — 
+                  and for forty years, that "somewhere" has been a small, quietly maintained set of machines known as the 
+                  root servers. Today there are roughly 1,950 of them scattered across the globe, but they all still answer 
+                  to just 13 names. This is the story of how that came to be: from a single test machine at a university in 1984, 
+                  through a Cold War-era network built for the U.S. military, to a system now resilient enough to shrug off 
+                  attacks that once knocked out most of it at once.
                 </p>
                 <br><br>
                 <h6><u>1.1 Period 1983-1986: </u></h6>
@@ -717,6 +737,8 @@
     });
     $('#myFooter').load('../../include/footer.html');
     $('#showsidebar').load('../../include/sidebarShow.html');
+    $('#includeVerticalTimeline').load('../../images/html-images/timeline-root-servers-vertical.html');
+    $('#includeHorizontalTimeline').load('../../images/html-images/timeline-root-servers-horizontal.html');
   </script>
   <script>
     var geturl = window.location.href;
