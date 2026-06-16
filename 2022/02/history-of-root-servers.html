@@ -2,13 +2,33 @@
 <html lang="zxx">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V78EBX66N1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-V78EBX66N1');
+        </script>
+    
+        <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KKQWN7J6');</script>
+    <!-- End Google Tag Manager -->
+    
+
   <meta charset="utf-8">
-  <title>Gaurav Kansal Blog</title>
+  <title>History of the Root DNS Servers | Gaurav Kansal Blog</title>
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:title" content="History of Root Servers" />
-  <meta property="og:description" content="History of ROOT-SERVERS (A Journey from 4 nodes to 13 nodes at present)" />
+  <meta property="og:description" content="History of ROOT-SERVERS (A Journey from 4 nodes to 13 nodes 
+  at present)" />
   <meta property="og:image" content="	https://blog.gauravkansal.in/images/root_server.jpg" />
   <meta property="og:url" content="https://blog.gauravkansal.in/2022/02/history-of-root-servers.html" />
   <meta property="og:type" content="article" />
@@ -72,12 +92,12 @@
               </ul>
               <img src="../../images/root_server.jpg" alt="post-thumb" class="img-fluid mb-4">
               <div class="content">
-                <p class="blog-post-body">
+                <p>
                   History of ROOT-SERVERS (A Journey from 4 nodes to 13 nodes at present)
                 </p>
                 <br><br>
                 <h6><u>1.1 Period 1983-1986: </u></h6>
-                <p>Before the development of DNS, information about hosts were assigned in a flat
+                <p align="justify">Before the development of DNS, information about hosts were assigned in a flat
                   namespace format and name-to-address look ups was done using table, which use
                   to be available in all the hosts. Network Information Centre (NIC) at SRI
                   International, use to maintain this table and all hosts get the updated copy from
@@ -88,14 +108,14 @@
                   the frequency of updates, a decentralized database need was felt. To address this
                   problem, Mr. Jon Postel and Mr. Paul Mockapetris published number of RFCs
                   that laid down the design of DNS.</p>
-                <p>To test the DNS, Mr. Jon Postel and Mr. Paul Mockapetris setup the first root
+                <p align="justify">To test the DNS, Mr. Jon Postel and Mr. Paul Mockapetris setup the first root
                   server in 1984 at Information Science Institute (ISI) at the University of South
                   California (USC). The domain name services were running of the software
                   developed by Mockapetris, named JEEVES. In 1985 an additional root was added
                   at ISI.</p>
-                <p>An additional root server was placed at SRI International, as it was NIC for DDN
+                <p align="justify">An additional root server was placed at SRI International, as it was NIC for DDN
                   and was handling the registration of hosts and maintenance of hosts.txt file.</p>
-                <p>Doug Kingston and Mike Muuss, at the Ballistic Research Laboratory (BRL) in
+                <p align="justify">Doug Kingston and Mike Muuss, at the Ballistic Research Laboratory (BRL) in
                   the U.S. Army, played an important role in the ongoing development of the
                   Berkeley Internet Name Domain (BIND) package. To assist in the further
                   development of the DNS and to provide a root server for MILNET (which was
@@ -158,19 +178,19 @@
 
                 <div class="mt-5 mb-5">
                   <h6><u>1.2 Period 1986-1990: </u></h6>
-                  <p>In October 1986, at the Internet Engineering Task Force (IETF) 6 meeting, Doug
+                  <p align="justify">In October 1986, at the Internet Engineering Task Force (IETF) 6 meeting, Doug
                     Kingston from BRL convened a workshop called “Name Domains for MILNET.”
                     The primary focus was to explore the transition of MILNET to use domain
                     names.<sup><a onclick="linkfiles('link4')">[4]</a></sup></p>
-                  <p>During the workshop and also in mailing list discussions afterwards, Gunter Air
+                  <p align="justify">During the workshop and also in mailing list discussions afterwards, Gunter Air
                     Force Station was mentioned as a possible root server location because of its
                     ability to serve MILNET. Eventually, in November 1987 GUNTER-ADAM
                     (U.S. Air Force Networking Group) was added as a root server.</p>
-                  <p>In 1986, the National Science Foundation Network (NSFNET) went online. Built
+                  <p align="justify">In 1986, the National Science Foundation Network (NSFNET) went online. Built
                     as a "network of networks" and developed in phases, NSFNET connected
                     supercomputer centers in the U.S. and a variety of regional research and
                     education networks, extending the Internet’s reach throughout the United States.</p>
-                  <p>As NSFNet traffic and registrations grew, people became aware of some
+                  <p align="justify">As NSFNet traffic and registrations grew, people became aware of some
                     cases of poor DNS service due to the limited number and reach of root servers.
                     To address this issue, in July 1987, at the IETF 7 meeting, the name domain
                     planning working group held a one-hour session to discuss root servers.<sup><a
@@ -245,7 +265,7 @@
                       </tbody>
                     </table>
                   </div>
-                  <p>In November 1988, DDN implemented phase two of the MILNET Domain Name
+                  <p align="justify">In November 1988, DDN implemented phase two of the MILNET Domain Name
                     Implementation with DDN MGT Bulletin 42. As a result, SRI-NIC.ARPA was
                     renamed to NIC.DDN.MIL, BRL-AOS.ARPA was renamed to AOS.BRL.MIL,
                     and GUNTERADAM.ARPA was renamed to GUNTER-ADAM.AF.MIL.</p>
@@ -325,7 +345,7 @@
                 </div>
                 <div class="mt-5 mb-5">
                   <h6><u>1.5 1993 – InterNIC: </u></h6>
-                  <p>ince the 1980s, the registration of domain names was performed by the DDN-NIC under contract by the
+                  <p align="justify">ince the 1980s, the registration of domain names was performed by the DDN-NIC under contract by the
                     Department of Defense. This was because most
                     registrants at the time were military users and awardees. By the early 1990s, due
                     to the rapid growth of the NSFNET, academic institutions comprised the majority
@@ -333,17 +353,17 @@
                     registration for these names. The U.S. Federal Networking Council (a group of
                     U.S. Government agencies involved in networking) asked the National Science
                     Foundation (NSF) to assume responsibility for non-military Internet registration.</p>
-                  <p>In 1992, after a solicitation process (NSF 9224), the NSF awarded three
+                  <p align="justify">In 1992, after a solicitation process (NSF 9224), the NSF awarded three
                     five-year cooperative agreements, to American Telephone and Telegraph
                     Company (AT&T), General Atomics (GA), and Network Solutions, Inc. (NSI).
                     The contracted parties were to provide directory and database services,
                     information services and non-military registration services, respectively. These
                     companies adopted the name InterNIC for their joint role.</p>
-                  <p>Around the time Network Solutions won the bid to manage the domain
+                  <p align="justify">Around the time Network Solutions won the bid to manage the domain
                     registration service, it asked Jon Postel (IANA) about adding NS.INTERNET.NET as a root name server.
                     Postel agreed and IANA added
                     NS.INTERNET.NET as a root server in April 1993.</p>
-                  <p>In May 1994, KAVA.NISC.SRI.COM at SRI International was retired due to lack
+                  <p align="justify">In May 1994, KAVA.NISC.SRI.COM at SRI International was retired due to lack
                     of funding, and NS1.ISI.EDU was added as a root server to replace it.
                     In 1994, Paul Vixie and Rick Adams asked Jon Postel (IANA) on behalf of the
                     Internet Software Consortium (ISC) to add a root server at ISC. Postel agreed,
@@ -358,7 +378,7 @@
                 </div>
                 <div class="mt-5 mb-5">
                   <h6><u>1.6 1995 – Renaming Root Servers to root-servers.net: </u></h6>
-                  <p>By April 1993, the number of root name servers had grown to an extent where
+                  <p align="justify">By April 1993, the number of root name servers had grown to an extent where
                     the size of a root hints response was approaching the limit of 512 bytes. Bill
                     Manning and Paul Vixie developed a plan to rename all root servers under the
                     root-servers.net domain. This would allow the use of DNS label compression to
@@ -517,10 +537,101 @@
                           community since the organization’s creation in 1998.
                         </span></a></sup>In 1999, this transfer
                     occurred, which included L-Root. </p>
-
-
-
                 </div>
+
+                <div class="mt-5 mb-5">
+                  <h6><u>1.9 The Anycast Era (2002–Present) </u></h6>
+                   
+                  <p align="justify">For more than a decade after 1997, the 13 root servers remained 13
+                  single physical machines — one per letter, one per location. That
+                  changed abruptly on <strong>October 21, 2002</strong>, when a
+                  coordinated DDoS attack flooded all 13 root servers simultaneously,
+                  knocking out <strong>9 of them</strong> for roughly an hour. The
+                  attack went largely unnoticed by ordinary internet users because
+                  caching elsewhere in the DNS hierarchy absorbed the impact, but it
+                  was a wake-up call for the operator community: a single point of
+                  failure per letter was no longer acceptable at internet scale.</p>
+                  
+                  <p align="justify">The response was <strong>anycast</strong> — the same technique
+                  already used for some CDN traffic, now applied to root
+                  infrastructure. Anycast lets multiple physical servers in different
+                  parts of the world share a single IP address; BGP routing
+                  automatically sends each query to the topologically nearest
+                  instance. Crucially, this didn't change the "13 servers" architecture
+                  at the addressing level — it just meant each of the 13 logical
+                  letters could now be served by dozens, or eventually hundreds, of
+                  physical machines.</p>
+                  
+                  <p align="justify">J-Root was among the first to deploy anycast widely, and other
+                  operators followed through the mid-2000s. By <strong>2008</strong>,
+                  IPv6 addresses (AAAA records) were added to the root zone for the
+                  first time, allowing root servers to be queried over IPv6 — a
+                  milestone that took until 2008 because adding them earlier would have
+                  pushed root hint responses past the 512-byte limit that had
+                  originally capped the system at 13 servers in the first place. EDNS0,
+                  which permits larger UDP responses, made this possible.</p>
+                  
+                  <p align="justify">The growth since then has been dramatic. As of late 2025, the
+                  root server system comprises roughly <strong>1,950 anycast
+                  instances</strong><sup class="footnote-ref"><a id="fnref-15" href="#fn-15">15</a></sup>
+                  spread across the 13 logical servers and operated by the same 12
+                  organizations that have run the system since the 1990s — Verisign
+                  (A and J), USC-ISI (B), Cogent (C), University of Maryland (D), NASA
+                  Ames (E), ISC (F), the US Army Research Lab (G and H, run
+                  separately), ICANN (L), RIPE NCC (K), and WIDE/JPRS (M). What was
+                  once a handful of university and government machines is now one of
+                  the most distributed pieces of critical infrastructure on the
+                  planet.</p>  
+                </div
+
+                <div class="mt-5 mb-5">
+                  <h6><u>1.10 Debunking the "13 Root Servers" Myth</u></h6>
+                  <p align="justify">A common misconception — even among people working in networking
+                  — is that there are only 13 physical machines running the DNS root,
+                  and that losing one of them is a near-catastrophic event. Neither is
+                  true, and the confusion is understandable given how the number 13
+                  has been repeated throughout this article's history.</p>
+                  
+                  <p align="justify">What's actually fixed at 13 is the number of <strong>logical root
+                  server identities</strong> — the 13 letters, A through M, each with
+                  its own IPv4 and IPv6 address, baked into the root hints file every
+                  resolver ships with. What's <em>not</em> fixed is the number of
+                  physical machines answering for each letter. Thanks to anycast, a
+                  single query to, say, K-Root's address might be answered by a server
+                  in London, Amsterdam, Mumbai, or Singapore, depending on where the
+                  query originates and how BGP routes it at that moment.</p>
+                  
+                  <p align="justify">This is also why the October 2002 attack, despite knocking out 9
+                  of 13 <em>logical</em> servers, caused barely any visible disruption
+                  — and why a similar attack today would be far harder to pull off at
+                  all. Taking down a root server today doesn't mean attacking one
+                  machine; it means attacking potentially hundreds of geographically
+                  and operationally independent instances simultaneously, each behind
+                  its own BGP-announced anycast cloud.</p>
+                </div>
+
+                <hr><div>
+                <h5>Root Server Presence in India</h5>
+                
+                <p align="justify">For Indian internet users, the anycast era has meant a steady
+                reduction in DNS resolution latency for root queries — though it's
+                worth noting that because TLD and second-level records are heavily
+                cached by recursive resolvers, most users rarely query the root
+                directly. Still, root server proximity matters for the small
+                fraction of queries (cache misses, DNSSEC validation, new domain
+                registrations) that do reach the root.</p>
+                
+                <p align="justify">Several root server operators (like F, K, L and many others also) maintain anycast instances within
+                India, typically hosted at major internet exchange points. This
+                local presence means that when an Indian resolver does need to query
+                the root directly, it can often do so with single-digit-millisecond
+                latency rather than reaching across continents — a meaningful
+                improvement from the era when every root query from India had to
+                cross to the United States or Europe and back.</p>
+                </div>
+
+
+                <hr>
                 <h6><u>References: </u></h6>
                 <ul class="refLi" style="list-style: none;">
                   <li id="link1">1. <a class="openLink"
@@ -543,12 +654,10 @@
                   <li id="link11">11. <a class="openLink">Domain name compression was introduced in RFC1035 as an
                       optional protocol feature and later mandated by
                       RFC1123. In this scheme, an entire domain name or a list of labels at the end of a domain name is
-                      replaced with
-                      a pointer to a prior occurrence of the same name in the same message, thus eliminating the
+                      replaced with a pointer to a prior occurrence of the same name in the same message, thus eliminating the
                       repetition of domain
                       names in a message and reducing the size of the message. In the case of responses to root server
-                      priming queries
-                      , the domain root-servers.net appears only once in the response, instead of 13 times (once for
+                      priming queries, the domain root-servers.net appears only once in the response, instead of 13 times (once for
                       each root server).</a></li>
 
                 </ul>
