@@ -2,13 +2,33 @@
 <html lang="zxx">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V78EBX66N1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-V78EBX66N1');
+        </script>
+    
+        <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KKQWN7J6');</script>
+    <!-- End Google Tag Manager -->
+
+
     <meta charset="utf-8">
-    <title>Gaurav Kansal Blog</title>
+    <title>Wi-Fi Setup Analysis: Indira Gandhi International Airport, New Delhi | Gaurav Kansal Blog</title>
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:title" content="Analysis of IGI Airport Wi-Fi setup" />
-    <meta property="og:description" content="The access points installed at T3, IGI Airport, New Delhi are of Cisco make, Internal access points with internal antennas." />
+    <meta property="og:title" content="Wi-Fi Setup Analysis: Indira Gandhi International Airport, New Delhi" />
+    <meta property="og:description" content="The access points installed at T3, IGI Airport, 
+    New Delhi are of Cisco make, Internal access points with internal antennas." />
     <meta property="og:image" content="https://blog.gauravkansal.in/images/igi2.png" />
     <meta property="og:url" content="https://blog.gauravkansal.in/2016/10/analysis-of-igi-airport-wi-fi-setup.html" />
     <meta property="og:type" content="article" />
@@ -50,7 +70,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h4>
-                        Analysis of IGI Airport Wi-Fi setup
+                        Wi-Fi Setup Analysis: Indira Gandhi International Airport, New Delhi
                     </h4>
                 </div>
             </div>
@@ -72,124 +92,216 @@
                                 <li class="list-inline-item"><i class="ti-calendar mr-2"></i> October 03, 2016</li>
                             </ul>
                             <div class="content">
-                                <p class="blog-post-body">
-                                    The access points installed at T3, IGI Airport, New Delhi are of Cisco make,
-                                    Internal access points with internal antennas. This is depicted in the below images
-                                    –
 
-                                </p>
-                                <div class="d-flex flex-column justify-content-center">
-                                    <img src="../../images/igi1.png" alt="igi" class="img-fluid w-50 py-3">
-
-                                    <img src="../../images/igi2.png" alt="igi" class="img-fluid w-50 py-3">
-
-                                </div>
-
-                                <h6><u>Cisco access points can be installed in two modes –:- </u></h6>
-                                <ol>
-                                    <li><b>Lightweight installation.</b><br>
-                                        <p>In this mode, access points make a secure tunnel with the wireless controller
-                                            and pass all the user traffic to the controller. Based on configuration,
-                                            controller take appropriate actions and process the traffic. Advisable for
-                                            large/enterprise setup.</p>
-                                    </li>
-
-                                    <li><b>Autonomous installation –</b> <br>
-                                        <p>In this mode, access points play the role of controller also and process the
-                                            traffic as per policy. Ideal for small setup.</p>
-                                    </li>
-                                </ol>
+                            <div style="border-left:4px solid #C2703D; background:#FBF6F1; padding:14px 18px; margin:0 0 24px 0; font-size:14px; line-height:1.6;">
+                            <p style="margin:0 0 8px 0;"><strong>Note — June 2026:</strong> This post was written in October 2016. 
+                                Below things are now out of date:</p>
+                            <ul style="margin:0 0 8px 0; padding-left:20px;">
+                                <li><strong>Tata Docomo no longer exists.</strong> Tata Teleservices' consumer
+                                mobile business, including the Tata Docomo brand, was acquired by Bharti
+                                Airtel (announced on October 2017) and fully merged on 1 July 2019 — so the
+                                "Tata Docomo Wi-Fi" SSID described here doesn't exist anymore.</li>
+                                <li><strong>The airport now runs its own Wi-Fi.</strong> As of late 2025, Delhi
+                                airport's free Wi-Fi is provided directly by GMR (the airport operator)
+                                under SSIDs like "GMR Free Wi-Fi". </li>
+                                <li><strong>CGNAT is now routine.</strong> The 100.64.0.0/10 "Shared Address
+                                Space" (RFC 6598) discussed below was a rare observation in
+                                2016; carrier-grade NAT is now standard practice across most Indian
+                                ISPs.</li>
+                            </ul>
+                            <p style="margin:0;">This note is based on published sources. I haven't re-run this analysis on today's network. Read
+                            this post as 2016 history, and not the current behavior.</p>
+                            </div><hr>
+ 
                                 <p>
-                                    I roam around at various corner of the floor after connecting to wireless and I
-                                    didn’t face any connection drop (or re-authentication issues). This is a roaming
-                                    functionality which usually possible only in controller based model. This cause me
-                                    believe that wireless setup installed at T3, IGI Airport, New Delhi is controller
-                                    based setup.
+                                    I was at T3, IGI Airport, New Delhi last week and I took the opportunity to analyze
+                                    the Wi-Fi setup there. I will share my findings in this post.
                                 </p>
 
-                                <h6><u>SSID and other information’s –</u></h6>
-                                <p>SSID announced at T3 was <b>‘Tata Docomo Wi-Fi’</b> and it was an open ssid (service
-                                    set identifier). So, from the name itself it was clearly visible that Wi-Fi service
-                                    is provided by Tata Docomo (why will anyone else do the advertisement for Tata
-                                    Docomo J).
-                                    After connecting to the SSID, all the user traffic is diverted to the captive portal
-                                    which asked for OTP based authentication and only after successful authentication,
-                                    user is allowed to access the network (Internet).</p>
-                                <img src="../../images/igi3.png" alt="igi" class="img-fluid w-50 py-3">
-
-                                <p>From the above screen shots, we are able to find out some useful information like
-                                    network segment, signal strength, interference and about 802.11 protocol used.</p>
-
+                                <p>
+                                The access points installed at Terminal 3, IGI Airport, New Delhi, are
+                                Cisco-manufactured internal access points with internal antennas, as shown
+                                below:
+                                </p>
+                                <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                                <img src="../../images/igi1.png" class="img-fluid w-40 py-3"
+                                    alt="Cisco internal access point mounted at T3, IGI Airport, New Delhi (photo 1)" />
+                                <img src="../../images/igi2.png" class="img-fluid w-40 py-3"
+                                    alt="Cisco internal access point mounted at T3, IGI Airport, New Delhi (photo 2)" />
+                                </div>
+                                <br>
+                                
+                                <h2>Cisco Access Point Deployment Modes</h2>
+                                
+                                <p>Cisco access points can be deployed in two modes:</p>
+                                
                                 <ol>
-                                    <li><b>Network</b>- The IP segment used for wireless was 100.77.32.0/20 which
-                                        belongs to
-                                        100.64.0.0/10 super net which is reserved as <b>‘Shared Address Space’</b> by
-                                        IANA
-                                        and is described in <a href="https://tools.ietf.org/html/rfc6598"
-                                            target="_blank">RFC 6598</a>.</li>
-
-                                    <li><b>802.11 information</b>- I was connected to wireless network over 802.11n
-                                        standard
-                                        in 2.4 GHz band, over channel number 6 and channel width was 20MHz (.11n
-                                        standard
-                                        works on both the band i.e., 2.4GHz and 5GHz). Connection speed was 145Mbps
-                                        (which
-                                        is fairly good) and MCS Index was 15.</li>
-
-                                    <li> <b>Signal strength</b>- RSSI value of the connection was -57dBm, which is
-                                        fairly
-                                        good as per standards and noise was -96dBM, which is negligible. So, we can
-                                        figure
-                                        out that interference was very low, or you can say, it was nearly negligible
-                                        (and
-                                        this was expected because wireless network was confined in the airport, which is
-                                        under the reach of limited persons only).
-
-                                    </li>
+                                <li>
+                                    <strong>Lightweight installation</strong> <p align="justify">In this mode, access points
+                                    establish a secure tunnel to a wireless controller and forward all user
+                                    traffic to it. The controller then applies policy and processes traffic
+                                    accordingly. This mode is recommended for large or enterprise deployments.</p>
+                                </li>
+                                <li>
+                                    <strong>Autonomous installation</strong> <p align="justify">In this mode, each access point
+                                    also functions as its own controller, processing traffic according to
+                                    local policy. This mode suits small deployments.</p>
+                                </li>
                                 </ol>
-
-
-
-                                <h6><u>Authentication</u></h6>
-                                <p>SSID announced for guest access was of <b>web-auth</b> type; means it was open
-                                    (anyone can come & connect) and all the user traffic was diverted to the captive
-                                    portal, which asked for user authentication through OTP before allowing the user to
-                                    access the network.</p>
-                                <img src="../../images/igi4.png" alt="igi" class="img-fluid w-50 py-3">
-
-                                <p>Website which asked for user information was <a
-                                        href="https://hs.tatadocomo.com/ttsl/home.do"
-                                        target="_blank">https://hs.tatadocomo.com/ttsl/home.do</a>, hosted over public
-                                    ip address (i.e., 14.194.199.10) but only accessible when you are connected through
-                                    their Wi-Fi. Website was over SSL/TLS which is a best practice in these cases.</p>
-                                <img src="../../images/igi5.png" alt="igi" class="img-fluid w-50 py-3">
-
-                                <p>After successful authentication, user is allowed to access the Wi-Fi for 45 mins
-                                    without any charges. Above image depicts that this (in my case when I took the
-                                    screen shot, 44 Min 44 Sec are left) and after that you have to purchase the coupon
-                                    to access the wireless and same is available on the captive portal in the
-                                    denominations of 20, 50 or 100. The white space visible over voucher images is the
-                                    space for Ads which was blocked by Ad Block extension.
+ 
+                                 
+                                <p>
+                                I roamed to various corners of the floor after connecting to the wireless
+                                network and did not face any connection drops or re-authentication issues.
+                                This kind of seamless roaming is typically possible only in a
+                                controller-based deployment, which leads me to believe that the wireless
+                                setup at T3, IGI Airport, New Delhi, is controller-based.
                                 </p>
 
-                                <h6><u>Speed Test and Uplink Information</u></h6>
-                                <p>In 802.11 information part, I mentioned that I was connected over 145Mbps, which is a
-                                    theoretical connection speed based on Tx power, Rx power, RSSI values, Noise,
-                                    Modulation and certain other factors. The actual speed which I measured through
-                                    speed test utility is shown below –</p>
-                                <img src="../../images/igi6.png" alt="igi" class="img-fluid w-50 py-3">
+                                <!-- Added by GK June 2026-->
+                                <div class="text-center">
+                                <div id="includeWiFiNetworkTopology"></div>
+                                </div><hr>
 
-                                <p>Speed test results show a download speed of 22 Mbps and upload speed of 32 Mbps which
-                                    is much better than the average broadband speed in India.</p>
-                                <img src="../../images/igi7.png" alt="igi" class="img-fluid w-50 py-3">
+                                <h2>SSID and Network Details</h2>
+                                
+                                <p>
+                                The SSID announced at T3 was <strong>Tata Docomo Wi-Fi</strong>, broadcast
+                                as an open SSID (Service Set Identifier) — so the carrier name itself made
+                                the service provider obvious. After connecting to the SSID, all user
+                                traffic was redirected to a captive portal requesting OTP-based
+                                authentication; only after successful authentication was the user allowed
+                                to access the network (internet).
+                                </p>
+                                
+                                <img src="../../images/igi3.png"
+                                    alt="Wireless connection details screenshot showing IP segment, 802.11 standard, channel, and signal strength"
+                                    class="img-fluid w-50 py-3"/>
+                                
+                                <p>
+                                From the screenshot above, we can pull out some useful technical details —
+                                network segment, signal strength, interference, and the 802.11 protocol in
+                                use:
+                                </p><br>
 
-                                <p>If I talk about the up-link which is used for upstreaming the Wi-Fi at T3, I was
-                                    going out through Tata Docomo’s network and my public IP was 49.248.225.35</p>
+                                <table style="border-collapse:collapse; width:100%;">
+                                <thead>
+                                    <tr>
+                                    <th style="border:1px solid #ccc; padding:8px; text-align:left;">Parameter</th>
+                                    <th style="border:1px solid #ccc; padding:8px; text-align:left;">Value</th>
+                                    <th style="border:1px solid #ccc; padding:8px; text-align:left;">Why it matters</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td style="border:1px solid #ccc; padding:8px;">IP addressing</td>
+                                    <td style="border:1px solid #ccc; padding:8px;">100.77.32.0/20</td>
+                                    <td style="border:1px solid #ccc; padding:8px;">
+                                        Falls within the 100.64.0.0/10 block, reserved by IANA as
+                                        "Shared Address Space" per
+                                        <a href="https://tools.ietf.org/html/rfc6598">RFC 6598</a> —
+                                        i.e., carrier-grade NAT space.
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                    <td style="border:1px solid #ccc; padding:8px;">802.11 standard</td>
+                                    <td style="border:1px solid #ccc; padding:8px;">802.11n, 2.4 GHz, channel 6, 20 MHz width</td>
+                                    <td style="border:1px solid #ccc; padding:8px;">
+                                        802.11n supports both 2.4 GHz and 5 GHz; this connection used 2.4 GHz.
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                    <td style="border:1px solid #ccc; padding:8px;">PHY connection speed</td>
+                                    <td style="border:1px solid #ccc; padding:8px;">145 Mbps, MCS Index 15</td>
+                                    <td style="border:1px solid #ccc; padding:8px;">
+                                        A theoretical link rate, not actual throughput — see the speed test
+                                        results further down.
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                    <td style="border:1px solid #ccc; padding:8px;">Signal strength (RSSI)</td>
+                                    <td style="border:1px solid #ccc; padding:8px;">-57 dBm</td>
+                                    <td style="border:1px solid #ccc; padding:8px;">Strong signal by typical Wi-Fi standards.</td>
+                                    </tr>
+                                    <tr>
+                                    <td style="border:1px solid #ccc; padding:8px;">Noise floor</td>
+                                    <td style="border:1px solid #ccc; padding:8px;">-96 dBm</td>
+                                    <td style="border:1px solid #ccc; padding:8px;">
+                                        Very low — interference was negligible, expected in a confined
+                                        airport environment with limited reach.
+                                    </td>
+                                    </tr>
+                                </tbody>
+                                </table>
 
-                                <p>This shows that Tata Docomo provides end-to-end wireless network at T3 which includes
-                                    wireless access points, controller and up-link for internet reachability.</p>
+                                <h2>Authentication</h2>
+                                
+                                <p>
+                                The guest SSID used web-auth type authentication — meaning it was open to
+                                anyone, with all user traffic redirected to a captive portal that required
+                                OTP-based authentication before granting network access.
+                                </p>
+                                
+                                <img src="../../images/igi4.png"
+                                    alt="Tata Docomo Wi-Fi captive portal screen requesting OTP authentication" 
+                                    class="img-fluid w-50 py-3"/>
+                                
+                                <p>
+                                The captive portal site,
+                                <a href="https://hs.tatadocomo.com/ttsl/home.do">hs.tatadocomo.com/ttsl/home.do</a>,
+                                was hosted on public IP 14.194.199.10 but only reachable while connected to
+                                the airport Wi-Fi. The portal was served over SSL/TLS, a good security
+                                practice for a page collecting user information.
+                                </p>
+                                
+                                <img src="../../images/igi5.png"
+                                    alt="Captive portal SSL/TLS certificate details for the Tata Docomo Wi-Fi login page" 
+                                    class="img-fluid w-50 py-3"/>
+                                
 
-                                <img src="../../images/igi8.png" alt="igi" class="img-fluid w-50 py-3">
+                                <p align="justify">
+                                After successful authentication, users get 45 minutes of free Wi-Fi access
+                                — in my case, the screenshot below shows 44 minutes 44 seconds remaining.
+                                Beyond that, access requires purchasing a coupon directly through the
+                                captive portal, available in ₹20, ₹50, or ₹100 denominations. The blank
+                                space visible in the voucher screenshot is where an ad would normally
+                                appear; it was blocked by an ad-blocker extension.
+                                </p>
+ 
+                                                            
+                            <h2>Speed Test and Uplink Information</h2>
+                            
+                            <p>
+                            Earlier, I noted a 145 Mbps connection speed — but that's a theoretical PHY
+                            rate derived from Tx/Rx power, RSSI, noise, modulation, and other factors.
+                            The actual throughput, measured with a speed test utility, is shown below:
+                            </p>
+                            
+                            <img src="../../images/igi6.png" class="img-fluid w-50 py-3"
+                                alt="Speed test utility running over the T3 airport Wi-Fi connection" />
+                            
+                            <p>
+                            The speed test recorded 22 Mbps download and 32 Mbps upload — comfortably
+                            above the average broadband speed in India at the time.
+                            </p>
+
+                            <img src="../../images/igi7.png" class="img-fluid w-50 py-3"
+                                alt="Speed test results showing 22 Mbps download and 32 Mbps upload" />
+                            
+                            <p>
+                            Looking at the uplink used for the Wi-Fi at T3, my traffic was egressing
+                            through Tata Docomo's network, with a public IP of 49.248.225.35.
+                            </p>
+                            
+                            <img src="../../images/igi8.png" class="img-fluid w-50 py-3"
+                                alt="Traceroute or public IP lookup confirming the uplink egresses through Tata Docomo's network" />
+                            
+                            <p>
+                            This confirms that Tata Docomo provided the end-to-end wireless network at
+                            T3 — access points, controller, and internet uplink — as a single managed
+                            service.
+                            </p>
+                            
 
                             </div>
 
@@ -205,7 +317,7 @@
                                         class="preblog">
                                         <div class="prebox"> <span><i class="fa fa-angle-left fa-lg"></i> </span>
                                             Previous </div>
-                                        <p class="pretitle"> Analysis of IGI Airport Wi-Fi setup</p>
+                                        <p class="pretitle"> Common terms: Wi-Fi</p>
 
                                     </a>
 
@@ -249,6 +361,7 @@
         });
         $('#myFooter').load('../../include/footer.html');
         $('#showsidebar').load('../../include/sidebarShow.html');
+        $('#includeWiFiNetworkTopology').load('../../images/html-images/T3-IGI-Airport_Wi-Fi-Network-Topology-October2016.html');
     </script>
     <script>
         var geturl = window.location.href;
