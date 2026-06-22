@@ -112,8 +112,11 @@
                             <p style="margin:0;">This note is based on published sources. I haven't re-run this analysis on today's network. Read
                             this post as 2016 history, and not the current behavior.</p>
                             </div><hr>
- 
-                                <p>
+                            <p align="justify">
+                                Public Wi-Fi at a busy international airport is an interesting networks to study: 
+                                it has to handle hundreds of concurrent users, and deliver acceptable throughput.
+                                 This post documents what I found — the access point hardware and deployment model, 
+                                 the SSID and authentication flow, the IP addressing scheme, and the actual throughput numbers.
                                     I was at T3, IGI Airport, New Delhi last week and I took the opportunity to analyze
                                     the Wi-Fi setup there. I will share my findings in this post.
                                 </p>
@@ -301,9 +304,21 @@
                             T3 — access points, controller, and internet uplink — as a single managed
                             service.
                             </p>
-                            
+                            <h2>Takeaways</h2> 
+                                <p class="mb-0";>
+                                <strong>1. The architecture was enterprise-grade.</strong>
+                                Seamless layer-2 roaming, CAPWAP tunnelling, a managed captive portal, and a controller-based Wi-Fi network.
+                                </p>                
+                                <p class="mb-0";>
+                                <strong>2. CGNAT was doing real work here.</strong> The 100.64.0.0/10 address
+                                space assigned to clients (RFC 6598) meant Tata Docomo could serve thousands
+                                of concurrent airport users.
+                                </p>
+                                <p class="mb-0";>
+                                <strong>3. Throughput was reasonable.</strong> 
+                                </p>
 
-                            </div>
+                            </div><br/>
 
                             <div class="labelList">
                                 <div class="labelIcon"><i class="fa-solid fa-tags"></i></div>
