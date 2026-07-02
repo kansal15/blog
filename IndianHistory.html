@@ -5,6 +5,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Indian History — 1,00,000 Years in the Making</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  <!--Favicon-->
+  <link rel="icon" type="image/png" href="images/favicon.jpg">
+  <link href="css/fontawesome/css/all.min.css" rel="stylesheet" />
+
+
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -16,10 +31,12 @@
       --saffron: #FF6B00;
       --saffron-lt: #FF8C2A;
       --saffron-dk: #C14D00;
+      --theme-color:#c2915d;
+      --theme-color-dk:#d58753;
       --gold: #D4A017;
       --gold-lt: #F0C040;
       --ivory: #FAF6EE;
-      --cream: #F2EAD8;
+      --cream: #fdefe6;
       --ink: #1A1208;
       --bark: #3D2B10;
       --sage: #2E6B4F;
@@ -30,7 +47,7 @@
       --timeline-w: 3px;
     }
 
-    *,
+    /* *,
     *::before,
     *::after {
       box-sizing: border-box;
@@ -40,12 +57,12 @@
 
     html {
       scroll-behavior: smooth;
-    }
+    } */
 
     body {
-      background: var(--ivory);
-      color: var(--ink);
-      font-family: 'Lora', Georgia, serif;
+      /* background: var(--ivory);
+      color: var(--ink); */
+      /* font-family: 'Lora', Georgia, serif; */
       overflow-x: hidden;
     }
 
@@ -63,7 +80,7 @@
     /* ══════════════════════════════════════════
        NAV
     ══════════════════════════════════════════ */
-    nav {
+    /* nav {
       position: fixed;
       top: 0;
       left: 0;
@@ -76,7 +93,7 @@
       background: rgba(26, 18, 8, 0.88);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
-    }
+    } 
 
     .nav-logo {
       font-family: 'Cinzel Decorative', serif;
@@ -107,13 +124,13 @@
     .nav-links a:hover {
       color: var(--gold-lt);
     }
-
+*/
     /* ══════════════════════════════════════════
        HERO
     ══════════════════════════════════════════ */
     .hero {
       position: relative;
-      min-height: 100vh;
+      min-height: auto;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -122,7 +139,7 @@
         radial-gradient(ellipse 80% 60% at 50% 100%, rgba(255,107,0,0.22) 0%, transparent 70%),
         radial-gradient(ellipse 60% 50% at 20% 20%, rgba(212,160,23,0.14) 0%, transparent 60%),
         linear-gradient(170deg, #0E0A04 0%, #1F1208 45%, #2A1A0C 100%); */
-      background-image: url(indianHistoryAssets/image/jambudweep.png);
+      background-image: url(images/IndianHistory/jambudweep.png);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -162,11 +179,11 @@
     .hero-inner {
       position: relative;
       z-index: 2;
-      padding: 140px 24px 80px;
+      padding: 100px 24px 100px;
     }
 
     .hero-eyebrow {
-      font-family: 'Nunito Sans', sans-serif;
+      /* font-family: 'Nunito Sans', sans-serif; */
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.35em;
@@ -207,7 +224,7 @@
     }
 
     .hero-sub {
-      font-family: 'Lora', serif;
+      /* font-family: 'Lora', serif; */
       font-style: italic;
       font-size: clamp(15px, 2.2vw, 20px);
       color: rgba(250, 246, 238, 0.65);
@@ -225,11 +242,11 @@
 
     .btn-primary-hero {
       padding: 14px 32px;
-      background: linear-gradient(135deg, var(--saffron) 0%, var(--saffron-dk) 100%);
+      background: linear-gradient(135deg, var(--theme-color) 0%, var(--saffron-dk) 100%);
       color: #fff;
       border: none;
       border-radius: 3px;
-      font-family: 'Nunito Sans', sans-serif;
+      /* font-family: 'Nunito Sans', sans-serif; */
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 0.12em;
@@ -251,7 +268,7 @@
       color: rgba(250, 246, 238, 0.8);
       border: 1px solid rgba(250, 246, 238, 0.28);
       border-radius: 3px;
-      font-family: 'Nunito Sans', sans-serif;
+      /* font-family: 'Nunito Sans', sans-serif; */
       font-size: 13px;
       font-weight: 600;
       letter-spacing: 0.12em;
@@ -276,7 +293,7 @@
       flex-direction: column;
       align-items: center;
       gap: 8px;
-      font-family: 'Nunito Sans', sans-serif;
+      /* font-family: 'Nunito Sans', sans-serif; */
       font-size: 10px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
@@ -311,12 +328,12 @@
     }
 
     .section-label {
-      font-family: 'Nunito Sans', sans-serif;
+      /* font-family: 'Nunito Sans', sans-serif; */
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.35em;
       text-transform: uppercase;
-      color: var(--saffron);
+      color: var(--theme-color);
       margin-bottom: 12px;
       display: flex;
       align-items: center;
@@ -345,7 +362,7 @@
     }
 
     .section-desc {
-      font-family: 'Lora', serif;
+      /* font-family: 'Lora', serif; */
       font-size: 16px;
       line-height: 1.8;
       color: var(--ash);
@@ -358,7 +375,7 @@
     .intro-strip {
       background: var(--ink);
       padding: 0;
-      border-top: 2px solid var(--saffron);
+      border-top: 2px solid var(--theme-color);
       border-bottom: 1px solid rgba(212, 160, 23, 0.2);
     }
 
@@ -389,7 +406,7 @@
     }
 
     .stat-label {
-      font-family: 'Nunito Sans', sans-serif;
+      /* font-family: 'Nunito Sans', sans-serif; */
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.2em;
@@ -400,7 +417,7 @@
     }
 
     .stat-desc {
-      font-family: 'Lora', serif;
+      /* font-family: 'Lora', serif; */
       font-style: italic;
       font-size: 13px;
       color: rgba(250, 246, 238, 0.32);
@@ -436,7 +453,7 @@
       top: 0;
       bottom: 0;
       width: var(--timeline-w);
-      background: linear-gradient(to bottom, transparent, var(--gold) 8%, var(--saffron) 50%, var(--gold) 92%, transparent);
+      background: linear-gradient(to bottom, transparent, var(--gold) 8%, var(--theme-color) 50%, var(--gold) 92%, transparent);
       transform: translateX(-50%);
     } */
 
@@ -514,7 +531,7 @@
       /* adjust according to image center */
       /* width: 60px;
       height: 2px;
-      background: linear-gradient(90deg, var(--gold), var(--saffron)); */
+      background: linear-gradient(90deg, var(--gold), var(--theme-color)); */
     }
 
     /* Left-side cards */
@@ -527,7 +544,7 @@
       right: -30px;
     } */
 
-/* 
+    /* 
     .tl-item.left .tl-dot::before,
     .tl-item.right .tl-dot::before {
       content: "";
@@ -556,13 +573,13 @@
     } */
 
     .tl-card-accent {
-    height: 5px;
-    background: linear-gradient(90deg, var(--saffron), var(--gold));
-    top: 4px;
-    position: relative;
-    width: 100%;
-    z-index: 999;
-    border-radius: 28px 28px 0 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--theme-color), var(--gold));
+      top: 4px;
+      position: relative;
+      width: 100%;
+      z-index: 999;
+      border-radius: 28px 28px 0 0;
 
     }
 
@@ -571,12 +588,12 @@
     } */
 
     .tl-era {
-      font-family: 'Nunito Sans', sans-serif;
+      /* font-family: 'Nunito Sans', sans-serif; */
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: var(--saffron);
+      color: var(--theme-color);
       margin-bottom: 6px;
     }
 
@@ -589,7 +606,7 @@
     }
 
     .tl-dates {
-      font-family: 'Lora', serif;
+      /* font-family: 'Lora', serif; */
       font-style: italic;
       font-size: 13px;
       color: var(--gold);
@@ -597,7 +614,7 @@
     }
 
     .tl-desc {
-      font-family: 'Lora', serif;
+      /* font-family: 'Lora', serif; */
       font-size: 14px;
       line-height: 1.7;
       color: var(--ash);
@@ -611,7 +628,7 @@
       border-radius: 20px;
       background: var(--cream);
       border: 1px solid var(--line);
-      font-family: 'Nunito Sans', sans-serif;
+      /* font-family: 'Nunito Sans', sans-serif; */
       font-size: 11px;
       font-weight: 600;
       color: var(--bark);
@@ -636,12 +653,12 @@
       max-width: 1060px;
       margin: 0 auto;
       border-collapse: collapse;
-      font-family: 'Lora', serif;
+      /* font-family: 'Lora', serif; */
       font-size: 14px;
     }
 
     .eras-table thead th {
-      background: var(--saffron);
+      background: var(--theme-color);
       color: #fff;
       padding: 16px 20px;
       font-family: 'Cinzel', serif;
@@ -682,8 +699,8 @@
     }
 
     .eras-table td:nth-child(2) {
-      color: var(--saffron-lt);
-      font-family: 'Nunito Sans', sans-serif;
+      color: var(--theme-color-dk);
+      /* font-family: 'Nunito Sans', sans-serif; */
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.05em;
@@ -710,9 +727,9 @@
 
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
       gap: 28px;
-      max-width: 1100px;
+      max-width: 100%;
       margin: 0 auto;
     }
 
@@ -771,12 +788,12 @@
     }
 
     .era-card-era {
-      font-family: 'Nunito Sans', sans-serif;
+      /* font-family: 'Nunito Sans', sans-serif; */
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: var(--saffron);
+      color: var(--theme-color);
       margin-bottom: 6px;
     }
 
@@ -790,7 +807,7 @@
     }
 
     .era-card-dates {
-      font-family: 'Lora', serif;
+      /* font-family: 'Lora', serif; */
       font-style: italic;
       font-size: 13px;
       color: var(--gold);
@@ -798,7 +815,7 @@
     }
 
     .era-card-desc {
-      font-family: 'Lora', serif;
+      /* font-family: 'Lora', serif; */
       font-size: 14px;
       line-height: 1.72;
       color: var(--ash);
@@ -810,12 +827,12 @@
       align-items: center;
       gap: 6px;
       margin-top: 20px;
-      font-family: 'Nunito Sans', sans-serif;
+      /* font-family: 'Nunito Sans', sans-serif; */
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--saffron);
+      color: var(--theme-color);
       text-decoration: none;
       transition: gap 0.2s;
     }
@@ -911,7 +928,7 @@
       display: flex;
       align-items: flex-start;
       gap: 10px;
-      font-family: 'Lora', serif;
+      /* font-family: 'Lora', serif; */
       font-size: 14px;
       line-height: 1.65;
       color: var(--ash);
@@ -935,7 +952,7 @@
     .quote-section {
       padding: 100px 24px;
       text-align: center;
-      background: var(--saffron);
+      background: var(--theme-color);
       position: relative;
       overflow: hidden;
     }
@@ -966,7 +983,7 @@
     }
 
     .quote-attr {
-      font-family: 'Lora', serif;
+      /* font-family: 'Lora', serif; */
       font-style: italic;
       font-size: 15px;
       color: rgba(255, 255, 255, 0.7);
@@ -976,7 +993,7 @@
     /* ══════════════════════════════════════════
        FOOTER
     ══════════════════════════════════════════ */
-    footer {
+    /* footer {
       background: #0A0602;
       padding: 60px 48px 40px;
       border-top: 1px solid rgba(212, 160, 23, 0.15);
@@ -1039,7 +1056,7 @@
       color: rgba(250, 246, 238, 0.2);
       text-align: center;
       letter-spacing: 0.05em;
-    }
+    } */
 
     /* ══════════════════════════════════════════
        DECORATIVE DIVIDERS
@@ -1353,7 +1370,7 @@
     /*.timeline-row:nth-child(2n+2) .timeline-content-txt { text-align: center; }*/
     .timeline-box {
       /*padding: 45px 50px 130px;*/
-      max-width: 550px;
+      max-width: 520px;
       margin-right: 25px;
       position: relative;
     }
@@ -1530,7 +1547,7 @@
       padding: 28px 28px 24px;
       text-align: left;
       /* border-top: 5px solid transparent; 
-            border-image: linear-gradient(90deg, var(--saffron), var(--gold)) 1; */
+            border-image: linear-gradient(90deg, var(--theme-color), var(--gold)) 1; */
 
     }
 
@@ -1542,7 +1559,7 @@
     @media screen and (max-width: 1800px) {
 
       .timeline-box {
-        max-width: 460px;
+        max-width: 430px;
       }
 
       .timeline-box.img-right .timeline-content img,
@@ -1566,7 +1583,7 @@
       }
 
       .timeline-box {
-        max-width: 410px;
+        max-width: 390px;
       }
 
       .timeline-box.img-right .timeline-content img,
@@ -1599,7 +1616,7 @@
         font-size: 40px;
       }
 
-  
+
 
       .timeline-box p {
         font-size: 15px;
@@ -1607,7 +1624,7 @@
       }
 
       .timeline-box {
-        max-width: 330px;
+        max-width: 310px;
       }
 
       .timeline-row:first-child .timeline-box:first-child {
@@ -1640,7 +1657,7 @@
       }
 
       .timeline-box {
-        max-width: 290px;
+        max-width: 270px;
       }
 
       .timeline-row:first-child {
@@ -1677,11 +1694,11 @@
     }
 
     @media screen and (max-width: 1024px) {
-      .start-point:before{
+      .start-point:before {
         left: 5.3%;
       }
 
-      .black-dot{
+      .black-dot {
         position: absolute;
         margin: 0px;
         left: 28px;
@@ -1710,7 +1727,8 @@
         height: calc(100% - 0px);
         left: 35px;
       }
-      .timeline-row:nth-child(2n+2){
+
+      .timeline-row:nth-child(2n+2) {
         padding: 0;
       }
 
@@ -1840,10 +1858,10 @@
         top: 50%;
         width: 39px;
         height: 3px;
-        background: linear-gradient(90deg, var(--gold), var(--saffron));
+        background: linear-gradient(90deg, var(--gold), var(--theme-color));
         z-index: 1;
         left: -41px;
-    }
+      }
 
     }
 
@@ -1867,43 +1885,62 @@
         text-align: left;
         padding: 0px 10px 0 40px;
         margin: 60px 0px;
-    }
-    .timeline-row .timeline-box:nth-child(2n) .timeline-box-wrap {
+      }
+
+      .timeline-row .timeline-box:nth-child(2n) .timeline-box-wrap {
         text-align: left;
         padding: 0px 10px 0 40px;
         margin: 60px 0px;
-    }
+      }
 
-    .black-dot {
+      .black-dot {
         left: 3%;
-    }
+      }
 
-    .start-point.end-point {
+      .start-point.end-point {
         left: 0;
         width: 100%;
         transform: translateX(0%);
+      }
+
+
+
     }
-
-
-     
-    }
-
-    
   </style>
 </head>
 
 <body>
 
-  <!-- ── NAV ────────────────────────────────── -->
-  <nav>
-    <div class="nav-logo">Bharat Darshan</div>
-    <ul class="nav-links">
-      <li><a href="#timeline">Timeline</a></li>
-      <li><a href="#eras">All Eras</a></li>
-      <li><a href="#deep-dive">Deep Dive</a></li>
-      <li><a href="#explore">Explore</a></li>
-    </ul>
-  </nav>
+  <!-- preloader -->
+  <div class="preloader">
+    <div class="loader">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- /preloader -->
+
+  <div class="navigation" id="myHead"></div>
+
+
+  <!-- page-title -->
+  <section class="section bg-secondary">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>HOW OLD IS THE HISTORY OF INDIA</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /page-title -->
+
+
+
 
   <!-- ── HERO ───────────────────────────────── -->
   <section class="hero">
@@ -1957,262 +1994,287 @@
 
 
 
-  <section class="about-timeline timeline-section" id="timeline">
-    <div class="timeline-header">
-      <div class="section-label" style="justify-content:center;">Chronological Journey</div>
-      <h2 class="section-title">India's History Timeline</h2>
-      <p class="section-desc" style="margin:0 auto; text-align:center;">
-        A continuous thread from the world's first cities to the age of independence.
-      </p>
-    </div>
-
-    <div class="wrapper inner-wrapper-padding ">
-
-      <div class="start-point">
-        <div class="black-dot"></div>
-       
-        <div class="corner bl"></div>
-      </div>
-
-      <div class="timeline-main">
-        <div class="timeline-row">
-
-          <div class="timeline-box timeline-content-img logo-timeline-arrow">
-            <div class="timeline-box-wrap">
-              <!-- <h6>1950</h6> -->
-              <div class="tl-dot">
-                <div class="tl-dot-inner"><img src="indianHistoryAssets/image/indianHistoryTimeline_10.png"></div>
-              </div>
-              <div class="tl-card-accent"></div>
-              <div class="timeline-content">
-                <div class="tl-era">Prehistoric</div>
-                <div class="tl-period">Indus Valley Civilization</div>
-                <div class="tl-dates">c. 3300 – 1700 BCE</div>
-                <div class="tl-desc">The world's first known urban culture, with remarkably planned
-                  cities at Harappa and
-                  Mohenjo-daro. Advanced drainage, standardized weights, and a yet-undeciphered
-                  script.</div>
-                <span class="tl-badge">🏙️ Urban planned cities</span>
+  <section class="mt-1" id="timeline">
+    <div class="card mb-2">
+      <div class="about-timeline timeline-section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="timeline-header">
+                <div class="section-label" style="justify-content:center;">Chronological Journey</div>
+                <h2 class="section-title">India's History Timeline</h2>
+                <p class="section-desc" style="margin:0 auto; text-align:center;">
+                  A continuous thread from the world's first cities to the age of independence.
+                </p>
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="wrapper inner-wrapper-padding ">
 
+                <div class="start-point">
+                  <div class="black-dot"></div>
 
-          <div class="horizontal-line"></div>
-          <div class="verticle-line"></div>
-          <div class="corner top"></div>
-          <div class="corner bottom"></div>
-        </div>
-
-
-        <div class="timeline-row">
-          <div class="timeline-box img-right timeline-content-img">
-            <div class="timeline-box-wrap">
-              <div class="tl-dot">
-                <div class="tl-dot-inner"><img src="indianHistoryAssets/image/indianHistoryTimeline_4.png"></div>
-              </div>
-              <div class="tl-card-accent"></div>
-              <div class="timeline-content">
-                <div class="tl-era">Vedic Age</div>
-                <div class="tl-period">Vedic Period</div>
-                <div class="tl-dates">c. 1500 – 500 BCE</div>
-                <div class="tl-desc">Composition of the Rig Veda and the great Sanskrit hymns. Social
-                  structures, religious
-                  rites, and philosophical thought laid the foundations of Hindu civilization.</div>
-                <span class="tl-badge">📜 Sacred hymns era</span>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-box ">
-            <div class="timeline-box-wrap">
-              <div class="tl-dot">
-                <div class="tl-dot-inner"><img src="indianHistoryAssets/image/indianHistoryTimeline_1.png"></div>
-              </div>
-              <div class="tl-card-accent"></div>
-              <div class="timeline-content">
-                <div class="tl-era">Iron Age Kingdoms</div>
-                <div class="tl-period">Mahajanapadas & Age of Buddha</div>
-                <div class="tl-dates">c. 600 – 322 BCE</div>
-                <div class="tl-desc">Sixteen great states rose across the Gangetic plain. Siddhartha
-                  Gautama attained
-                  enlightenment, and Mahavira founded Jainism — two of humanity's most enduring
-                  spiritual traditions.</div>
-                <span class="tl-badge">🗺️ Sixteen great states</span>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-box img-right timeline-content-img top-timeline-arrow">
-            <div class="timeline-box-wrap">
-              <div class="tl-dot">
-                <div class="tl-dot-inner"><img src="indianHistoryAssets/image/indianHistoryTimeline_5.png"></div>
-              </div>
-              <div class="tl-card-accent"></div>
-              <div class="timeline-content">
-                <div class="tl-era">First Great Empire</div>
-                <div class="tl-period">Mauryan Empire</div>
-                <div class="tl-dates">c. 322 – 185 BCE</div>
-                <div class="tl-desc">Chandragupta Maurya unified the subcontinent. Ashoka's reign became
-                  a model of
-                  enlightened governance — spreading Buddhism across Asia through rock edicts and
-                  diplomatic missions.</div>
-                <span class="tl-badge">🏛️ First great empire</span>
-              </div>
-            </div>
-          </div>
-          <div class="horizontal-line"></div>
-          <div class="verticle-line"></div>
-          <div class="corner top"></div>
-          <div class="corner bottom"></div>
-        </div>
-        <div class="timeline-row">
-          <div class="timeline-box img-left timeline-content-img">
-            <div class="timeline-box-wrap">
-              <div class="tl-dot">
-                <div class="tl-dot-inner"><img src="indianHistoryAssets/image/indianHistoryTimeline_9.png"></div>
-              </div>
-              <div class="tl-card-accent"></div>
-              <div class="timeline-content">
-                <div class="tl-era">Post-Mauryan</div>
-                <div class="tl-period">Shungas, Kushans & Satavahanas</div>
-                <div class="tl-dates">185 BCE – 320 CE</div>
-                <div class="tl-desc">A era of dynastic transitions, cross-cultural exchange with Central
-                  Asia, the Silk
-                  Road, and the flourishing of Buddhist art at Sanchi, Amaravati, and Mathura.</div>
-                <span class="tl-badge">🪙 Dynastic transitions</span>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-box timeline-content-img">
-            <div class="timeline-box-wrap">
-              <div class="tl-dot">
-                <div class="tl-dot-inner"><img src="indianHistoryAssets/image/indianHistoryTimeline_6.png"></div>
-              </div>
-              <div class="tl-card-accent"></div>
-              <div class="timeline-content">
-                <div class="tl-era">Golden Age</div>
-                <div class="tl-period">Gupta Empire</div>
-                <div class="tl-dates">c. 320 – 550 CE</div>
-                <div class="tl-desc">India's classical golden age. Aryabhata calculated pi and proposed
-                  a heliocentric
-                  model. Kalidasa wrote Sanskrit literature's greatest masterpieces. Art, philosophy,
-                  and science
-                  flourished.</div>
-                <span class="tl-badge">✨ Golden age of India</span>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-box ">
-            <div class="timeline-box-wrap">
-              <div class="tl-dot">
-                <div class="tl-dot-inner"><img src="indianHistoryAssets/image/indianHistoryTimeline_3.png"></div>
-              </div>
-              <div class="tl-card-accent"></div>
-              <div class="timeline-content">
-                <div class="tl-era">Medieval South</div>
-                <div class="tl-period">Early Medieval & Rise of the South</div>
-                <div class="tl-dates">750 – 1200 CE</div>
-                <div class="tl-desc">The Chola Empire reached its zenith — ruling Southern India, Sri
-                  Lanka, and conducting
-                  naval campaigns to Southeast Asia. Magnificent temple architecture at Thanjavur and
-                  Mahabalipuram.</div>
-                <span class="tl-badge">🛕 Southern dynasties flourish</span>
-              </div>
-            </div>
-          </div>
-          <div class="horizontal-line"></div>
-          <div class="verticle-line"></div>
-          <div class="corner top"></div>
-          <div class="corner bottom"></div>
-        </div>
-        <div class="timeline-row">
-          <div class="timeline-box ">
-            <div class="timeline-box-wrap">
-              <div class="tl-dot">
-                <div class="tl-dot-inner"><img src="indianHistoryAssets/image/indianHistoryTimeline_11.png"></div>
-              </div>
-              <div class="tl-card-accent"></div>
-              <div class="timeline-content">
-                <div class="tl-era">Sultanate Era</div>
-                <div class="tl-period">Delhi Sultanate</div>
-                <div class="tl-dates">1206 – 1526 CE</div>
-                <div class="tl-desc">Five successive dynasties governed from Delhi. Islamic rule brought
-                  new architectural
-                  traditions — the Qutb Minar, Indo-Saracenic style, and a fusion of Persian and
-                  Indian cultures.</div>
-                <span class="tl-badge">🕌 Islamic rule begins</span>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-box timeline-content-img">
-            <div class="timeline-box-wrap">
-              <div class="tl-dot">
-                <div class="tl-dot-inner"><img src="indianHistoryAssets/image/indianHistoryTimeline_12.png"></div>
-              </div>
-              <div class="tl-card-accent"></div>
-              <div class="timeline-content">
-                <div class="tl-era">Imperial Mughal</div>
-                <div class="tl-period">Mughal Empire</div>
-                <div class="tl-dates">1526 – 1857 CE</div>
-                <div class="tl-desc">From Babur's conquest to Akbar's religious pluralism and Shah
-                  Jahan's Taj Mahal — the
-                  Mughal era created an extraordinary cultural synthesis of Persian, Central Asian,
-                  and Indian traditions.
+                  <div class="corner bl"></div>
                 </div>
-                <span class="tl-badge">🕌 Architectural splendor</span>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-box img-right timeline-content-img">
-            <div class="timeline-box-wrap">
-              <div class="tl-dot">
-                <div class="tl-dot-inner"><img src="indianHistoryAssets/image/indianHistoryTimeline_8.png"></div>
-              </div>
-              <div class="tl-card-accent"></div>
-              <div class="timeline-content">
-                <div class="tl-era">Colonial Period</div>
-                <div class="tl-period">British Colonial Rule</div>
-                <div class="tl-dates">1757 – 1947 CE</div>
-                <div class="tl-desc">The East India Company's rise after Plassey led to Crown rule.
-                  Gandhi's non-violent
-                  resistance, the freedom movement, and Partition shaped the end of the empire and the
-                  birth of modern
-                  nations.</div>
-                <span class="tl-badge">🏛️ Raj era rule</span>
-              </div>
-            </div>
-          </div>
-          <div class="horizontal-line"></div>
-          <div class="verticle-line"></div>
-          <div class="corner top"></div>
-          <div class="corner bottom"></div>
-        </div>
-        <div class="timeline-row">
-          <div class="timeline-box timeline-content-img">
-            <div class="timeline-box-wrap">
-              <div class="tl-dot">
-                <div class="tl-dot-inner"><img src="indianHistoryAssets/image/indianHistoryTimeline_7.png"></div>
-              </div>
-              <div class="tl-card-accent" style="background:linear-gradient(90deg,var(--sage),var(--sage-lt));"></div>
-              <div class="timeline-content">
-                <div class="tl-era">Republic</div>
-                <div class="tl-period">Post-Independence India</div>
-                <div class="tl-dates">1947 – Present</div>
-                <div class="tl-desc">The world's largest democracy adopted its Constitution in 1950.
-                  India grew from a
-                  post-colonial nation into a global power — space missions, economic growth, and
-                  cultural influence on
-                  every continent.</div>
-                <span class="tl-badge">🇮🇳 Modern India emerges</span>
-              </div>
-            </div>
-          </div>
 
-          <div class="horizontal-line"></div>
-          <div class="verticle-line"></div>
-          <div class="corner top"></div>
-          <div class="corner bottom"></div>
-          <div class="start-point end-point">
-            <div class="black-dot"></div>
+                <div class="timeline-main">
+                  <div class="timeline-row">
+
+                    <div class="timeline-box timeline-content-img logo-timeline-arrow">
+                      <div class="timeline-box-wrap">
+                        <!-- <h6>1950</h6> -->
+                        <div class="tl-dot">
+                          <div class="tl-dot-inner"><img src="images/IndianHistory/indianHistoryTimeline_10.png">
+                          </div>
+                        </div>
+                        <div class="tl-card-accent"></div>
+                        <div class="timeline-content">
+                          <div class="tl-era">Prehistoric</div>
+                          <div class="tl-period">Indus Valley Civilization</div>
+                          <div class="tl-dates">c. 3300 – 1700 BCE</div>
+                          <div class="tl-desc">The world's first known urban culture, with remarkably planned
+                            cities at Harappa and
+                            Mohenjo-daro. Advanced drainage, standardized weights, and a yet-undeciphered
+                            script.</div>
+                          <span class="tl-badge">🏙️ Urban planned cities</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="horizontal-line"></div>
+                    <div class="verticle-line"></div>
+                    <div class="corner top"></div>
+                    <div class="corner bottom"></div>
+                  </div>
+
+
+                  <div class="timeline-row">
+                    <div class="timeline-box img-right timeline-content-img">
+                      <div class="timeline-box-wrap">
+                        <div class="tl-dot">
+                          <div class="tl-dot-inner"><img src="images/IndianHistory/indianHistoryTimeline_4.png">
+                          </div>
+                        </div>
+                        <div class="tl-card-accent"></div>
+                        <div class="timeline-content">
+                          <div class="tl-era">Vedic Age</div>
+                          <div class="tl-period">Vedic Period</div>
+                          <div class="tl-dates">c. 1500 – 500 BCE</div>
+                          <div class="tl-desc">Composition of the Rig Veda and the great Sanskrit hymns. Social
+                            structures, religious
+                            rites, and philosophical thought laid the foundations of Hindu civilization.</div>
+                          <span class="tl-badge">📜 Sacred hymns era</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="timeline-box ">
+                      <div class="timeline-box-wrap">
+                        <div class="tl-dot">
+                          <div class="tl-dot-inner"><img src="images/IndianHistory/indianHistoryTimeline_1.png">
+                          </div>
+                        </div>
+                        <div class="tl-card-accent"></div>
+                        <div class="timeline-content">
+                          <div class="tl-era">Iron Age Kingdoms</div>
+                          <div class="tl-period">Mahajanapadas & Age of Buddha</div>
+                          <div class="tl-dates">c. 600 – 322 BCE</div>
+                          <div class="tl-desc">Sixteen great states rose across the Gangetic plain. Siddhartha
+                            Gautama attained
+                            enlightenment, and Mahavira founded Jainism — two of humanity's most enduring
+                            spiritual traditions.</div>
+                          <span class="tl-badge">🗺️ Sixteen great states</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="timeline-box img-right timeline-content-img top-timeline-arrow">
+                      <div class="timeline-box-wrap">
+                        <div class="tl-dot">
+                          <div class="tl-dot-inner"><img src="images/IndianHistory/indianHistoryTimeline_5.png">
+                          </div>
+                        </div>
+                        <div class="tl-card-accent"></div>
+                        <div class="timeline-content">
+                          <div class="tl-era">First Great Empire</div>
+                          <div class="tl-period">Mauryan Empire</div>
+                          <div class="tl-dates">c. 322 – 185 BCE</div>
+                          <div class="tl-desc">Chandragupta Maurya unified the subcontinent. Ashoka's reign became
+                            a model of
+                            enlightened governance — spreading Buddhism across Asia through rock edicts and
+                            diplomatic missions.</div>
+                          <span class="tl-badge">🏛️ First great empire</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="horizontal-line"></div>
+                    <div class="verticle-line"></div>
+                    <div class="corner top"></div>
+                    <div class="corner bottom"></div>
+                  </div>
+                  <div class="timeline-row">
+                    <div class="timeline-box img-left timeline-content-img">
+                      <div class="timeline-box-wrap">
+                        <div class="tl-dot">
+                          <div class="tl-dot-inner"><img src="images/IndianHistory/indianHistoryTimeline_9.png">
+                          </div>
+                        </div>
+                        <div class="tl-card-accent"></div>
+                        <div class="timeline-content">
+                          <div class="tl-era">Post-Mauryan</div>
+                          <div class="tl-period">Shungas, Kushans & Satavahanas</div>
+                          <div class="tl-dates">185 BCE – 320 CE</div>
+                          <div class="tl-desc">A era of dynastic transitions, cross-cultural exchange with Central
+                            Asia, the Silk
+                            Road, and the flourishing of Buddhist art at Sanchi, Amaravati, and Mathura.</div>
+                          <span class="tl-badge">🪙 Dynastic transitions</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="timeline-box timeline-content-img">
+                      <div class="timeline-box-wrap">
+                        <div class="tl-dot">
+                          <div class="tl-dot-inner"><img src="images/IndianHistory/indianHistoryTimeline_6.png">
+                          </div>
+                        </div>
+                        <div class="tl-card-accent"></div>
+                        <div class="timeline-content">
+                          <div class="tl-era">Golden Age</div>
+                          <div class="tl-period">Gupta Empire</div>
+                          <div class="tl-dates">c. 320 – 550 CE</div>
+                          <div class="tl-desc">India's classical golden age. Aryabhata calculated pi and proposed
+                            a heliocentric
+                            model. Kalidasa wrote Sanskrit literature's greatest masterpieces. Art, philosophy,
+                            and science
+                            flourished.</div>
+                          <span class="tl-badge">✨ Golden age of India</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="timeline-box ">
+                      <div class="timeline-box-wrap">
+                        <div class="tl-dot">
+                          <div class="tl-dot-inner"><img src="images/IndianHistory/indianHistoryTimeline_3.png">
+                          </div>
+                        </div>
+                        <div class="tl-card-accent"></div>
+                        <div class="timeline-content">
+                          <div class="tl-era">Medieval South</div>
+                          <div class="tl-period">Early Medieval & Rise of the South</div>
+                          <div class="tl-dates">750 – 1200 CE</div>
+                          <div class="tl-desc">The Chola Empire reached its zenith — ruling Southern India, Sri
+                            Lanka, and conducting
+                            naval campaigns to Southeast Asia. Magnificent temple architecture at Thanjavur and
+                            Mahabalipuram.</div>
+                          <span class="tl-badge">🛕 Southern dynasties flourish</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="horizontal-line"></div>
+                    <div class="verticle-line"></div>
+                    <div class="corner top"></div>
+                    <div class="corner bottom"></div>
+                  </div>
+                  <div class="timeline-row">
+                    <div class="timeline-box ">
+                      <div class="timeline-box-wrap">
+                        <div class="tl-dot">
+                          <div class="tl-dot-inner"><img src="images/IndianHistory/indianHistoryTimeline_11.png">
+                          </div>
+                        </div>
+                        <div class="tl-card-accent"></div>
+                        <div class="timeline-content">
+                          <div class="tl-era">Sultanate Era</div>
+                          <div class="tl-period">Delhi Sultanate</div>
+                          <div class="tl-dates">1206 – 1526 CE</div>
+                          <div class="tl-desc">Five successive dynasties governed from Delhi. Islamic rule brought
+                            new architectural
+                            traditions — the Qutb Minar, Indo-Saracenic style, and a fusion of Persian and
+                            Indian cultures.</div>
+                          <span class="tl-badge">🕌 Islamic rule begins</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="timeline-box timeline-content-img">
+                      <div class="timeline-box-wrap">
+                        <div class="tl-dot">
+                          <div class="tl-dot-inner"><img src="images/IndianHistory/indianHistoryTimeline_12.png">
+                          </div>
+                        </div>
+                        <div class="tl-card-accent"></div>
+                        <div class="timeline-content">
+                          <div class="tl-era">Imperial Mughal</div>
+                          <div class="tl-period">Mughal Empire</div>
+                          <div class="tl-dates">1526 – 1857 CE</div>
+                          <div class="tl-desc">From Babur's conquest to Akbar's religious pluralism and Shah
+                            Jahan's Taj Mahal — the
+                            Mughal era created an extraordinary cultural synthesis of Persian, Central Asian,
+                            and Indian traditions.
+                          </div>
+                          <span class="tl-badge">🕌 Architectural splendor</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="timeline-box img-right timeline-content-img">
+                      <div class="timeline-box-wrap">
+                        <div class="tl-dot">
+                          <div class="tl-dot-inner"><img src="images/IndianHistory/indianHistoryTimeline_8.png">
+                          </div>
+                        </div>
+                        <div class="tl-card-accent"></div>
+                        <div class="timeline-content">
+                          <div class="tl-era">Colonial Period</div>
+                          <div class="tl-period">British Colonial Rule</div>
+                          <div class="tl-dates">1757 – 1947 CE</div>
+                          <div class="tl-desc">The East India Company's rise after Plassey led to Crown rule.
+                            Gandhi's non-violent
+                            resistance, the freedom movement, and Partition shaped the end of the empire and the
+                            birth of modern
+                            nations.</div>
+                          <span class="tl-badge">🏛️ Raj era rule</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="horizontal-line"></div>
+                    <div class="verticle-line"></div>
+                    <div class="corner top"></div>
+                    <div class="corner bottom"></div>
+                  </div>
+                  <div class="timeline-row">
+                    <div class="timeline-box timeline-content-img">
+                      <div class="timeline-box-wrap">
+                        <div class="tl-dot">
+                          <div class="tl-dot-inner"><img src="images/IndianHistory/indianHistoryTimeline_7.png">
+                          </div>
+                        </div>
+                        <div class="tl-card-accent"
+                          style="background:linear-gradient(90deg,var(--sage),var(--sage-lt));"></div>
+                        <div class="timeline-content">
+                          <div class="tl-era">Republic</div>
+                          <div class="tl-period">Post-Independence India</div>
+                          <div class="tl-dates">1947 – Present</div>
+                          <div class="tl-desc">The world's largest democracy adopted its Constitution in 1950.
+                            India grew from a
+                            post-colonial nation into a global power — space missions, economic growth, and
+                            cultural influence on
+                            every continent.</div>
+                          <span class="tl-badge">🇮🇳 Modern India emerges</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="horizontal-line"></div>
+                    <div class="verticle-line"></div>
+                    <div class="corner top"></div>
+                    <div class="corner bottom"></div>
+                    <div class="start-point end-point">
+                      <div class="black-dot"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -2301,7 +2363,9 @@
   </section>
 
   <!-- ── ERA CARDS ──────────────────────────── -->
-  <section class="cards-section">
+  <section class="mt-1" >
+    <div class="card mb-2">
+  <div class="cards-section">
     <div class="cards-header">
       <div class="section-label" style="justify-content:center;">Explore By Era</div>
       <h2 class="section-title">Major Chapters</h2>
@@ -2387,7 +2451,9 @@
       </div>
 
     </div>
-  </section>
+  </div>
+  </div>
+</section>
 
   <!-- ── DEEP DIVE SCROLLY ─────────────────── -->
   <section class="scrolly" id="deep-dive">
@@ -2481,33 +2547,58 @@
     <p class="quote-attr">— The Story of Bharat</p>
   </section>
 
-  <!-- ── FOOTER ─────────────────────────────── -->
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand">Bharat Darshan</div>
-        <p class="footer-tagline">An editorial journey through 100,000 years of Indian civilisation.</p>
-      </div>
-      <div>
-        <div class="footer-links">
-          <a href="#timeline">Timeline</a>
-          <a href="#eras">All Eras</a>
-          <a href="#deep-dive">Deep Dive</a>
-        </div>
-      </div>
-      <div>
-        <div class="footer-links">
-          <a href="#">Ancient India</a>
-          <a href="#">Classical Empires</a>
-          <a href="#">Medieval & Mughal</a>
-          <a href="#">Modern Republic</a>
-        </div>
-      </div>
-    </div>
-    <p class="footer-copy">
-      ॐ &nbsp;·&nbsp; Satyameva Jayate &nbsp;·&nbsp; Truth Alone Triumphs &nbsp;·&nbsp; भारत दर्शन
-    </p>
-  </footer>
+
+
+  <div id="showsidebar"></div>
+
+  <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+
+  <script src="plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+  <script>
+    $('#myHead').load('include/header.html');
+    $(document).ready(function () {
+      $("#skipnone").remove();
+    });
+    $('#myFooter').load('include/footer.html');
+    $('#showsidebar').load('include/sidebarShow.html');
+  </script>
+  <script>
+    var geturl = window.location.href;
+    // console.log(geturl);
+    var disqus_config = function () {
+      this.page.url = geturl;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = geturl; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://gauravkansal-in.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+  <!-- Bootstrap JS -->
+  <script src="plugins/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- slick slider -->
+  <script src="plugins/slick/slick.min.js"></script>
+  <!-- masonry -->
+  <script src="plugins/masonry/masonry.js"></script>
+  <!-- headroom -->
+  <script src="plugins/headroom/headroom.js"></script>
+  <!-- reading time -->
+  <script src="plugins/reading-time/readingTime.min.js"></script>
+
+  <!-- Main Script -->
+  <script src="js/script.js" crossorigin="anonymous"></script>
+
 
 </body>
 
