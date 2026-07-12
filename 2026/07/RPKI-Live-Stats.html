@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V78EBX66N1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-V78EBX66N1');
+        </script>
+
+        <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KKQWN7J6');</script>
+    <!-- End Google Tag Manager -->
+
+	<meta charset="utf-8">
+	<title>Current Status of RPKI — ROAs and ASPAs Across the Internet | Gaurav Kansal Blog</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta property="og:title" content="Current Status of RPKI — ROAs and ASPAs Across the Internet | Gaurav Kansal Blog" />
+        <meta property="og:description" content="Current status of RPKI - ROA and ASPA adoption across all five RIRs, with a deep dive into the APNIC region and India. Auto-refreshed every 24 hours." />
+        <meta property="og:image" content="rpki_status_banner.png" />
+        <meta property="og:url" content="https://blog.gauravkansal.in/2026/07/Current-Status-of-RPKI-ROAs-and-ASPAs.html" />
+        <meta property="og:type" content="article" />
+
+	<!-- ** Plugins Needed for the Project ** -->
+	<link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="../../plugins/slick/slick.css">
+	<link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+	<link href="../../css/style.css" rel="stylesheet">
+	<link rel="icon" type="image/png" href="../../images/favicon.jpg">
+	<link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+	<style>
+        body #blog-post-block{
+            font-size: 19px;
+        }
+        #blog-post-block p{
+            text-align: justify;
+        }
+        /* RPKI post - parchment theme table styling, matches chart palette */
+        .rpki-table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 15px;
+            margin: 20px 0;
+        }
+        .rpki-table th {
+            background-color: #3f6b66;
+            color: #f2e8db;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        .rpki-table td {
+            padding: 8px 12px;
+            border: 1px solid #d3bfa4;
+        }
+        .rpki-table tr:nth-child(even) {
+            background-color: #f2e8db;
+        }
+        .rpki-refresh-note {
+            background-color: #f2e8db;
+            border-left: 4px solid #c0654b;
+            padding: 10px 16px;
+            font-size: 15px;
+            margin: 20px 0;
+        }
+    </style>
+  </head>
+
+<body>
+	<div class="preloader">
+		<div class="loader">
+			<span class="dot"></span>
+			<div class="dots">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="navigation" id="myHead"></div>
+
+	<section class="section bg-secondary">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12">
+					<h4>Current Status of RPKI — ROAs and ASPAs Across the Internet</h4>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="mt-1" id="blog-post-block">
+		<div class="card mb-2">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+					<div class="card-block">
+                                        <ul class="list-inline d-flex justify-content-between py-3">
+                                        <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html" target="_blank">Gaurav Kansal</a></li>
+                                        <li class="list-inline-item"><i class="ti-calendar mr-2"></i> Data last refreshed: <!--RPKI:LAST_UPDATED-->2026-07-12 15:45 IST<!--/RPKI:LAST_UPDATED--></li>
+                                        </ul>
+							<div class="content">
+
+<svg viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Current Status of RPKI — ROAs and ASPAs Across the Internet</title>
+  <desc>A warm parchment-themed blog banner showing RPKI adoption status across RIRs, APNIC region, and India.</desc>
+
+  <rect width="680" height="380" fill="#e8d5c1" rx="12"/>
+  <rect x="0" y="0" width="7" height="380" fill="#c0654b" rx="3"/>
+
+  <circle cx="580" cy="80"  r="90" fill="#d3bfa4" opacity="0.5"/>
+  <circle cx="600" cy="100" r="60" fill="#8a9a5b" opacity="0.3"/>
+  <circle cx="556" cy="58"  r="35" fill="#3f6b66" opacity="0.2"/>
+
+  <rect x="400" y="200" width="248" height="138" rx="8" fill="#f2e8db" opacity="0.8"/>
+
+  <text x="48" y="66" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#7a6650" letter-spacing="3">
+    IS THE ROUTING TABLE ACTUALLY SECURE?
+  </text>
+
+  <text x="48" y="126" font-family="Arial, sans-serif" font-size="46" font-weight="700" fill="#3b2a1a" letter-spacing="-1">
+    RPKI Status
+  </text>
+  <text x="48" y="176" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#c0654b" letter-spacing="-1">
+    ROAs &amp; ASPAs
+  </text>
+
+  <text x="48" y="216" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#5b7a99">
+    A living snapshot, refreshed every 24 hours
+  </text>
+
+  <line x1="48" y1="240" x2="340" y2="240" stroke="#c0654b" stroke-width="1" opacity="0.5"/>
+
+  <text x="48" y="264" font-family="Arial, sans-serif" font-size="13" fill="#7a6650">
+    RIR coverage · APNIC region · India detail
+  </text>
+
+  <text x="416" y="218" font-family="Arial, sans-serif" font-size="10" fill="#7a6650" letter-spacing="1" opacity="0.9">
+    ASPA COVERAGE BY RIR
+  </text>
+
+  <!-- Bar widths are sqrt-scaled from real counts (RIPE 1463, ARIN 436,
+       LACNIC 106, APNIC 85, AFRINIC 0) so smaller RIRs stay visible rather
+       than a linear scale flattening them to invisible slivers. This is
+       still a decorative summary, not the data chart - see rir_adoption.svg
+       below for the actual accurate figures. -->
+  <rect x="412" y="226" width="228" height="14" rx="3" fill="#e8d5c1"/>
+  <rect x="412" y="226" width="212" height="14" rx="3" fill="#3f6b66"/>
+  <text x="420" y="236" font-family="Arial, sans-serif" font-size="8.5" fill="#f2e8db">RIPE NCC</text>
+
+  <rect x="412" y="243" width="228" height="14" rx="3" fill="#e8d5c1"/>
+  <rect x="412" y="243" width="116" height="14" rx="3" fill="#c0654b"/>
+  <text x="420" y="253" font-family="Arial, sans-serif" font-size="8.5" fill="#f2e8db">ARIN</text>
+
+  <rect x="412" y="260" width="228" height="14" rx="3" fill="#e8d5c1"/>
+  <rect x="412" y="260" width="57"  height="14" rx="3" fill="#8a9a5b"/>
+  <text x="420" y="270" font-family="Arial, sans-serif" font-size="8.5" fill="#3b2a1a">LACNIC</text>
+
+  <rect x="412" y="277" width="228" height="14" rx="3" fill="#e8d5c1"/>
+  <rect x="412" y="277" width="51"  height="14" rx="3" fill="#d1a24a"/>
+  <text x="420" y="287" font-family="Arial, sans-serif" font-size="8.5" fill="#3b2a1a">APNIC</text>
+
+  <rect x="412" y="294" width="228" height="14" rx="3" fill="#e8d5c1"/>
+  <rect x="412" y="294" width="3"   height="14" rx="1" fill="#7d5a6a"/>
+  <text x="420" y="304" font-family="Arial, sans-serif" font-size="8.5" fill="#3b2a1a">AFRINIC (0)</text>
+
+  <line x1="48" y1="340" x2="632" y2="340" stroke="#d3bfa4" stroke-width="1"/>
+  <text x="48" y="360" font-family="Arial, sans-serif" font-size="11" fill="#7a6650">blog.gauravkansal.in</text>
+  <text x="632" y="360" font-family="Arial, sans-serif" font-size="10" fill="#7a6650" text-anchor="end">Auto-refreshed pipeline</text>
+</svg>
+
+<p align="justify">
+RPKI (Resource Public Key Infrastructure) lets an Autonomous System prove two things
+with a cryptographic signature instead of just trusting BGP announcements: that it's
+actually allowed to originate a given IP prefix, and that it's actually allowed to sit
+in the path as someone's transit provider. A ROA (Route Origin Authorization) covers the
+first case — it stops one network from announcing someone else's IP range by mistake or
+on purpose. An ASPA (Autonomous System Provider Authorization) covers the second — it
+stops route leaks, where a network accidentally forwards a route to the wrong upstream.
+</p>
+
+<div class="rpki-refresh-note">
+This is a living post rather than a one-time write-up. The charts and numbers below are
+regenerated automatically every 24 hours directly from the RPKI repositories and each RIR's
+own delegation records, so what you're reading reflects the actual state of adoption as of
+the timestamp above.
+</div>
+
+<hr/>
+
+<h3>The Global Picture</h3>
+
+<p>As of this refresh, here is ASPA adoption across all five Regional Internet Registries:</p>
+
+<table class="rpki-table">
+  <thead>
+    <tr><th>RIR</th><th>ASNs with ASPA</th><th>Total ASNs</th><th>Coverage</th></tr>
+  </thead>
+  <tbody>
+    <!--RPKI:RIR_TABLE_ROWS-->    <tr><td>RIPENCC</td><td>1,659</td><td>39,583</td><td>4.191%</td></tr>
+    <tr><td>ARIN</td><td>503</td><td>34,059</td><td>1.477%</td></tr>
+    <tr><td>LACNIC</td><td>107</td><td>14,246</td><td>0.751%</td></tr>
+    <tr><td>APNIC</td><td>87</td><td>31,126</td><td>0.280%</td></tr>
+    <tr><td>AFRINIC</td><td>0</td><td>2,752</td><td>0.000%</td></tr><!--/RPKI:RIR_TABLE_ROWS-->
+  </tbody>
+</table>
+
+<img src="rir_adoption.svg" alt="ASPA adoption by RIR" style="max-width:100%;">
+
+<hr/>
+
+<h3>ROA Publication — the Mature Baseline</h3>
+
+<p>
+Unlike ASPA, ROA (Route Origin Authorization) is well-established across every RIR.
+Here's the same RIR-by-RIR breakdown for ROA publication:
+</p>
+
+<table class="rpki-table">
+  <thead>
+    <tr><th>RIR</th><th>ASNs with a ROA</th><th>Total ASNs</th><th>Coverage</th></tr>
+  </thead>
+  <tbody>
+    <!--RPKI:ROA_TABLE_ROWS-->    <tr><td>RIPENCC</td><td>26,864</td><td>39,583</td><td>67.868%</td></tr>
+    <tr><td>APNIC</td><td>18,939</td><td>31,126</td><td>60.846%</td></tr>
+    <tr><td>ARIN</td><td>12,697</td><td>34,059</td><td>37.279%</td></tr>
+    <tr><td>LACNIC</td><td>6,923</td><td>14,246</td><td>48.596%</td></tr>
+    <tr><td>AFRINIC</td><td>1,659</td><td>2,752</td><td>60.283%</td></tr><!--/RPKI:ROA_TABLE_ROWS-->
+  </tbody>
+</table>
+
+<img src="roa_adoption.svg" alt="ROA publication by RIR" style="max-width:100%;">
+
+<p>
+The gap between these numbers and the ASPA table above is the story: ROA has had over
+a decade to mature, while ASPA is still in its early-adopter phase across every RIR,
+APNIC included. Within APNIC specifically, <strong><!--RPKI:APNIC_ROA_COUNT-->18,939<!--/RPKI:APNIC_ROA_COUNT--></strong> ASNs
+(<strong><!--RPKI:APNIC_ROA_COVERAGE_PCT-->60.846<!--/RPKI:APNIC_ROA_COVERAGE_PCT-->%</strong>) publish a ROA — worth keeping in mind
+when the APNIC region's ASPA numbers look small by comparison later in this post.
+</p>
+
+<hr/>
+
+<h3>ROV — Is Anyone Actually Checking?</h3>
+
+<p>
+Publishing a ROA or ASPA only matters if networks downstream actually validate against
+it. ROV (Route Origin Validation) measures that missing piece — not what's published,
+but what's actually enforced. APNIC Labs runs a continuous global measurement of this using
+anycast beacon routes delivered to end-user devices via an ad-measurement network: one route
+is permanently RPKI-valid as a control, another is permanently RPKI-invalid, and APNIC tracks
+what fraction of a country's users can still reach the invalid one — those users are sitting
+behind networks that are <em>not</em> dropping invalid routes. (The exact prefixes used aren't
+publicly disclosed, deliberately — publishing them would let networks special-case just those
+routes rather than genuinely enforcing ROV everywhere. Full methodology:
+<a href="https://blog.apnic.net/2023/11/09/how-we-measure-rpki-roa-signing-and-route-origination-validation/" target="_blank" rel="noopener">APNIC Labs, "How we measure"</a>.
+Worth noting: independent researchers have pointed out that relying on a single invalid test
+prefix gives only a partial view compared to testing many prefixes simultaneously — treat
+these numbers as a solid trend indicator rather than an exact figure.)
+</p>
+
+<img src="rov_comparison.svg" alt="ROV enforcement rate: World vs India" style="max-width:100%;">
+
+<p>
+As of <!--RPKI:ROV_DATE-->2026-07-11<!--/RPKI:ROV_DATE-->, <strong><!--RPKI:ROV_WORLD_RATE-->28.52<!--/RPKI:ROV_WORLD_RATE-->%</strong> of internet users globally sit
+behind networks enforcing ROV. That number matters when you get to the India section below.
+</p>
+
+<hr/>
+
+<h3>The APNIC Region</h3>
+
+<p>
+Zooming into APNIC specifically — <strong><!--RPKI:APNIC_ASPA_COUNT-->87<!--/RPKI:APNIC_ASPA_COUNT--></strong> ASNs out of
+<strong><!--RPKI:APNIC_TOTAL_ASNS-->31,126<!--/RPKI:APNIC_TOTAL_ASNS--></strong> total APNIC-delegated ASNs
+(<strong><!--RPKI:APNIC_COVERAGE_PCT-->0.280<!--/RPKI:APNIC_COVERAGE_PCT-->%</strong>) currently publish an ASPA object.
+</p>
+
+<img src="apnic_country_pie.svg" alt="APNIC ASPA adoption by country" style="max-width:100%;">
+
+<table class="rpki-table">
+  <thead>
+    <tr><th>Country</th><th>ASNs</th></tr>
+  </thead>
+  <tbody>
+    <!--RPKI:APNIC_COUNTRY_TABLE_ROWS-->    <tr><td>AU</td><td>18</td></tr>
+    <tr><td>PK</td><td>15</td></tr>
+    <tr><td>IN</td><td>9</td></tr>
+    <tr><td>NZ</td><td>8</td></tr>
+    <tr><td>BD</td><td>8</td></tr>
+    <tr><td>SG</td><td>4</td></tr>
+    <tr><td>NR</td><td>3</td></tr>
+    <tr><td>PH</td><td>3</td></tr>
+    <tr><td>CN</td><td>3</td></tr>
+    <tr><td>LK</td><td>2</td></tr>
+    <tr><td>FJ</td><td>2</td></tr>
+    <tr><td>JP</td><td>2</td></tr>
+    <tr><td>HK</td><td>1</td></tr>
+    <tr><td>TL</td><td>1</td></tr>
+    <tr><td>TO</td><td>1</td></tr>
+    <tr><td>WS</td><td>1</td></tr>
+    <tr><td>CA</td><td>1</td></tr>
+    <tr><td>VU</td><td>1</td></tr>
+    <tr><td>TH</td><td>1</td></tr>
+    <tr><td>ID</td><td>1</td></tr>
+    <tr><td>NP</td><td>1</td></tr>
+    <tr><td>KR</td><td>1</td></tr><!--/RPKI:APNIC_COUNTRY_TABLE_ROWS-->
+  </tbody>
+</table>
+
+<hr/>
+
+<h3>India</h3>
+
+<p>
+<strong><!--RPKI:INDIA_ASPA_COUNT-->9<!--/RPKI:INDIA_ASPA_COUNT--></strong> of India's <strong><!--RPKI:INDIA_TOTAL_ASNS-->6,184<!--/RPKI:INDIA_TOTAL_ASNS--></strong>
+APNIC-delegated ASNs (<strong><!--RPKI:INDIA_COVERAGE_PCT-->0.146<!--/RPKI:INDIA_COVERAGE_PCT-->%</strong>) currently publish ASPA.
+For ROA, the picture is far more mature: <strong><!--RPKI:INDIA_ROA_COUNT-->2,936<!--/RPKI:INDIA_ROA_COUNT--></strong> ASNs
+(<strong><!--RPKI:INDIA_ROA_COVERAGE_PCT-->47.477<!--/RPKI:INDIA_ROA_COVERAGE_PCT-->%</strong>) publish a ROA.
+</p>
+
+<div class="rpki-refresh-note">
+<strong>The number that actually matters most for India: only <!--RPKI:ROV_INDIA_RATE-->1.04<!--/RPKI:ROV_INDIA_RATE-->%
+of users are behind networks that enforce ROV</strong> — against a global average of
+<!--RPKI:ROV_WORLD_RATE-->28.52<!--/RPKI:ROV_WORLD_RATE-->%. Publishing ROAs
+and ASPAs doesn't protect anyone if the networks carrying India's traffic aren't actually
+checking them. That gap matters far more than the publication numbers above.
+</div>
+
+<img src="india_summary_card.svg" alt="India ASPA coverage" style="max-width:100%;">
+
+<table class="rpki-table">
+  <thead>
+    <tr><th>ASN</th><th>Organisation</th><th>Providers</th></tr>
+  </thead>
+  <tbody>
+    <!--RPKI:INDIA_ASN_TABLE_ROWS-->    <tr><td>AS9885</td><td>National Knowledge Network</td><td>4755, 9498, 11537, 20965, 23855, 24029, 24490, 55836</td></tr>
+    <tr><td>AS38620</td><td>National Knowledge Network</td><td>55824</td></tr>
+    <tr><td>AS136308</td><td>Deenet Networks Private Limited</td><td>9498, 9829, 55836</td></tr>
+    <tr><td>AS148000</td><td>National Knowledge Network</td><td>7633, 9829, 9885, 45117, 55824, 142501, 142502, 148003</td></tr>
+    <tr><td>AS148003</td><td>National Knowledge Network</td><td>4755</td></tr>
+    <tr><td>AS149794</td><td>Daryll Swer</td><td>20473, 141253</td></tr>
+    <tr><td>AS151704</td><td>BHARATDC-AS</td><td>4755, 55410, 137409, 154317, 214441</td></tr>
+    <tr><td>AS154317</td><td>VyomCloud</td><td>151704, 214441</td></tr>
+    <tr><td>AS154673</td><td>INDIGO DATA SERVICES PRIVATE LIMITED</td><td>136308, 142529</td></tr><!--/RPKI:INDIA_ASN_TABLE_ROWS-->
+  </tbody>
+</table>
+
+<hr/>
+
+<h3>Closing Thoughts</h3>
+
+<p>
+These numbers move slowly, and that's expected — ASPA only protects a network once that
+network actually publishes it, and that depends on how ready each RIR's tools are and
+whether individual network operators get around to setting it up. This post keeps
+refreshing on its own, so come back for the current numbers instead of trusting whatever
+you read here on any one day.
+</p>
+
+<hr/>
+
+<p><em>
+Data sources: rpki-client console output, APNIC/RIPE/ARIN/LACNIC/AFRINIC delegated
+statistics files, RDAP lookups against rdap.apnic.net. Auto-refreshed every 24 hours.
+Snapshot generated: <!--RPKI:LAST_UPDATED-->2026-07-12 15:45 IST<!--/RPKI:LAST_UPDATED-->.
+</em></p>
+
+							</div>
+
+							<div class="labelList">
+                                <div class="labelIcon"><i class="fa-solid fa-tags"></i></div>
+                                <div class="labelText">RPKI</div>
+                            </div>
+
+                            <!--
+                              Prev/Next post links - EDIT these to point at your actual
+                              neighbouring posts once this is placed in your post sequence.
+                            -->
+                            <div class="pagination blogPagination my-4">
+                                <div class="paginationNav pull-right">
+                                    <a href=" javascript:void(0);" title="Previous" rel="" class="preblog disable opacity-50">
+                                        <div class="prebox">
+                                            <span><i class="fa fa-angle-left fa-lg"></i> </span>
+                                            Previous
+                                        </div>
+                                        <p>Previous Heading</p>
+                                    </a>
+                                    <a href="javascript:void(0);" title="Next" rel="" class="nextblog disable opacity-50">
+                                      <div class="nextbox">Next<span><i class="fa fa-angle-right fa-lg"></i></span> </div>
+                                        <p class="nexttitle">Next Heading</p>
+                                    </a>
+                                </div>
+                            </div>
+
+						</div>
+						<div id="disqus_thread"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<div id="showsidebar"></div>
+
+  <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+
+  <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+  <script>
+    $('#myHead').load('../../include/header.html');
+    $(document).ready(function () {
+      $("#skipnone").remove();
+    });
+    $('#myFooter').load('../../include/footer.html');
+    $('#showsidebar').load('../../include/sidebarShow.html');
+  </script>
+     <script>
+        var geturl = window.location.href;
+        var disqus_config = function () {
+            this.page.url = geturl;
+            this.page.identifier = geturl;
+        };
+
+        (function () {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://gauravkansal-in.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+  <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../../plugins/slick/slick.min.js"></script>
+  <script src="../../plugins/masonry/masonry.js"></script>
+  <script src="../../plugins/headroom/headroom.js"></script>
+  <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+  <script src="../../js/script.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

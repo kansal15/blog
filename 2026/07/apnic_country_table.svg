@@ -1,0 +1,73 @@
+<svg viewBox="0 0 400 704" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="704" fill="#e8d5c1"/>
+<text x="200.0" y="28" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#3b2a1a">APNIC-Region ASPA Adoption by Country</text>
+<rect x="20" y="45" width="360" height="28" fill="#3f6b66"/>
+<text x="35" y="64" font-family="Arial" font-size="13" font-weight="bold" fill="#f2e8db">Country</text>
+<text x="340" y="64" font-family="Arial" font-size="13" font-weight="bold" fill="#f2e8db">ASNs</text>
+<rect x="20" y="73" width="360" height="28" fill="#f2e8db" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="92" font-family="Arial" font-size="12" fill="#3b2a1a">AU</text>
+<text x="340" y="92" font-family="Arial" font-size="12" fill="#3b2a1a">18</text>
+<rect x="20" y="101" width="360" height="28" fill="#e8d5c1" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="120" font-family="Arial" font-size="12" fill="#3b2a1a">PK</text>
+<text x="340" y="120" font-family="Arial" font-size="12" fill="#3b2a1a">15</text>
+<rect x="20" y="129" width="360" height="28" fill="#f2e8db" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="148" font-family="Arial" font-size="12" fill="#3b2a1a">IN</text>
+<text x="340" y="148" font-family="Arial" font-size="12" fill="#3b2a1a">9</text>
+<rect x="20" y="157" width="360" height="28" fill="#e8d5c1" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="176" font-family="Arial" font-size="12" fill="#3b2a1a">NZ</text>
+<text x="340" y="176" font-family="Arial" font-size="12" fill="#3b2a1a">8</text>
+<rect x="20" y="185" width="360" height="28" fill="#f2e8db" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="204" font-family="Arial" font-size="12" fill="#3b2a1a">BD</text>
+<text x="340" y="204" font-family="Arial" font-size="12" fill="#3b2a1a">8</text>
+<rect x="20" y="213" width="360" height="28" fill="#e8d5c1" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="232" font-family="Arial" font-size="12" fill="#3b2a1a">SG</text>
+<text x="340" y="232" font-family="Arial" font-size="12" fill="#3b2a1a">4</text>
+<rect x="20" y="241" width="360" height="28" fill="#f2e8db" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="260" font-family="Arial" font-size="12" fill="#3b2a1a">NR</text>
+<text x="340" y="260" font-family="Arial" font-size="12" fill="#3b2a1a">3</text>
+<rect x="20" y="269" width="360" height="28" fill="#e8d5c1" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="288" font-family="Arial" font-size="12" fill="#3b2a1a">PH</text>
+<text x="340" y="288" font-family="Arial" font-size="12" fill="#3b2a1a">3</text>
+<rect x="20" y="297" width="360" height="28" fill="#f2e8db" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="316" font-family="Arial" font-size="12" fill="#3b2a1a">CN</text>
+<text x="340" y="316" font-family="Arial" font-size="12" fill="#3b2a1a">3</text>
+<rect x="20" y="325" width="360" height="28" fill="#e8d5c1" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="344" font-family="Arial" font-size="12" fill="#3b2a1a">LK</text>
+<text x="340" y="344" font-family="Arial" font-size="12" fill="#3b2a1a">2</text>
+<rect x="20" y="353" width="360" height="28" fill="#f2e8db" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="372" font-family="Arial" font-size="12" fill="#3b2a1a">FJ</text>
+<text x="340" y="372" font-family="Arial" font-size="12" fill="#3b2a1a">2</text>
+<rect x="20" y="381" width="360" height="28" fill="#e8d5c1" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="400" font-family="Arial" font-size="12" fill="#3b2a1a">JP</text>
+<text x="340" y="400" font-family="Arial" font-size="12" fill="#3b2a1a">2</text>
+<rect x="20" y="409" width="360" height="28" fill="#f2e8db" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="428" font-family="Arial" font-size="12" fill="#3b2a1a">HK</text>
+<text x="340" y="428" font-family="Arial" font-size="12" fill="#3b2a1a">1</text>
+<rect x="20" y="437" width="360" height="28" fill="#e8d5c1" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="456" font-family="Arial" font-size="12" fill="#3b2a1a">TL</text>
+<text x="340" y="456" font-family="Arial" font-size="12" fill="#3b2a1a">1</text>
+<rect x="20" y="465" width="360" height="28" fill="#f2e8db" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="484" font-family="Arial" font-size="12" fill="#3b2a1a">TO</text>
+<text x="340" y="484" font-family="Arial" font-size="12" fill="#3b2a1a">1</text>
+<rect x="20" y="493" width="360" height="28" fill="#e8d5c1" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="512" font-family="Arial" font-size="12" fill="#3b2a1a">WS</text>
+<text x="340" y="512" font-family="Arial" font-size="12" fill="#3b2a1a">1</text>
+<rect x="20" y="521" width="360" height="28" fill="#f2e8db" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="540" font-family="Arial" font-size="12" fill="#3b2a1a">CA</text>
+<text x="340" y="540" font-family="Arial" font-size="12" fill="#3b2a1a">1</text>
+<rect x="20" y="549" width="360" height="28" fill="#e8d5c1" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="568" font-family="Arial" font-size="12" fill="#3b2a1a">VU</text>
+<text x="340" y="568" font-family="Arial" font-size="12" fill="#3b2a1a">1</text>
+<rect x="20" y="577" width="360" height="28" fill="#f2e8db" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="596" font-family="Arial" font-size="12" fill="#3b2a1a">TH</text>
+<text x="340" y="596" font-family="Arial" font-size="12" fill="#3b2a1a">1</text>
+<rect x="20" y="605" width="360" height="28" fill="#e8d5c1" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="624" font-family="Arial" font-size="12" fill="#3b2a1a">ID</text>
+<text x="340" y="624" font-family="Arial" font-size="12" fill="#3b2a1a">1</text>
+<rect x="20" y="633" width="360" height="28" fill="#f2e8db" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="652" font-family="Arial" font-size="12" fill="#3b2a1a">NP</text>
+<text x="340" y="652" font-family="Arial" font-size="12" fill="#3b2a1a">1</text>
+<rect x="20" y="661" width="360" height="28" fill="#e8d5c1" stroke="#d3bfa4" stroke-width="0.5"/>
+<text x="35" y="680" font-family="Arial" font-size="12" fill="#3b2a1a">KR</text>
+<text x="340" y="680" font-family="Arial" font-size="12" fill="#3b2a1a">1</text>
+</svg>
