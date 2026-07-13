@@ -108,7 +108,7 @@
                                         <ul class="list-inline d-flex justify-content-between py-3">
                                         <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
                                         href="https://www.gauravkansal.in/index.html" target="_blank">Gaurav Kansal</a></li>
-                                        <li class="list-inline-item"><i class="ti-calendar mr-2"></i> Data last refreshed: <!--RPKI:LAST_UPDATED-->2026-07-12 15:45 IST<!--/RPKI:LAST_UPDATED--></li>
+                                        <li class="list-inline-item"><i class="ti-calendar mr-2"></i> Data last refreshed: <!--RPKI:LAST_UPDATED-->2026-07-13 09:11 IST<!--/RPKI:LAST_UPDATED--></li>
                                         </ul>
 							<div class="content">
 
@@ -208,10 +208,10 @@ the timestamp above.
     <tr><th>RIR</th><th>ASNs with ASPA</th><th>Total ASNs</th><th>Coverage</th></tr>
   </thead>
   <tbody>
-    <!--RPKI:RIR_TABLE_ROWS-->    <tr><td>RIPENCC</td><td>1,659</td><td>39,583</td><td>4.191%</td></tr>
-    <tr><td>ARIN</td><td>503</td><td>34,059</td><td>1.477%</td></tr>
-    <tr><td>LACNIC</td><td>107</td><td>14,246</td><td>0.751%</td></tr>
-    <tr><td>APNIC</td><td>87</td><td>31,126</td><td>0.280%</td></tr>
+    <!--RPKI:RIR_TABLE_ROWS-->    <tr><td>RIPENCC</td><td>1,660</td><td>39,583</td><td>4.194%</td></tr>
+    <tr><td>ARIN</td><td>505</td><td>34,059</td><td>1.483%</td></tr>
+    <tr><td>LACNIC</td><td>104</td><td>14,246</td><td>0.730%</td></tr>
+    <tr><td>APNIC</td><td>89</td><td>31,126</td><td>0.286%</td></tr>
     <tr><td>AFRINIC</td><td>0</td><td>2,752</td><td>0.000%</td></tr><!--/RPKI:RIR_TABLE_ROWS-->
   </tbody>
 </table>
@@ -232,11 +232,12 @@ Here's the same RIR-by-RIR breakdown for ROA publication:
     <tr><th>RIR</th><th>ASNs with a ROA</th><th>Total ASNs</th><th>Coverage</th></tr>
   </thead>
   <tbody>
-    <!--RPKI:ROA_TABLE_ROWS-->    <tr><td>RIPENCC</td><td>26,864</td><td>39,583</td><td>67.868%</td></tr>
-    <tr><td>APNIC</td><td>18,939</td><td>31,126</td><td>60.846%</td></tr>
-    <tr><td>ARIN</td><td>12,697</td><td>34,059</td><td>37.279%</td></tr>
-    <tr><td>LACNIC</td><td>6,923</td><td>14,246</td><td>48.596%</td></tr>
-    <tr><td>AFRINIC</td><td>1,659</td><td>2,752</td><td>60.283%</td></tr><!--/RPKI:ROA_TABLE_ROWS-->
+    <!--RPKI:ROA_TABLE_ROWS-->    <tr><td>RIPENCC</td><td>26,867</td><td>39,583</td><td>67.875%</td></tr>
+    <tr><td>APNIC</td><td>18,940</td><td>31,126</td><td>60.849%</td></tr>
+    <tr><td>ARIN</td><td>12,699</td><td>34,059</td><td>37.285%</td></tr>
+    <tr><td>LACNIC</td><td>6,920</td><td>14,246</td><td>48.575%</td></tr>
+    <tr><td>INDIA</td><td>2,936</td><td>6,184</td><td>47.477%</td></tr>
+    <tr><td>AFRINIC</td><td>1,658</td><td>2,752</td><td>60.247%</td></tr><!--/RPKI:ROA_TABLE_ROWS-->
   </tbody>
 </table>
 
@@ -245,8 +246,8 @@ Here's the same RIR-by-RIR breakdown for ROA publication:
 <p>
 The gap between these numbers and the ASPA table above is the story: ROA has had over
 a decade to mature, while ASPA is still in its early-adopter phase across every RIR,
-APNIC included. Within APNIC specifically, <strong><!--RPKI:APNIC_ROA_COUNT-->18,939<!--/RPKI:APNIC_ROA_COUNT--></strong> ASNs
-(<strong><!--RPKI:APNIC_ROA_COVERAGE_PCT-->60.846<!--/RPKI:APNIC_ROA_COVERAGE_PCT-->%</strong>) publish a ROA — worth keeping in mind
+APNIC included. Within APNIC specifically, <strong><!--RPKI:APNIC_ROA_COUNT-->18,940<!--/RPKI:APNIC_ROA_COUNT--></strong> ASNs
+(<strong><!--RPKI:APNIC_ROA_COVERAGE_PCT-->60.849<!--/RPKI:APNIC_ROA_COVERAGE_PCT-->%</strong>) publish a ROA — worth keeping in mind
 when the APNIC region's ASPA numbers look small by comparison later in this post.
 </p>
 
@@ -265,26 +266,94 @@ behind networks that are <em>not</em> dropping invalid routes. (The exact prefix
 publicly disclosed, deliberately — publishing them would let networks special-case just those
 routes rather than genuinely enforcing ROV everywhere. Full methodology:
 <a href="https://blog.apnic.net/2023/11/09/how-we-measure-rpki-roa-signing-and-route-origination-validation/" target="_blank" rel="noopener">APNIC Labs, "How we measure"</a>.
-Worth noting: independent researchers have pointed out that relying on a single invalid test
-prefix gives only a partial view compared to testing many prefixes simultaneously — treat
+Worth noting: independent researchers (in the
+<a href="https://arxiv.org/pdf/2603.29207" target="_blank" rel="noopener">TORCH paper</a>,
+which cross-checked APNIC's results against their own multi-prefix measurement) have
+pointed out that relying on a single invalid test prefix gives only a partial view
+compared to testing many prefixes simultaneously — treat
 these numbers as a solid trend indicator rather than an exact figure.)
 </p>
 
 <img src="rov_comparison.svg" alt="ROV enforcement rate: World vs India" style="max-width:100%;">
 
 <p>
-As of <!--RPKI:ROV_DATE-->2026-07-11<!--/RPKI:ROV_DATE-->, <strong><!--RPKI:ROV_WORLD_RATE-->28.52<!--/RPKI:ROV_WORLD_RATE-->%</strong> of internet users globally sit
+As of <!--RPKI:ROV_DATE-->2026-07-12<!--/RPKI:ROV_DATE-->, <strong><!--RPKI:ROV_WORLD_RATE-->28.50<!--/RPKI:ROV_WORLD_RATE-->%</strong> of internet users globally sit
 behind networks enforcing ROV. That number matters when you get to the India section below.
 </p>
+
+<div class="rpki-refresh-note">
+<strong>Why isn't this just 0% or 100%?</strong> You'd think a network either checks these
+signatures or it doesn't. In practice, a "network" here usually means a big operator with
+routers spread across many cities, installed at different times — some upgraded to check
+RPKI, some not yet. People connecting through the upgraded routers get protected; people
+on the older ones don't, even though it's technically the same company. On top of that,
+most networks buy internet access from more than one upstream provider, and if even one
+of those providers doesn't check, traffic can sometimes slip through that way instead. So
+a country sitting at, say, 40% usually means something close to its literal reading: about
+40% of that country's users happen to be routed through infrastructure that currently
+checks, and the rest aren't — not that everyone is "40% careful."
+</div>
+
+<p>Where does India stand next to the countries doing this best? Here's the same 28-day
+filter rate, worldwide and then narrowed to Asia, both anchored on India so its position
+is easy to see either way:</p>
+
+<img src="rov_top_global.svg" alt="Top ROV-enforcing countries worldwide, with India" style="max-width:100%;">
+
+<table class="rpki-table">
+  <thead>
+    <tr><th>Country</th><th>ROV filter rate (28d)</th></tr>
+  </thead>
+  <tbody>
+    <!--RPKI:ROV_TOP_GLOBAL_TABLE_ROWS-->    <tr><td><strong>India</strong></td><td><strong>1.0%</strong></td></tr>
+    <tr><td>Morocco</td><td>96.9%</td></tr>
+    <tr><td>Egypt</td><td>89.6%</td></tr>
+    <tr><td>Netherlands</td><td>74.8%</td></tr>
+    <tr><td>Spain</td><td>72.9%</td></tr>
+    <tr><td>France</td><td>71.2%</td></tr>
+    <tr><td>United States</td><td>63.0%</td></tr>
+    <tr><td>Sri Lanka</td><td>62.9%</td></tr>
+    <tr><td>Australia</td><td>55.8%</td></tr>
+    <tr><td>Sudan</td><td>53.0%</td></tr><!--/RPKI:ROV_TOP_GLOBAL_TABLE_ROWS-->
+  </tbody>
+</table>
+
+<img src="rov_top_asia.svg" alt="Top ROV-enforcing countries in Asia, with India" style="max-width:100%;">
+
+<table class="rpki-table">
+  <thead>
+    <tr><th>Country</th><th>ROV filter rate (28d)</th></tr>
+  </thead>
+  <tbody>
+    <!--RPKI:ROV_TOP_ASIA_TABLE_ROWS-->    <tr><td><strong>India</strong></td><td><strong>1.0%</strong></td></tr>
+    <tr><td>Sri Lanka</td><td>62.9%</td></tr>
+    <tr><td>Myanmar</td><td>52.6%</td></tr>
+    <tr><td>Saudi Arabia</td><td>48.9%</td></tr>
+    <tr><td>Philippines</td><td>41.0%</td></tr>
+    <tr><td>Japan</td><td>38.6%</td></tr>
+    <tr><td>Iran</td><td>32.5%</td></tr>
+    <tr><td>Malaysia</td><td>28.6%</td></tr>
+    <tr><td>Turkey</td><td>23.3%</td></tr>
+    <tr><td>Vietnam</td><td>18.8%</td></tr><!--/RPKI:ROV_TOP_ASIA_TABLE_ROWS-->
+  </tbody>
+</table>
+
+<p><small>
+Both lists are restricted to countries with roughly 10 million or more internet users, so
+small countries with unusually high (or low) numbers don't crowd out the comparison. This
+candidate list is a manually maintained estimate, not a live feed, and is only
+recalculated every 48 hours rather than on every refresh, since these rankings don't move
+much day to day.
+</small></p>
 
 <hr/>
 
 <h3>The APNIC Region</h3>
 
 <p>
-Zooming into APNIC specifically — <strong><!--RPKI:APNIC_ASPA_COUNT-->87<!--/RPKI:APNIC_ASPA_COUNT--></strong> ASNs out of
+Zooming into APNIC specifically — <strong><!--RPKI:APNIC_ASPA_COUNT-->89<!--/RPKI:APNIC_ASPA_COUNT--></strong> ASNs out of
 <strong><!--RPKI:APNIC_TOTAL_ASNS-->31,126<!--/RPKI:APNIC_TOTAL_ASNS--></strong> total APNIC-delegated ASNs
-(<strong><!--RPKI:APNIC_COVERAGE_PCT-->0.280<!--/RPKI:APNIC_COVERAGE_PCT-->%</strong>) currently publish an ASPA object.
+(<strong><!--RPKI:APNIC_COVERAGE_PCT-->0.286<!--/RPKI:APNIC_COVERAGE_PCT-->%</strong>) currently publish an ASPA object.
 </p>
 
 <img src="apnic_country_pie.svg" alt="APNIC ASPA adoption by country" style="max-width:100%;">
@@ -300,11 +369,11 @@ Zooming into APNIC specifically — <strong><!--RPKI:APNIC_ASPA_COUNT-->87<!--/R
     <tr><td>NZ</td><td>8</td></tr>
     <tr><td>BD</td><td>8</td></tr>
     <tr><td>SG</td><td>4</td></tr>
+    <tr><td>PH</td><td>4</td></tr>
+    <tr><td>FJ</td><td>3</td></tr>
     <tr><td>NR</td><td>3</td></tr>
-    <tr><td>PH</td><td>3</td></tr>
     <tr><td>CN</td><td>3</td></tr>
     <tr><td>LK</td><td>2</td></tr>
-    <tr><td>FJ</td><td>2</td></tr>
     <tr><td>JP</td><td>2</td></tr>
     <tr><td>HK</td><td>1</td></tr>
     <tr><td>TL</td><td>1</td></tr>
@@ -333,7 +402,7 @@ For ROA, the picture is far more mature: <strong><!--RPKI:INDIA_ROA_COUNT-->2,93
 <div class="rpki-refresh-note">
 <strong>The number that actually matters most for India: only <!--RPKI:ROV_INDIA_RATE-->1.04<!--/RPKI:ROV_INDIA_RATE-->%
 of users are behind networks that enforce ROV</strong> — against a global average of
-<!--RPKI:ROV_WORLD_RATE-->28.52<!--/RPKI:ROV_WORLD_RATE-->%. Publishing ROAs
+<!--RPKI:ROV_WORLD_RATE-->28.50<!--/RPKI:ROV_WORLD_RATE-->%. Publishing ROAs
 and ASPAs doesn't protect anyone if the networks carrying India's traffic aren't actually
 checking them. That gap matters far more than the publication numbers above.
 </div>
@@ -359,6 +428,39 @@ checking them. That gap matters far more than the publication numbers above.
 
 <hr/>
 
+<h3>Why Bother With Any of This?</h3>
+
+<p>If you run a network, here's the plain case for turning these on, without the jargon:</p>
+
+<ul>
+  <li><strong>A ROA stops someone else from accidentally (or deliberately) claiming your IP addresses.</strong>
+  Without one, any network in the world can announce your address range, and other networks
+  have no way to tell that's wrong. It's happened by accident more times than anyone would like —
+  a typo in a router config at some other company, and suddenly some of your traffic goes
+  to them instead of you.</li>
+
+  <li><strong>An ASPA stops your traffic from getting rerouted through the wrong path.</strong>
+  Even with ROAs everywhere, a network can still leak your route to the wrong upstream by
+  mistake. An ASPA is you explicitly saying "these are my only legitimate upstream providers" —
+  so a leak through anyone else gets caught immediately instead of silently working (badly).</li>
+
+  <li><strong>Turning on ROV means you actually get the benefit of everyone else's ROAs and ASPAs.</strong>
+  Publishing your own ROA protects other people's networks from routing mistakes involving
+  your prefixes. Turning on ROV protects your own network from other people's mistakes. You
+  need both sides for any of this to actually work — a signature nobody checks doesn't stop
+  anything.</li>
+
+  <li><strong>None of this requires trusting a single central authority blindly.</strong>
+  You're not asking anyone to take your word for it — the whole point of the cryptographic
+  signatures is that any network can verify it independently, automatically, without a phone
+  call or a support ticket.</li>
+
+  <li><strong>It's a one-time setup, not an ongoing burden.</strong>
+  Once a ROA, ASPA, or ROV filter is configured, it runs itself. The cost is mostly a few
+  hours of setup and testing; the benefit is permanent protection against a whole category
+  of routing mistakes that otherwise go undetected until something breaks.</li>
+</ul>
+
 <h3>Closing Thoughts</h3>
 
 <p>
@@ -374,7 +476,7 @@ you read here on any one day.
 <p><em>
 Data sources: rpki-client console output, APNIC/RIPE/ARIN/LACNIC/AFRINIC delegated
 statistics files, RDAP lookups against rdap.apnic.net. Auto-refreshed every 24 hours.
-Snapshot generated: <!--RPKI:LAST_UPDATED-->2026-07-12 15:45 IST<!--/RPKI:LAST_UPDATED-->.
+Snapshot generated: <!--RPKI:LAST_UPDATED-->2026-07-13 09:11 IST<!--/RPKI:LAST_UPDATED-->.
 </em></p>
 
 							</div>

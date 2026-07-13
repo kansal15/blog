@@ -23,19 +23,19 @@
 <text x="35" y="232" font-family="Arial" font-size="12" fill="#3b2a1a">SG</text>
 <text x="340" y="232" font-family="Arial" font-size="12" fill="#3b2a1a">4</text>
 <rect x="20" y="241" width="360" height="28" fill="#f2e8db" stroke="#d3bfa4" stroke-width="0.5"/>
-<text x="35" y="260" font-family="Arial" font-size="12" fill="#3b2a1a">NR</text>
-<text x="340" y="260" font-family="Arial" font-size="12" fill="#3b2a1a">3</text>
+<text x="35" y="260" font-family="Arial" font-size="12" fill="#3b2a1a">PH</text>
+<text x="340" y="260" font-family="Arial" font-size="12" fill="#3b2a1a">4</text>
 <rect x="20" y="269" width="360" height="28" fill="#e8d5c1" stroke="#d3bfa4" stroke-width="0.5"/>
-<text x="35" y="288" font-family="Arial" font-size="12" fill="#3b2a1a">PH</text>
+<text x="35" y="288" font-family="Arial" font-size="12" fill="#3b2a1a">FJ</text>
 <text x="340" y="288" font-family="Arial" font-size="12" fill="#3b2a1a">3</text>
 <rect x="20" y="297" width="360" height="28" fill="#f2e8db" stroke="#d3bfa4" stroke-width="0.5"/>
-<text x="35" y="316" font-family="Arial" font-size="12" fill="#3b2a1a">CN</text>
+<text x="35" y="316" font-family="Arial" font-size="12" fill="#3b2a1a">NR</text>
 <text x="340" y="316" font-family="Arial" font-size="12" fill="#3b2a1a">3</text>
 <rect x="20" y="325" width="360" height="28" fill="#e8d5c1" stroke="#d3bfa4" stroke-width="0.5"/>
-<text x="35" y="344" font-family="Arial" font-size="12" fill="#3b2a1a">LK</text>
-<text x="340" y="344" font-family="Arial" font-size="12" fill="#3b2a1a">2</text>
+<text x="35" y="344" font-family="Arial" font-size="12" fill="#3b2a1a">CN</text>
+<text x="340" y="344" font-family="Arial" font-size="12" fill="#3b2a1a">3</text>
 <rect x="20" y="353" width="360" height="28" fill="#f2e8db" stroke="#d3bfa4" stroke-width="0.5"/>
-<text x="35" y="372" font-family="Arial" font-size="12" fill="#3b2a1a">FJ</text>
+<text x="35" y="372" font-family="Arial" font-size="12" fill="#3b2a1a">LK</text>
 <text x="340" y="372" font-family="Arial" font-size="12" fill="#3b2a1a">2</text>
 <rect x="20" y="381" width="360" height="28" fill="#e8d5c1" stroke="#d3bfa4" stroke-width="0.5"/>
 <text x="35" y="400" font-family="Arial" font-size="12" fill="#3b2a1a">JP</text>
