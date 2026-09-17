@@ -61,7 +61,7 @@
   :root{
     --ink:#0e0e0e;--ink-2:#333;--ink-3:#555;--ink-4:#888;
     --bg:#fafaf8;--surface:#fff;--rule:#e2e0db;
-    --green:#1a6b45;--green-l:#e6f4ee;--green-m:#2d9966;--green-hi:#f0faf5;
+    --gold:#bf8c55;--gold-l:#f7ede0;--gold-m:#a8763f;--gold-hi:#fbf5ec;--gold-line:#e4cba4;
     --blue:#1a4fa0;--blue-l:#e8eefa;
     --amber:#b05c0a;--amber-l:#fef3e6;
     --mono:'JetBrains Mono',monospace;
@@ -69,60 +69,64 @@
   body{font-family:'Inter',sans-serif;font-size:17px;line-height:1.75;color:var(--ink);background:var(--bg)}
 
   /* HERO */
-  .hero{background:#0a2218;color:#fff;padding:80px 24px 72px;position:relative;overflow:hidden}
-  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 80% 50%,#1a6b4530 0%,transparent 70%);pointer-events:none}
+  .hero{background:#241a10;color:#fff;padding:80px 24px 72px;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 80% 50%,#bf8c5530 0%,transparent 70%);pointer-events:none}
   .hero-inner{max-width:860px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
-  .hero-eye{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:#6ee8a8;text-transform:uppercase;margin-bottom:20px}
+  .hero-eye{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:#e8c088;text-transform:uppercase;margin-bottom:20px}
   .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,50px);line-height:1.15;color:#fff;font-weight:400;margin-bottom:18px}
-  .hero h1 em{color:#6ee8a8;font-style:italic}
-  .hero-sub{font-size:15px;color:#a8c8b8;line-height:1.6;max-width:520px}
+  .hero h1 em{color:#e8c088;font-style:italic}
+  .hero-sub{font-size:15px;color:#cbb9a3;line-height:1.6;max-width:520px}
   .hero-badge{text-align:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:28px 32px;min-width:180px}
-  .hero-badge-val{font-family:'DM Serif Display',serif;font-size:44px;color:#6ee8a8;line-height:1}
-  .hero-badge-lbl{font-size:12px;color:#a8c8b8;margin-top:8px;line-height:1.4}
-  .hero-meta{max-width:860px;margin:32px auto 0;font-size:13px;color:#6a9a80;display:flex;gap:24px;flex-wrap:wrap}
+  .hero-badge-val{font-family:'DM Serif Display',serif;font-size:44px;color:#e8c088;line-height:1}
+  .hero-badge-lbl{font-size:12px;color:#cbb9a3;margin-top:8px;line-height:1.4}
+  .hero-meta{max-width:860px;margin:32px auto 0;font-size:13px;color:#a68a6a;display:flex;gap:24px;flex-wrap:wrap}
   .hero-meta span::before{content:'· '}
   .hero-meta span:first-child::before{content:''}
 
   /* LAYOUT */
   .body{max-width:720px;margin:0 auto;padding:56px 24px}
   h2{font-family:'DM Serif Display',serif;font-size:28px;font-weight:400;color:var(--ink);margin:56px 0 16px;line-height:1.25}
-  h3{font-size:15px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--green);margin:40px 0 12px}
+  h3{font-size:15px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--gold-m);margin:40px 0 12px}
   p{margin-bottom:20px;color:var(--ink-2)}
   strong{font-weight:600;color:var(--ink)}
-  a{color:var(--green);text-decoration:none;border-bottom:1px solid #c0dece}
-  a:hover{border-bottom-color:var(--green)}
+  a{color:var(--gold-m);text-decoration:none;border-bottom:1px solid var(--gold-line)}
+  a:hover{border-bottom-color:var(--gold-m)}
   .lead{font-size:19px;line-height:1.65;color:#333;margin-bottom:32px}
   hr{border:none;border-top:1px solid var(--rule);margin:48px 0}
   sup{font-size:11px;vertical-align:super;line-height:0}
-  sup a{border-bottom:none;color:var(--green);font-family:var(--mono)}
+  sup a{border-bottom:none;color:var(--gold-m);font-family:var(--mono)}
 
   /* PULLQUOTE */
-  .pq{border-left:3px solid var(--green-m);padding:16px 24px;margin:36px 0;background:var(--green-hi);border-radius:0 8px 8px 0}
-  .pq p{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.5;color:#1a3a2a;margin:0;font-style:italic}
+  .pq{border-left:3px solid var(--gold);padding:16px 24px;margin:36px 0;background:var(--gold-hi);border-radius:0 8px 8px 0}
+  .pq p{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.5;color:#3a2a17;margin:0;font-style:italic}
 
   /* STAT GRID */
   .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:28px 0}
   .stat{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:20px 18px}
   .stat-v{font-family:'DM Serif Display',serif;font-size:30px;color:var(--ink);line-height:1;margin-bottom:6px}
   .stat-l{font-size:12px;color:var(--ink-3);line-height:1.4}
-  .stat.g{background:var(--green-l);border-color:#c0dece}.stat.g .stat-v{color:var(--green)}
+  .stat.g{background:var(--gold-l);border-color:var(--gold-line)}.stat.g .stat-v{color:var(--gold-m)}
   .stat.b{background:var(--blue-l);border-color:#c8d8f0}.stat.b .stat-v{color:var(--blue)}
   .stat.a{background:var(--amber-l);border-color:#f0d8b8}.stat.a .stat-v{color:var(--amber)}
 
   /* IMAGE CARD */
-  .chart-card{background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:28px;margin:32px 0;text-align:center}
-  .chart-card img{max-width:100%;height:auto;border-radius:8px}
+  .chart-card{background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:24px;margin:32px 0;text-align:center}
+  /* #blog-post-block img{width:25%} (site-wide, css/style.css) beats a bare .chart-card img rule on
+     specificity, which is why charts render tiny — override it explicitly here with a stronger selector. */
+  #blog-post-block .chart-card img{width:100% !important;max-width:100%;height:auto;border-radius:8px;display:inline-block;margin:0}
   .chart-cap{font-size:13px;color:var(--ink-4);margin-top:14px;margin-bottom:0}
+  /* Break the chart out wider than the text column so the image reads at full size */
+  .chart-card.wide{max-width:960px;margin-left:calc((720px - 960px) / 2);margin-right:calc((720px - 960px) / 2)}
 
   /* METHOD TABLE */
   .mt{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
   .mt th{text-align:left;padding:10px 12px;background:#f4f4f0;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);border-bottom:1px solid var(--rule)}
   .mt td{padding:12px;border-bottom:1px solid #f0eeea;vertical-align:top}
   .mt tr:last-child td{border-bottom:none}
-  .mt tr.hi{background:var(--green-l)}
+  .mt tr.hi{background:var(--gold-l)}
   .mt tr.hi2{background:var(--blue-l)}
   .badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:4px;font-weight:500}
-  .bg{background:var(--green-l);color:var(--green)}
+  .bg{background:var(--gold-l);color:var(--gold-m)}
   .bb{background:var(--blue-l);color:var(--blue)}
   .ba{background:var(--amber-l);color:var(--amber)}
 
@@ -130,11 +134,11 @@
   .corr{background:var(--amber-l);border:1px solid #f0d8b8;border-radius:8px;padding:16px 20px;margin:20px 0;font-size:14px;line-height:1.6}
 
   /* SUMMARY */
-  .sum-box{border:1px solid #c0dece;border-radius:12px;background:var(--green-hi);padding:28px 32px;margin:40px 0}
+  .sum-box{border:1px solid var(--gold-line);border-radius:12px;background:var(--gold-hi);padding:28px 32px;margin:40px 0}
   .sum-box h3{margin-top:0}
   .sum-list{list-style:none;padding:0}
   .sum-list li{padding:6px 0 6px 20px;position:relative;font-size:15px;color:var(--ink-2)}
-  .sum-list li::before{content:'→';position:absolute;left:0;color:var(--green-m);font-weight:600}
+  .sum-list li::before{content:'→';position:absolute;left:0;color:var(--gold-m);font-weight:600}
 
   /* CODE LINE */
   .code{font-family:var(--mono);font-size:14px;background:#f5f5f0;padding:14px 18px;border-radius:8px;border-left:3px solid var(--rule);line-height:1.8;color:var(--ink);margin-bottom:20px}
@@ -144,17 +148,18 @@
   .refs h3{margin-top:0;margin-bottom:16px}
   .ref-item{font-size:13px;line-height:1.6;padding:8px 0;border-bottom:.5px solid #ddd;color:var(--ink-3)}
   .ref-item:last-child{border-bottom:none}
-  .ref-num{font-family:var(--mono);font-size:11px;color:var(--green);margin-right:8px;font-weight:600}
+  .ref-num{font-family:var(--mono);font-size:11px;color:var(--gold-m);margin-right:8px;font-weight:600}
   .ref-item a{color:var(--blue);word-break:break-all}
 
   /* FOOTER */
-  .footer{background:#0a2218;color:#6a9a80;text-align:center;padding:36px 24px;font-size:13px;line-height:1.8}
-  .footer a{color:#6ee8a8;border-bottom:none}
+  .footer{background:#241a10;color:#a68a6a;text-align:center;padding:36px 24px;font-size:13px;line-height:1.8}
+  .footer a{color:#e8c088;border-bottom:none}
 
   @media(max-width:600px){
     .hero-inner{grid-template-columns:1fr}
     .hero-badge{display:none}
-    .chart-card{padding:16px}
+    .chart-card{padding:14px}
+    .chart-card.wide{max-width:100%;margin-left:0;margin-right:0}
   }
 </style>
   </head>
@@ -337,7 +342,7 @@
     </tbody>
   </table>
 
-  <div class="chart-card">
+  <div class="chart-card wide">
     <img src="../../images/2026/ripe-atlas-ping-chart.png" alt="Average ping response time from Indian RIPE Atlas probes — 1.10.10.10 at 17ms, Google 14ms, Cloudflare 14ms, Quad9 55ms">
     <p class="chart-cap">Avg. ping response from Indian probes, 13 Nov 2025 – 11 Feb 2026</p>
   </div>
@@ -356,7 +361,7 @@
     </tbody>
   </table>
 
-  <div class="chart-card">
+  <div class="chart-card wide">
     <img src="../../images/2026/ripe-atlas-dns-chart.png" alt="Average DNS query response time from Indian RIPE Atlas probes — 1.10.10.10 at 27ms, Cloudflare 43ms, Google 32ms, Quad9 112ms">
     <p class="chart-cap">Avg. DNS query time from Indian probes, 13 Nov 2025 – 11 Feb 2026</p>
   </div>
