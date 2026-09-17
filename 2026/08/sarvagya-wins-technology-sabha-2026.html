@@ -47,20 +47,36 @@
 	<link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
 	<style>
         body #blog-post-block{
-            font-size: 19px;
+            font-size: 18px;
         }
         #blog-post-block p{
             text-align: justify;
         }
+        #blog-post-block .card .card-block .content h3{
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+        }
+
         .hero-img-wrap {
-            margin: 0 -40px 20px -40px;
+          margin: 0 0 34px;
+          overflow: hidden;
+          border-radius: 14px;
+          background: #eef1f5;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
         }
         #blog-post-block .hero-img-wrap img {
             width: 100% !important;
             max-width: none !important;
             margin: 0 !important;
             display: block;
+            height: auto;
+            object-fit: cover;
         }
+        #blog-post-block .card .card-block .content ul li{
+            margin-bottom: 0.5rem;
+        }
+        
         @media (max-width: 767px) {
             .hero-img-wrap {
                 margin: 0 -10px 20px -10px;
@@ -117,7 +133,7 @@
 <img src="../../images/2026/sarvagya_technology_sabha_2026.webp" alt="Sarvagya wins Enterprise Security award at Technology Sabha 2026, trophy presented by Saina Nehwal to National Informatics Centre">
 </div>
 
-<p>
+<p class="blog-post-body mt-5">
   I'm glad to share that <strong>Sarvagya &ndash; Bharat Public DNS (1.10.10.10)</strong>,
   National Informatics Centre's (NIC) public DNS resolver service, has won the
   <strong>Enterprise Security</strong> award at the
@@ -172,15 +188,15 @@
   Cloudflare DNS. Since launch on <strong>1 January 2024</strong>, it has grown to:
 </p>
 <ul>
-  <li><strong>5B+</strong> DNS queries served daily &mdash; up from 3B+ a year earlier, reflecting steadily growing adoption</li>
-  <li><strong>8M+</strong> unique users</li>
-  <li><strong>99.999%</strong> uptime</li>
+  <li><strong class="text-primary">5B+</strong> DNS queries served daily &mdash; up from 3B+ a year earlier, reflecting steadily growing adoption</li>
+  <li><strong class="text-primary">8M+</strong> unique users</li>
+  <li><strong class="text-primary">99.999%</strong> uptime</li>
 </ul>
 <p>Security is built into the resolver by default, not offered as an add-on:</p>
 <ul>
-  <li><strong>DNSSEC validation</strong> &mdash; protects against cache poisoning and spoofing</li>
-  <li><strong>DNS-over-HTTPS (DoH) and DNS-over-TLS (DoT)</strong> &mdash; encrypts queries in transit</li>
-  <li><strong>Malicious-domain blocking</strong> &mdash; filters known malware/phishing domains at resolution time</li>
+  <li><strong class="text-primary">DNSSEC validation</strong> &mdash; protects against cache poisoning and spoofing</li>
+  <li><strong class="text-primary">DNS-over-HTTPS (DoH) and DNS-over-TLS (DoT)</strong> &mdash; encrypts queries in transit</li>
+  <li><strong class="text-primary">Malicious-domain blocking</strong> &mdash; filters known malware/phishing domains at resolution time</li>
 </ul>
 <p>
   The underlying stack is entirely open source: Linux, BIND and Unbound for DNS
@@ -228,7 +244,7 @@
   <div style="flex:1; min-width:280px; max-width:504px;">
     <iframe
       src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7498275314561773569"
-      height="463" width="504" frameborder="0" allowfullscreen=""
+      height="700" width="504" frameborder="0" allowfullscreen=""
       title="Embedded LinkedIn post by Express Computer"
       style="max-width:100%;">
     </iframe>
@@ -251,7 +267,7 @@
   are encrypted end-to-end?
 </p>
 
-<p><img src="../../images/2026/doh_esni_question_technology_sabha.webp" alt="Asking a question on DoH, TLS 1.3 ECH, and enterprise traffic filtering during the EfficientIP Zero Trust Security session at Technology Sabha 2026" style="max-width:100%;"></p>
+
 
 <p>
   It's a real problem for enterprise network security teams. Traditionally,
