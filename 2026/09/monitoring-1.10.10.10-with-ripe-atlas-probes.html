@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V78EBX66N1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-V78EBX66N1');
+        </script>
+
+        <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KKQWN7J6');</script>
+    <!-- End Google Tag Manager -->
+
+
+	<meta charset="utf-8">
+	<title>Monitoring 1.10.10.10 with RIPE Atlas Probes | Gaurav Kansal Blog</title>
+
+	<!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta property="og:title" content="Monitoring 1.10.10.10 with RIPE Atlas Probes" />
+        <meta property="og:description" content="Ping and DNS response-time measurements from RIPE Atlas probes located across India." />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="https://blog.gauravkansal.in/" />
+        <meta property="og:type" content="article" />
+
+	<!-- ** Plugins Needed for the Project ** -->
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+	<!-- slick slider -->
+	<link rel="stylesheet" href="../../plugins/slick/slick.css">
+	<!-- themefy-icon -->
+	<link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+	<!-- Main Stylesheet -->
+	<link href="../../css/style.css" rel="stylesheet">
+	<!--Favicon-->
+	<link rel="icon" type="image/png" href="../../images/favicon.jpg">
+	<link href="../../css/fontawesome/css/all.min.css" rel="stylesheet" />
+	<style>
+        body #blog-post-block{
+            font-size: 19px;
+        }
+        #blog-post-block p{
+            text-align: justify;
+        }
+    </style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --ink:#0e0e0e;--ink-2:#333;--ink-3:#555;--ink-4:#888;
+    --bg:#fafaf8;--surface:#fff;--rule:#e2e0db;
+    --green:#1a6b45;--green-l:#e6f4ee;--green-m:#2d9966;--green-hi:#f0faf5;
+    --blue:#1a4fa0;--blue-l:#e8eefa;
+    --amber:#b05c0a;--amber-l:#fef3e6;
+    --mono:'JetBrains Mono',monospace;
+  }
+  body{font-family:'Inter',sans-serif;font-size:17px;line-height:1.75;color:var(--ink);background:var(--bg)}
+
+  /* HERO */
+  .hero{background:#0a2218;color:#fff;padding:80px 24px 72px;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 80% 50%,#1a6b4530 0%,transparent 70%);pointer-events:none}
+  .hero-inner{max-width:860px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+  .hero-eye{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:#6ee8a8;text-transform:uppercase;margin-bottom:20px}
+  .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,50px);line-height:1.15;color:#fff;font-weight:400;margin-bottom:18px}
+  .hero h1 em{color:#6ee8a8;font-style:italic}
+  .hero-sub{font-size:15px;color:#a8c8b8;line-height:1.6;max-width:520px}
+  .hero-badge{text-align:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:28px 32px;min-width:180px}
+  .hero-badge-val{font-family:'DM Serif Display',serif;font-size:44px;color:#6ee8a8;line-height:1}
+  .hero-badge-lbl{font-size:12px;color:#a8c8b8;margin-top:8px;line-height:1.4}
+  .hero-meta{max-width:860px;margin:32px auto 0;font-size:13px;color:#6a9a80;display:flex;gap:24px;flex-wrap:wrap}
+  .hero-meta span::before{content:'· '}
+  .hero-meta span:first-child::before{content:''}
+
+  /* LAYOUT */
+  .body{max-width:720px;margin:0 auto;padding:56px 24px}
+  h2{font-family:'DM Serif Display',serif;font-size:28px;font-weight:400;color:var(--ink);margin:56px 0 16px;line-height:1.25}
+  h3{font-size:15px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--green);margin:40px 0 12px}
+  p{margin-bottom:20px;color:var(--ink-2)}
+  strong{font-weight:600;color:var(--ink)}
+  a{color:var(--green);text-decoration:none;border-bottom:1px solid #c0dece}
+  a:hover{border-bottom-color:var(--green)}
+  .lead{font-size:19px;line-height:1.65;color:#333;margin-bottom:32px}
+  hr{border:none;border-top:1px solid var(--rule);margin:48px 0}
+  sup{font-size:11px;vertical-align:super;line-height:0}
+  sup a{border-bottom:none;color:var(--green);font-family:var(--mono)}
+
+  /* PULLQUOTE */
+  .pq{border-left:3px solid var(--green-m);padding:16px 24px;margin:36px 0;background:var(--green-hi);border-radius:0 8px 8px 0}
+  .pq p{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.5;color:#1a3a2a;margin:0;font-style:italic}
+
+  /* STAT GRID */
+  .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:28px 0}
+  .stat{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:20px 18px}
+  .stat-v{font-family:'DM Serif Display',serif;font-size:30px;color:var(--ink);line-height:1;margin-bottom:6px}
+  .stat-l{font-size:12px;color:var(--ink-3);line-height:1.4}
+  .stat.g{background:var(--green-l);border-color:#c0dece}.stat.g .stat-v{color:var(--green)}
+  .stat.b{background:var(--blue-l);border-color:#c8d8f0}.stat.b .stat-v{color:var(--blue)}
+  .stat.a{background:var(--amber-l);border-color:#f0d8b8}.stat.a .stat-v{color:var(--amber)}
+
+  /* IMAGE CARD */
+  .chart-card{background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:28px;margin:32px 0;text-align:center}
+  .chart-card img{max-width:100%;height:auto;border-radius:8px}
+  .chart-cap{font-size:13px;color:var(--ink-4);margin-top:14px;margin-bottom:0}
+
+  /* METHOD TABLE */
+  .mt{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+  .mt th{text-align:left;padding:10px 12px;background:#f4f4f0;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);border-bottom:1px solid var(--rule)}
+  .mt td{padding:12px;border-bottom:1px solid #f0eeea;vertical-align:top}
+  .mt tr:last-child td{border-bottom:none}
+  .mt tr.hi{background:var(--green-l)}
+  .mt tr.hi2{background:var(--blue-l)}
+  .badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:4px;font-weight:500}
+  .bg{background:var(--green-l);color:var(--green)}
+  .bb{background:var(--blue-l);color:var(--blue)}
+  .ba{background:var(--amber-l);color:var(--amber)}
+
+  /* CORRECTION / NOTE BOX */
+  .corr{background:var(--amber-l);border:1px solid #f0d8b8;border-radius:8px;padding:16px 20px;margin:20px 0;font-size:14px;line-height:1.6}
+
+  /* SUMMARY */
+  .sum-box{border:1px solid #c0dece;border-radius:12px;background:var(--green-hi);padding:28px 32px;margin:40px 0}
+  .sum-box h3{margin-top:0}
+  .sum-list{list-style:none;padding:0}
+  .sum-list li{padding:6px 0 6px 20px;position:relative;font-size:15px;color:var(--ink-2)}
+  .sum-list li::before{content:'→';position:absolute;left:0;color:var(--green-m);font-weight:600}
+
+  /* CODE LINE */
+  .code{font-family:var(--mono);font-size:14px;background:#f5f5f0;padding:14px 18px;border-radius:8px;border-left:3px solid var(--rule);line-height:1.8;color:var(--ink);margin-bottom:20px}
+
+  /* REFERENCES */
+  .refs{background:#f5f5f0;border-radius:12px;padding:28px 32px;margin:40px 0}
+  .refs h3{margin-top:0;margin-bottom:16px}
+  .ref-item{font-size:13px;line-height:1.6;padding:8px 0;border-bottom:.5px solid #ddd;color:var(--ink-3)}
+  .ref-item:last-child{border-bottom:none}
+  .ref-num{font-family:var(--mono);font-size:11px;color:var(--green);margin-right:8px;font-weight:600}
+  .ref-item a{color:var(--blue);word-break:break-all}
+
+  /* FOOTER */
+  .footer{background:#0a2218;color:#6a9a80;text-align:center;padding:36px 24px;font-size:13px;line-height:1.8}
+  .footer a{color:#6ee8a8;border-bottom:none}
+
+  @media(max-width:600px){
+    .hero-inner{grid-template-columns:1fr}
+    .hero-badge{display:none}
+    .chart-card{padding:16px}
+  }
+</style>
+  </head>
+
+<body>
+	<!-- preloader -->
+	<div class="preloader">
+		<div class="loader">
+			<span class="dot"></span>
+			<div class="dots">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+	<!-- /preloader -->
+
+	<div class="navigation" id="myHead"></div>
+
+	<!--Main content-->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-eye">DNS Infrastructure · India · Nov 2025 – Feb 2026</p>
+      <h1>Monitoring <em>1.10.10.10</em> with RIPE Atlas Probes</h1>
+      <p class="hero-sub" align="justify">Ping and DNS response-time measurements from RIPE Atlas probes
+	  located across India, compared against 1.1.1.1, 8.8.8.8, and 9.9.9.9.</p>
+    </div>
+    <div class="hero-badge">
+      <div class="hero-badge-val">27ms</div>
+      <div class="hero-badge-lbl">avg DNS response<br>from Indian probes</div>
+    </div>
+  </div>
+  <div class="hero-meta">
+    <span>RIPE Atlas Measurement Study</span>
+	<span>Sarvagya - Bharat Public DNS (1.10.10.10)</span>
+    <span>91-day window: 13 Nov 2025 – 11 Feb 2026</span>
+  </div>
+</header>
+
+	<section class="mt-1" id="blog-post-block">
+		<div class="card mb-2">
+			<div class="container-fluid">
+				<div class="row">
+					<!-- blog post -->
+					<div class="col-lg-12">
+					<div class="card-block">
+                                        <ul class="list-inline d-flex justify-content-between py-3">
+                                        <li class="list-inline-item"><i class="ti-user mr-2"></i> Post by <a
+                                        href="https://www.gauravkansal.in/index.html" target="_blank">Gaurav Kansal</a></li>
+                                        <li class="list-inline-item"><i class="ti-calendar mr-2"></i> September 17, 2026</li>
+                                        </ul>
+							<div class="content">
+
+
+<main class="body">
+
+  <p class="lead">1.10.10.10 is NIC's public DNS resolver. We wanted to know how it actually performs
+	for users in India — not in theory, but from real, independently hosted network connections spread
+	across the country. So we built a small measurement setup using RIPE Atlas probes based in India.</p>
+
+  <p>Every day, these probes send Ping and DNS queries to 1.10.10.10. For comparison, they send the same
+	queries to three other well-known public resolvers: 1.1.1.1 (Cloudflare), 8.8.8.8 (Google), and 9.9.9.9
+	(Quad9). We pull the results, summarise them, and push them to a public GitHub repository.</p>
+
+  <div class="pq">
+    <p>"1.10.10.10 holds its own on ping latency and clearly leads on DNS response time — the metric
+	that most directly reflects the end-user experience of resolving a domain name."</p>
+  </div>
+
+<hr>
+
+  <h2>What is RIPE Atlas</h2>
+
+  <p>RIPE Atlas is a global Internet measurement network run by the RIPE NCC — the regional Internet
+	registry for Europe, the Middle East, and parts of Central Asia. It's built out of thousands of small
+	measurement devices called probes, hosted by volunteers, ISPs, universities, and companies all over
+	the world.</p>
+
+  <p>Anyone can use the network to run measurements like Ping, Traceroute, and DNS query checks from any
+	of these vantage points. That's far more useful than testing from a single server sitting in one
+	data centre.</p>
+
+  <h2>What are probes</h2>
+
+  <p>A RIPE Atlas probe is a small physical (or in some cases software/virtual) device that sits on
+	someone's network connection. It continuously runs measurements assigned to it by the RIPE Atlas
+	platform, then reports the results back. Hosts get "credits" for running a probe, which they can
+	spend to run their own measurements from the rest of the network — it's a mutual, credit-based
+	system rather than a paid service.</p>
+
+  <p>For our purposes, what matters is this: each probe represents a real, independently hosted network
+	connection somewhere in India — a mix of ISPs, regions, and network conditions. When we query
+	1.10.10.10 from over a hundred of these probes instead of from one machine, the results reflect
+	real-world variation.</p>
+
+  <hr>
+
+  <h2>How we're using the probes</h2>
+
+  <p>We used a pool of active RIPE Atlas probes hosted across different locations in India —
+	typically between <strong>130 and 145 probes</strong> active at any given time — to run two kinds
+	of recurring measurements against 1.10.10.10, alongside the same measurements against 1.1.1.1,
+	8.8.8.8, and 9.9.9.9 for context:</p>
+
+  <div class="stat-grid">
+    <div class="stat g">
+      <div class="stat-v">4×/day</div>
+      <div class="stat-l">Ping (ICMP) measurements — reachability and round-trip latency</div>
+    </div>
+    <div class="stat b">
+      <div class="stat-v">1×/day</div>
+      <div class="stat-l">DNS query measurements — response time for the day's top 10 domains</div>
+    </div>
+    <div class="stat">
+      <div class="stat-v">130–145</div>
+      <div class="stat-l">Active RIPE Atlas probes across India</div>
+    </div>
+  </div>
+
+  <h3>Which domains we query</h3>
+
+  <p>The DNS measurements aren't run against random or fixed test domains. Every day, we pull the top
+	10 domains by hit count from our NIC network traffic — the domains real users on our network are
+	querying the most that day. Those same 10 domains are then used as the query set for the DNS
+	measurements against all four resolvers: 1.10.10.10, 1.1.1.1, 8.8.8.8, and 9.9.9.9.</p>
+
+  <p>Since the top-10 list is refreshed daily rather than fixed once, the query set drifts with real
+	usage patterns. But on any given day, all four resolvers are tested against the exact same set of
+	domains, so the DNS response-time comparison stays fair.</p>
+
+  <div class="corr">
+	<strong>A note on the DNS numbers:</strong> because the query set is the day's top 10 domains by
+	traffic, most of these queries are likely cache hits at the resolver, not cold lookups. That's
+	realistic — it reflects what real users experience — but it means these numbers measure
+	cached-response speed more than worst-case resolution time.
+  </div>
+
+  <h3>How we calculate the numbers</h3>
+
+  <p>A set of Bash scripts pulls the results back from the RIPE Atlas API. The script greps the
+	relevant fields out of the raw output and runs the averages directly on that — there's no
+	filtering or exclusion of packet loss or failed queries. The reported averages below reflect
+	exactly what the probes returned, unfiltered. The scripts then generate a self-contained HTML
+	bar-graph for a quick visual read, and push both the raw data and the graph to our GitHub
+	repository.</p>
+
+  <h3>Repository</h3>
+
+  <table class="mt">
+    <thead>
+      <tr><th>Repository</th><th>Period</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><a href="https://github.com/kansal15/1.10.10.10-measurement" target="_blank">github.com/kansal15/1.10.10.10-measurement</a></td><td>February – October 2025</td></tr>
+      <tr><td><a href="https://github.com/kansal15/1.10.10.10-tests" target="_blank">github.com/kansal15/1.10.10.10-tests</a></td><td>November 2025 – February 2026</td></tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2>What the data shows</h2>
+
+  <p>Here we're using data from <strong>13 November 2025 to 11 February 2026 (91 days)</strong>, and
+	we've used that same 91-day window for a like-for-like comparison across ping and DNS query
+	response times.</p>
+
+  <h3>Ping latency — 13 Nov 2025 to 11 Feb 2026 (91 days)</h3>
+
+  <table class="mt">
+    <thead>
+      <tr><th>Resolver</th><th>Avg. ping (ms)</th><th>Total measurements</th></tr>
+    </thead>
+    <tbody>
+      <tr class="hi"><td><strong>1.10.10.10 (NIC)</strong></td><td><strong>17.3</strong></td><td>1,038,738</td></tr>
+      <tr><td>1.1.1.1 (Cloudflare)</td><td>14.8</td><td>1,047,581</td></tr>
+      <tr><td>8.8.8.8 (Google)</td><td>14.8</td><td>1,039,961</td></tr>
+      <tr><td>9.9.9.9 (Quad9)</td><td>55.8</td><td>1,050,441</td></tr>
+    </tbody>
+  </table>
+
+  <div class="chart-card">
+    <img src="../../images/2026/ripe-atlas-ping-chart.png" alt="Average ping response time from Indian RIPE Atlas probes — 1.10.10.10 at 17ms, Google 14ms, Cloudflare 14ms, Quad9 55ms">
+    <p class="chart-cap">Avg. ping response from Indian probes, 13 Nov 2025 – 11 Feb 2026</p>
+  </div>
+
+  <h3>DNS response time — 13 Nov 2025 to 11 Feb 2026 (91 days)</h3>
+
+  <table class="mt">
+    <thead>
+      <tr><th>Resolver</th><th>Avg. DNS response (ms)</th><th>Total measurements</th></tr>
+    </thead>
+    <tbody>
+      <tr class="hi"><td><strong>1.10.10.10 (NIC)</strong></td><td><strong>27.0</strong></td><td>580,916</td></tr>
+      <tr><td>8.8.8.8 (Google)</td><td>32.1</td><td>596,800</td></tr>
+      <tr><td>1.1.1.1 (Cloudflare)</td><td>43.2</td><td>528,540</td></tr>
+      <tr><td>9.9.9.9 (Quad9)</td><td>112.1</td><td>577,032</td></tr>
+    </tbody>
+  </table>
+
+  <div class="chart-card">
+    <img src="../../images/2026/ripe-atlas-dns-chart.png" alt="Average DNS query response time from Indian RIPE Atlas probes — 1.10.10.10 at 27ms, Cloudflare 43ms, Google 32ms, Quad9 112ms">
+    <p class="chart-cap">Avg. DNS query time from Indian probes, 13 Nov 2025 – 11 Feb 2026</p>
+  </div>
+
+  <hr>
+
+  <h2>Summary</h2>
+
+  <p>Overall, 1.10.10.10's performance across this measurement window is commendable. It holds its own
+	on ping latency and clearly leads on DNS response time — the metric that most directly reflects the
+	end-user experience of resolving a domain name.</p>
+
+  <p>On ping, 1.10.10.10 (17.3 ms) trails 1.1.1.1 and 8.8.8.8 (14.8 ms each) by a small margin, while
+	comfortably beating 9.9.9.9 (55.8 ms). The most likely reason for this gap is infrastructure
+	footprint: Cloudflare and Google run large global anycast networks with many points of presence
+	inside India, so more probes land close to one of their nodes. 1.10.10.10 runs from fewer physical
+	locations, so some probes travel a bit further to reach it. This is a scale difference, not a
+	reliability problem.</p>
+
+  <p>On DNS response time, 1.10.10.10 performs significantly better than the other resolvers, averaging
+	27.0 ms against 32.1 ms (8.8.8.8), 43.2 ms (1.1.1.1), and 112.1 ms (9.9.9.9). Taken together, the
+	data indicates that 1.10.10.10 is a strong, reliable resolver for users in India.</p>
+
+  <div class="sum-box">
+    <h3>Why this holds up</h3>
+    <ul class="sum-list">
+      <li>Large, unfiltered sample: 1M+ ping and 500K+ DNS measurements per resolver over 91 days</li>
+      <li>130–145 active probes across a range of ISPs and regions in India</li>
+      <li>Same 10 domains queried against all four resolvers on any given day — a fair comparison</li>
+      <li>No cherry-picking: averages are computed directly from raw probe output, packet loss included</li>
+    </ul>
+  </div>
+
+  <p>These conclusions are based on a large sample size — over 1,000,000 ping measurements and over
+	500,000 DNS measurements per resolver across the 91-day window — gathered from probes spread across
+	a range of ISPs and regions in India. That gives reasonable confidence that the results reflect
+	real, representative conditions rather than a one-off snapshot.</p>
+
+
+
+							</div>
+							<div class="labelList">
+                                <div class="labelIcon"><i class="fa-solid fa-tags"></i></div>
+                                <div class="labelText">DNS</div>
+                            </div>
+                            <div class="pagination blogPagination my-4">
+                                <div class="paginationNav pull-right">
+
+                                    <a href=" javascript:void(0);" title="Previous" rel="" class="preblog disable opacity-50">
+                                        <div class="prebox">
+                                            <span><i class="fa fa-angle-left fa-lg"></i> </span>
+                                            Previous
+                                        </div>
+                                        <p>Previous Heading</p>
+                                    </a>
+
+
+                                    <a href=" javascript:void(0);" title="Next" rel="" class="nextblog disable opacity-50">
+
+                                      <div class="nextbox">Next<span><i class="fa fa-angle-right fa-lg"></i></span> </div>
+                                        <p class="nexttitle">Next Heading</p>
+
+                                    </a>
+                                </div>
+                            </div>
+
+						</div>
+						<div id="disqus_thread"></div>
+					</div>
+					<!-- /blog post -->
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<!-- /Main content -->
+
+	<div id="showsidebar"></div>
+
+  <div class="bg-secondary footer-bg" id="myFooter"></div>
+
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+
+  <script src="../../plugins/jQuery/jquery.min.js" crossorigin="anonymous"></script>
+  <script>
+    $('#myHead').load('../../include/header.html');
+    $(document).ready(function () {
+      $("#skipnone").remove();
+    });
+    $('#myFooter').load('../../include/footer.html');
+    $('#showsidebar').load('../../include/sidebarShow.html');
+  </script>
+     <script>
+        var geturl = window.location.href;
+        var disqus_config = function () {
+            this.page.url = geturl;
+            this.page.identifier = geturl;
+        };
+
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://gauravkansal-in.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+  <!-- Bootstrap JS -->
+  <script src="../../plugins/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- slick slider -->
+  <script src="../../plugins/slick/slick.min.js"></script>
+  <!-- masonry -->
+  <script src="../../plugins/masonry/masonry.js"></script>
+  <!-- headroom -->
+  <script src="../../plugins/headroom/headroom.js"></script>
+  <!-- reading time -->
+  <script src="../../plugins/reading-time/readingTime.min.js"></script>
+
+  <!-- Main Script -->
+  <script src="../../js/script.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
