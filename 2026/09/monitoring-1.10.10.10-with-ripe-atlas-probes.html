@@ -64,6 +64,7 @@
     --gold:#bf8c55;--gold-l:#f7ede0;--gold-m:#a8763f;--gold-hi:#fbf5ec;--gold-line:#e4cba4;
     --blue:#1a4fa0;--blue-l:#e8eefa;
     --amber:#b05c0a;--amber-l:#fef3e6;
+    --teal:#1f9c82;--plum:#7a4a9a;--gold-chart:#c8862c;
     --mono:'JetBrains Mono',monospace;
   }
   body{font-family:'Inter',sans-serif;font-size:17px;line-height:1.75;color:var(--ink);background:var(--bg)}
@@ -117,6 +118,17 @@
   .chart-cap{font-size:13px;color:var(--ink-4);margin-top:14px;margin-bottom:0}
   /* Break the chart out wider than the text column so the image reads at full size */
   .chart-card.wide{max-width:960px;margin-left:calc((720px - 960px) / 2);margin-right:calc((720px - 960px) / 2)}
+
+  /* NATIVE RESOLVER BARS — vector, so no raster distortion at any zoom/DPI. Color is fixed per
+     resolver (not per rank), same convention across both charts. */
+  .chart-title{font-size:13px;font-weight:600;color:var(--ink-4);text-transform:uppercase;letter-spacing:.05em;margin-bottom:22px;text-align:left}
+  .res-row{margin-bottom:18px}
+  .res-row:last-child{margin-bottom:0}
+  .res-lbl{display:flex;justify-content:space-between;align-items:baseline;font-size:14px;margin-bottom:6px}
+  .res-name{color:var(--ink);font-weight:500;text-align:left}
+  .res-val{font-family:var(--mono);font-size:15px;color:var(--ink);font-weight:600}
+  .bar-t{height:14px;background:#efece6;border-radius:10px;overflow:hidden}
+  .bar-f{height:100%;border-radius:10px}
 
   /* METHOD TABLE */
   .mt{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
@@ -342,9 +354,25 @@
     </tbody>
   </table>
 
-  <div class="chart-card wide">
-    <img src="../../images/2026/ripe-atlas-ping-chart.png" alt="Average ping response time from Indian RIPE Atlas probes — 1.10.10.10 at 17ms, Google 14ms, Cloudflare 14ms, Quad9 55ms">
-    <p class="chart-cap">Avg. ping response from Indian probes, 13 Nov 2025 – 11 Feb 2026</p>
+  <div class="chart-card wide" style="text-align:left">
+    <div class="chart-title">Avg. ping response — Indian probes</div>
+    <div class="res-row">
+      <div class="res-lbl"><span class="res-name">1.10.10.10 (NIC)</span><span class="res-val">17.3 ms</span></div>
+      <div class="bar-t"><div class="bar-f" style="width:27%;background:var(--gold-chart)"></div></div>
+    </div>
+    <div class="res-row">
+      <div class="res-lbl"><span class="res-name">Cloudflare 1.1.1.1</span><span class="res-val">14.8 ms</span></div>
+      <div class="bar-t"><div class="bar-f" style="width:23%;background:var(--blue)"></div></div>
+    </div>
+    <div class="res-row">
+      <div class="res-lbl"><span class="res-name">Google 8.8.8.8</span><span class="res-val">14.8 ms</span></div>
+      <div class="bar-t"><div class="bar-f" style="width:23%;background:var(--teal)"></div></div>
+    </div>
+    <div class="res-row">
+      <div class="res-lbl"><span class="res-name">Quad9 9.9.9.9</span><span class="res-val">55.8 ms</span></div>
+      <div class="bar-t"><div class="bar-f" style="width:87%;background:var(--plum)"></div></div>
+    </div>
+    <p class="chart-cap" style="text-align:left">Avg. ping response from Indian probes, 13 Nov 2025 – 11 Feb 2026</p>
   </div>
 
   <h3>DNS response time — 13 Nov 2025 to 11 Feb 2026 (91 days)</h3>
@@ -361,9 +389,25 @@
     </tbody>
   </table>
 
-  <div class="chart-card wide">
-    <img src="../../images/2026/ripe-atlas-dns-chart.png" alt="Average DNS query response time from Indian RIPE Atlas probes — 1.10.10.10 at 27ms, Cloudflare 43ms, Google 32ms, Quad9 112ms">
-    <p class="chart-cap">Avg. DNS query time from Indian probes, 13 Nov 2025 – 11 Feb 2026</p>
+  <div class="chart-card wide" style="text-align:left">
+    <div class="chart-title">Avg. DNS query time — Indian probes</div>
+    <div class="res-row">
+      <div class="res-lbl"><span class="res-name">1.10.10.10 (NIC)</span><span class="res-val">27.0 ms</span></div>
+      <div class="bar-t"><div class="bar-f" style="width:21%;background:var(--gold-chart)"></div></div>
+    </div>
+    <div class="res-row">
+      <div class="res-lbl"><span class="res-name">Google 8.8.8.8</span><span class="res-val">32.1 ms</span></div>
+      <div class="bar-t"><div class="bar-f" style="width:25%;background:var(--teal)"></div></div>
+    </div>
+    <div class="res-row">
+      <div class="res-lbl"><span class="res-name">Cloudflare 1.1.1.1</span><span class="res-val">43.2 ms</span></div>
+      <div class="bar-t"><div class="bar-f" style="width:34%;background:var(--blue)"></div></div>
+    </div>
+    <div class="res-row">
+      <div class="res-lbl"><span class="res-name">Quad9 9.9.9.9</span><span class="res-val">112.1 ms</span></div>
+      <div class="bar-t"><div class="bar-f" style="width:87%;background:var(--plum)"></div></div>
+    </div>
+    <p class="chart-cap" style="text-align:left">Avg. DNS query time from Indian probes, 13 Nov 2025 – 11 Feb 2026</p>
   </div>
 
   <hr>
@@ -419,10 +463,10 @@
                                     </a>
 
 
-                                    <a href=" javascript:void(0);" title="Next" rel="" class="nextblog disable opacity-50">
+                                    <a href="../../2026/08/sarvagya-wins-technology-sabha-2026.html" title="Next" rel="" class="nextblog">
 
                                       <div class="nextbox">Next<span><i class="fa fa-angle-right fa-lg"></i></span> </div>
-                                        <p class="nexttitle">Next Heading</p>
+                                        <p class="nexttitle">Sarvagya Wins Technology Sabha 2026</p>
 
                                     </a>
                                 </div>
