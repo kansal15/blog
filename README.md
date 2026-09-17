@@ -11,7 +11,7 @@
 
 - 💬 Ask me about **DNS, Wi-Fi, TLS/SSL, Networks, Network Security**
 
-- 📫 How to reach me **contact@gauravkansal.in**
+- 📫 How to reach me **gkansal@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
