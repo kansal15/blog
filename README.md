@@ -5,13 +5,13 @@
 
 <p align="left"> <a href="https://twitter.com/kansal15" target="_blank"><img src="https://img.shields.io/twitter/follow/kansal15?logo=twitter&style=for-the-badge" alt="kansal15" /></a> </p>
 
-- 🔭 I’m currently working on **Indian Public DNS (1.10.10.10 & 2409::1)**
+- 🔭 I’m currently working on **Sarvagya - Bharat Public DNS (1.10.10.10 & 2409::1)**
 
 - 📝 I regularly write articles on [https://blog.gauravkansal.in/](https://blog.gauravkansal.in/)
 
 - 💬 Ask me about **DNS, Wi-Fi, TLS/SSL, Networks, Network Security**
 
-- 📫 How to reach me **gkansal@gmail.com**
+- 📫 How to reach me **gkansal.me@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
